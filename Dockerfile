@@ -26,9 +26,24 @@ COPY --from=publish /app/publish .
 USER root
 RUN apt-get update && apt-get install -y netcat-openbsd && rm -rf /var/lib/apt/lists/*
 
-# Copy wait-for-db script
-COPY wait-for-db.sh /app/wait-for-db.sh
-RUN chmod +x /app/wait-for-db.sh
+RUN echo '#!/bin/bash\n\
+set -e\n\
+\n\
+DB_HOST="${DB_HOST:-mysql}"\n\
+DB_PORT="${DB_PORT:-3306}"\n\
+\n\
+echo "Waiting for MySQL database at $DB_HOST:$DB_PORT..."\n\
+\n\
+until nc -z -v -w30 "$DB_HOST" "$DB_PORT"\n\
+do\n\
+  echo "Waiting for database connection..."\n\
+  sleep 5\n\
+done\n\
+\n\
+echo "Database is ready!"\n\
+echo "Starting application..."\n\
+\n\
+exec "$@"' > /app/wait-for-db.sh && chmod +x /app/wait-for-db.sh
 
 # Use wait-for-db script before starting the application
 ENTRYPOINT ["/app/wait-for-db.sh", "dotnet", "Project-6---Group-4---CSCN73060-SEC-1.dll"]
