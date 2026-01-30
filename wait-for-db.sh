@@ -3,12 +3,14 @@
 
 set -e
 
-host="${ConnectionStrings__DefaultConnection#*Server=}"
-host="${host%%;*}"
+# Database host is always 'mysql' from docker-compose service name
+DB_HOST="${DB_HOST:-mysql}"
+DB_PORT="${DB_PORT:-3306}"
 
-echo "Waiting for MySQL database at $host:3306..."
+echo "Waiting for MySQL database at $DB_HOST:$DB_PORT..."
 
-until nc -z -v -w30 mysql 3306
+# Wait for database to be ready
+until nc -z -v -w30 "$DB_HOST" "$DB_PORT"
 do
   echo "Waiting for database connection..."
   sleep 5
