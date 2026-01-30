@@ -1,0 +1,49 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: pcpartpicker_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword123
+      MYSQL_DATABASE: pcpartpicker_db
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: apppassword123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpassword123"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - pcpartpicker_network
+
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pcpartpicker_webapp
+    restart: always
+    ports:
+      - "5000:8080"
+      - "5001:8081"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=pcpartpicker_db;User=appuser;Password=apppassword123;
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - pcpartpicker_network
+
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  pcpartpicker_network:
+    driver: bridge
+
