@@ -1,0 +1,53 @@
+## ASP.NET Core
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+build/
+bld/
+
+# Visual Studio cache/options
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+
+# Database files
+*.mdf
+*.ldf
+*.bak
+
+# User-specific files
+*.userprefs
+appsettings.Development.json
+
+# Mac
+.DS_Store
+
+# Rider
+.idea/
+
+# VSCode
+.vscode/
+
+# Docker
+docker-compose.override.yml
+
