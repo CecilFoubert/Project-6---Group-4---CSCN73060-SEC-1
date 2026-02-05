@@ -37,6 +37,10 @@ builder.Services.AddCors(options =>
     });
 });
 
+// Add Swagger/OpenAPI
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
 
 // Run migrations and seed database automatically
@@ -72,6 +76,14 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+// Enable Swagger in all environments
+app.UseSwagger();
+app.UseSwaggerUI(options =>
+{
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "PC Part Picker API v1");
+    options.RoutePrefix = "swagger"; // Access at /swagger
+});
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
