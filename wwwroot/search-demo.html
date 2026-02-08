@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Parts Search Demo</title>
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .search-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .results-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .part-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .part-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+        .part-card img {
+            max-width: 100px;
+            max-height: 100px;
+            object-fit: contain;
+        }
+        .price {
+            font-size: 1.5em;
+            color: #28a745;
+            font-weight: bold;
+        }
+        .attribute {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .attribute strong {
+            color: #495057;
+        }
+        .filter-section {
+            margin-bottom: 20px;
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">PC Parts Dynamic Search Demo</h1>
+        
+        <div class="search-container">
+            <h3>Search Parameters</h3>
+            
+            <div class="filter-section">
+                <label for="partType" class="form-label">Part Type</label>
+                <select id="partType" class="form-select">
+                    <option value="cpu">CPU (Processors)</option>
+                    <option value="gpu">GPU (Graphics Cards)</option>
+                    <option value="memory">Memory (RAM)</option>
+                    <option value="motherboard">Motherboard</option>
+                    <option value="storage">Storage</option>
+                    <option value="powersupply">Power Supply</option>
+                    <option value="case">Case</option>
+                    <option value="cpucooler">CPU Cooler</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="filter-section">
+                        <label for="manufacturer" class="form-label">Manufacturer</label>
+                        <input type="text" id="manufacturer" class="form-control" placeholder="e.g., Intel, AMD, NVIDIA">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="filter-section">
+                        <label for="customAttribute" class="form-label">Custom Attribute</label>
+                        <input type="text" id="customAttribute" class="form-control" placeholder="e.g., Socket, Chipset">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="filter-section">
+                        <label for="customAttributeValue" class="form-label">Custom Attribute Value</label>
+                        <input type="text" id="customAttributeValue" class="form-control" placeholder="e.g., LGA1700, RTX">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="filter-section">
+                        <label for="minPrice" class="form-label">Min Price ($)</label>
+                        <input type="number" id="minPrice" class="form-control" placeholder="e.g., 100">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="filter-section">
+                        <label for="maxPrice" class="form-label">Max Price ($)</label>
+                        <input type="number" id="maxPrice" class="form-control" placeholder="e.g., 500">
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button id="searchBtn" class="btn btn-primary btn-lg" onclick="searchParts()">
+                    Search Parts
+                </button>
+                <button class="btn btn-secondary" onclick="clearFilters()">
+                    Clear Filters
+                </button>
+            </div>
+
+            <div class="loading">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p>Searching...</p>
+            </div>
+        </div>
+
+        <div class="results-container">
+            <div id="resultsHeader" style="display: none;">
+                <h3>Search Results</h3>
+                <div class="alert alert-info">
+                    <strong>Total Results:</strong> <span id="totalCount">0</span><br>
+                    <strong>Part Type:</strong> <span id="resultPartType"></span><br>
+                    <strong>Applied Filters:</strong> <span id="appliedFilters">None</span>
+                </div>
+            </div>
+
+            <div id="results"></div>
+
+            <div id="noResults" style="display: none;" class="alert alert-warning">
+                No parts found matching your criteria. Try adjusting your filters.
+            </div>
+
+            <div id="errorMessage" style="display: none;" class="alert alert-danger">
+                <strong>Error:</strong> <span id="errorText"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        async function searchParts() {
+            // Show loading
+            document.querySelector('.loading').style.display = 'block';
+            document.getElementById('results').innerHTML = '';
+            document.getElementById('resultsHeader').style.display = 'none';
+            document.getElementById('noResults').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'none';
+
+            // Build query parameters
+            const partType = document.getElementById('partType').value;
+            const params = new URLSearchParams();
+
+            const manufacturer = document.getElementById('manufacturer').value.trim();
+            if (manufacturer) params.append('manufacturer', manufacturer);
+
+            const customAttr = document.getElementById('customAttribute').value.trim();
+            const customAttrValue = document.getElementById('customAttributeValue').value.trim();
+            if (customAttr && customAttrValue) {
+                params.append(customAttr, customAttrValue);
+            }
+
+            const minPrice = document.getElementById('minPrice').value.trim();
+            if (minPrice) params.append('minPrice', minPrice);
+
+            const maxPrice = document.getElementById('maxPrice').value.trim();
+            if (maxPrice) params.append('maxPrice', maxPrice);
+
+            try {
+                const response = await fetch(`/api/parts/${partType}/search?${params}`);
+                
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.error || 'Search failed');
+                }
+
+                const data = await response.json();
+                displayResults(data);
+            } catch (error) {
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('errorText').textContent = error.message;
+            } finally {
+                document.querySelector('.loading').style.display = 'none';
+            }
+        }
+
+        function displayResults(data) {
+            document.getElementById('resultsHeader').style.display = 'block';
+            document.getElementById('totalCount').textContent = data.totalCount;
+            document.getElementById('resultPartType').textContent = data.partType.toUpperCase();
+            
+            // Display applied filters
+            const filterText = Object.keys(data.appliedFilters).length > 0 
+                ? Object.entries(data.appliedFilters).map(([key, value]) => `${key}: ${value}`).join(', ')
+                : 'None';
+            document.getElementById('appliedFilters').textContent = filterText;
+
+            const resultsDiv = document.getElementById('results');
+
+            if (data.totalCount === 0) {
+                document.getElementById('noResults').style.display = 'block';
+                return;
+            }
+
+            let html = '';
+            data.results.forEach(part => {
+                html += `
+                    <div class="part-card">
+                        <div class="row">
+                            <div class="col-md-2">
+                                ${part.ImageUrl ? `<img src="${part.ImageUrl}" alt="${part.Name}" class="img-fluid">` : '<div class="text-muted">No image</div>'}
+                            </div>
+                            <div class="col-md-10">
+                                <h5>${part.Name || 'Unnamed Part'}</h5>
+                                <div class="price">${part.Price || 'Price not available'}</div>
+                                <div class="row mt-3">
+                `;
+
+                // Display all attributes dynamically
+                for (const [key, value] of Object.entries(part)) {
+                    if (key !== 'Id' && key !== 'Name' && key !== 'Price' && 
+                        key !== 'ImageUrl' && key !== 'ProductUrl' && key !== 'PartType' && 
+                        value && value !== 'null') {
+                        html += `
+                            <div class="col-md-6">
+                                <div class="attribute">
+                                    <strong>${formatAttributeName(key)}:</strong> ${value}
+                                </div>
+                            </div>
+                        `;
+                    }
+                }
+
+                html += `
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            resultsDiv.innerHTML = html;
+        }
+
+        function formatAttributeName(name) {
+            // Convert camelCase to Title Case with spaces
+            return name
+                .replace(/([A-Z])/g, ' $1')
+                .replace(/^./, str => str.toUpperCase())
+                .trim();
+        }
+
+        function clearFilters() {
+            document.getElementById('manufacturer').value = '';
+            document.getElementById('customAttribute').value = '';
+            document.getElementById('customAttributeValue').value = '';
+            document.getElementById('minPrice').value = '';
+            document.getElementById('maxPrice').value = '';
+            document.getElementById('results').innerHTML = '';
+            document.getElementById('resultsHeader').style.display = 'none';
+            document.getElementById('noResults').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'none';
+        }
+
+        // Allow Enter key to trigger search
+        document.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                searchParts();
+            }
+        });
+    </script>
+</body>
+</html>
