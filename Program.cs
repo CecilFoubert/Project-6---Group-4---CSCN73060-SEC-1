@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 using Project_6___Group_4___CSCN73060_SEC_1.Data;
 using Project_6___Group_4___CSCN73060_SEC_1.Services;
 
@@ -87,6 +89,41 @@ app.UseSwaggerUI(options =>
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+// Serve the ClientApp static files so the frontend is available on the same origin/port as the API
+// (works in both Development and Production, e.g. when running via Docker/start.bat).
+var clientRoot = Path.Combine(app.Environment.ContentRootPath, "ClientApp");
+if (Directory.Exists(clientRoot))
+{
+    var clientProvider = new PhysicalFileProvider(clientRoot);
+
+    app.UseDefaultFiles(new DefaultFilesOptions
+    {
+        FileProvider = clientProvider,
+        RequestPath = "",
+        DefaultFileNames = { "index.html" }
+    });
+
+    app.UseStaticFiles(new StaticFileOptions
+    {
+        FileProvider = clientProvider,
+        RequestPath = ""
+    });
+
+    // Fallback: for non-API requests without file extension, return index.html so client-side routes work
+    app.MapWhen(context =>
+        !context.Request.Path.StartsWithSegments("/api") &&
+        !context.Request.Path.StartsWithSegments("/swagger") &&
+        string.IsNullOrEmpty(Path.GetExtension(context.Request.Path.Value ?? string.Empty)),
+        subApp =>
+        {
+            subApp.Run(async ctx =>
+            {
+                ctx.Response.ContentType = "text/html";
+                await ctx.Response.SendFileAsync(Path.Combine(clientRoot, "index.html"));
+            });
+        });
+}
 
 app.UseRouting();
 

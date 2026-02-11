@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PC Part Picker - System Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">PCPartPicker (by Group 4)</span>
+      </a>
+      <nav class="main-nav">
+        <a href="#build" class="nav-link active">System Build</a>
+        <a href="#browse" class="nav-link">Browse</a>
+        <a href="#guides" class="nav-link">Guides</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="content-wrapper">
+      <section class="build-panel" id="buildPanel">
+        <div class="build-panel-header">
+          <h2>Your Build</h2>
+          <button type="button" class="btn btn-ghost" id="clearBuildBtn" title="Clear build">Clear</button>
+        </div>
+        <ul class="build-list" id="buildList">
+          <li class="build-row build-row-empty" data-part-type="cpu">
+            <span class="build-label">CPU</span>
+            <span class="build-action"><button type="button" class="btn btn-choose">Choose</button></span>
+          </li>
+          <li class="build-row build-row-empty" data-part-type="motherboard">
+            <span class="build-label">Motherboard</span>
+            <span class="build-action"><button type="button" class="btn btn-choose">Choose</button></span>
+          </li>
+          <li class="build-row build-row-empty" data-part-type="memory">
+            <span class="build-label">Memory</span>
+            <span class="build-action"><button type="button" class="btn btn-choose">Choose</button></span>
+          </li>
+          <li class="build-row build-row-empty" data-part-type="storage">
+            <span class="build-label">Storage</span>
+            <span class="build-action"><button type="button" class="btn btn-choose">Choose</button></span>
+          </li>
+          <li class="build-row build-row-empty" data-part-type="gpu">
+            <span class="build-label">Video Card</span>
+            <span class="build-action"><button type="button" class="btn btn-choose">Choose</button></span>
+          </li>
+          <li class="build-row build-row-empty" data-part-type="case">
+            <span class="build-label">Case</span>
+            <span class="build-action"><button type="button" class="btn btn-choose">Choose</button></span>
+          </li>
+          <li class="build-row build-row-empty" data-part-type="powersupply">
+            <span class="build-label">Power Supply</span>
+            <span class="build-action"><button type="button" class="btn btn-choose">Choose</button></span>
+          </li>
+          <li class="build-row build-row-empty" data-part-type="cpucooler">
+            <span class="build-label">CPU Cooler</span>
+            <span class="build-action"><button type="button" class="btn btn-choose">Choose</button></span>
+          </li>
+        </ul>
+        <div class="build-footer">
+          <div class="build-total">
+            <span class="total-label">Total</span>
+            <span class="total-value" id="buildTotal">$0.00</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right: Part picker (modal / slide) -->
+      <section class="picker-panel" id="pickerPanel">
+        <div class="picker-header">
+          <h3 id="pickerTitle">Select a part</h3>
+          <button type="button" class="btn btn-ghost picker-close" id="pickerClose" aria-label="Close">×</button>
+        </div>
+        <div class="picker-toolbar">
+          <input type="search" id="partSearch" class="search-input" placeholder="Filter parts..." />
+        </div>
+        <div class="picker-content">
+          <div id="partsList" class="parts-list"></div>
+          <div id="partsMessage" class="parts-message" style="display:none;"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>PC Part Picker Clone · Group 4 · CSCN73060</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
