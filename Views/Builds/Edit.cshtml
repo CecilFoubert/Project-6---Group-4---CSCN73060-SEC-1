@@ -1,0 +1,222 @@
+@model Project_6___Group_4___CSCN73060_SEC_1.Models.Build
+
+@{
+    ViewData["Title"] = "Edit Build";
+}
+
+<div class="container mt-4">
+    <h1>Edit PC Build</h1>
+    <hr />
+
+    <form asp-action="Edit" id="buildForm">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="CreatedAt" />
+        
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Build Information</h5>
+            </div>
+            <div class="card-body">
+                <div class="form-group mb-3">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" required />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Description" class="control-label"></label>
+                    <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden inputs for part IDs -->
+        <input type="hidden" asp-for="CpuId" id="cpuId" />
+        <input type="hidden" asp-for="GpuId" id="gpuId" />
+        <input type="hidden" asp-for="MotherboardId" id="motherboardId" />
+        <input type="hidden" asp-for="MemoryId" id="memoryId" />
+        <input type="hidden" asp-for="StorageId" id="storageId" />
+        <input type="hidden" asp-for="CaseId" id="caseId" />
+        <input type="hidden" asp-for="PowerSupplyId" id="powerSupplyId" />
+        <input type="hidden" asp-for="CpuCoolerId" id="cpuCoolerId" />
+
+        <div class="card mb-4">
+            <div class="card-header bg-secondary text-white">
+                <h5 class="mb-0">Select Components</h5>
+            </div>
+            <div class="card-body">
+                <!-- Component selection buttons (same as Create) -->
+                <div class="mb-4">
+                    <h6>CPU (Processor)</h6>
+                    <button type="button" class="btn btn-outline-primary btn-sm" onclick="openPartSearch('cpu')">
+                        <i class="bi bi-search"></i> Search CPU
+                    </button>
+                    <div id="cpu-selected" class="mt-2"></div>
+                </div>
+
+                <div class="mb-4">
+                    <h6>GPU (Graphics Card)</h6>
+                    <button type="button" class="btn btn-outline-primary btn-sm" onclick="openPartSearch('gpu')">
+                        <i class="bi bi-search"></i> Search GPU
+                    </button>
+                    <div id="gpu-selected" class="mt-2"></div>
+                </div>
+
+                <div class="mb-4">
+                    <h6>Motherboard</h6>
+                    <button type="button" class="btn btn-outline-primary btn-sm" onclick="openPartSearch('motherboard')">
+                        <i class="bi bi-search"></i> Search Motherboard
+                    </button>
+                    <div id="motherboard-selected" class="mt-2"></div>
+                </div>
+
+                <div class="mb-4">
+                    <h6>Memory (RAM)</h6>
+                    <button type="button" class="btn btn-outline-primary btn-sm" onclick="openPartSearch('memory')">
+                        <i class="bi bi-search"></i> Search Memory
+                    </button>
+                    <div id="memory-selected" class="mt-2"></div>
+                </div>
+
+                <div class="mb-4">
+                    <h6>Storage</h6>
+                    <button type="button" class="btn btn-outline-primary btn-sm" onclick="openPartSearch('storage')">
+                        <i class="bi bi-search"></i> Search Storage
+                    </button>
+                    <div id="storage-selected" class="mt-2"></div>
+                </div>
+
+                <div class="mb-4">
+                    <h6>Case</h6>
+                    <button type="button" class="btn btn-outline-primary btn-sm" onclick="openPartSearch('case')">
+                        <i class="bi bi-search"></i> Search Case
+                    </button>
+                    <div id="case-selected" class="mt-2"></div>
+                </div>
+
+                <div class="mb-4">
+                    <h6>Power Supply</h6>
+                    <button type="button" class="btn btn-outline-primary btn-sm" onclick="openPartSearch('powersupply')">
+                        <i class="bi bi-search"></i> Search Power Supply
+                    </button>
+                    <div id="powersupply-selected" class="mt-2"></div>
+                </div>
+
+                <div class="mb-4">
+                    <h6>CPU Cooler</h6>
+                    <button type="button" class="btn btn-outline-primary btn-sm" onclick="openPartSearch('cpucooler')">
+                        <i class="bi bi-search"></i> Search CPU Cooler
+                    </button>
+                    <div id="cpucooler-selected" class="mt-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Update Build" class="btn btn-primary btn-lg" />
+            <a asp-action="Index" class="btn btn-secondary btn-lg">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<!-- Part Search Modal (same as Create.cshtml) -->
+<div class="modal fade" id="partSearchModal" tabindex="-1" aria-labelledby="partSearchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="partSearchModalLabel">Search Parts</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h6 class="mb-0">Filters</h6>
+                    </div>
+                    <div class="card-body">
+                        <div id="filterControls" class="row"></div>
+                        <div class="mt-3">
+                            <button type="button" class="btn btn-primary" onclick="searchParts()">Apply Filters</button>
+                            <button type="button" class="btn btn-secondary" onclick="clearFilters()">Clear Filters</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="searchLoading" class="text-center" style="display: none;">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p>Searching...</p>
+                </div>
+                <div id="searchResults"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <!-- Include the same JavaScript from Create.cshtml -->
+    <script src="~/js/build-part-search.js"></script>
+    
+    <script>
+        // Initialize selected parts on page load
+        document.addEventListener('DOMContentLoaded', async function() {
+            partSearchModal = new bootstrap.Modal(document.getElementById('partSearchModal'));
+            
+            // Load existing parts
+            @if (Model.CpuId.HasValue)
+            {
+                <text>await loadExistingPart('cpu', @Model.CpuId.Value);</text>
+            }
+            @if (Model.GpuId.HasValue)
+            {
+                <text>await loadExistingPart('gpu', @Model.GpuId.Value);</text>
+            }
+            @if (Model.MotherboardId.HasValue)
+            {
+                <text>await loadExistingPart('motherboard', @Model.MotherboardId.Value);</text>
+            }
+            @if (Model.MemoryId.HasValue)
+            {
+                <text>await loadExistingPart('memory', @Model.MemoryId.Value);</text>
+            }
+            @if (Model.StorageId.HasValue)
+            {
+                <text>await loadExistingPart('storage', @Model.StorageId.Value);</text>
+            }
+            @if (Model.CaseId.HasValue)
+            {
+                <text>await loadExistingPart('case', @Model.CaseId.Value);</text>
+            }
+            @if (Model.PowerSupplyId.HasValue)
+            {
+                <text>await loadExistingPart('powersupply', @Model.PowerSupplyId.Value);</text>
+            }
+            @if (Model.CpuCoolerId.HasValue)
+            {
+                <text>await loadExistingPart('cpucooler', @Model.CpuCoolerId.Value);</text>
+            }
+        });
+
+        async function loadExistingPart(partType, partId) {
+            try {
+                const response = await fetch(`/api/parts/${partType}/${partId}`);
+                const part = await response.json();
+                
+                const selectedDiv = document.getElementById(partType.toLowerCase() + '-selected');
+                selectedDiv.innerHTML = `
+                    <div class="alert alert-success d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>${part.Name}</strong><br>
+                            <small>${part.Price || 'Price not available'}</small>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-danger" onclick="removePart('${partType}')">Remove</button>
+                    </div>
+                `;
+            } catch (error) {
+                console.error('Error loading part:', error);
+            }
+        }
+    </script>
+}
