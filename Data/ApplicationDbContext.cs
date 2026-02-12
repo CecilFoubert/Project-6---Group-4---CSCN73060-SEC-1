@@ -20,6 +20,9 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Data
         public DbSet<PowerSupply> PowerSupplies { get; set; }
         public DbSet<CpuCooler> CpuCoolers { get; set; }
 
+        // Builds DbSet
+        public DbSet<Build> Builds { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -33,6 +36,56 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Data
             modelBuilder.Entity<Storage>().ToTable("Storages");
             modelBuilder.Entity<PowerSupply>().ToTable("PowerSupplies");
             modelBuilder.Entity<CpuCooler>().ToTable("CpuCoolers");
+            modelBuilder.Entity<Build>().ToTable("Builds");
+
+            // Configure Build relationships
+            modelBuilder.Entity<Build>()
+                .HasOne(b => b.Cpu)
+                .WithMany()
+                .HasForeignKey(b => b.CpuId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<Build>()
+                .HasOne(b => b.Gpu)
+                .WithMany()
+                .HasForeignKey(b => b.GpuId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<Build>()
+                .HasOne(b => b.Motherboard)
+                .WithMany()
+                .HasForeignKey(b => b.MotherboardId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<Build>()
+                .HasOne(b => b.Memory)
+                .WithMany()
+                .HasForeignKey(b => b.MemoryId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<Build>()
+                .HasOne(b => b.Storage)
+                .WithMany()
+                .HasForeignKey(b => b.StorageId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<Build>()
+                .HasOne(b => b.Case)
+                .WithMany()
+                .HasForeignKey(b => b.CaseId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<Build>()
+                .HasOne(b => b.PowerSupply)
+                .WithMany()
+                .HasForeignKey(b => b.PowerSupplyId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<Build>()
+                .HasOne(b => b.CpuCooler)
+                .WithMany()
+                .HasForeignKey(b => b.CpuCoolerId)
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

@@ -17,15 +17,214 @@
         <span class="logo-text">PCPartPicker (by Group 4)</span>
       </a>
       <nav class="main-nav">
-        <a href="#build" class="nav-link active">System Build</a>
-        <a href="#browse" class="nav-link">Browse</a>
-        <a href="#guides" class="nav-link">Guides</a>
+        <a href="#browse" class="nav-link active" data-view="browse">Browse</a>
+        <a href="#builds" class="nav-link" data-view="builds">Builds</a>
+        <a href="#guides" class="nav-link" data-view="guides">Guides</a>
       </nav>
     </div>
   </header>
 
   <main class="main-content">
-    <div class="content-wrapper">
+    <!-- Guides View -->
+    <div class="guides-view" id="guidesView" style="display:none;">
+      <div class="guides-container">
+        <h1>API & Project Documentation</h1>
+        
+        <section class="guide-section">
+          <h2>📋 Project Overview</h2>
+          <p>This PC Part Picker application is built using <strong>ASP.NET Core MVC</strong> with a modern Single Page Application (SPA) frontend. It allows users to browse PC components, create builds, and save configurations.</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>🔧 Technology Stack</h2>
+          <ul>
+            <li><strong>Backend:</strong> ASP.NET Core 8.0 (MVC & Web API)</li>
+            <li><strong>Database:</strong> MySQL 8.0 (via Docker)</li>
+            <li><strong>ORM:</strong> Entity Framework Core</li>
+            <li><strong>Frontend:</strong> Vanilla JavaScript, HTML5, CSS3</li>
+            <li><strong>UI Framework:</strong> Custom CSS with Bootstrap-inspired components</li>
+          </ul>
+        </section>
+
+        <section class="guide-section">
+          <h2>🌐 API Endpoints</h2>
+          
+          <div class="api-endpoint">
+            <h3>GET /api/parts/{partType}</h3>
+            <p><strong>Description:</strong> Retrieve all parts of a specific type</p>
+            <p><strong>Parameters:</strong></p>
+            <ul>
+              <li><code>partType</code>: cpu, gpu, memory, motherboard, storage, case, powersupply, cpucooler</li>
+            </ul>
+            <p><strong>Example:</strong> <code>GET /api/parts/cpu</code></p>
+          </div>
+
+          <div class="api-endpoint">
+            <h3>GET /api/parts/{partType}/search</h3>
+            <p><strong>Description:</strong> Search parts with dynamic filtering</p>
+            <p><strong>Query Parameters:</strong></p>
+            <ul>
+              <li><code>minPrice</code>: Minimum price filter (optional)</li>
+              <li><code>maxPrice</code>: Maximum price filter (optional)</li>
+              <li><code>{attributeName}</code>: Any part attribute for filtering (e.g., Socket, Chipset)</li>
+            </ul>
+            <p><strong>Example:</strong> <code>GET /api/parts/cpu/search?minPrice=100&maxPrice=300&Socket=AM5</code></p>
+          </div>
+
+          <div class="api-endpoint">
+            <h3>GET /api/parts/{partType}/filters</h3>
+            <p><strong>Description:</strong> Get all available filter options for a part type</p>
+            <p><strong>Returns:</strong> Dictionary of attributes with their distinct values</p>
+            <p><strong>Example:</strong> <code>GET /api/parts/motherboard/filters</code></p>
+            <p><strong>Response:</strong></p>
+            <pre>{
+  "Socket": ["AM5", "LGA1700", "AM4"],
+  "FormFactor": ["ATX", "Micro ATX", "Mini ITX"],
+  "Chipset": ["B650", "X670", "Z790"]
+}</pre>
+          </div>
+
+          <div class="api-endpoint">
+            <h3>Builds API (MVC)</h3>
+            <p><strong>Routes:</strong></p>
+            <ul>
+              <li><code>GET /Builds</code> - List all builds</li>
+              <li><code>GET /Builds/Details/{id}</code> - View build details</li>
+              <li><code>POST /Builds/Create</code> - Create new build</li>
+              <li><code>POST /Builds/Edit/{id}</code> - Update existing build</li>
+              <li><code>POST /Builds/Delete/{id}</code> - Delete build</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="guide-section">
+          <h2>🔄 Application Workflow</h2>
+          
+          <div class="workflow-step">
+            <h3>1. Browse Parts</h3>
+            <p>Users click "Choose" next to a component → Opens part picker panel → Fetches parts via <code>/api/parts/{partType}/search</code></p>
+          </div>
+
+          <div class="workflow-step">
+            <h3>2. Apply Filters</h3>
+            <p>Click "🔍 Filters" → Fetches available filters from <code>/api/parts/{partType}/filters</code> → User selects filters → Applies filters to search request</p>
+          </div>
+
+          <div class="workflow-step">
+            <h3>3. View Part Details</h3>
+            <p>Click on part name → Opens modal with full specifications → Shows all attributes with their values</p>
+          </div>
+
+          <div class="workflow-step">
+            <h3>4. Add to Build</h3>
+            <p>Click "Add" button → Part is added to build panel → Total price updates → Build stored in localStorage</p>
+          </div>
+
+          <div class="workflow-step">
+            <h3>5. Save Build</h3>
+            <p>Click "Save Build" → Enter build name and description → Build saved to localStorage with unique ID → Accessible from Builds view</p>
+          </div>
+
+          <div class="workflow-step">
+            <h3>6. Statistical Analysis</h3>
+            <p>When viewing parts → "Average Part" card shows at top → Displays most common attribute values → Shows average price across all results</p>
+          </div>
+        </section>
+
+        <section class="guide-section">
+          <h2>📁 Project Structure</h2>
+          <pre class="code-block">/Project-6---Group-4---CSCN73060-SEC-1
+├── Controllers/
+│   ├── PartsController.cs       # API endpoints for parts
+│   └── BuildsController.cs      # MVC CRUD for builds
+├── Models/
+│   ├── Cpu.cs, Gpu.cs, etc.     # Part model definitions
+│   └── Build.cs                 # Build model with relationships
+├── Services/
+│   ├── IPartService.cs          # Service interface
+│   └── PartService.cs           # Dynamic search & filter logic
+├── Data/
+│   ├── ApplicationDbContext.cs  # EF Core DbContext
+│   └── SeedData/                # Database seed files
+├── Migrations/                   # EF Core migrations
+├── Views/
+│   ├── Builds/                  # MVC views for builds
+│   └── Shared/                  # Shared layouts
+├── ClientApp/                    # SPA Frontend
+│   ├── index.html               # Main HTML
+│   ├── js/app.js                # Application logic
+│   └── css/styles.css           # Styling
+└── wwwroot/                      # Static files</pre>
+        </section>
+
+        <section class="guide-section">
+          <h2>💾 Data Flow</h2>
+          <ol>
+            <li><strong>User Action:</strong> Click on component or apply filter</li>
+            <li><strong>Frontend:</strong> JavaScript sends AJAX request to API</li>
+            <li><strong>Controller:</strong> Receives request, validates parameters</li>
+            <li><strong>Service Layer:</strong> Processes request with dynamic LINQ queries</li>
+            <li><strong>Database:</strong> EF Core translates to SQL, queries MySQL</li>
+            <li><strong>Response:</strong> Data serialized to JSON, sent to frontend</li>
+            <li><strong>Rendering:</strong> JavaScript creates DOM elements dynamically</li>
+          </ol>
+        </section>
+
+        <section class="guide-section">
+          <h2>🎯 Key Features</h2>
+          <ul>
+            <li><strong>Dynamic Filtering:</strong> Reflection-based attribute filtering</li>
+            <li><strong>Statistical Analysis:</strong> Calculates average specs from search results</li>
+            <li><strong>Pagination:</strong> Client-side pagination (10 items per page)</li>
+            <li><strong>Build Management:</strong> Create, save, load, and delete builds</li>
+            <li><strong>Detailed Views:</strong> Modal popups for full part specifications</li>
+            <li><strong>Responsive Design:</strong> Mobile-friendly interface</li>
+          </ul>
+        </section>
+
+        <section class="guide-section">
+          <h2>🔐 Database Schema</h2>
+          <p>Each part type has its own table with specific attributes:</p>
+          <ul>
+            <li><strong>Cpus:</strong> Socket, CoreCount, CoreClock, BoostClock, TDP, etc.</li>
+            <li><strong>Gpus:</strong> Chipset, Memory, CoreClock, BoostClock, Length, TDP</li>
+            <li><strong>Motherboards:</strong> Socket, FormFactor, Chipset, MemoryMax, MemorySlots</li>
+            <li><strong>Memories:</strong> Speed, Modules, PricePerGB, CASLatency, Type</li>
+            <li><strong>Storages:</strong> Capacity, Type, Cache, FormFactor, Interface</li>
+            <li><strong>Builds:</strong> Links to all component types via foreign keys</li>
+          </ul>
+        </section>
+
+        <section class="guide-section">
+          <h2>🚀 Getting Started</h2>
+          <ol>
+            <li>Start MySQL container: <code>docker-compose up -d mysql</code></li>
+            <li>Run migrations: <code>dotnet ef database update</code></li>
+            <li>Start application: <code>dotnet run</code></li>
+            <li>Navigate to: <code>http://localhost:5067</code></li>
+            <li>Browse parts and start building!</li>
+          </ol>
+        </section>
+      </div>
+    </div>
+
+    <!-- Builds List View -->
+    <div class="builds-view" id="buildsView" style="display:none;">
+      <div class="builds-header">
+        <h2>Your Saved Builds</h2>
+        <button type="button" class="btn btn-primary" id="newBuildBtn">+ New Build</button>
+      </div>
+      <div class="builds-grid" id="buildsGrid">
+        <!-- Builds will be rendered here -->
+      </div>
+      <div class="builds-empty" id="buildsEmpty" style="display:none;">
+        <p>No saved builds yet. Create your first build!</p>
+        <button type="button" class="btn btn-primary" id="newBuildBtn2">+ New Build</button>
+      </div>
+    </div>
+
+    <!-- Browse/System Build View -->
+    <div class="content-wrapper" id="browseView">
       <section class="build-panel" id="buildPanel">
         <div class="build-panel-header">
           <h2>Your Build</h2>
@@ -70,6 +269,9 @@
             <span class="total-label">Total</span>
             <span class="total-value" id="buildTotal">$0.00</span>
           </div>
+          <div class="build-actions">
+            <button type="button" class="btn btn-primary" id="saveBuildBtn">Save Build</button>
+          </div>
         </div>
       </section>
 
@@ -80,15 +282,88 @@
           <button type="button" class="btn btn-ghost picker-close" id="pickerClose" aria-label="Close">×</button>
         </div>
         <div class="picker-toolbar">
-          <input type="search" id="partSearch" class="search-input" placeholder="Filter parts..." />
+          <button type="button" class="btn btn-secondary" id="filterBtn">🔍 Filters</button>
+          <span id="activeFiltersCount" class="filter-count" style="display:none;">0 active</span>
         </div>
         <div class="picker-content">
           <div id="partsList" class="parts-list"></div>
           <div id="partsMessage" class="parts-message" style="display:none;"></div>
+          <div class="pagination" id="pagination" style="display:none;">
+            <button type="button" class="btn btn-sm" id="prevPage">Previous</button>
+            <span id="pageInfo">Page 1</span>
+            <button type="button" class="btn btn-sm" id="nextPage">Next</button>
+          </div>
         </div>
       </section>
     </div>
   </main>
+
+  <!-- Filter Modal -->
+  <div class="modal" id="filterModal" style="display:none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Filter Options</h3>
+        <button type="button" class="btn btn-ghost modal-close" id="filterModalClose">×</button>
+      </div>
+      <div class="modal-body" id="filterModalBody">
+        <!-- Dynamic filters will be loaded here -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="clearFiltersBtn">Clear All</button>
+        <button type="button" class="btn btn-primary" id="applyFiltersBtn">Apply Filters</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Save Build Modal -->
+  <div class="modal" id="saveBuildModal" style="display:none;">
+    <div class="modal-content modal-small">
+      <div class="modal-header">
+        <h3>Save Build</h3>
+        <button type="button" class="btn btn-ghost modal-close" id="saveBuildModalClose">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="buildName">Build Name</label>
+          <input type="text" id="buildName" class="form-input" placeholder="My Gaming PC" required />
+        </div>
+        <div class="form-group">
+          <label for="buildDescription">Description (optional)</label>
+          <textarea id="buildDescription" class="form-input" rows="3" placeholder="A powerful gaming build..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="cancelSaveBtn">Cancel</button>
+        <button type="button" class="btn btn-primary" id="confirmSaveBtn">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Part Details Modal -->
+  <div class="modal" id="partDetailsModal" style="display:none;">
+    <div class="modal-content modal-large">
+      <div class="modal-header">
+        <h3 id="partDetailsTitle">Part Details</h3>
+        <button type="button" class="btn btn-ghost modal-close" id="partDetailsModalClose">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="part-details-container">
+          <div class="part-details-image">
+            <img id="partDetailsImage" src="" alt="Part image" />
+          </div>
+          <div class="part-details-info">
+            <div class="part-details-price" id="partDetailsPrice"></div>
+            <div class="part-details-meta" id="partDetailsMeta"></div>
+            <div class="part-details-specs" id="partDetailsSpecs"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="closeDetailsBtn">Close</button>
+        <button type="button" class="btn btn-primary" id="addFromDetailsBtn">Add to Build</button>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="footer-inner">
