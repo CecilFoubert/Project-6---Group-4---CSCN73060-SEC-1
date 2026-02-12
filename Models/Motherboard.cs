@@ -44,7 +44,7 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Models
         [MaxLength(100)]
         public string? MemorySlots { get; set; }
         
-        [MaxLength(200)]
+        [MaxLength(500)]
         public string? MemorySpeed { get; set; }
         
         [MaxLength(100)]

@@ -1,0 +1,250 @@
+@model Project_6___Group_4___CSCN73060_SEC_1.Models.Build
+
+@{
+    ViewData["Title"] = "Build Details";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>@Model.Name</h1>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.Description))
+    {
+        <div class="alert alert-info">
+            <strong>Description:</strong> @Model.Description
+        </div>
+    }
+
+    @if (Model.TotalPrice.HasValue)
+    {
+        <div class="alert alert-success">
+            <h4 class="alert-heading">Total Build Cost: $@Model.TotalPrice.Value.ToString("N2")</h4>
+        </div>
+    }
+
+    <div class="row">
+        <!-- CPU -->
+        @if (Model.Cpu != null)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">CPU (Processor)</h5>
+                    </div>
+                    <div class="card-body">
+                        @if (!string.IsNullOrEmpty(Model.Cpu.ImageUrl))
+                        {
+                            <img src="@Model.Cpu.ImageUrl" alt="@Model.Cpu.Name" class="img-fluid mb-3" style="max-height: 150px;">
+                        }
+                        <h6>@Model.Cpu.Name</h6>
+                        <p class="text-muted mb-1"><strong>Manufacturer:</strong> @Model.Cpu.Manufacturer</p>
+                        <p class="text-success mb-1"><strong>Price:</strong> @Model.Cpu.Price</p>
+                        @if (!string.IsNullOrEmpty(Model.Cpu.Socket))
+                        {
+                            <p class="mb-1"><strong>Socket:</strong> @Model.Cpu.Socket</p>
+                        }
+                        @if (Model.Cpu.CoreCount.HasValue)
+                        {
+                            <p class="mb-1"><strong>Cores:</strong> @Model.Cpu.CoreCount</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        <!-- GPU -->
+        @if (Model.Gpu != null)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">GPU (Graphics Card)</h5>
+                    </div>
+                    <div class="card-body">
+                        @if (!string.IsNullOrEmpty(Model.Gpu.ImageUrl))
+                        {
+                            <img src="@Model.Gpu.ImageUrl" alt="@Model.Gpu.Name" class="img-fluid mb-3" style="max-height: 150px;">
+                        }
+                        <h6>@Model.Gpu.Name</h6>
+                        <p class="text-muted mb-1"><strong>Manufacturer:</strong> @Model.Gpu.Manufacturer</p>
+                        <p class="text-success mb-1"><strong>Price:</strong> @Model.Gpu.Price</p>
+                        @if (!string.IsNullOrEmpty(Model.Gpu.Chipset))
+                        {
+                            <p class="mb-1"><strong>Chipset:</strong> @Model.Gpu.Chipset</p>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.Gpu.Memory))
+                        {
+                            <p class="mb-1"><strong>Memory:</strong> @Model.Gpu.Memory</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        <!-- Motherboard -->
+        @if (Model.Motherboard != null)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Motherboard</h5>
+                    </div>
+                    <div class="card-body">
+                        @if (!string.IsNullOrEmpty(Model.Motherboard.ImageUrl))
+                        {
+                            <img src="@Model.Motherboard.ImageUrl" alt="@Model.Motherboard.Name" class="img-fluid mb-3" style="max-height: 150px;">
+                        }
+                        <h6>@Model.Motherboard.Name</h6>
+                        <p class="text-muted mb-1"><strong>Manufacturer:</strong> @Model.Motherboard.Manufacturer</p>
+                        <p class="text-success mb-1"><strong>Price:</strong> @Model.Motherboard.Price</p>
+                        @if (!string.IsNullOrEmpty(Model.Motherboard.SocketCPU))
+                        {
+                            <p class="mb-1"><strong>Socket:</strong> @Model.Motherboard.SocketCPU</p>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.Motherboard.FormFactor))
+                        {
+                            <p class="mb-1"><strong>Form Factor:</strong> @Model.Motherboard.FormFactor</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        <!-- Memory -->
+        @if (Model.Memory != null)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Memory (RAM)</h5>
+                    </div>
+                    <div class="card-body">
+                        @if (!string.IsNullOrEmpty(Model.Memory.ImageUrl))
+                        {
+                            <img src="@Model.Memory.ImageUrl" alt="@Model.Memory.Name" class="img-fluid mb-3" style="max-height: 150px;">
+                        }
+                        <h6>@Model.Memory.Name</h6>
+                        <p class="text-muted mb-1"><strong>Manufacturer:</strong> @Model.Memory.Manufacturer</p>
+                        <p class="text-success mb-1"><strong>Price:</strong> @Model.Memory.Price</p>
+                        @if (!string.IsNullOrEmpty(Model.Memory.Speed))
+                        {
+                            <p class="mb-1"><strong>Speed:</strong> @Model.Memory.Speed</p>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.Memory.Modules))
+                        {
+                            <p class="mb-1"><strong>Modules:</strong> @Model.Memory.Modules</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        <!-- Storage -->
+        @if (Model.Storage != null)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Storage</h5>
+                    </div>
+                    <div class="card-body">
+                        @if (!string.IsNullOrEmpty(Model.Storage.ImageUrl))
+                        {
+                            <img src="@Model.Storage.ImageUrl" alt="@Model.Storage.Name" class="img-fluid mb-3" style="max-height: 150px;">
+                        }
+                        <h6>@Model.Storage.Name</h6>
+                        <p class="text-muted mb-1"><strong>Manufacturer:</strong> @Model.Storage.Manufacturer</p>
+                        <p class="text-success mb-1"><strong>Price:</strong> @Model.Storage.Price</p>
+                        @if (!string.IsNullOrEmpty(Model.Storage.Capacity))
+                        {
+                            <p class="mb-1"><strong>Capacity:</strong> @Model.Storage.Capacity</p>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.Storage.Type))
+                        {
+                            <p class="mb-1"><strong>Type:</strong> @Model.Storage.Type</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        <!-- Case -->
+        @if (Model.Case != null)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Case</h5>
+                    </div>
+                    <div class="card-body">
+                        @if (!string.IsNullOrEmpty(Model.Case.ImageUrl))
+                        {
+                            <img src="@Model.Case.ImageUrl" alt="@Model.Case.Name" class="img-fluid mb-3" style="max-height: 150px;">
+                        }
+                        <h6>@Model.Case.Name</h6>
+                        <p class="text-muted mb-1"><strong>Manufacturer:</strong> @Model.Case.Manufacturer</p>
+                        <p class="text-success mb-1"><strong>Price:</strong> @Model.Case.Price</p>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <!-- Power Supply -->
+        @if (Model.PowerSupply != null)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Power Supply</h5>
+                    </div>
+                    <div class="card-body">
+                        @if (!string.IsNullOrEmpty(Model.PowerSupply.ImageUrl))
+                        {
+                            <img src="@Model.PowerSupply.ImageUrl" alt="@Model.PowerSupply.Name" class="img-fluid mb-3" style="max-height: 150px;">
+                        }
+                        <h6>@Model.PowerSupply.Name</h6>
+                        <p class="text-muted mb-1"><strong>Manufacturer:</strong> @Model.PowerSupply.Manufacturer</p>
+                        <p class="text-success mb-1"><strong>Price:</strong> @Model.PowerSupply.Price</p>
+                        @if (!string.IsNullOrEmpty(Model.PowerSupply.Wattage))
+                        {
+                            <p class="mb-1"><strong>Wattage:</strong> @Model.PowerSupply.Wattage</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        <!-- CPU Cooler -->
+        @if (Model.CpuCooler != null)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">CPU Cooler</h5>
+                    </div>
+                    <div class="card-body">
+                        @if (!string.IsNullOrEmpty(Model.CpuCooler.ImageUrl))
+                        {
+                            <img src="@Model.CpuCooler.ImageUrl" alt="@Model.CpuCooler.Name" class="img-fluid mb-3" style="max-height: 150px;">
+                        }
+                        <h6>@Model.CpuCooler.Name</h6>
+                        <p class="text-muted mb-1"><strong>Manufacturer:</strong> @Model.CpuCooler.Manufacturer</p>
+                        <p class="text-success mb-1"><strong>Price:</strong> @Model.CpuCooler.Price</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <p class="text-muted mb-0"><strong>Created:</strong> @Model.CreatedAt.ToLocalTime().ToString("f")</p>
+            <p class="text-muted mb-0"><strong>Last Updated:</strong> @Model.UpdatedAt.ToLocalTime().ToString("f")</p>
+        </div>
+    </div>
+</div>
