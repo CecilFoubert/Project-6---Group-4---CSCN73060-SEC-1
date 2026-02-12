@@ -54,12 +54,27 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
             var properties = entity.GetType().GetProperties();
             var result = new ExpandoObject() as IDictionary<string, object?>;
 
+            // Add part type first
             result["PartType"] = partType;
-            result["Id"] = properties.FirstOrDefault(p => p.Name == "Id")?.GetValue(entity);
-            result["Name"] = properties.FirstOrDefault(p => p.Name == "Name")?.GetValue(entity);
-            result["Price"] = properties.FirstOrDefault(p => p.Name == "Price")?.GetValue(entity);
-            result["Manufacturer"] = properties.FirstOrDefault(p => p.Name == "Manufacturer")?.GetValue(entity);
-            result["ImageUrl"] = properties.FirstOrDefault(p => p.Name == "ImageUrl")?.GetValue(entity);
+
+            // Add all properties dynamically
+            foreach (var property in properties)
+            {
+                try
+                {
+                    var value = property.GetValue(entity);
+                    // Only include non-null values or keep null for important fields
+                    if (value != null || property.Name == "Id" || property.Name == "Name" || property.Name == "Price")
+                    {
+                        result[property.Name] = value;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogWarning(ex, "Error getting property {PropertyName} from {EntityType}", 
+                        property.Name, entity.GetType().Name);
+                }
+            }
 
             return result;
         }
@@ -183,6 +198,217 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
             await _context.SaveChangesAsync();
 
             return true;
+        }
+
+        public async Task<SearchResult> SearchAsync(string partType, Dictionary<string, string> filters)
+        {
+            var modelType = GetModelType(partType);
+            if (modelType == null)
+                throw new ArgumentException($"Invalid part type: {partType}");
+
+            var dbSetProperty = _context.GetType().GetProperties()
+                .FirstOrDefault(p => p.PropertyType.IsGenericType &&
+                                   p.PropertyType.GetGenericTypeDefinition() == typeof(DbSet<>) &&
+                                   p.PropertyType.GetGenericArguments()[0] == modelType);
+
+            if (dbSetProperty == null)
+                throw new ArgumentException($"DbSet not found for type: {partType}");
+
+            var dbSet = dbSetProperty.GetValue(_context);
+            var queryable = dbSet as IQueryable<object>;
+            
+            if (queryable == null)
+            {
+                var castMethod = typeof(Queryable).GetMethod("Cast")!.MakeGenericMethod(typeof(object));
+                queryable = (IQueryable<object>)castMethod.Invoke(null, new[] { dbSet })!;
+            }
+
+            // Convert to list first to enable in-memory filtering for complex queries
+            var allItems = await queryable.ToListAsync();
+            var filteredItems = allItems.AsEnumerable();
+
+            // Extract price range filters
+            decimal? minPrice = null;
+            decimal? maxPrice = null;
+            var appliedFilters = new Dictionary<string, string>();
+
+            foreach (var filter in filters)
+            {
+                var key = filter.Key.ToLower();
+                var value = filter.Value;
+
+                if (string.IsNullOrWhiteSpace(value))
+                    continue;
+
+                appliedFilters[filter.Key] = value;
+
+                // Handle price range
+                if (key == "minprice")
+                {
+                    if (decimal.TryParse(value, out var min))
+                        minPrice = min;
+                    continue;
+                }
+
+                if (key == "maxprice")
+                {
+                    if (decimal.TryParse(value, out var max))
+                        maxPrice = max;
+                    continue;
+                }
+
+                // Handle other filters dynamically
+                var property = modelType.GetProperty(filter.Key, BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
+                if (property != null)
+                {
+                    filteredItems = filteredItems.Where(item =>
+                    {
+                        var propValue = property.GetValue(item);
+                        if (propValue == null)
+                            return false;
+
+                        var propStringValue = propValue.ToString();
+                        if (string.IsNullOrEmpty(propStringValue))
+                            return false;
+
+                        // Case-insensitive partial match
+                        return propStringValue.Contains(value, StringComparison.OrdinalIgnoreCase);
+                    });
+                }
+            }
+
+            // Apply price range filter
+            if (minPrice.HasValue || maxPrice.HasValue)
+            {
+                var priceProperty = modelType.GetProperty("Price", BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
+                if (priceProperty != null)
+                {
+                    filteredItems = filteredItems.Where(item =>
+                    {
+                        var priceValue = priceProperty.GetValue(item)?.ToString();
+                        if (string.IsNullOrEmpty(priceValue))
+                            return false;
+
+                        // Try to parse price (handle formats like "$599.99" or "599.99")
+                        var cleanPrice = priceValue.Replace("$", "").Replace(",", "").Trim();
+                        if (decimal.TryParse(cleanPrice, out var price))
+                        {
+                            if (minPrice.HasValue && price < minPrice.Value)
+                                return false;
+                            if (maxPrice.HasValue && price > maxPrice.Value)
+                                return false;
+                            return true;
+                        }
+                        return false;
+                    });
+                }
+            }
+
+            var resultList = filteredItems.ToList();
+            var lightweightResults = resultList.Select(item => ToLightweightObject(item, partType)).ToList();
+
+            return new SearchResult
+            {
+                PartType = partType,
+                TotalCount = lightweightResults.Count,
+                Results = lightweightResults,
+                AppliedFilters = appliedFilters
+            };
+        }
+
+        public async Task<FilterOptions> GetFilterOptionsAsync(string partType)
+        {
+            var modelType = GetModelType(partType);
+            if (modelType == null)
+                throw new ArgumentException($"Invalid part type: {partType}");
+
+            var dbSetProperty = _context.GetType().GetProperties()
+                .FirstOrDefault(p => p.PropertyType.IsGenericType &&
+                                   p.PropertyType.GetGenericTypeDefinition() == typeof(DbSet<>) &&
+                                   p.PropertyType.GetGenericArguments()[0] == modelType);
+
+            if (dbSetProperty == null)
+                throw new ArgumentException($"DbSet not found for type: {partType}");
+
+            var dbSet = dbSetProperty.GetValue(_context);
+            var queryable = dbSet as IQueryable<object>;
+            
+            if (queryable == null)
+            {
+                var castMethod = typeof(Queryable).GetMethod("Cast")!.MakeGenericMethod(typeof(object));
+                queryable = (IQueryable<object>)castMethod.Invoke(null, new[] { dbSet })!;
+            }
+
+            var allItems = await queryable.ToListAsync();
+
+            var filterOptions = new FilterOptions
+            {
+                PartType = partType,
+                Attributes = new Dictionary<string, FilterAttribute>()
+            };
+
+            // Get all properties except ones we don't want to filter by
+            var properties = modelType.GetProperties()
+                .Where(p => p.Name != "Id" && 
+                           p.Name != "ImageUrl" && 
+                           p.Name != "ProductUrl" &&
+                           p.Name != "PartNumber" &&
+                           p.CanRead)
+                .ToList();
+
+            foreach (var property in properties)
+            {
+                try
+                {
+                    // Get all non-null, non-empty values for this property
+                    var distinctValues = allItems
+                        .Select(item => property.GetValue(item))
+                        .Where(value => value != null && !string.IsNullOrWhiteSpace(value.ToString()))
+                        .Select(value => value!.ToString()!)
+                        .Distinct()
+                        .OrderBy(v => v)
+                        .ToList();
+
+                    if (distinctValues.Any())
+                    {
+                        var attributeName = property.Name;
+                        var attributeType = GetFriendlyTypeName(property.PropertyType);
+
+                        filterOptions.Attributes[attributeName] = new FilterAttribute
+                        {
+                            AttributeName = attributeName,
+                            AttributeType = attributeType,
+                            DistinctValues = distinctValues,
+                            TotalDistinctCount = distinctValues.Count
+                        };
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogWarning(ex, "Error getting distinct values for property {PropertyName}", property.Name);
+                }
+            }
+
+            return filterOptions;
+        }
+
+        private string GetFriendlyTypeName(Type type)
+        {
+            // Handle nullable types
+            if (Nullable.GetUnderlyingType(type) != null)
+            {
+                type = Nullable.GetUnderlyingType(type)!;
+            }
+
+            return type.Name switch
+            {
+                "String" => "string",
+                "Int32" => "integer",
+                "Decimal" => "decimal",
+                "Boolean" => "boolean",
+                "DateTime" => "datetime",
+                _ => type.Name.ToLower()
+            };
         }
     }
 }
