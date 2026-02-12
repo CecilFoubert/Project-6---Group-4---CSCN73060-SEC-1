@@ -170,6 +170,90 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Controllers
                 }
             });
         }
+
+        /// <summary>
+        /// Get all available filter options for a part type
+        /// GET /api/parts/{partType}/filters
+        /// Returns all searchable attributes with their distinct values
+        /// Perfect for building dynamic dropdown filters in the frontend
+        /// 
+        /// Examples:
+        /// - /api/parts/cpu/filters
+        /// - /api/parts/gpu/filters
+        /// - /api/parts/memory/filters
+        /// </summary>
+        [HttpGet("{partType}/filters")]
+        public async Task<IActionResult> GetFilters(string partType)
+        {
+            try
+            {
+                var filterOptions = await _partService.GetFilterOptionsAsync(partType);
+                
+                return Ok(new
+                {
+                    partType = filterOptions.PartType,
+                    totalAttributes = filterOptions.Attributes.Count,
+                    attributes = filterOptions.Attributes
+                });
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting filter options for part type {PartType}", partType);
+                return StatusCode(500, new { error = "An error occurred while fetching filter options" });
+            }
+        }
+
+        /// <summary>
+        /// Dynamic search endpoint for parts with flexible filtering
+        /// GET /api/parts/{partType}/search
+        /// Query parameters: Any property name from the part model (e.g., manufacturer, socket, chipset)
+        /// Special parameters: minPrice, maxPrice (for price range filtering)
+        /// 
+        /// Examples:
+        /// - /api/parts/cpu/search?manufacturer=Intel&socket=LGA1700&minPrice=200&maxPrice=500
+        /// - /api/parts/gpu/search?chipset=RTX&minPrice=300&maxPrice=800
+        /// - /api/parts/memory/search?speed=DDR5&manufacturer=Corsair
+        /// - /api/parts/motherboard/search?socket=AM5&formfactor=ATX&maxPrice=300
+        /// </summary>
+        [HttpGet("{partType}/search")]
+        public async Task<IActionResult> Search(string partType)
+        {
+            try
+            {
+                // Extract all query parameters as filters
+                var filters = new Dictionary<string, string>();
+                foreach (var param in Request.Query)
+                {
+                    if (!string.IsNullOrWhiteSpace(param.Value))
+                    {
+                        filters[param.Key] = param.Value.ToString();
+                    }
+                }
+
+                var searchResult = await _partService.SearchAsync(partType, filters);
+                
+                return Ok(new
+                {
+                    partType = searchResult.PartType,
+                    totalCount = searchResult.TotalCount,
+                    appliedFilters = searchResult.AppliedFilters,
+                    results = searchResult.Results
+                });
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error searching parts of type {PartType}", partType);
+                return StatusCode(500, new { error = "An error occurred while searching parts" });
+            }
+        }
     }
 }
 
