@@ -306,14 +306,98 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
 
             var resultList = filteredItems.ToList();
             var lightweightResults = resultList.Select(item => ToLightweightObject(item, partType)).ToList();
+            
+            // Calculate average part
+            object? averagePart = null;
+            if (lightweightResults.Any())
+            {
+                averagePart = CalculateAveragePart(lightweightResults, partType);
+            }
 
             return new SearchResult
             {
                 PartType = partType,
                 TotalCount = lightweightResults.Count,
                 Results = lightweightResults,
-                AppliedFilters = appliedFilters
+                AppliedFilters = appliedFilters,
+                AveragePart = averagePart
             };
+        }
+        
+        private object CalculateAveragePart(List<object> parts, string partType)
+        {
+            var averageData = new Dictionary<string, object>
+            {
+                ["Name"] = "Average Part",
+                ["Manufacturer"] = "Statistical Summary",
+                ["PartNumber"] = $"Based on {parts.Count} parts"
+            };
+            
+            // Calculate average price
+            decimal totalPrice = 0;
+            int priceCount = 0;
+            foreach (var part in parts)
+            {
+                // Handle both Dictionary and ExpandoObject/IDictionary
+                var dict = part as IDictionary<string, object>;
+                if (dict != null && dict.TryGetValue("Price", out var priceObj))
+                {
+                    var priceStr = priceObj?.ToString()?.Replace("$", "").Replace(",", "").Trim();
+                    if (decimal.TryParse(priceStr, out var price) && price > 0)
+                    {
+                        totalPrice += price;
+                        priceCount++;
+                    }
+                }
+            }
+            
+            if (priceCount > 0)
+            {
+                averageData["Price"] = "$" + (totalPrice / priceCount).ToString("F2");
+            }
+            else
+            {
+                averageData["Price"] = "N/A";
+            }
+            
+            // Count attribute occurrences
+            var attributeCounts = new Dictionary<string, Dictionary<string, int>>();
+            var excludeFields = new HashSet<string> { "Id", "Name", "ImageUrl", "ProductUrl", "Price", "Manufacturer", "PartNumber", "PartType", "SpecsNumber" };
+            
+            foreach (var part in parts)
+            {
+                // Handle both Dictionary and ExpandoObject/IDictionary
+                var dict = part as IDictionary<string, object>;
+                if (dict == null) continue;
+                
+                foreach (var kvp in dict)
+                {
+                    if (excludeFields.Contains(kvp.Key)) continue;
+                    if (kvp.Value == null || string.IsNullOrWhiteSpace(kvp.Value.ToString())) continue;
+                    
+                    if (!attributeCounts.ContainsKey(kvp.Key))
+                    {
+                        attributeCounts[kvp.Key] = new Dictionary<string, int>();
+                    }
+                    
+                    var value = kvp.Value.ToString()!;
+                    if (!attributeCounts[kvp.Key].ContainsKey(value))
+                    {
+                        attributeCounts[kvp.Key][value] = 0;
+                    }
+                    attributeCounts[kvp.Key][value]++;
+                }
+            }
+            
+            // Find most common value for each attribute
+            foreach (var attr in attributeCounts)
+            {
+                var mostCommon = attr.Value.OrderByDescending(v => v.Value).First();
+                var percentage = ((double)mostCommon.Value / parts.Count * 100).ToString("F0");
+                averageData[attr.Key] = $"{mostCommon.Key} ({percentage}%)";
+            }
+            
+            return averageData;
         }
 
         public async Task<FilterOptions> GetFilterOptionsAsync(string partType)
