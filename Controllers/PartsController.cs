@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Project_6___Group_4___CSCN73060_SEC_1.Models;
 using Project_6___Group_4___CSCN73060_SEC_1.Services;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Controllers
@@ -208,29 +209,47 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Controllers
         }
 
         /// <summary>
-        /// Dynamic search endpoint for parts with flexible filtering
-        /// GET /api/parts/{partType}/search
-        /// Query parameters: Any property name from the part model (e.g., manufacturer, socket, chipset)
-        /// Special parameters: minPrice, maxPrice (for price range filtering)
+        /// Dynamic search endpoint for parts with flexible filtering (JSON body)
+        /// POST /api/parts/{partType}/search
+        /// Body: SearchFilters object with minPrice, maxPrice, manufacturer, and dynamic filters
         /// 
-        /// Examples:
-        /// - /api/parts/cpu/search?manufacturer=Intel&socket=LGA1700&minPrice=200&maxPrice=500
-        /// - /api/parts/gpu/search?chipset=RTX&minPrice=300&maxPrice=800
-        /// - /api/parts/memory/search?speed=DDR5&manufacturer=Corsair
-        /// - /api/parts/motherboard/search?socket=AM5&formfactor=ATX&maxPrice=300
+        /// Example body:
+        /// {
+        ///   "minPrice": 200,
+        ///   "maxPrice": 500,
+        ///   "manufacturer": "Intel",
+        ///   "filters": {
+        ///     "socket": "LGA1700",
+        ///     "cores": "8"
+        ///   }
+        /// }
         /// </summary>
-        [HttpGet("{partType}/search")]
-        public async Task<IActionResult> Search(string partType)
+        [HttpPost("{partType}/search")]
+        public async Task<IActionResult> Search(string partType, [FromBody] SearchFilters? searchFilters)
         {
             try
             {
-                // Extract all query parameters as filters
+                // Convert SearchFilters to Dictionary for the service
                 var filters = new Dictionary<string, string>();
-                foreach (var param in Request.Query)
+                
+                if (searchFilters != null)
                 {
-                    if (!string.IsNullOrWhiteSpace(param.Value))
+                    if (searchFilters.MinPrice.HasValue)
+                        filters["minPrice"] = searchFilters.MinPrice.Value.ToString();
+                    
+                    if (searchFilters.MaxPrice.HasValue)
+                        filters["maxPrice"] = searchFilters.MaxPrice.Value.ToString();
+                    
+                    if (!string.IsNullOrWhiteSpace(searchFilters.Manufacturer))
+                        filters["manufacturer"] = searchFilters.Manufacturer;
+                    
+                    if (searchFilters.Filters != null)
                     {
-                        filters[param.Key] = param.Value.ToString();
+                        foreach (var kvp in searchFilters.Filters)
+                        {
+                            if (!string.IsNullOrWhiteSpace(kvp.Value))
+                                filters[kvp.Key] = kvp.Value;
+                        }
                     }
                 }
 
@@ -241,7 +260,8 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Controllers
                     partType = searchResult.PartType,
                     totalCount = searchResult.TotalCount,
                     appliedFilters = searchResult.AppliedFilters,
-                    results = searchResult.Results
+                    results = searchResult.Results,
+                    averagePart = searchResult.AveragePart
                 });
             }
             catch (ArgumentException ex)
