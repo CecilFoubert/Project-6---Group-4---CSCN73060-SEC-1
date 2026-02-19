@@ -1,6 +1,6 @@
 (function () {
   // API Configuration
-  const API_BASE = window.location.origin + '/api/parts';
+  const API_BASE = 'http://localhost:6700/api/parts';
   
   // DOM Elements
   const buildListEl = document.getElementById('buildList');
@@ -419,15 +419,39 @@
     showPartsMessage('Searching...');
     
     try {
-      const params = new URLSearchParams(activeFilters);
-      const url = `${API_BASE}/${currentPartType}/search?${params}`;
+      // Build JSON body for POST request
+      const searchFilters = {
+        minPrice: activeFilters.minPrice ? parseFloat(activeFilters.minPrice) : null,
+        maxPrice: activeFilters.maxPrice ? parseFloat(activeFilters.maxPrice) : null,
+        manufacturer: activeFilters.Manufacturer || activeFilters.manufacturer || null,
+        filters: {}
+      };
       
-      const res = await fetch(url);
+      // Add all other filters to the filters object
+      Object.keys(activeFilters).forEach(key => {
+        const lowerKey = key.toLowerCase();
+        if (lowerKey !== 'minprice' && lowerKey !== 'maxprice' && lowerKey !== 'manufacturer') {
+          searchFilters.filters[key] = activeFilters[key];
+        }
+      });
+      
+      const url = `${API_BASE}/${currentPartType}/search`;
+      
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(searchFilters)
+      });
       if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
       
       const payload = await res.json();
-      allParts = payload.results || payload.data || payload;
+      allParts = payload.results || payload.Results || payload.data || payload;
       filteredParts = Array.isArray(allParts) ? allParts : [];
+      
+      // Get average part from backend if available
+      window.backendAveragePart = payload.averagePart || payload.AveragePart || null;
       
       currentPage = 1;
       hidePartsMessage();
@@ -435,66 +459,6 @@
     } catch (err) {
       showPartsMessage('Error searching parts: ' + err.message);
     }
-  }
-
-  function calculateAveragePart() {
-    if (!filteredParts || filteredParts.length === 0) return null;
-    
-    // Calculate average price
-    let totalPrice = 0;
-    let priceCount = 0;
-    filteredParts.forEach(part => {
-      const priceStr = (part.Price || '').replace(/[^0-9.]/g, '');
-      const p = parseFloat(priceStr);
-      if (!isNaN(p) && p > 0) {
-        totalPrice += p;
-        priceCount++;
-      }
-    });
-    const avgPrice = priceCount > 0 ? totalPrice / priceCount : 0;
-    
-    // Count attribute occurrences
-    const attributeCounts = {};
-    const excludeFields = ['Id', 'Name', 'ImageUrl', 'ProductUrl', 'Price', 'Manufacturer', 'PartNumber', 'PartType', 'SpecsNumber'];
-    
-    filteredParts.forEach(part => {
-      Object.keys(part).forEach(key => {
-        if (!excludeFields.includes(key) && part[key] != null && part[key] !== '') {
-          if (!attributeCounts[key]) {
-            attributeCounts[key] = {};
-          }
-          const value = String(part[key]);
-          attributeCounts[key][value] = (attributeCounts[key][value] || 0) + 1;
-        }
-      });
-    });
-    
-    // Find most common value for each attribute
-    const averagePart = {
-      Name: 'Average Part',
-      Price: '$' + avgPrice.toFixed(2),
-      Manufacturer: 'Statistical Summary',
-      PartNumber: `Based on ${filteredParts.length} parts`
-    };
-    
-    Object.keys(attributeCounts).forEach(attr => {
-      const values = attributeCounts[attr];
-      let mostCommonValue = '';
-      let maxCount = 0;
-      
-      Object.keys(values).forEach(value => {
-        if (values[value] > maxCount) {
-          maxCount = values[value];
-          mostCommonValue = value;
-        }
-      });
-      
-      // Add occurrence percentage
-      const percentage = ((maxCount / filteredParts.length) * 100).toFixed(0);
-      averagePart[attr] = `${mostCommonValue} (${percentage}%)`;
-    });
-    
-    return averagePart;
   }
 
   function renderPartsPage() {
@@ -513,8 +477,8 @@
     partsListEl.innerHTML = '';
     const fragment = document.createDocumentFragment();
     
-    // Add average part at the top
-    const avgPart = calculateAveragePart();
+    // Add average part at the top from backend
+    const avgPart = window.backendAveragePart;
     if (avgPart && currentPage === 1) {
       const avgCard = document.createElement('div');
       avgCard.className = 'part-card average-part-card';

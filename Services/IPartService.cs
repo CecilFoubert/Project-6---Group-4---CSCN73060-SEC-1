@@ -17,6 +17,7 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
         public int TotalCount { get; set; }
         public IEnumerable<object> Results { get; set; } = new List<object>();
         public Dictionary<string, string> AppliedFilters { get; set; } = new Dictionary<string, string>();
+        public object? AveragePart { get; set; }
     }
 
     public class FilterOptions
