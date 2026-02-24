@@ -22,7 +22,7 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Data
             _configuration = configuration;
         }
 
-        public async Task SeedAsync()
+        public virtual async Task SeedAsync()
         {
             try
             {

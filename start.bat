@@ -17,15 +17,26 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-echo [1/3] Starting MySQL container on port 6701...
+echo [0/5] Cleaning existing containers, volumes, and images...
+docker-compose down -v --rmi all 2>nul
+echo    Done. Fresh database will be created.
+
+echo.
+echo [1/5] Starting MySQL container on port 6701...
 docker-compose up -d mysql
 
 echo.
-echo [2/3] Waiting for MySQL to be ready...
-powershell -Command "Start-Sleep -Seconds 10"
+echo [2/5] Waiting for MySQL to be ready...
+powershell -NoProfile -Command "Start-Sleep -Seconds 10"
 
 echo.
-echo [3/3] Starting ASP.NET application on port 6700...
+echo [3/5] Stopping any existing application instance...
+taskkill /IM "Project-6---Group-4---CSCN73060-SEC-1.exe" /F 2>nul
+if %errorlevel% equ 0 (echo    Stopped.) else (echo    No running instance.)
+powershell -NoProfile -Command "Start-Sleep -Seconds 2"
+
+echo.
+echo [4/5] Starting ASP.NET application on port 6700...
 echo.
 echo The application will:
 echo  - Auto-apply database migrations
