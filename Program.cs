@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
@@ -17,13 +18,21 @@ builder.Services.AddControllers()
         options.JsonSerializerOptions.WriteIndented = true; // Pretty print JSON
     });
 
-// Configure MySQL Database Connection
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
-
-// Register DbSeeder as a scoped service
-builder.Services.AddScoped<DbSeeder>();
+// Configure database (InMemory for testing, MySQL otherwise)
+var useInMemory = builder.Configuration.GetValue<bool>("UseInMemoryDatabase");
+if (useInMemory)
+{
+    builder.Services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseInMemoryDatabase("TestDb"));
+    builder.Services.AddScoped<DbSeeder, TestDbSeeder>();
+}
+else
+{
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    builder.Services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+    builder.Services.AddScoped<DbSeeder>();
+}
 
 // Register Part Service
 builder.Services.AddScoped<IPartService, PartService>();
@@ -54,10 +63,18 @@ using (var scope = app.Services.CreateScope())
         var context = services.GetRequiredService<ApplicationDbContext>();
         var logger = services.GetRequiredService<ILogger<Program>>();
         
-        // Apply migrations automatically
-        logger.LogInformation("Applying database migrations...");
-        await context.Database.MigrateAsync();
-        logger.LogInformation("Database migrations applied successfully.");
+        // Apply migrations (or EnsureCreated for InMemory)
+        if (useInMemory)
+        {
+            logger.LogInformation("Ensuring test database is created...");
+            await context.Database.EnsureCreatedAsync();
+        }
+        else
+        {
+            logger.LogInformation("Applying database migrations...");
+            await context.Database.MigrateAsync();
+        }
+        logger.LogInformation("Database ready.");
         
         // Seed the database
         var seeder = services.GetRequiredService<DbSeeder>();
@@ -114,6 +131,7 @@ if (Directory.Exists(clientRoot))
     app.MapWhen(context =>
         !context.Request.Path.StartsWithSegments("/api") &&
         !context.Request.Path.StartsWithSegments("/swagger") &&
+        !context.Request.Path.StartsWithSegments("/options") &&
         string.IsNullOrEmpty(Path.GetExtension(context.Request.Path.Value ?? string.Empty)),
         subApp =>
         {
@@ -132,6 +150,24 @@ app.UseCors("AllowAll");
 
 app.UseAuthorization();
 
+// OPTIONS "/options" - Returns list of all available routes in JSON format
+app.MapMethods("/options", new[] { "OPTIONS" }, (IEnumerable<EndpointDataSource> endpointSources) =>
+{
+    var routes = endpointSources
+        .SelectMany(es => es.Endpoints)
+        .OfType<RouteEndpoint>()
+        .Select(e =>
+        {
+            var methods = e.Metadata.OfType<HttpMethodMetadata>().FirstOrDefault()?.HttpMethods ?? [];
+            var path = "/" + (e.RoutePattern.RawText?.TrimStart('/') ?? "");
+            return new { path, methods = methods.ToList() };
+        })
+        .Where(r => !string.IsNullOrEmpty(r.path))
+        .OrderBy(r => r.path)
+        .ToList();
+    return Results.Json(new { routes });
+});
+
 // Map API Controllers
 app.MapControllers();
 
@@ -141,3 +177,6 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+// Expose Program for WebApplicationFactory in tests
+public partial class Program { }

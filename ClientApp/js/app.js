@@ -272,7 +272,7 @@
     saveBuildModal.style.display = 'none';
   }
 
-  function saveCurrentBuild() {
+  async function saveCurrentBuild() {
     const name = buildNameInput.value.trim();
     if (!name) {
       alert('Please enter a build name');
@@ -281,31 +281,104 @@
 
     const build = getBuild();
     const builds = getSavedBuilds();
-    
-    const newBuild = {
-      id: currentBuildId || Date.now().toString(),
+    const apiBase = window.location.origin + '/api/Builds';
+
+    // Build payload for API
+    const partsForApi = {};
+    Object.keys(build).forEach(pt => {
+      if (build[pt] && build[pt].Id) {
+        partsForApi[pt] = { Id: build[pt].Id };
+      }
+    });
+
+    const payload = {
       name: name,
       description: buildDescriptionInput.value.trim(),
-      parts: build,
-      createdAt: currentBuildId ? builds.find(b => b.id === currentBuildId)?.createdAt : new Date().toISOString(),
-      updatedAt: new Date().toISOString()
+      parts: partsForApi
     };
 
-    if (currentBuildId) {
-      // Update existing
-      const index = builds.findIndex(b => b.id === currentBuildId);
-      if (index !== -1) {
-        builds[index] = newBuild;
-      }
-    } else {
-      // Add new
-      builds.push(newBuild);
-    }
+    try {
+      let savedBuild;
+      const existingByName = builds.find(b => b.name && b.name.toLowerCase() === name.toLowerCase());
 
-    saveBuildsToStorage(builds);
-    currentBuildId = newBuild.id;
-    closeSaveBuildModal();
-    alert('Build saved successfully!');
+      if (existingByName && existingByName.backendId) {
+        // Same name as old build - send PATCH
+        const res = await fetch(`${apiBase}/${existingByName.backendId}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (!res.ok) throw new Error(res.statusText);
+        savedBuild = await res.json();
+      } else {
+        // Check if backend has a build with this name
+        const checkRes = await fetch(`${apiBase}/by-name/${encodeURIComponent(name)}`);
+        if (checkRes.ok) {
+          const existing = await checkRes.json();
+          // Same name exists on backend - send PATCH
+          const patchRes = await fetch(`${apiBase}/${existing.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          if (!patchRes.ok) throw new Error(patchRes.statusText);
+          savedBuild = await patchRes.json();
+        } else {
+          // New build - send POST
+          const postRes = await fetch(apiBase, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          if (!postRes.ok) throw new Error(postRes.statusText);
+          savedBuild = await postRes.json();
+        }
+      }
+
+      // Convert API response to localStorage format and sync
+      const newBuild = {
+        id: currentBuildId || String(savedBuild.id),
+        backendId: savedBuild.id,
+        name: savedBuild.name,
+        description: savedBuild.description || '',
+        parts: savedBuild.parts || build,
+        createdAt: savedBuild.createdAt || new Date().toISOString(),
+        updatedAt: savedBuild.updatedAt || new Date().toISOString()
+      };
+
+      const index = builds.findIndex(b => b.id === currentBuildId || b.backendId === savedBuild.id);
+      if (index >= 0) {
+        builds[index] = newBuild;
+      } else {
+        builds.push(newBuild);
+      }
+
+      saveBuildsToStorage(builds);
+      currentBuildId = newBuild.id;
+      closeSaveBuildModal();
+      alert('Build saved successfully!');
+    } catch (err) {
+      console.error(err);
+      // Fallback to localStorage-only when API is unavailable
+      const newBuild = {
+        id: currentBuildId || Date.now().toString(),
+        name: name,
+        description: buildDescriptionInput.value.trim(),
+        parts: build,
+        createdAt: currentBuildId ? builds.find(b => b.id === currentBuildId)?.createdAt : new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+      };
+      const existingIdx = builds.findIndex(b => b.id === currentBuildId || (b.name && b.name.toLowerCase() === name.toLowerCase()));
+      if (existingIdx >= 0) {
+        builds[existingIdx] = newBuild;
+      } else {
+        builds.push(newBuild);
+      }
+      saveBuildsToStorage(builds);
+      currentBuildId = newBuild.id;
+      closeSaveBuildModal();
+      alert('Build saved locally (API unavailable).');
+    }
   }
 
   // ===== Builds View =====
