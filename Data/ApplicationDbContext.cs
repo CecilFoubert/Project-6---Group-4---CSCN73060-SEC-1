@@ -23,6 +23,9 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Data
         // Builds DbSet
         public DbSet<Build> Builds { get; set; }
 
+        // Average part cache for search results
+        public DbSet<PartAverageCache> PartAverageCaches { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -37,6 +40,10 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Data
             modelBuilder.Entity<PowerSupply>().ToTable("PowerSupplies");
             modelBuilder.Entity<CpuCooler>().ToTable("CpuCoolers");
             modelBuilder.Entity<Build>().ToTable("Builds");
+            modelBuilder.Entity<PartAverageCache>().ToTable("PartAverageCaches");
+            modelBuilder.Entity<PartAverageCache>()
+                .HasIndex(c => new { c.PartType, c.FilterKey })
+                .IsUnique();
 
             // Configure Build relationships
             modelBuilder.Entity<Build>()
