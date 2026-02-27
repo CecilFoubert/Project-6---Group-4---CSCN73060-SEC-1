@@ -1,12 +1,24 @@
+/*!
+ * @file Models/CpuCooler.cs
+ * @brief CPU cooler domain model.
+ * @ingroup Models
+ */
+
 using System.ComponentModel.DataAnnotations;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Models
 {
+    /// <summary>
+    /// CPU cooler model (air or liquid) with compatibility and performance fields.
+    /// </summary>
     public class CpuCooler
     {
         [Key]
         public int Id { get; set; }
         
+        /// <summary>
+        /// Display name of the cooler.
+        /// </summary>
         [Required]
         [MaxLength(500)]
         public string Name { get; set; } = string.Empty;

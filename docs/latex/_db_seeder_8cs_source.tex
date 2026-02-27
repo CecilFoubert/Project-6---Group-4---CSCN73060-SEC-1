@@ -1,0 +1,127 @@
+\doxysection{Db\+Seeder.\+cs}
+\hypertarget{_db_seeder_8cs_source}{}\label{_db_seeder_8cs_source}\index{Data/DbSeeder.cs@{Data/DbSeeder.cs}}
+\doxymbox{\hyperlink{_db_seeder_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }MySqlConnector;}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00010}00010\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Data}}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00016}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }DbSeeder}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context}{ApplicationDbContext}}\ \_context;}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IWebHostEnvironment\ \_env;}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ ILogger<DbSeeder>\ \_logger;}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IConfiguration\ \_configuration;}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DbSeeder(}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context}{ApplicationDbContext}}\ context,\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ IWebHostEnvironment\ env,\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ ILogger<DbSeeder>\ logger,}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ IConfiguration\ configuration)}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \_context\ =\ context;}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \_env\ =\ env;}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \_logger\ =\ logger;}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \_configuration\ =\ configuration;}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00039}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder_aba2da0481779f18e6e32714ff66b8b22}{00039}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ async\ Task\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder_aba2da0481779f18e6e32714ff66b8b22}{SeedAsync}}()}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ data\ already\ exists}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_context.Cpus.Any())}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogInformation(\textcolor{stringliteral}{"{}Database\ already\ seeded.\ Skipping\ seed\ process."{}});}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogInformation(\textcolor{stringliteral}{"{}Starting\ database\ seeding\ from\ SQL\ file..."{}});}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ sqlFilePath\ =\ Path.Combine(\_env.ContentRootPath,\ \textcolor{stringliteral}{"{}Data"{}},\ \textcolor{stringliteral}{"{}SeedData"{}},\ \textcolor{stringliteral}{"{}pcpartpicker\_seed\_data.sql"{}});}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!File.Exists(sqlFilePath))}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogError(\$\textcolor{stringliteral}{"{}SQL\ seed\ file\ not\ found:\ \{sqlFilePath\}"{}});}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ the\ SQL\ file}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ sqlContent\ =\ await\ File.ReadAllTextAsync(sqlFilePath);}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Split\ into\ individual\ statements\ (separated\ by\ semicolons)}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ statements\ =\ sqlContent}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Split(\textcolor{keyword}{new}[]\ \{\ \textcolor{stringliteral}{"{};\(\backslash\)r\(\backslash\)n"{}},\ \textcolor{stringliteral}{"{};\(\backslash\)n"{}}\ \},\ StringSplitOptions.RemoveEmptyEntries)}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Where(s\ =>\ !\textcolor{keywordtype}{string}.IsNullOrWhiteSpace(s)\ \&\&\ !s.TrimStart().StartsWith(\textcolor{stringliteral}{"{}-\/-\/"{}}))}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToList();}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogInformation(\$\textcolor{stringliteral}{"{}Executing\ \{statements.Count\}\ SQL\ statements..."{}});}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ connectionString\ =\ \_configuration.GetConnectionString(\textcolor{stringliteral}{"{}DefaultConnection"{}});}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ (var\ connection\ =\ \textcolor{keyword}{new}\ MySqlConnection(connectionString))}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ connection.OpenAsync();}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ batchSize\ =\ 100;}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ totalBatches\ =\ (int)Math.Ceiling(statements.Count\ /\ (\textcolor{keywordtype}{double})batchSize);}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ batch\ =\ 0;\ batch\ <\ totalBatches;\ batch++)}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ batchStatements\ =\ statements}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Skip(batch\ *\ batchSize)}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Take(batchSize)}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToList();}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ (var\ transaction\ =\ await\ connection.BeginTransactionAsync())}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ statement\ \textcolor{keywordflow}{in}\ batchStatements)}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ trimmedStatement\ =\ statement.Trim();}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(trimmedStatement))}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ (var\ command\ =\ \textcolor{keyword}{new}\ MySqlCommand(trimmedStatement,\ connection,\ transaction))}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.CommandTimeout\ =\ 300;\ \textcolor{comment}{//\ 5\ minutes\ timeout}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ command.ExecuteNonQueryAsync();}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ transaction.CommitAsync();}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogInformation(\$\textcolor{stringliteral}{"{}Batch\ \{batch\ +\ 1\}/\{totalBatches\}\ completed."{}});}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ transaction.RollbackAsync();}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogError(ex,\ \$\textcolor{stringliteral}{"{}Error\ executing\ batch\ \{batch\ +\ 1\}"{}});}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogInformation(\textcolor{stringliteral}{"{}Database\ seeding\ completed\ successfully!"{}});}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verify\ the\ data\ was\ inserted}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ cpuCount\ =\ await\ \_context.Cpus.CountAsync();}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ gpuCount\ =\ await\ \_context.Gpus.CountAsync();}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ memoryCount\ =\ await\ \_context.Memories.CountAsync();}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogInformation(\$\textcolor{stringliteral}{"{}Seeded\ records\ -\/\ CPUs:\ \{cpuCount\},\ GPUs:\ \{gpuCount\},\ Memory:\ \{memoryCount\}"{}});}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogError(ex,\ \textcolor{stringliteral}{"{}An\ error\ occurred\ while\ seeding\ the\ database."{}});}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00132}00132\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_db_seeder_8cs_source_l00133}00133\ \}}
+
+\end{DoxyCode}

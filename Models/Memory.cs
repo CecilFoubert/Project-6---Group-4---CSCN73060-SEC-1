@@ -1,12 +1,24 @@
+/*!
+ * @file Models/Memory.cs
+ * @brief Memory (RAM) domain model.
+ * @ingroup Models
+ */
+
 using System.ComponentModel.DataAnnotations;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Models
 {
+    /// <summary>
+    /// Memory (RAM) product model used by the API and UI.
+    /// </summary>
     public class Memory
     {
         [Key]
         public int Id { get; set; }
         
+        /// <summary>
+        /// Display name of the memory product.
+        /// </summary>
         [Required]
         [MaxLength(500)]
         public string Name { get; set; } = string.Empty;
@@ -17,6 +29,9 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Models
         [MaxLength(500)]
         public string? ProductUrl { get; set; }
         
+        /// <summary>
+        /// Price displayed as formatted string (e.g. "$89.99").
+        /// </summary>
         [MaxLength(100)]
         public string? Price { get; set; }
         
@@ -26,6 +41,9 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Models
         [MaxLength(500)]
         public string? PartNumber { get; set; }
         
+        /// <summary>
+        /// Speed description (e.g. "DDR5-5200").
+        /// </summary>
         [MaxLength(200)]
         public string? Speed { get; set; }
         

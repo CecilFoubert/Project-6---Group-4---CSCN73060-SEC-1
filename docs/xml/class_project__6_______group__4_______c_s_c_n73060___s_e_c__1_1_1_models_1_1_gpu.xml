@@ -1,0 +1,470 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a7ee51c744aa6e607d1d7e16a88291211" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="17" column="20" bodyfile="Models/Gpu.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a44851b18514cb26350e20fef79495eb0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Name</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+<para>Display name of the GPU. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="24" column="23" bodyfile="Models/Gpu.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a0db74a354819444540505240afc44de3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.ImageUrl</definition>
+        <argsstring></argsstring>
+        <name>ImageUrl</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.ImageUrl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="27" column="23" bodyfile="Models/Gpu.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1ace0b7a42ffc7ec550069f3e956b4bbc9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.ProductUrl</definition>
+        <argsstring></argsstring>
+        <name>ProductUrl</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.ProductUrl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="30" column="23" bodyfile="Models/Gpu.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a9b01cbd7bc97871ef6c4a2d2360a502c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Price</definition>
+        <argsstring></argsstring>
+        <name>Price</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Price</qualifiedname>
+        <briefdescription>
+<para>Price as a string (e.g. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;$399.00&quot;). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="36" column="23" bodyfile="Models/Gpu.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a2e7aaaf81ccead3470cd8dd77b08ce26" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Manufacturer</definition>
+        <argsstring></argsstring>
+        <name>Manufacturer</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Manufacturer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="39" column="23" bodyfile="Models/Gpu.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1adbc3f66f2d437ff43f3d0e60d4048f51" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.PartNumber</definition>
+        <argsstring></argsstring>
+        <name>PartNumber</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.PartNumber</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="42" column="23" bodyfile="Models/Gpu.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a1162dd61f2598175459bbd103a0a74f8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Chipset</definition>
+        <argsstring></argsstring>
+        <name>Chipset</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Chipset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="45" column="23" bodyfile="Models/Gpu.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a321f58d8eb4f0081ba172e3316e2b07c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Memory</definition>
+        <argsstring></argsstring>
+        <name>Memory</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Memory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="48" column="23" bodyfile="Models/Gpu.cs" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1ac01a52a2d1ea7204515a7401fb3bff0b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.MemoryType</definition>
+        <argsstring></argsstring>
+        <name>MemoryType</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.MemoryType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="51" column="23" bodyfile="Models/Gpu.cs" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a2e8906173aaaae50a9b67b8a52714f05" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.CoreClock</definition>
+        <argsstring></argsstring>
+        <name>CoreClock</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.CoreClock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="54" column="23" bodyfile="Models/Gpu.cs" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a05351620ef602a6f133651998e35f1a5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.BoostClock</definition>
+        <argsstring></argsstring>
+        <name>BoostClock</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.BoostClock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="57" column="23" bodyfile="Models/Gpu.cs" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a6ed074021d55201be2d01bdb2fd80935" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.EffectiveMemoryClock</definition>
+        <argsstring></argsstring>
+        <name>EffectiveMemoryClock</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.EffectiveMemoryClock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="60" column="23" bodyfile="Models/Gpu.cs" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a0619964d655ddcdb9e750d3809a01320" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Interface</definition>
+        <argsstring></argsstring>
+        <name>Interface</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Interface</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="63" column="23" bodyfile="Models/Gpu.cs" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a209d64a37e8d3bb62e5f0cac2f75444e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Color</definition>
+        <argsstring></argsstring>
+        <name>Color</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="66" column="23" bodyfile="Models/Gpu.cs" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a013f4ebcc5d558db81dcdc8dab244da6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.FrameSync</definition>
+        <argsstring></argsstring>
+        <name>FrameSync</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.FrameSync</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="69" column="23" bodyfile="Models/Gpu.cs" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a29e5d35a62c278a15b72f8ee90e66f5a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Length</definition>
+        <argsstring></argsstring>
+        <name>Length</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="72" column="23" bodyfile="Models/Gpu.cs" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a1178e75009f0ee742c7731380d9ae5f0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.TDP</definition>
+        <argsstring></argsstring>
+        <name>TDP</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.TDP</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="75" column="23" bodyfile="Models/Gpu.cs" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1aad71e205f3ce3cc2f1da2b1b1935176d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.CaseExpansionSlotWidth</definition>
+        <argsstring></argsstring>
+        <name>CaseExpansionSlotWidth</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.CaseExpansionSlotWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="78" column="23" bodyfile="Models/Gpu.cs" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a7073ffceadaf0c53504a4e0b5c136bdb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.TotalSlotWidth</definition>
+        <argsstring></argsstring>
+        <name>TotalSlotWidth</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.TotalSlotWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="81" column="23" bodyfile="Models/Gpu.cs" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1acb70c8b093bb69e36e6eac89d560fd88" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Cooling</definition>
+        <argsstring></argsstring>
+        <name>Cooling</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.Cooling</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="84" column="23" bodyfile="Models/Gpu.cs" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1ac1b72ddf85a4b8baf9f019271df0787a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.ExternalPower</definition>
+        <argsstring></argsstring>
+        <name>ExternalPower</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.ExternalPower</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="87" column="23" bodyfile="Models/Gpu.cs" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a255bead19bbc8ad884c6717fdd1eb4be" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.HDMIOutputs</definition>
+        <argsstring></argsstring>
+        <name>HDMIOutputs</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.HDMIOutputs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="90" column="23" bodyfile="Models/Gpu.cs" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1af7e442bda719d1a8d4dbd9ad467a0b02" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.DisplayPortOutputs</definition>
+        <argsstring></argsstring>
+        <name>DisplayPortOutputs</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.DisplayPortOutputs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="93" column="23" bodyfile="Models/Gpu.cs" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a1f261334b5a8898cb9d03fd47d410f15" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.DVIDDualLinkOutputs</definition>
+        <argsstring></argsstring>
+        <name>DVIDDualLinkOutputs</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.DVIDDualLinkOutputs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="96" column="23" bodyfile="Models/Gpu.cs" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a2b6263c3c258845ad02cd2415ee5863d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.HDMI21aOutputs</definition>
+        <argsstring></argsstring>
+        <name>HDMI21aOutputs</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.HDMI21aOutputs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="99" column="23" bodyfile="Models/Gpu.cs" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a9cc457b417255149d9c44420e017fd93" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.DisplayPort14Outputs</definition>
+        <argsstring></argsstring>
+        <name>DisplayPort14Outputs</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.DisplayPort14Outputs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="102" column="23" bodyfile="Models/Gpu.cs" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a25bb7fa1c543994dd2254c1bacb694ba" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.DisplayPort14aOutputs</definition>
+        <argsstring></argsstring>
+        <name>DisplayPort14aOutputs</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.DisplayPort14aOutputs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="105" column="23" bodyfile="Models/Gpu.cs" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1aeb953c5f06156d3b899b364c09e1bd38" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.DisplayPort21Outputs</definition>
+        <argsstring></argsstring>
+        <name>DisplayPort21Outputs</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.DisplayPort21Outputs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="108" column="23" bodyfile="Models/Gpu.cs" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a1baca5d71b5f05d2985a8f4153fa862f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.SLICrossFire</definition>
+        <argsstring></argsstring>
+        <name>SLICrossFire</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Gpu.SLICrossFire</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Gpu.cs" line="111" column="23" bodyfile="Models/Gpu.cs" bodystart="111" bodyend="111"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>GPU product model with display and specification fields used by the API and UI. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Models/Gpu.cs" line="14" column="11" bodyfile="Models/Gpu.cs" bodystart="15" bodyend="112"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a05351620ef602a6f133651998e35f1a5" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>BoostClock</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1aad71e205f3ce3cc2f1da2b1b1935176d" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>CaseExpansionSlotWidth</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a1162dd61f2598175459bbd103a0a74f8" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>Chipset</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a209d64a37e8d3bb62e5f0cac2f75444e" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>Color</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1acb70c8b093bb69e36e6eac89d560fd88" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>Cooling</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a2e8906173aaaae50a9b67b8a52714f05" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>CoreClock</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a25bb7fa1c543994dd2254c1bacb694ba" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>DisplayPort14aOutputs</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a9cc457b417255149d9c44420e017fd93" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>DisplayPort14Outputs</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1aeb953c5f06156d3b899b364c09e1bd38" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>DisplayPort21Outputs</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1af7e442bda719d1a8d4dbd9ad467a0b02" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>DisplayPortOutputs</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a1f261334b5a8898cb9d03fd47d410f15" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>DVIDDualLinkOutputs</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a6ed074021d55201be2d01bdb2fd80935" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>EffectiveMemoryClock</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1ac1b72ddf85a4b8baf9f019271df0787a" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>ExternalPower</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a013f4ebcc5d558db81dcdc8dab244da6" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>FrameSync</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a2b6263c3c258845ad02cd2415ee5863d" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>HDMI21aOutputs</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a255bead19bbc8ad884c6717fdd1eb4be" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>HDMIOutputs</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a7ee51c744aa6e607d1d7e16a88291211" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>Id</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a0db74a354819444540505240afc44de3" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>ImageUrl</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a0619964d655ddcdb9e750d3809a01320" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>Interface</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a29e5d35a62c278a15b72f8ee90e66f5a" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>Length</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a2e7aaaf81ccead3470cd8dd77b08ce26" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>Manufacturer</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a321f58d8eb4f0081ba172e3316e2b07c" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>Memory</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1ac01a52a2d1ea7204515a7401fb3bff0b" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>MemoryType</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a44851b18514cb26350e20fef79495eb0" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>Name</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1adbc3f66f2d437ff43f3d0e60d4048f51" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>PartNumber</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a9b01cbd7bc97871ef6c4a2d2360a502c" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>Price</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1ace0b7a42ffc7ec550069f3e956b4bbc9" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>ProductUrl</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a1baca5d71b5f05d2985a8f4153fa862f" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>SLICrossFire</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a1178e75009f0ee742c7731380d9ae5f0" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>TDP</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a7073ffceadaf0c53504a4e0b5c136bdb" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</scope><name>TotalSlotWidth</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

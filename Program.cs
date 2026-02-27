@@ -1,3 +1,19 @@
+/*!
+ * @file Program.cs
+ * @brief Application startup and host configuration for PC Part Picker.
+ * @ingroup Data
+ *
+ * High-level responsibilities:
+ * - Configure services (DbContext, IPartService, CORS, Swagger)
+ * - Configure JSON serialization options for API controllers
+ * - Apply EF Core migrations and run <DbSeeder> at startup
+ * - Serve SPA ClientApp static files and provide API endpoints
+ *
+ * This file is the entry point for the web application and is important to
+ * document so developers know where migrations, seeding, CORS and static file
+ * hosting are configured.
+ */
+
 using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;

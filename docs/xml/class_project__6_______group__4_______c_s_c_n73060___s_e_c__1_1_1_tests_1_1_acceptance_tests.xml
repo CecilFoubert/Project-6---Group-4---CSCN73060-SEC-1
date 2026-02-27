@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Tests::AcceptanceTests</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IClassFixture</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1a2b63f115a639b5a289eebf4568023b53" prot="private" static="no" mutable="no">
+        <type>readonly HttpClient</type>
+        <definition>readonly HttpClient Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests._client</definition>
+        <argsstring></argsstring>
+        <name>_client</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests._client</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" line="14" column="33" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1ad30015d86a4d6b1445fda680ea82398c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests.AcceptanceTests</definition>
+        <argsstring>(CustomWebApplicationFactory factory)</argsstring>
+        <name>AcceptanceTests</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests.AcceptanceTests</qualifiedname>
+        <param>
+          <type><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_custom_web_application_factory" kindref="compound">CustomWebApplicationFactory</ref></type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" line="16" column="12" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1ab7246707b40c6700143421d309644851" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests.User_Can_BrowseCpus_And_CreateBuild_WithSelectedCpu</definition>
+        <argsstring>()</argsstring>
+        <name>User_Can_BrowseCpus_And_CreateBuild_WithSelectedCpu</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests.User_Can_BrowseCpus_And_CreateBuild_WithSelectedCpu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" line="22" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" bodystart="22" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1ac62729bf5ecc18347c34f9ff42b45cc4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests.User_Can_SearchCpus_ByPriceAndManufacturer_ThenCreateBuild</definition>
+        <argsstring>()</argsstring>
+        <name>User_Can_SearchCpus_ByPriceAndManufacturer_ThenCreateBuild</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests.User_Can_SearchCpus_ByPriceAndManufacturer_ThenCreateBuild</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" line="55" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" bodystart="55" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1a6958530550833cf8ba9497d1d2827867" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests.User_Can_CreateBuild_SaveWithName_AndRetrieveLater</definition>
+        <argsstring>()</argsstring>
+        <name>User_Can_CreateBuild_SaveWithName_AndRetrieveLater</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests.User_Can_CreateBuild_SaveWithName_AndRetrieveLater</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" line="98" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" bodystart="98" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1a22344364c5d7ffa7c151ae450b54cee0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests.User_Can_UpdateExistingBuild_WhenSavingWithSameName</definition>
+        <argsstring>()</argsstring>
+        <name>User_Can_UpdateExistingBuild_WhenSavingWithSameName</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests.User_Can_UpdateExistingBuild_WhenSavingWithSameName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" line="118" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" bodystart="118" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1a9cec86343d51512faaa960110393c7d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests.User_Can_GetFilterOptions_UseThemToSearch_AndViewResults</definition>
+        <argsstring>()</argsstring>
+        <name>User_Can_GetFilterOptions_UseThemToSearch_AndViewResults</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests.User_Can_GetFilterOptions_UseThemToSearch_AndViewResults</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" line="147" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" bodystart="147" bodyend="175"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Acceptance tests verifying end-to-end user workflows and business scenarios. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IClassFixture&lt; CustomWebApplicationFactory &gt;</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IClassFixture&lt; CustomWebApplicationFactory &gt;</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Tests.AcceptanceTests</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" line="12" column="7" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" bodystart="13" bodyend="176"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1a2b63f115a639b5a289eebf4568023b53" prot="private" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::AcceptanceTests</scope><name>_client</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1ad30015d86a4d6b1445fda680ea82398c" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::AcceptanceTests</scope><name>AcceptanceTests</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1ab7246707b40c6700143421d309644851" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::AcceptanceTests</scope><name>User_Can_BrowseCpus_And_CreateBuild_WithSelectedCpu</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1a6958530550833cf8ba9497d1d2827867" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::AcceptanceTests</scope><name>User_Can_CreateBuild_SaveWithName_AndRetrieveLater</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1a9cec86343d51512faaa960110393c7d6" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::AcceptanceTests</scope><name>User_Can_GetFilterOptions_UseThemToSearch_AndViewResults</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1ac62729bf5ecc18347c34f9ff42b45cc4" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::AcceptanceTests</scope><name>User_Can_SearchCpus_ByPriceAndManufacturer_ThenCreateBuild</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1a22344364c5d7ffa7c151ae450b54cee0" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::AcceptanceTests</scope><name>User_Can_UpdateExistingBuild_WhenSavingWithSameName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

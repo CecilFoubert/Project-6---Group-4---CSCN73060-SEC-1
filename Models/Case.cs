@@ -1,12 +1,24 @@
+/*!
+ * @file Models/Case.cs
+ * @brief Case domain model.
+ * @ingroup Models
+ */
+
 using System.ComponentModel.DataAnnotations;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Models
 {
+    /// <summary>
+    /// PC case model containing dimensions and compatibility attributes.
+    /// </summary>
     public class Case
     {
         [Key]
         public int Id { get; set; }
         
+        /// <summary>
+        /// Display name of the case.
+        /// </summary>
         [Required]
         [MaxLength(500)]
         public string Name { get; set; } = string.Empty;

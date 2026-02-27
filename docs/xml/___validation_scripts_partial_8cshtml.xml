@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="___validation_scripts_partial_8cshtml" kind="file" language="C#">
+    <compoundname>_ValidationScriptsPartial.cshtml</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;script<sp/>src=</highlight><highlight class="stringliteral">&quot;~/lib/jquery-validation/dist/jquery.validate.min.js&quot;</highlight><highlight class="normal">&gt;&lt;/script&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">&lt;script<sp/>src=</highlight><highlight class="stringliteral">&quot;~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js&quot;</highlight><highlight class="normal">&gt;&lt;/script&gt;</highlight></codeline>
+    </programlisting>
+    <location file="Views/Shared/_ValidationScriptsPartial.cshtml"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Controllers::PartsController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ControllerBase</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1ac07494c3d23e8d9fb2389b86002c4f5e" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service" kindref="compound">IPartService</ref></type>
+        <definition>readonly IPartService Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController._partService</definition>
+        <argsstring></argsstring>
+        <name>_partService</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController._partService</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/PartsController.cs" line="22" column="39" bodyfile="Controllers/PartsController.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1acab2ddac25b49a5710c89cb3f706ff5e" prot="private" static="no" mutable="no">
+        <type>readonly ILogger&lt; <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a27d72825c60f1d9f2fe7f3f1005df319" kindref="member">PartsController</ref> &gt;</type>
+        <definition>readonly ILogger&lt;PartsController&gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController._logger</definition>
+        <argsstring></argsstring>
+        <name>_logger</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController._logger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/PartsController.cs" line="23" column="34" bodyfile="Controllers/PartsController.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a27d72825c60f1d9f2fe7f3f1005df319" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.PartsController</definition>
+        <argsstring>(IPartService partService, ILogger&lt; PartsController &gt; logger)</argsstring>
+        <name>PartsController</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.PartsController</qualifiedname>
+        <param>
+          <type><ref refid="interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service" kindref="compound">IPartService</ref></type>
+          <declname>partService</declname>
+        </param>
+        <param>
+          <type>ILogger&lt; PartsController &gt;</type>
+          <declname>logger</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new instance of <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller" kindref="compound">PartsController</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>partService</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service used to perform part operations.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>logger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Logger for diagnostics.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/PartsController.cs" line="30" column="16" bodyfile="Controllers/PartsController.cs" bodystart="30" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a488b5b2a2f96b6b13e89ba9b8e5cab90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.GetAll</definition>
+        <argsstring>(string partType)</argsstring>
+        <name>GetAll</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.GetAll</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>partType</declname>
+        </param>
+        <briefdescription>
+<para>Get all parts of a specific type GET /api/parts/{partType} Examples: /api/parts/cpu, /api/parts/gpu, /api/parts/memory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/PartsController.cs" line="42" column="27" bodyfile="Controllers/PartsController.cs" bodystart="42" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a9bf6a94727d66ff5e7b4310831ebacd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.GetById</definition>
+        <argsstring>(string partType, int id)</argsstring>
+        <name>GetById</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.GetById</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>partType</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get a specific part by ID GET /api/parts/{partType}/{id} Example: /api/parts/cpu/5. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/PartsController.cs" line="71" column="27" bodyfile="Controllers/PartsController.cs" bodystart="71" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1ab9ca2c74fa2c10e9d059367c759e3186" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.Create</definition>
+        <argsstring>(string partType, [FromBody] Dictionary&lt; string, object &gt; data)</argsstring>
+        <name>Create</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.Create</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>partType</declname>
+        </param>
+        <param>
+          <attributes>[FromBody]</attributes>
+          <type>Dictionary&lt; string, object &gt;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Create a new part POST /api/parts/{partType} Body: { &quot;name&quot;: &quot;...&quot;, &quot;price&quot;: &quot;...&quot;, &quot;manufacturer&quot;: &quot;...&quot; }. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/PartsController.cs" line="98" column="27" bodyfile="Controllers/PartsController.cs" bodystart="98" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a7157a0b3eff2d1df44a9b383ca5bfeeb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.Update</definition>
+        <argsstring>(string partType, int id, [FromBody] Dictionary&lt; string, object &gt; data)</argsstring>
+        <name>Update</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.Update</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>partType</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <attributes>[FromBody]</attributes>
+          <type>Dictionary&lt; string, object &gt;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Update an existing part PUT /api/parts/{partType}/{id} Body: { &quot;name&quot;: &quot;...&quot;, &quot;price&quot;: &quot;...&quot; }. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/PartsController.cs" line="126" column="27" bodyfile="Controllers/PartsController.cs" bodystart="126" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a5299734d0fb246f470b663f82e8933d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.Delete</definition>
+        <argsstring>(string partType, int id)</argsstring>
+        <name>Delete</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.Delete</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>partType</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Delete a part DELETE /api/parts/{partType}/{id}. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/PartsController.cs" line="152" column="27" bodyfile="Controllers/PartsController.cs" bodystart="152" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a03b43ef0be415e5e2b58ddfa4a95bd39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IActionResult</type>
+        <definition>IActionResult Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.GetSupportedTypes</definition>
+        <argsstring>()</argsstring>
+        <name>GetSupportedTypes</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.GetSupportedTypes</qualifiedname>
+        <briefdescription>
+<para>Get supported part types GET /api/parts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/PartsController.cs" line="178" column="30" bodyfile="Controllers/PartsController.cs" bodystart="178" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a7bbf252ddc876b8266ed8a2b84a99263" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.GetFilters</definition>
+        <argsstring>(string partType)</argsstring>
+        <name>GetFilters</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.GetFilters</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>partType</declname>
+        </param>
+        <briefdescription>
+<para>Get all available filter options for a part type GET /api/parts/{partType}/filters Returns all searchable attributes with their distinct values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/PartsController.cs" line="197" column="27" bodyfile="Controllers/PartsController.cs" bodystart="197" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a3473eb23cae0fb324ea8bdff20848d2d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.Search</definition>
+        <argsstring>(string partType, [FromBody] SearchFilters? searchFilters)</argsstring>
+        <name>Search</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController.Search</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>partType</declname>
+        </param>
+        <param>
+          <attributes>[FromBody]</attributes>
+          <type><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters" kindref="compound">SearchFilters</ref>?</type>
+          <declname>searchFilters</declname>
+        </param>
+        <briefdescription>
+<para>Dynamic search endpoint for parts with flexible filtering (JSON body) POST /api/parts/{partType}/search. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/PartsController.cs" line="226" column="27" bodyfile="Controllers/PartsController.cs" bodystart="226" bodyend="274"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>API controller that exposes endpoints for CRUD and search over PC part types (cpu, gpu, memory, motherboard, case, storage, powersupply, cpucooler). </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Delegates data access and filtering logic to <ref refid="interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service" kindref="compound">IPartService</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ControllerBase</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ControllerBase</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Controllers/PartsController.cs" line="20" column="11" bodyfile="Controllers/PartsController.cs" bodystart="21" bodyend="275"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1acab2ddac25b49a5710c89cb3f706ff5e" prot="private" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::PartsController</scope><name>_logger</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1ac07494c3d23e8d9fb2389b86002c4f5e" prot="private" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::PartsController</scope><name>_partService</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1ab9ca2c74fa2c10e9d059367c759e3186" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::PartsController</scope><name>Create</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a5299734d0fb246f470b663f82e8933d0" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::PartsController</scope><name>Delete</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a488b5b2a2f96b6b13e89ba9b8e5cab90" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::PartsController</scope><name>GetAll</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a9bf6a94727d66ff5e7b4310831ebacd4" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::PartsController</scope><name>GetById</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a7bbf252ddc876b8266ed8a2b84a99263" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::PartsController</scope><name>GetFilters</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a03b43ef0be415e5e2b58ddfa4a95bd39" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::PartsController</scope><name>GetSupportedTypes</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a27d72825c60f1d9f2fe7f3f1005df319" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::PartsController</scope><name>PartsController</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a3473eb23cae0fb324ea8bdff20848d2d" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::PartsController</scope><name>Search</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a7157a0b3eff2d1df44a9b383ca5bfeeb" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::PartsController</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

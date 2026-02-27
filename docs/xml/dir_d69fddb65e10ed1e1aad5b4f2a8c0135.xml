@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dir_d69fddb65e10ed1e1aad5b4f2a8c0135" kind="dir">
+    <compoundname>Services</compoundname>
+    <innerfile refid="_i_part_service_8cs">IPartService.cs</innerfile>
+    <innerfile refid="_part_service_8cs">PartService.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Services/"/>
+  </compounddef>
+</doxygen>

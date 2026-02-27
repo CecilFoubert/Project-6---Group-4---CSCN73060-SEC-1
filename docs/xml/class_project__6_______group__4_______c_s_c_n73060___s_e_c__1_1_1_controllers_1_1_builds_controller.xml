@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Controllers::BuildsController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Controller</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1ad20677fcfec4c412eebfebfd3786b288" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context" kindref="compound">ApplicationDbContext</ref></type>
+        <definition>readonly ApplicationDbContext Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController._context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/BuildsController.cs" line="20" column="47" bodyfile="Controllers/BuildsController.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a94f5d9fc45b13bb959833fc20fa9c77e" prot="private" static="no" mutable="no">
+        <type>readonly ILogger&lt; <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a70a82507b34a13476fd9293de476c139" kindref="member">BuildsController</ref> &gt;</type>
+        <definition>readonly ILogger&lt;BuildsController&gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController._logger</definition>
+        <argsstring></argsstring>
+        <name>_logger</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController._logger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/BuildsController.cs" line="21" column="34" bodyfile="Controllers/BuildsController.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a70a82507b34a13476fd9293de476c139" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.BuildsController</definition>
+        <argsstring>(ApplicationDbContext context, ILogger&lt; BuildsController &gt; logger)</argsstring>
+        <name>BuildsController</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.BuildsController</qualifiedname>
+        <param>
+          <type><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context" kindref="compound">ApplicationDbContext</ref></type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>ILogger&lt; BuildsController &gt;</type>
+          <declname>logger</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller" kindref="compound">BuildsController</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/BuildsController.cs" line="26" column="16" bodyfile="Controllers/BuildsController.cs" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a87ace0f2a02d7ceda40b41a214953dad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.Index</definition>
+        <argsstring>()</argsstring>
+        <name>Index</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.Index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/BuildsController.cs" line="33" column="27" bodyfile="Controllers/BuildsController.cs" bodystart="33" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a26e85a5ace41ff154dd7cc2e6cff57a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.Details</definition>
+        <argsstring>(int? id)</argsstring>
+        <name>Details</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.Details</qualifiedname>
+        <param>
+          <type>int?</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/BuildsController.cs" line="51" column="27" bodyfile="Controllers/BuildsController.cs" bodystart="51" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1ab612d9bbed45c0df11020320364ab09c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IActionResult</type>
+        <definition>IActionResult Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.Create</definition>
+        <argsstring>()</argsstring>
+        <name>Create</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.Create</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/BuildsController.cs" line="78" column="30" bodyfile="Controllers/BuildsController.cs" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a3ac0e535a735d983dd29bc7817a87e80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.Create</definition>
+        <argsstring>([Bind(&quot;Id,Name,Description,CpuId,GpuId,MotherboardId,MemoryId,StorageId,CaseId,PowerSupplyId,CpuCoolerId&quot;)] Build build)</argsstring>
+        <name>Create</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.Create</qualifiedname>
+        <param>
+          <attributes>[Bind(&quot;Id,Name,Description,CpuId,GpuId,MotherboardId,MemoryId,StorageId,CaseId,PowerSupplyId,CpuCoolerId&quot;)]</attributes>
+          <type><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build" kindref="compound">Build</ref></type>
+          <declname>build</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/BuildsController.cs" line="86" column="27" bodyfile="Controllers/BuildsController.cs" bodystart="86" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a4f48f151e0066873a9142ab9d14b02c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.Edit</definition>
+        <argsstring>(int? id)</argsstring>
+        <name>Edit</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.Edit</qualifiedname>
+        <param>
+          <type>int?</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/BuildsController.cs" line="100" column="27" bodyfile="Controllers/BuildsController.cs" bodystart="100" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a0d2d07e19e1d44e5ffeb47c88b4c7b8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.Edit</definition>
+        <argsstring>(int id, [Bind(&quot;Id,Name,Description,CpuId,GpuId,MotherboardId,MemoryId,StorageId,CaseId,PowerSupplyId,CpuCoolerId,CreatedAt&quot;)] Build build)</argsstring>
+        <name>Edit</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.Edit</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <attributes>[Bind(&quot;Id,Name,Description,CpuId,GpuId,MotherboardId,MemoryId,StorageId,CaseId,PowerSupplyId,CpuCoolerId,CreatedAt&quot;)]</attributes>
+          <type><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build" kindref="compound">Build</ref></type>
+          <declname>build</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/BuildsController.cs" line="118" column="27" bodyfile="Controllers/BuildsController.cs" bodystart="118" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1aee759fd0e5841bebcceaa6f5064fbe9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.Delete</definition>
+        <argsstring>(int? id)</argsstring>
+        <name>Delete</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.Delete</qualifiedname>
+        <param>
+          <type>int?</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/BuildsController.cs" line="150" column="27" bodyfile="Controllers/BuildsController.cs" bodystart="150" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a9c26105ea1a85bc72b7df0702f61d713" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.DeleteConfirmed</definition>
+        <argsstring>(int id)</argsstring>
+        <name>DeleteConfirmed</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.DeleteConfirmed</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/BuildsController.cs" line="179" column="27" bodyfile="Controllers/BuildsController.cs" bodystart="179" bodyend="189"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a2cac2c254c8ce9da8713a706d858ce50" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.BuildExists</definition>
+        <argsstring>(int id)</argsstring>
+        <name>BuildExists</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.BuildExists</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/BuildsController.cs" line="191" column="22" bodyfile="Controllers/BuildsController.cs" bodystart="191" bodyend="194"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>MVC controller that renders Razor views for build CRUD operations. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Used by the web UI (not the API) to view and manage saved builds. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Controller</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Controller</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Controllers/BuildsController.cs" line="18" column="11" bodyfile="Controllers/BuildsController.cs" bodystart="19" bodyend="195"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1ad20677fcfec4c412eebfebfd3786b288" prot="private" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::BuildsController</scope><name>_context</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a94f5d9fc45b13bb959833fc20fa9c77e" prot="private" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::BuildsController</scope><name>_logger</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a2cac2c254c8ce9da8713a706d858ce50" prot="private" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::BuildsController</scope><name>BuildExists</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a70a82507b34a13476fd9293de476c139" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::BuildsController</scope><name>BuildsController</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1ab612d9bbed45c0df11020320364ab09c" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::BuildsController</scope><name>Create</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a3ac0e535a735d983dd29bc7817a87e80" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::BuildsController</scope><name>Create</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1aee759fd0e5841bebcceaa6f5064fbe9d" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::BuildsController</scope><name>Delete</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a9c26105ea1a85bc72b7df0702f61d713" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::BuildsController</scope><name>DeleteConfirmed</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a26e85a5ace41ff154dd7cc2e6cff57a2" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::BuildsController</scope><name>Details</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a4f48f151e0066873a9142ab9d14b02c4" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::BuildsController</scope><name>Edit</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a0d2d07e19e1d44e5ffeb47c88b4c7b8e" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::BuildsController</scope><name>Edit</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a87ace0f2a02d7ceda40b41a214953dad" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::BuildsController</scope><name>Index</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

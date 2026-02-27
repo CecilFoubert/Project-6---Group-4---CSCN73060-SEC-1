@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1ae77257c60ac7ff5c15c98c55e63058e8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="17" column="20" bodyfile="Models/CpuCooler.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1acc497d5c28e316fb63eaa62a93cc6368" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Name</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+<para>Display name of the cooler. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="24" column="23" bodyfile="Models/CpuCooler.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1adf20bdcdd02089c721166c4310f9a7d4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.ImageUrl</definition>
+        <argsstring></argsstring>
+        <name>ImageUrl</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.ImageUrl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="27" column="23" bodyfile="Models/CpuCooler.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a5be7740bbf0810cd2ebbe67d608a6dc0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.ProductUrl</definition>
+        <argsstring></argsstring>
+        <name>ProductUrl</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.ProductUrl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="30" column="23" bodyfile="Models/CpuCooler.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a038b8ef5e721dccfaa7b3a27fc6d119a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Price</definition>
+        <argsstring></argsstring>
+        <name>Price</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Price</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="33" column="23" bodyfile="Models/CpuCooler.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a480dbe62cca56a2143331bb8ae8424c6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Manufacturer</definition>
+        <argsstring></argsstring>
+        <name>Manufacturer</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Manufacturer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="36" column="23" bodyfile="Models/CpuCooler.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a198204bfe815909298b55bed213613de" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Model</definition>
+        <argsstring></argsstring>
+        <name>Model</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Model</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="39" column="23" bodyfile="Models/CpuCooler.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1ab036016f00cd5623ca91a3fb1a2eb715" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.PartNumber</definition>
+        <argsstring></argsstring>
+        <name>PartNumber</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.PartNumber</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="42" column="23" bodyfile="Models/CpuCooler.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a2e730f6be962cd8ec86b4b18305452c9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.FanRPM</definition>
+        <argsstring></argsstring>
+        <name>FanRPM</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.FanRPM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="45" column="23" bodyfile="Models/CpuCooler.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a2fc0fa4bb6f3b11b3bf79b1897e65960" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.NoiseLevel</definition>
+        <argsstring></argsstring>
+        <name>NoiseLevel</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.NoiseLevel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="48" column="23" bodyfile="Models/CpuCooler.cs" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a6ba275545253dfceaa32f9493a819712" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Color</definition>
+        <argsstring></argsstring>
+        <name>Color</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="51" column="23" bodyfile="Models/CpuCooler.cs" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a30abc4e42ff18b6898418239bd5c4df5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Height</definition>
+        <argsstring></argsstring>
+        <name>Height</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="54" column="23" bodyfile="Models/CpuCooler.cs" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a31d5bfeb71e34a75e9ef076e550d9ea2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.CPUSocket</definition>
+        <argsstring></argsstring>
+        <name>CPUSocket</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.CPUSocket</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="57" column="23" bodyfile="Models/CpuCooler.cs" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1af4cded9d17608ab76e2f2808d4de36d3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.WaterCooled</definition>
+        <argsstring></argsstring>
+        <name>WaterCooled</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.WaterCooled</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="60" column="23" bodyfile="Models/CpuCooler.cs" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a25b2270a5dba82dd648523925909407c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Fanless</definition>
+        <argsstring></argsstring>
+        <name>Fanless</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.Fanless</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="63" column="23" bodyfile="Models/CpuCooler.cs" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1aa935c85fe2d9a047cac798b492753d69" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.SpecsNumber</definition>
+        <argsstring></argsstring>
+        <name>SpecsNumber</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.CpuCooler.SpecsNumber</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/CpuCooler.cs" line="66" column="23" bodyfile="Models/CpuCooler.cs" bodystart="66" bodyend="66"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>CPU cooler model (air or liquid) with compatibility and performance fields. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Models/CpuCooler.cs" line="14" column="11" bodyfile="Models/CpuCooler.cs" bodystart="15" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a6ba275545253dfceaa32f9493a819712" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>Color</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a31d5bfeb71e34a75e9ef076e550d9ea2" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>CPUSocket</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a25b2270a5dba82dd648523925909407c" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>Fanless</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a2e730f6be962cd8ec86b4b18305452c9" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>FanRPM</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a30abc4e42ff18b6898418239bd5c4df5" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>Height</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1ae77257c60ac7ff5c15c98c55e63058e8" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>Id</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1adf20bdcdd02089c721166c4310f9a7d4" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>ImageUrl</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a480dbe62cca56a2143331bb8ae8424c6" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>Manufacturer</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a198204bfe815909298b55bed213613de" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>Model</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1acc497d5c28e316fb63eaa62a93cc6368" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>Name</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a2fc0fa4bb6f3b11b3bf79b1897e65960" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>NoiseLevel</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1ab036016f00cd5623ca91a3fb1a2eb715" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>PartNumber</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a038b8ef5e721dccfaa7b3a27fc6d119a" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>Price</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a5be7740bbf0810cd2ebbe67d608a6dc0" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>ProductUrl</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1aa935c85fe2d9a047cac798b492753d69" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>SpecsNumber</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1af4cded9d17608ab76e2f2808d4de36d3" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</scope><name>WaterCooled</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

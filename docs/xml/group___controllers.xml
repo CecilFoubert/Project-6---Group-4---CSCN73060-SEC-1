@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="group___controllers" kind="group">
+    <compoundname>Controllers</compoundname>
+    <title>Controllers</title>
+    <innerfile refid="_api_builds_controller_8cs">ApiBuildsController.cs</innerfile>
+    <innerfile refid="_builds_controller_8cs">BuildsController.cs</innerfile>
+    <innerfile refid="_home_controller_8cs">HomeController.cs</innerfile>
+    <innerfile refid="_parts_controller_8cs">PartsController.cs</innerfile>
+    <briefdescription>
+<para>API and MVC controllers (REST endpoints and view controllers). */. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>/*! </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

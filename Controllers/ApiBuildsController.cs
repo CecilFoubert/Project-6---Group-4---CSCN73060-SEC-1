@@ -1,3 +1,9 @@
+/*!
+ * @file Controllers/ApiBuildsController.cs
+ * @brief API controller for Build entities (JSON API).
+ * @ingroup Controllers
+ */
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Project_6___Group_4___CSCN73060_SEC_1.Data;
@@ -5,6 +11,11 @@ using Project_6___Group_4___CSCN73060_SEC_1.Models;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Controllers
 {
+    /// <summary>
+    /// API controller for builds. Provides endpoints to list, retrieve, create,
+    /// update and delete builds, and to query builds by part selection.
+    /// Returns lightweight API models suitable for client-side consumption.
+    /// </summary>
     [ApiController]
     [Route("api/Builds")]
     public class ApiBuildsController : ControllerBase
@@ -24,6 +35,9 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Controllers
             ["cpucooler"] = "CpuCoolerId"
         };
 
+        /// <summary>
+        /// Creates a new <see cref="ApiBuildsController"/>.
+        /// </summary>
         public ApiBuildsController(ApplicationDbContext context, ILogger<ApiBuildsController> logger)
         {
             _context = context;

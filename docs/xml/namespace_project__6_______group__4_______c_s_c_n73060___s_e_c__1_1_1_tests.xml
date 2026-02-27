@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests" kind="namespace" language="C#">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Tests</compoundname>
+    <innerclass refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests" prot="public">Project_6___Group_4___CSCN73060_SEC_1::Tests::AcceptanceTests</innerclass>
+    <innerclass refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests" prot="public">Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</innerclass>
+    <innerclass refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_custom_web_application_factory" prot="public">Project_6___Group_4___CSCN73060_SEC_1::Tests::CustomWebApplicationFactory</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/AcceptanceTests.cs" line="7" column="1"/>
+  </compounddef>
+</doxygen>

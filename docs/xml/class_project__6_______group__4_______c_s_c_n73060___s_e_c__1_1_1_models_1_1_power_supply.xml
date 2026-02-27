@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a54af6aa24278009812e12c35b3b1ef8b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="17" column="20" bodyfile="Models/PowerSupply.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a8ad486868248a672d295187d6bfe31e6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Name</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+<para>Display name of the PSU. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="24" column="23" bodyfile="Models/PowerSupply.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a7f3ead38aba96ba863f958a5e05a2f0e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.ImageUrl</definition>
+        <argsstring></argsstring>
+        <name>ImageUrl</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.ImageUrl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="27" column="23" bodyfile="Models/PowerSupply.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1adf6d3b27fd9eeb66b29c1fbbc3e579b0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.ProductUrl</definition>
+        <argsstring></argsstring>
+        <name>ProductUrl</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.ProductUrl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="30" column="23" bodyfile="Models/PowerSupply.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a209740cdc29817df44f1dcb4ab091fd0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Price</definition>
+        <argsstring></argsstring>
+        <name>Price</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Price</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="33" column="23" bodyfile="Models/PowerSupply.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a54f2dbcfe7e4fe0395cbb35e3cfed913" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Manufacturer</definition>
+        <argsstring></argsstring>
+        <name>Manufacturer</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Manufacturer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="36" column="23" bodyfile="Models/PowerSupply.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1ad368539c95632af6137a900726cb17f2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Model</definition>
+        <argsstring></argsstring>
+        <name>Model</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Model</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="39" column="23" bodyfile="Models/PowerSupply.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1ab593c333232137f18d82499947ff830f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.PartNumber</definition>
+        <argsstring></argsstring>
+        <name>PartNumber</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.PartNumber</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="42" column="23" bodyfile="Models/PowerSupply.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1aa0aa235c92a529aa7df0b1088bcebe6b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="45" column="23" bodyfile="Models/PowerSupply.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1ac0bc31f026981f576f18c2ec245fa450" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.EfficiencyRating</definition>
+        <argsstring></argsstring>
+        <name>EfficiencyRating</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.EfficiencyRating</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="48" column="23" bodyfile="Models/PowerSupply.cs" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a650b32ab5ded3d7392ee02c64e209fea" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Wattage</definition>
+        <argsstring></argsstring>
+        <name>Wattage</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Wattage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="51" column="23" bodyfile="Models/PowerSupply.cs" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a8f2f16fbbcaa3a548a44f1aa47176f41" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Length</definition>
+        <argsstring></argsstring>
+        <name>Length</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="54" column="23" bodyfile="Models/PowerSupply.cs" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1aa8e6582e846e5f42763baaf0f2b72037" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Modular</definition>
+        <argsstring></argsstring>
+        <name>Modular</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Modular</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="57" column="23" bodyfile="Models/PowerSupply.cs" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a466db700a77ccf7dd6cbfd72f89ef947" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Color</definition>
+        <argsstring></argsstring>
+        <name>Color</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="60" column="23" bodyfile="Models/PowerSupply.cs" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a8450c0ee81e624e7bc780e4c61e3d189" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Fanless</definition>
+        <argsstring></argsstring>
+        <name>Fanless</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Fanless</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="63" column="23" bodyfile="Models/PowerSupply.cs" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a8c9266c0aa2cd467a40882413bbbe895" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.ATX4PinConnectors</definition>
+        <argsstring></argsstring>
+        <name>ATX4PinConnectors</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.ATX4PinConnectors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="66" column="23" bodyfile="Models/PowerSupply.cs" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1ae524784e6c0e1e03a9e97d948c3e7078" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.EPS8PinConnectors</definition>
+        <argsstring></argsstring>
+        <name>EPS8PinConnectors</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.EPS8PinConnectors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="69" column="23" bodyfile="Models/PowerSupply.cs" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a1168f0b628019ce791227c22536b32d8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.PCIe12Plus4Pin12VHPWRConnectors</definition>
+        <argsstring></argsstring>
+        <name>PCIe12Plus4Pin12VHPWRConnectors</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.PCIe12Plus4Pin12VHPWRConnectors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="72" column="23" bodyfile="Models/PowerSupply.cs" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a0eba270113014539327df82ea66d3aff" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.PCIe12PinConnectors</definition>
+        <argsstring></argsstring>
+        <name>PCIe12PinConnectors</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.PCIe12PinConnectors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="75" column="23" bodyfile="Models/PowerSupply.cs" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1aa5547b02bcf2e5dd0f83f6ef36b3645e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.PCIe8PinConnectors</definition>
+        <argsstring></argsstring>
+        <name>PCIe8PinConnectors</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.PCIe8PinConnectors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="78" column="23" bodyfile="Models/PowerSupply.cs" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a4948d703466cda2fbdffaddc82efa740" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.PCIe6Plus2PinConnectors</definition>
+        <argsstring></argsstring>
+        <name>PCIe6Plus2PinConnectors</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.PCIe6Plus2PinConnectors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="81" column="23" bodyfile="Models/PowerSupply.cs" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a03aba69aa1e3edea35dd25c2b2befc49" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.PCIe6PinConnectors</definition>
+        <argsstring></argsstring>
+        <name>PCIe6PinConnectors</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.PCIe6PinConnectors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="84" column="23" bodyfile="Models/PowerSupply.cs" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1add45ac8e2588b01ff3ca5e5a68345f3a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.SATAConnectors</definition>
+        <argsstring></argsstring>
+        <name>SATAConnectors</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.SATAConnectors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="87" column="23" bodyfile="Models/PowerSupply.cs" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a36727813f6fba47edf0e30e33267690d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Molex4PinConnectors</definition>
+        <argsstring></argsstring>
+        <name>Molex4PinConnectors</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.Molex4PinConnectors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="90" column="23" bodyfile="Models/PowerSupply.cs" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a34e0cd083e03bd231b920b0374a6dc29" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.SpecsNumber</definition>
+        <argsstring></argsstring>
+        <name>SpecsNumber</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PowerSupply.SpecsNumber</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PowerSupply.cs" line="93" column="23" bodyfile="Models/PowerSupply.cs" bodystart="93" bodyend="93"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Power supply unit (PSU) model for the catalog. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Models/PowerSupply.cs" line="14" column="11" bodyfile="Models/PowerSupply.cs" bodystart="15" bodyend="94"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a8c9266c0aa2cd467a40882413bbbe895" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>ATX4PinConnectors</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a466db700a77ccf7dd6cbfd72f89ef947" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>Color</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1ac0bc31f026981f576f18c2ec245fa450" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>EfficiencyRating</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1ae524784e6c0e1e03a9e97d948c3e7078" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>EPS8PinConnectors</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a8450c0ee81e624e7bc780e4c61e3d189" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>Fanless</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a54af6aa24278009812e12c35b3b1ef8b" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>Id</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a7f3ead38aba96ba863f958a5e05a2f0e" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>ImageUrl</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a8f2f16fbbcaa3a548a44f1aa47176f41" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>Length</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a54f2dbcfe7e4fe0395cbb35e3cfed913" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>Manufacturer</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1ad368539c95632af6137a900726cb17f2" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>Model</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1aa8e6582e846e5f42763baaf0f2b72037" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>Modular</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a36727813f6fba47edf0e30e33267690d" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>Molex4PinConnectors</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a8ad486868248a672d295187d6bfe31e6" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>Name</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1ab593c333232137f18d82499947ff830f" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>PartNumber</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a0eba270113014539327df82ea66d3aff" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>PCIe12PinConnectors</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a1168f0b628019ce791227c22536b32d8" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>PCIe12Plus4Pin12VHPWRConnectors</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a03aba69aa1e3edea35dd25c2b2befc49" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>PCIe6PinConnectors</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a4948d703466cda2fbdffaddc82efa740" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>PCIe6Plus2PinConnectors</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1aa5547b02bcf2e5dd0f83f6ef36b3645e" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>PCIe8PinConnectors</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a209740cdc29817df44f1dcb4ab091fd0" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>Price</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1adf6d3b27fd9eeb66b29c1fbbc3e579b0" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>ProductUrl</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1add45ac8e2588b01ff3ca5e5a68345f3a" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>SATAConnectors</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a34e0cd083e03bd231b920b0374a6dc29" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>SpecsNumber</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1aa0aa235c92a529aa7df0b1088bcebe6b" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>Type</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a650b32ab5ded3d7392ee02c64e209fea" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</scope><name>Wattage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

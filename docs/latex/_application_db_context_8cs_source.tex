@@ -1,0 +1,107 @@
+\doxysection{Application\+Db\+Context.\+cs}
+\hypertarget{_application_db_context_8cs_source}{}\label{_application_db_context_8cs_source}\index{Data/ApplicationDbContext.cs@{Data/ApplicationDbContext.cs}}
+\doxymbox{\hyperlink{_application_db_context_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models}};}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00010}\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data}{00010}}\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Data}}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00015}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ApplicationDbContext\ :\ DbContext}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ApplicationDbContext(DbContextOptions<ApplicationDbContext>\ options)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ :\ base(options)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ PC\ Component\ DbSets}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DbSet<Cpu>\ Cpus\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DbSet<Gpu>\ Gpus\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DbSet<Memory>\ Memories\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DbSet<Motherboard>\ Motherboards\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DbSet<Case>\ Cases\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DbSet<Storage>\ Storages\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DbSet<PowerSupply>\ PowerSupplies\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DbSet<CpuCooler>\ CpuCoolers\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Builds\ DbSet}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DbSet<Build>\ Builds\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Average\ part\ cache\ for\ search\ results}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DbSet<PartAverageCache>\ PartAverageCaches\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnModelCreating(ModelBuilder\ modelBuilder)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ base.OnModelCreating(modelBuilder);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Configure\ your\ entities\ here\ if\ needed}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu}{Cpu}}>().ToTable(\textcolor{stringliteral}{"{}Cpus"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu}{Gpu}}>().ToTable(\textcolor{stringliteral}{"{}Gpus"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory}{Memory}}>().ToTable(\textcolor{stringliteral}{"{}Memories"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard}{Motherboard}}>().ToTable(\textcolor{stringliteral}{"{}Motherboards"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case}{Case}}>().ToTable(\textcolor{stringliteral}{"{}Cases"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage}{Storage}}>().ToTable(\textcolor{stringliteral}{"{}Storages"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply}{PowerSupply}}>().ToTable(\textcolor{stringliteral}{"{}PowerSupplies"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler}{CpuCooler}}>().ToTable(\textcolor{stringliteral}{"{}CpuCoolers"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Build}}>().ToTable(\textcolor{stringliteral}{"{}Builds"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache}{PartAverageCache}}>().ToTable(\textcolor{stringliteral}{"{}PartAverageCaches"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache}{PartAverageCache}}>()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasIndex(c\ =>\ \textcolor{keyword}{new}\ \{\ c.PartType,\ c.FilterKey\ \})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsUnique();}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Configure\ Build\ relationships}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Build}}>()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasOne(b\ =>\ b.Cpu)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(b\ =>\ b.CpuId)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Build}}>()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasOne(b\ =>\ b.Gpu)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(b\ =>\ b.GpuId)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Build}}>()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasOne(b\ =>\ b.Motherboard)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(b\ =>\ b.MotherboardId)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Build}}>()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasOne(b\ =>\ b.Memory)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(b\ =>\ b.MemoryId)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Build}}>()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasOne(b\ =>\ b.Storage)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(b\ =>\ b.StorageId)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Build}}>()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasOne(b\ =>\ b.Case)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(b\ =>\ b.CaseId)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Build}}>()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasOne(b\ =>\ b.PowerSupply)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(b\ =>\ b.PowerSupplyId)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Build}}>()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasOne(b\ =>\ b.CpuCooler)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(b\ =>\ b.CpuCoolerId)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00106}00106\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00107}00107\ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_8cs_source_l00108}00108\ }
+
+\end{DoxyCode}

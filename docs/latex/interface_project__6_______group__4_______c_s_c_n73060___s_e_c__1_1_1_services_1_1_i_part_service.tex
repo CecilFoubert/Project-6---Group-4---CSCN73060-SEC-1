@@ -1,0 +1,147 @@
+\doxysection{Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+IPart\+Service Interface Reference}
+\hypertarget{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service}{}\label{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService}}
+
+
+Service interface for retrieving and manipulating parts of different types.  
+
+
+Inheritance diagram for Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+IPart\+Service:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ IEnumerable$<$ object $>$ $>$ \doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_a9ce235931d2838cf970597a9a1cd055d}{Get\+All\+Async}} (string part\+Type)
+\begin{DoxyCompactList}\small\item\em Get all parts for the given part type (lightweight API representation). \end{DoxyCompactList}\item 
+Task$<$ object?$>$ \doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_a8e1ffbcaa5ec0eb0c6fb3b331ff72940}{Get\+By\+Id\+Async}} (string part\+Type, int id)
+\begin{DoxyCompactList}\small\item\em Get a single part by id for the specified part type. \end{DoxyCompactList}\item 
+Task$<$ object $>$ \doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_ab56d037f0e0c362dfe7851e492e766d4}{Create\+Async}} (string part\+Type, Dictionary$<$ string, object $>$ data)
+\begin{DoxyCompactList}\small\item\em Create a new part for the given part type using the provided data dictionary. \end{DoxyCompactList}\item 
+Task$<$ object?$>$ \doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_afaca9457e9ff766c2fbe7b5ec6dd15cc}{Update\+Async}} (string part\+Type, int id, Dictionary$<$ string, object $>$ data)
+\begin{DoxyCompactList}\small\item\em Update an existing part. \end{DoxyCompactList}\item 
+Task$<$ bool $>$ \doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_ab8fc535562cba511f13fca3257be10d8}{Delete\+Async}} (string part\+Type, int id)
+\begin{DoxyCompactList}\small\item\em Delete a part. \end{DoxyCompactList}\item 
+Task$<$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result}{Search\+Result}} $>$ \doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_a17c3c1225de79d1a87c5de25ef42df48}{Search\+Async}} (string part\+Type, Dictionary$<$ string, string $>$ filters)
+\begin{DoxyCompactList}\small\item\em Search parts of a given type using a set of string filters (min\+Price/\+max\+Price/\+manufacturer/\+attributes). \end{DoxyCompactList}\item 
+Task$<$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_options}{Filter\+Options}} $>$ \doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_ae82291c6911af6bd0e44ca9042136dc7}{Get\+Filter\+Options\+Async}} (string part\+Type)
+\begin{DoxyCompactList}\small\item\em Get distinct filter options for a given part type (attributes and their distinct values). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service interface for retrieving and manipulating parts of different types. 
+
+Implementations provide a unified abstraction over multiple Db\+Sets (CPU, GPU, Memory, etc.). 
+
+Definition at line \doxymbox{\hyperlink{_i_part_service_8cs_source_l00013}{13}} of file \doxymbox{\hyperlink{_i_part_service_8cs_source}{IPart\+Service.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_ab56d037f0e0c362dfe7851e492e766d4}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService}!CreateAsync@{CreateAsync}}
+\index{CreateAsync@{CreateAsync}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService}}
+\doxysubsubsection{\texorpdfstring{CreateAsync()}{CreateAsync()}}
+{\footnotesize\ttfamily \label{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_ab56d037f0e0c362dfe7851e492e766d4} 
+Task$<$ object $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+IPart\+Service.\+Create\+Async (\begin{DoxyParamCaption}\item[{string}]{part\+Type}{, }\item[{Dictionary$<$ string, object $>$}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Create a new part for the given part type using the provided data dictionary. 
+
+Returns the created lightweight representation. 
+
+Implemented in \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_a3467a506be8f190b25cf00b6f780df37}{Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+Part\+Service}}.
+
+\Hypertarget{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_ab8fc535562cba511f13fca3257be10d8}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService}!DeleteAsync@{DeleteAsync}}
+\index{DeleteAsync@{DeleteAsync}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService}}
+\doxysubsubsection{\texorpdfstring{DeleteAsync()}{DeleteAsync()}}
+{\footnotesize\ttfamily \label{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_ab8fc535562cba511f13fca3257be10d8} 
+Task$<$ bool $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+IPart\+Service.\+Delete\+Async (\begin{DoxyParamCaption}\item[{string}]{part\+Type}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Delete a part. 
+
+Returns true when the item was removed. 
+
+Implemented in \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_a6fb3747aac4d11320c1d4f8ccf0611d6}{Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+Part\+Service}}.
+
+\Hypertarget{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_a9ce235931d2838cf970597a9a1cd055d}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService}!GetAllAsync@{GetAllAsync}}
+\index{GetAllAsync@{GetAllAsync}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService}}
+\doxysubsubsection{\texorpdfstring{GetAllAsync()}{GetAllAsync()}}
+{\footnotesize\ttfamily \label{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_a9ce235931d2838cf970597a9a1cd055d} 
+Task$<$ IEnumerable$<$ object $>$ $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+IPart\+Service.\+Get\+All\+Async (\begin{DoxyParamCaption}\item[{string}]{part\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Get all parts for the given part type (lightweight API representation). 
+
+
+
+Implemented in \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_a60426a934332c38493a59629e0ed2a04}{Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+Part\+Service}}.
+
+\Hypertarget{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_a8e1ffbcaa5ec0eb0c6fb3b331ff72940}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService}!GetByIdAsync@{GetByIdAsync}}
+\index{GetByIdAsync@{GetByIdAsync}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService}}
+\doxysubsubsection{\texorpdfstring{GetByIdAsync()}{GetByIdAsync()}}
+{\footnotesize\ttfamily \label{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_a8e1ffbcaa5ec0eb0c6fb3b331ff72940} 
+Task$<$ object?$>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+IPart\+Service.\+Get\+By\+Id\+Async (\begin{DoxyParamCaption}\item[{string}]{part\+Type}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Get a single part by id for the specified part type. 
+
+Returns null if not found. 
+
+Implemented in \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_acc4f3fbec11b7ae3e41066d141041c70}{Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+Part\+Service}}.
+
+\Hypertarget{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_ae82291c6911af6bd0e44ca9042136dc7}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService}!GetFilterOptionsAsync@{GetFilterOptionsAsync}}
+\index{GetFilterOptionsAsync@{GetFilterOptionsAsync}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService}}
+\doxysubsubsection{\texorpdfstring{GetFilterOptionsAsync()}{GetFilterOptionsAsync()}}
+{\footnotesize\ttfamily \label{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_ae82291c6911af6bd0e44ca9042136dc7} 
+Task$<$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_options}{Filter\+Options}} $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+IPart\+Service.\+Get\+Filter\+Options\+Async (\begin{DoxyParamCaption}\item[{string}]{part\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Get distinct filter options for a given part type (attributes and their distinct values). 
+
+
+
+Implemented in \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_a5dfee76c37f030bec9443e49d4b233cb}{Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+Part\+Service}}.
+
+\Hypertarget{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_a17c3c1225de79d1a87c5de25ef42df48}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService}!SearchAsync@{SearchAsync}}
+\index{SearchAsync@{SearchAsync}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService}}
+\doxysubsubsection{\texorpdfstring{SearchAsync()}{SearchAsync()}}
+{\footnotesize\ttfamily \label{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_a17c3c1225de79d1a87c5de25ef42df48} 
+Task$<$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result}{Search\+Result}} $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+IPart\+Service.\+Search\+Async (\begin{DoxyParamCaption}\item[{string}]{part\+Type}{, }\item[{Dictionary$<$ string, string $>$}]{filters}{}\end{DoxyParamCaption})}
+
+
+
+Search parts of a given type using a set of string filters (min\+Price/\+max\+Price/\+manufacturer/\+attributes). 
+
+Returns a \doxylink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result}{Search\+Result} containing results and summary info. 
+
+Implemented in \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_a8627c0650a0710e66d930b164597dda9}{Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+Part\+Service}}.
+
+\Hypertarget{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_afaca9457e9ff766c2fbe7b5ec6dd15cc}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService}!UpdateAsync@{UpdateAsync}}
+\index{UpdateAsync@{UpdateAsync}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services.IPartService}}
+\doxysubsubsection{\texorpdfstring{UpdateAsync()}{UpdateAsync()}}
+{\footnotesize\ttfamily \label{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_afaca9457e9ff766c2fbe7b5ec6dd15cc} 
+Task$<$ object?$>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+IPart\+Service.\+Update\+Async (\begin{DoxyParamCaption}\item[{string}]{part\+Type}{, }\item[{int}]{id}{, }\item[{Dictionary$<$ string, object $>$}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Update an existing part. 
+
+Returns the updated lightweight object or null when not found. 
+
+Implemented in \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_a5ba4b195c45104bdab5b5b8067d2179b}{Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Services.\+Part\+Service}}.
+
+
+
+The documentation for this interface was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Services/\+\doxymbox{\hyperlink{_i_part_service_8cs}{IPart\+Service.\+cs}}\end{DoxyCompactItemize}

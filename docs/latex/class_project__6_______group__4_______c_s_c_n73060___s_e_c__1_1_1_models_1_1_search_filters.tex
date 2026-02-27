@@ -1,0 +1,111 @@
+\doxysection{Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Search\+Filters Class Reference}
+\hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters}{}\label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters}}
+
+
+Model for search filters sent as JSON body to the search endpoint.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+decimal? \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_a066d89085ceef53e986f6dbb44324450}{Min\+Price}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Minimum price filter (inclusive). \end{DoxyCompactList}\item 
+decimal? \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_a4c587ffef1ed0af5a5261689535022f2}{Max\+Price}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Maximum price filter (inclusive). \end{DoxyCompactList}\item 
+string? \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_a57e1602041ac7e7d03196f3afdc71412}{Manufacturer}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Manufacturer filter (partial match, case-\/insensitive). \end{DoxyCompactList}\item 
+Dictionary$<$ string, string $>$? \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_ad44557dbdbcf48f00a6d1003844095fd}{Filters}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Dynamic filters as key-\/value pairs for any part property. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model for search filters sent as JSON body to the search endpoint. 
+
+Definition at line \doxymbox{\hyperlink{_search_filters_8cs_source_l00012}{12}} of file \doxymbox{\hyperlink{_search_filters_8cs_source}{Search\+Filters.\+cs}}.
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_ad44557dbdbcf48f00a6d1003844095fd}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters}!Filters@{Filters}}
+\index{Filters@{Filters}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters}}
+\doxysubsubsection{\texorpdfstring{Filters}{Filters}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_ad44557dbdbcf48f00a6d1003844095fd} 
+Dictionary$<$string, string$>$? Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Search\+Filters.\+Filters\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Dynamic filters as key-\/value pairs for any part property. 
+
+Keys are property names (e.\+g., "{}\+Socket"{}, "{}\+Chipset"{}, "{}\+Speed"{}). Values are filter values (partial match, case-\/insensitive). 
+
+Definition at line \doxymbox{\hyperlink{_search_filters_8cs_source_l00034}{34}} of file \doxymbox{\hyperlink{_search_filters_8cs_source}{Search\+Filters.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_a57e1602041ac7e7d03196f3afdc71412}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters}!Manufacturer@{Manufacturer}}
+\index{Manufacturer@{Manufacturer}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters}}
+\doxysubsubsection{\texorpdfstring{Manufacturer}{Manufacturer}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_a57e1602041ac7e7d03196f3afdc71412} 
+string? Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Search\+Filters.\+Manufacturer\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Manufacturer filter (partial match, case-\/insensitive). 
+
+
+
+Definition at line \doxymbox{\hyperlink{_search_filters_8cs_source_l00027}{27}} of file \doxymbox{\hyperlink{_search_filters_8cs_source}{Search\+Filters.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_a4c587ffef1ed0af5a5261689535022f2}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters}!MaxPrice@{MaxPrice}}
+\index{MaxPrice@{MaxPrice}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters}}
+\doxysubsubsection{\texorpdfstring{MaxPrice}{MaxPrice}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_a4c587ffef1ed0af5a5261689535022f2} 
+decimal? Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Search\+Filters.\+Max\+Price\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Maximum price filter (inclusive). 
+
+
+
+Definition at line \doxymbox{\hyperlink{_search_filters_8cs_source_l00022}{22}} of file \doxymbox{\hyperlink{_search_filters_8cs_source}{Search\+Filters.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_a066d89085ceef53e986f6dbb44324450}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters}!MinPrice@{MinPrice}}
+\index{MinPrice@{MinPrice}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.SearchFilters}}
+\doxysubsubsection{\texorpdfstring{MinPrice}{MinPrice}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_a066d89085ceef53e986f6dbb44324450} 
+decimal? Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Search\+Filters.\+Min\+Price\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Minimum price filter (inclusive). 
+
+
+
+Definition at line \doxymbox{\hyperlink{_search_filters_8cs_source_l00017}{17}} of file \doxymbox{\hyperlink{_search_filters_8cs_source}{Search\+Filters.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Models/\+\doxymbox{\hyperlink{_search_filters_8cs}{Search\+Filters.\+cs}}\end{DoxyCompactItemize}

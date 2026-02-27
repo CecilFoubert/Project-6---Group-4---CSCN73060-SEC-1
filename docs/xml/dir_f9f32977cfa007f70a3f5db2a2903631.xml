@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dir_f9f32977cfa007f70a3f5db2a2903631" kind="dir">
+    <compoundname>Project-6---Group-4---CSCN73060-SEC-1.Tests/obj/Debug</compoundname>
+    <innerdir refid="dir_d8ff00b54002f3658345462807c63805">Project-6---Group-4---CSCN73060-SEC-1.Tests/obj/Debug/net8.0</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/obj/Debug/"/>
+  </compounddef>
+</doxygen>

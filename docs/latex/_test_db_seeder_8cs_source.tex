@@ -1,0 +1,59 @@
+\doxysection{Test\+Db\+Seeder.\+cs}
+\hypertarget{_test_db_seeder_8cs_source}{}\label{_test_db_seeder_8cs_source}\index{Data/TestDbSeeder.cs@{Data/TestDbSeeder.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models}};}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Data}};}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00009}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }TestDbSeeder\ :\ DbSeeder}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context}{ApplicationDbContext}}\ \_context;}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{public}\ TestDbSeeder(}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context}{ApplicationDbContext}}\ context,}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ IWebHostEnvironment\ env,}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ ILogger<TestDbSeeder>\ logger,}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ IConfiguration\ configuration)}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ :\ base(context,\ env,\ logger,\ configuration)}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \_context\ =\ context;}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00023}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder_aee211554434bbe842afd037c047b4c47}{00023}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ async\ Task\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder_aee211554434bbe842afd037c047b4c47}{SeedAsync}}()}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00024}00024\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_context.Cpus.Any())}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \_context.Cpus.AddRange(}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu}{Cpu}}}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ \textcolor{stringliteral}{"{}Intel\ Core\ i5-\/12400"{}},}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Manufacturer\ =\ \textcolor{stringliteral}{"{}Intel"{}},}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Price\ =\ \textcolor{stringliteral}{"{}199.99"{}},}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Socket\ =\ \textcolor{stringliteral}{"{}LGA1700"{}},}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CoreCount\ =\ 6}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu}{Cpu}}}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ \textcolor{stringliteral}{"{}AMD\ Ryzen\ 5\ 5600X"{}},}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Manufacturer\ =\ \textcolor{stringliteral}{"{}AMD"{}},}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Price\ =\ \textcolor{stringliteral}{"{}249.99"{}},}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Socket\ =\ \textcolor{stringliteral}{"{}AM4"{}},}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CoreCount\ =\ 6}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu}{Cpu}}}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ \textcolor{stringliteral}{"{}Intel\ Core\ i7-\/13700K"{}},}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Manufacturer\ =\ \textcolor{stringliteral}{"{}Intel"{}},}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Price\ =\ \textcolor{stringliteral}{"{}409.99"{}},}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Socket\ =\ \textcolor{stringliteral}{"{}LGA1700"{}},}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CoreCount\ =\ 16}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ await\ \_context.SaveChangesAsync();}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_test_db_seeder_8cs_source_l00056}00056\ \}}
+
+\end{DoxyCode}

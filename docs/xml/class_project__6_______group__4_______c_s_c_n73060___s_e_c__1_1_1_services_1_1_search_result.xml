@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Services::SearchResult</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result_1a57b300f10aaf3080f8a15e8d1f8dac8d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Project_6___Group_4___CSCN73060_SEC_1.Services.SearchResult.PartType</definition>
+        <argsstring></argsstring>
+        <name>PartType</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Services.SearchResult.PartType</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Services/IPartService.cs" line="59" column="23" bodyfile="Services/IPartService.cs" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result_1a8ef6a205b8911c03afe67f10e6c64588" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Project_6___Group_4___CSCN73060_SEC_1.Services.SearchResult.TotalCount</definition>
+        <argsstring></argsstring>
+        <name>TotalCount</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Services.SearchResult.TotalCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Services/IPartService.cs" line="60" column="20" bodyfile="Services/IPartService.cs" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result_1a0446a693e909e0b81c20ffe996e6131e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>IEnumerable&lt; object &gt;</type>
+        <definition>IEnumerable&lt;object&gt; Project_6___Group_4___CSCN73060_SEC_1.Services.SearchResult.Results</definition>
+        <argsstring></argsstring>
+        <name>Results</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Services.SearchResult.Results</qualifiedname>
+        <initializer>= new List&lt;object&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Services/IPartService.cs" line="61" column="28" bodyfile="Services/IPartService.cs" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result_1a66561cbb3b892cadcb5494a94a51883d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Dictionary&lt; string, string &gt;</type>
+        <definition>Dictionary&lt;string, string&gt; Project_6___Group_4___CSCN73060_SEC_1.Services.SearchResult.AppliedFilters</definition>
+        <argsstring></argsstring>
+        <name>AppliedFilters</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Services.SearchResult.AppliedFilters</qualifiedname>
+        <initializer>= new Dictionary&lt;string, string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Services/IPartService.cs" line="62" column="27" bodyfile="Services/IPartService.cs" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result_1a60306f9d1ec5711861dd1d1e2276dab3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>object?</type>
+        <definition>object? Project_6___Group_4___CSCN73060_SEC_1.Services.SearchResult.AveragePart</definition>
+        <argsstring></argsstring>
+        <name>AveragePart</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Services.SearchResult.AveragePart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Services/IPartService.cs" line="63" column="23" bodyfile="Services/IPartService.cs" bodystart="63" bodyend="63"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Container for search results returned by <ref refid="interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_1a17c3c1225de79d1a87c5de25ef42df48" kindref="member">IPartService.SearchAsync</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Services/IPartService.cs" line="57" column="11" bodyfile="Services/IPartService.cs" bodystart="58" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result_1a66561cbb3b892cadcb5494a94a51883d" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Services::SearchResult</scope><name>AppliedFilters</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result_1a60306f9d1ec5711861dd1d1e2276dab3" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Services::SearchResult</scope><name>AveragePart</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result_1a57b300f10aaf3080f8a15e8d1f8dac8d" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Services::SearchResult</scope><name>PartType</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result_1a0446a693e909e0b81c20ffe996e6131e" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Services::SearchResult</scope><name>Results</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result_1a8ef6a205b8911c03afe67f10e6c64588" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Services::SearchResult</scope><name>TotalCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

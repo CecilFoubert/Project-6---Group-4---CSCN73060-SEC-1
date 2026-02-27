@@ -1,0 +1,51 @@
+\doxysection{IPart\+Service.\+cs}
+\hypertarget{_i_part_service_8cs_source}{}\label{_i_part_service_8cs_source}\index{Services/IPartService.cs@{Services/IPartService.cs}}
+\doxymbox{\hyperlink{_i_part_service_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00007}\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services}{00007}}\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Services}}}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00013}\doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service}{IPartService}}}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00018}\doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_a9ce235931d2838cf970597a9a1cd055d}{00018}}\ \ \ \ \ \ \ \ \ Task<IEnumerable<object>>\ \doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_a9ce235931d2838cf970597a9a1cd055d}{GetAllAsync}}(\textcolor{keywordtype}{string}\ partType);}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00024}\doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_a8e1ffbcaa5ec0eb0c6fb3b331ff72940}{00024}}\ \ \ \ \ \ \ \ \ Task<object?>\ \doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_a8e1ffbcaa5ec0eb0c6fb3b331ff72940}{GetByIdAsync}}(\textcolor{keywordtype}{string}\ partType,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00030}\doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_ab56d037f0e0c362dfe7851e492e766d4}{00030}}\ \ \ \ \ \ \ \ \ Task<object>\ \doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_ab56d037f0e0c362dfe7851e492e766d4}{CreateAsync}}(\textcolor{keywordtype}{string}\ partType,\ Dictionary<string,\ object>\ data);}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00035}\doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_afaca9457e9ff766c2fbe7b5ec6dd15cc}{00035}}\ \ \ \ \ \ \ \ \ Task<object?>\ \doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_afaca9457e9ff766c2fbe7b5ec6dd15cc}{UpdateAsync}}(\textcolor{keywordtype}{string}\ partType,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ Dictionary<string,\ object>\ data);}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00040}\doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_ab8fc535562cba511f13fca3257be10d8}{00040}}\ \ \ \ \ \ \ \ \ Task<bool>\ \doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_ab8fc535562cba511f13fca3257be10d8}{DeleteAsync}}(\textcolor{keywordtype}{string}\ partType,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00046}\doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_a17c3c1225de79d1a87c5de25ef42df48}{00046}}\ \ \ \ \ \ \ \ \ Task<SearchResult>\ \doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_a17c3c1225de79d1a87c5de25ef42df48}{SearchAsync}}(\textcolor{keywordtype}{string}\ partType,\ Dictionary<string,\ string>\ filters);}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00051}\doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_ae82291c6911af6bd0e44ca9042136dc7}{00051}}\ \ \ \ \ \ \ \ \ Task<FilterOptions>\ \doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_ae82291c6911af6bd0e44ca9042136dc7}{GetFilterOptionsAsync}}(\textcolor{keywordtype}{string}\ partType);}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00057}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result}{00057}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result}{SearchResult}}}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00058}00058\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ PartType\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ TotalCount\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ IEnumerable<object>\ Results\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}\ List<object>();}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Dictionary<string,\ string>\ AppliedFilters\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ string>();}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{object}?\ AveragePart\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00069}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_options}{00069}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_options}{FilterOptions}}}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00070}00070\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ PartType\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Dictionary<string,\ FilterAttribute>\ Attributes\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ FilterAttribute>();}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00078}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute}{00078}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute}{FilterAttribute}}}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00079}00079\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ AttributeName\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ AttributeType\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<string>\ DistinctValues\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}\ List<string>();}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ TotalDistinctCount\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00085}00085\ \}}
+\DoxyCodeLine{\Hypertarget{_i_part_service_8cs_source_l00086}00086\ }
+
+\end{DoxyCode}
