@@ -2,7 +2,11 @@ using Microsoft.EntityFrameworkCore;
 using Project_6___Group_4___CSCN73060_SEC_1.Data;
 using Project_6___Group_4___CSCN73060_SEC_1.Models;
 using System.Dynamic;
+using System.Linq.Expressions;
 using System.Reflection;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.Json;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Services
 {
@@ -15,22 +19,6 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
         {
             _context = context;
             _logger = logger;
-        }
-
-        private DbSet<T>? GetDbSet<T>(string partType) where T : class
-        {
-            return partType.ToLower() switch
-            {
-                "cpu" or "cpus" => _context.Set<T>(),
-                "gpu" or "gpus" => _context.Set<T>(),
-                "memory" or "memories" => _context.Set<T>(),
-                "motherboard" or "motherboards" => _context.Set<T>(),
-                "case" or "cases" => _context.Set<T>(),
-                "storage" or "storages" => _context.Set<T>(),
-                "powersupply" or "powersupplies" => _context.Set<T>(),
-                "cpucooler" or "cpucoolers" => _context.Set<T>(),
-                _ => null
-            };
         }
 
         private Type? GetModelType(string partType)
@@ -81,28 +69,24 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
 
         public async Task<IEnumerable<object>> GetAllAsync(string partType)
         {
-            var modelType = GetModelType(partType);
-            if (modelType == null)
-                throw new ArgumentException($"Invalid part type: {partType}");
-
-            var dbSetProperty = _context.GetType().GetProperties()
-                .FirstOrDefault(p => p.PropertyType.IsGenericType &&
-                                   p.PropertyType.GetGenericTypeDefinition() == typeof(DbSet<>) &&
-                                   p.PropertyType.GetGenericArguments()[0] == modelType);
-
-            if (dbSetProperty == null)
-                throw new ArgumentException($"DbSet not found for type: {partType}");
-
-            var dbSet = dbSetProperty.GetValue(_context);
-            var queryable = dbSet as IQueryable<object>;
-            
-            if (queryable == null)
+            var normalizedPartType = partType.ToLower();
+            return normalizedPartType switch
             {
-                var castMethod = typeof(Queryable).GetMethod("Cast")!.MakeGenericMethod(typeof(object));
-                queryable = (IQueryable<object>)castMethod.Invoke(null, new[] { dbSet })!;
-            }
+                "cpu" or "cpus" => await GetAllAsyncInternal(_context.Cpus, "cpu"),
+                "gpu" or "gpus" => await GetAllAsyncInternal(_context.Gpus, "gpu"),
+                "memory" or "memories" => await GetAllAsyncInternal(_context.Memories, "memory"),
+                "motherboard" or "motherboards" => await GetAllAsyncInternal(_context.Motherboards, "motherboard"),
+                "case" or "cases" => await GetAllAsyncInternal(_context.Cases, "case"),
+                "storage" or "storages" => await GetAllAsyncInternal(_context.Storages, "storage"),
+                "powersupply" or "powersupplies" => await GetAllAsyncInternal(_context.PowerSupplies, "powersupply"),
+                "cpucooler" or "cpucoolers" => await GetAllAsyncInternal(_context.CpuCoolers, "cpucooler"),
+                _ => throw new ArgumentException($"Invalid part type: {partType}")
+            };
+        }
 
-            var items = await queryable.ToListAsync();
+        private async Task<IEnumerable<object>> GetAllAsyncInternal<T>(DbSet<T> dbSet, string partType) where T : class
+        {
+            var items = await dbSet.ToListAsync();
             return items.Select(item => ToLightweightObject(item, partType));
         }
 
@@ -202,35 +186,29 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
 
         public async Task<SearchResult> SearchAsync(string partType, Dictionary<string, string> filters)
         {
-            var modelType = GetModelType(partType);
-            if (modelType == null)
-                throw new ArgumentException($"Invalid part type: {partType}");
-
-            var dbSetProperty = _context.GetType().GetProperties()
-                .FirstOrDefault(p => p.PropertyType.IsGenericType &&
-                                   p.PropertyType.GetGenericTypeDefinition() == typeof(DbSet<>) &&
-                                   p.PropertyType.GetGenericArguments()[0] == modelType);
-
-            if (dbSetProperty == null)
-                throw new ArgumentException($"DbSet not found for type: {partType}");
-
-            var dbSet = dbSetProperty.GetValue(_context);
-            var queryable = dbSet as IQueryable<object>;
-            
-            if (queryable == null)
+            var normalizedPartType = partType.ToLower();
+            return normalizedPartType switch
             {
-                var castMethod = typeof(Queryable).GetMethod("Cast")!.MakeGenericMethod(typeof(object));
-                queryable = (IQueryable<object>)castMethod.Invoke(null, new[] { dbSet })!;
-            }
+                "cpu" or "cpus" => await SearchAsyncInternal(_context.Cpus, "cpu", filters),
+                "gpu" or "gpus" => await SearchAsyncInternal(_context.Gpus, "gpu", filters),
+                "memory" or "memories" => await SearchAsyncInternal(_context.Memories, "memory", filters),
+                "motherboard" or "motherboards" => await SearchAsyncInternal(_context.Motherboards, "motherboard", filters),
+                "case" or "cases" => await SearchAsyncInternal(_context.Cases, "case", filters),
+                "storage" or "storages" => await SearchAsyncInternal(_context.Storages, "storage", filters),
+                "powersupply" or "powersupplies" => await SearchAsyncInternal(_context.PowerSupplies, "powersupply", filters),
+                "cpucooler" or "cpucoolers" => await SearchAsyncInternal(_context.CpuCoolers, "cpucooler", filters),
+                _ => throw new ArgumentException($"Invalid part type: {partType}")
+            };
+        }
 
-            // Convert to list first to enable in-memory filtering for complex queries
-            var allItems = await queryable.ToListAsync();
-            var filteredItems = allItems.AsEnumerable();
-
-            // Extract price range filters
+        private async Task<SearchResult> SearchAsyncInternal<T>(DbSet<T> dbSet, string partType, Dictionary<string, string> filters) where T : class
+        {
             decimal? minPrice = null;
             decimal? maxPrice = null;
             var appliedFilters = new Dictionary<string, string>();
+
+            // Build IQueryable with expression-based filters (pushed to SQL)
+            IQueryable<T> query = dbSet;
 
             foreach (var filter in filters)
             {
@@ -242,7 +220,6 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
 
                 appliedFilters[filter.Key] = value;
 
-                // Handle price range
                 if (key == "minprice")
                 {
                     if (decimal.TryParse(value, out var min))
@@ -257,39 +234,30 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
                     continue;
                 }
 
-                // Handle other filters dynamically
-                var property = modelType.GetProperty(filter.Key, BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
-                if (property != null)
+                // String property filter - EF Core translates to SQL
+                var property = typeof(T).GetProperty(filter.Key, BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
+                if (property != null && property.PropertyType == typeof(string))
                 {
-                    filteredItems = filteredItems.Where(item =>
-                    {
-                        var propValue = property.GetValue(item);
-                        if (propValue == null)
-                            return false;
-
-                        var propStringValue = propValue.ToString();
-                        if (string.IsNullOrEmpty(propStringValue))
-                            return false;
-
-                        // Case-insensitive partial match
-                        return propStringValue.Contains(value, StringComparison.OrdinalIgnoreCase);
-                    });
+                    var containsExpr = BuildContainsExpression<T>(property, value);
+                    query = query.Where(containsExpr);
                 }
             }
 
-            // Apply price range filter
+            // Execute query - only matching rows are loaded from DB
+            var items = await query.ToListAsync();
+
+            // Apply price filter in memory (Price stored as string like "$599.99")
             if (minPrice.HasValue || maxPrice.HasValue)
             {
-                var priceProperty = modelType.GetProperty("Price", BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
+                var priceProperty = typeof(T).GetProperty("Price", BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
                 if (priceProperty != null)
                 {
-                    filteredItems = filteredItems.Where(item =>
+                    items = items.Where(item =>
                     {
                         var priceValue = priceProperty.GetValue(item)?.ToString();
                         if (string.IsNullOrEmpty(priceValue))
                             return false;
 
-                        // Try to parse price (handle formats like "$599.99" or "599.99")
                         var cleanPrice = priceValue.Replace("$", "").Replace(",", "").Trim();
                         if (decimal.TryParse(cleanPrice, out var price))
                         {
@@ -300,18 +268,29 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
                             return true;
                         }
                         return false;
-                    });
+                    }).ToList();
                 }
             }
 
-            var resultList = filteredItems.ToList();
-            var lightweightResults = resultList.Select(item => ToLightweightObject(item, partType)).ToList();
-            
-            // Calculate average part
+            var lightweightResults = items.Select(item => ToLightweightObject(item, partType)).ToList();
+
+            // Average part: check cache first, then calculate and save
             object? averagePart = null;
-            if (lightweightResults.Any())
+            if (lightweightResults.Count > 0)
             {
-                averagePart = CalculateAveragePart(lightweightResults, partType);
+                var filterKey = BuildFilterKey(partType, appliedFilters);
+                var cached = await _context.PartAverageCaches
+                    .FirstOrDefaultAsync(c => c.PartType == partType && c.FilterKey == filterKey);
+
+                if (cached != null)
+                {
+                    averagePart = JsonSerializer.Deserialize<JsonElement>(cached.AveragePartJson);
+                }
+                else
+                {
+                    averagePart = CalculateAveragePart(lightweightResults, partType);
+                    await SaveAveragePartToCacheAsync(partType, filterKey, averagePart);
+                }
             }
 
             return new SearchResult
@@ -322,6 +301,48 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
                 AppliedFilters = appliedFilters,
                 AveragePart = averagePart
             };
+        }
+
+        private static Expression<Func<T, bool>> BuildContainsExpression<T>(PropertyInfo property, string value)
+        {
+            var param = Expression.Parameter(typeof(T), "x");
+            var propExpr = Expression.Property(param, property);
+            var containsMethod = typeof(string).GetMethod("Contains", new[] { typeof(string) });
+            if (containsMethod == null)
+                throw new InvalidOperationException("string.Contains not found");
+
+            var containsCall = Expression.Call(propExpr, containsMethod, Expression.Constant(value));
+            var nullCheck = Expression.NotEqual(propExpr, Expression.Constant(null, typeof(string)));
+            var combined = Expression.AndAlso(nullCheck, containsCall);
+            return Expression.Lambda<Func<T, bool>>(combined, param);
+        }
+
+        private static string BuildFilterKey(string partType, Dictionary<string, string> filters)
+        {
+            var sorted = filters.OrderBy(kvp => kvp.Key, StringComparer.OrdinalIgnoreCase);
+            var keyString = string.Join(";", sorted.Select(kvp => $"{kvp.Key.ToLowerInvariant()}={kvp.Value}"));
+            var bytes = SHA256.HashData(Encoding.UTF8.GetBytes($"{partType}:{keyString}"));
+            return Convert.ToHexString(bytes)[..64];
+        }
+
+        private async Task SaveAveragePartToCacheAsync(string partType, string filterKey, object averagePart)
+        {
+            try
+            {
+                var json = JsonSerializer.Serialize(averagePart);
+                var cache = new PartAverageCache
+                {
+                    PartType = partType,
+                    FilterKey = filterKey,
+                    AveragePartJson = json
+                };
+                _context.PartAverageCaches.Add(cache);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex, "Failed to save average part to cache for {PartType} with filter key {FilterKey}", partType, filterKey);
+            }
         }
         
         private object CalculateAveragePart(List<object> parts, string partType)
@@ -402,39 +423,34 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
 
         public async Task<FilterOptions> GetFilterOptionsAsync(string partType)
         {
-            var modelType = GetModelType(partType);
-            if (modelType == null)
-                throw new ArgumentException($"Invalid part type: {partType}");
-
-            var dbSetProperty = _context.GetType().GetProperties()
-                .FirstOrDefault(p => p.PropertyType.IsGenericType &&
-                                   p.PropertyType.GetGenericTypeDefinition() == typeof(DbSet<>) &&
-                                   p.PropertyType.GetGenericArguments()[0] == modelType);
-
-            if (dbSetProperty == null)
-                throw new ArgumentException($"DbSet not found for type: {partType}");
-
-            var dbSet = dbSetProperty.GetValue(_context);
-            var queryable = dbSet as IQueryable<object>;
-            
-            if (queryable == null)
+            var normalizedPartType = partType.ToLower();
+            return normalizedPartType switch
             {
-                var castMethod = typeof(Queryable).GetMethod("Cast")!.MakeGenericMethod(typeof(object));
-                queryable = (IQueryable<object>)castMethod.Invoke(null, new[] { dbSet })!;
-            }
+                "cpu" or "cpus" => await GetFilterOptionsInternal(_context.Cpus, "cpu"),
+                "gpu" or "gpus" => await GetFilterOptionsInternal(_context.Gpus, "gpu"),
+                "memory" or "memories" => await GetFilterOptionsInternal(_context.Memories, "memory"),
+                "motherboard" or "motherboards" => await GetFilterOptionsInternal(_context.Motherboards, "motherboard"),
+                "case" or "cases" => await GetFilterOptionsInternal(_context.Cases, "case"),
+                "storage" or "storages" => await GetFilterOptionsInternal(_context.Storages, "storage"),
+                "powersupply" or "powersupplies" => await GetFilterOptionsInternal(_context.PowerSupplies, "powersupply"),
+                "cpucooler" or "cpucoolers" => await GetFilterOptionsInternal(_context.CpuCoolers, "cpucooler"),
+                _ => throw new ArgumentException($"Invalid part type: {partType}")
+            };
+        }
 
-            var allItems = await queryable.ToListAsync();
-
+        private async Task<FilterOptions> GetFilterOptionsInternal<T>(DbSet<T> dbSet, string partType) where T : class
+        {
+            var allItems = await dbSet.ToListAsync();
+            var modelType = typeof(T);
             var filterOptions = new FilterOptions
             {
                 PartType = partType,
                 Attributes = new Dictionary<string, FilterAttribute>()
             };
 
-            // Get all properties except ones we don't want to filter by
             var properties = modelType.GetProperties()
-                .Where(p => p.Name != "Id" && 
-                           p.Name != "ImageUrl" && 
+                .Where(p => p.Name != "Id" &&
+                           p.Name != "ImageUrl" &&
                            p.Name != "ProductUrl" &&
                            p.Name != "PartNumber" &&
                            p.CanRead)
@@ -444,7 +460,6 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
             {
                 try
                 {
-                    // Get all non-null, non-empty values for this property
                     var distinctValues = allItems
                         .Select(item => property.GetValue(item))
                         .Where(value => value != null && !string.IsNullOrWhiteSpace(value.ToString()))
@@ -453,15 +468,12 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
                         .OrderBy(v => v)
                         .ToList();
 
-                    if (distinctValues.Any())
+                    if (distinctValues.Count > 0)
                     {
-                        var attributeName = property.Name;
-                        var attributeType = GetFriendlyTypeName(property.PropertyType);
-
-                        filterOptions.Attributes[attributeName] = new FilterAttribute
+                        filterOptions.Attributes[property.Name] = new FilterAttribute
                         {
-                            AttributeName = attributeName,
-                            AttributeType = attributeType,
+                            AttributeName = property.Name,
+                            AttributeType = GetFriendlyTypeName(property.PropertyType),
                             DistinctValues = distinctValues,
                             TotalDistinctCount = distinctValues.Count
                         };
