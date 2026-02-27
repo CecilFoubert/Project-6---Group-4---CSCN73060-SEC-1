@@ -1,8 +1,17 @@
+/*!
+ * @file Data/ApplicationDbContext.cs
+ * @brief EF Core DbContext for the application.
+ * @ingroup Data
+ */
+
 using Microsoft.EntityFrameworkCore;
 using Project_6___Group_4___CSCN73060_SEC_1.Models;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Data
 {
+    /// <summary>
+    /// EF Core DbContext for PC Part Picker. Exposes DbSets for all part types, builds and caching.
+    /// </summary>
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

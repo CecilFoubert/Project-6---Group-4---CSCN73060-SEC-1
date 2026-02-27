@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services" kind="namespace" language="C#">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Services</compoundname>
+    <innerclass refid="interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service" prot="public">Project_6___Group_4___CSCN73060_SEC_1::Services::IPartService</innerclass>
+    <innerclass refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result" prot="public">Project_6___Group_4___CSCN73060_SEC_1::Services::SearchResult</innerclass>
+    <innerclass refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_options" prot="public">Project_6___Group_4___CSCN73060_SEC_1::Services::FilterOptions</innerclass>
+    <innerclass refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute" prot="public">Project_6___Group_4___CSCN73060_SEC_1::Services::FilterAttribute</innerclass>
+    <innerclass refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service" prot="public">Project_6___Group_4___CSCN73060_SEC_1::Services::PartService</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Services/IPartService.cs" line="7" column="1"/>
+  </compounddef>
+</doxygen>

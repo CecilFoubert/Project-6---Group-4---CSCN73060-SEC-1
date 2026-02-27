@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dir_8dda3312684a93b2e6708913084b29ad" kind="dir">
+    <compoundname>Views/Shared</compoundname>
+    <innerfile refid="___layout_8cshtml">_Layout.cshtml</innerfile>
+    <innerfile refid="___validation_scripts_partial_8cshtml">_ValidationScriptsPartial.cshtml</innerfile>
+    <innerfile refid="_error_8cshtml">Error.cshtml</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Views/Shared/"/>
+  </compounddef>
+</doxygen>

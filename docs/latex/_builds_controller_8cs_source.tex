@@ -1,0 +1,191 @@
+\doxysection{Builds\+Controller.\+cs}
+\hypertarget{_builds_controller_8cs_source}{}\label{_builds_controller_8cs_source}\index{Controllers/BuildsController.cs@{Controllers/BuildsController.cs}}
+\doxymbox{\hyperlink{_builds_controller_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Data}};}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00010}00010\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models}};}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00012}00012\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers}}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00018}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a70a82507b34a13476fd9293de476c139}{BuildsController}}\ :\ Controller}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context}{ApplicationDbContext}}\ \_context;}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ ILogger<BuildsController>\ \_logger;}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00026}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a70a82507b34a13476fd9293de476c139}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a70a82507b34a13476fd9293de476c139}{BuildsController}}(\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context}{ApplicationDbContext}}\ context,\ ILogger<BuildsController>\ logger)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \_context\ =\ context;}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \_logger\ =\ logger;}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ GET:\ Builds}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<IActionResult>\ Index()}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ var\ builds\ =\ await\ \_context.Builds}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Cpu)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Gpu)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Motherboard)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Memory)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Storage)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Case)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.PowerSupply)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.CpuCooler)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OrderByDescending(b\ =>\ b.UpdatedAt)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToListAsync();}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(builds);}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ GET:\ Builds/Details/5}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<IActionResult>\ Details(\textcolor{keywordtype}{int}?\ \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{id}\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ var\ build\ =\ await\ \_context.Builds}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Cpu)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Gpu)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Motherboard)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Memory)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Storage)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Case)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.PowerSupply)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.CpuCooler)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .FirstOrDefaultAsync(m\ =>\ m.Id\ ==\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (build\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(build);}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ GET:\ Builds/Create}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ IActionResult\ Create()}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View();}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ POST:\ Builds/Create}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ [HttpPost]}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ [ValidateAntiForgeryToken]}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<IActionResult>\ Create([Bind(\textcolor{stringliteral}{"{}Id,Name,Description,CpuId,GpuId,MotherboardId,MemoryId,StorageId,CaseId,PowerSupplyId,CpuCoolerId"{}})]\ Build\ build)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ModelState.IsValid)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ build.CreatedAt\ =\ DateTime.UtcNow;}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ build.UpdatedAt\ =\ DateTime.UtcNow;}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_context.Add(build);}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_context.SaveChangesAsync();}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ RedirectToAction(nameof(Index));}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(build);}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ GET:\ Builds/Edit/5}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<IActionResult>\ Edit(\textcolor{keywordtype}{int}?\ \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{id}\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ var\ build\ =\ await\ \_context.Builds.FindAsync(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (build\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(build);}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ POST:\ Builds/Edit/5}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ [HttpPost]}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ [ValidateAntiForgeryToken]}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<IActionResult>\ Edit(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ [Bind(\textcolor{stringliteral}{"{}Id,Name,Description,CpuId,GpuId,MotherboardId,MemoryId,StorageId,CaseId,PowerSupplyId,CpuCoolerId,CreatedAt"{}})]\ Build\ build)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{id}\ !=\ build.Id)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ModelState.IsValid)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ build.UpdatedAt\ =\ DateTime.UtcNow;}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_context.Update(build);}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_context.SaveChangesAsync();}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (DbUpdateConcurrencyException)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!BuildExists(build.Id))}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ RedirectToAction(nameof(Index));}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(build);}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ GET:\ Builds/Delete/5}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<IActionResult>\ Delete(\textcolor{keywordtype}{int}?\ \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{id}\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ var\ build\ =\ await\ \_context.Builds}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Cpu)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Gpu)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Motherboard)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Memory)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Storage)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Case)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.PowerSupply)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.CpuCooler)}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .FirstOrDefaultAsync(m\ =>\ m.Id\ ==\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (build\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(build);}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ POST:\ Builds/Delete/5}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ [HttpPost,\ ActionName(\textcolor{stringliteral}{"{}Delete"{}})]}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ [ValidateAntiForgeryToken]}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<IActionResult>\ DeleteConfirmed(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ var\ build\ =\ await\ \_context.Builds.FindAsync(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (build\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_context.Builds.Remove(build);}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_context.SaveChangesAsync();}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ RedirectToAction(nameof(Index));}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ BuildExists(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_context.Builds.Any(e\ =>\ e.Id\ ==\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00195}00195\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_builds_controller_8cs_source_l00196}00196\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dir_a918b2cf39a28328a2b33c0da93cf50d" kind="dir">
+    <compoundname>Project-6---Group-4---CSCN73060-SEC-1.Tests</compoundname>
+    <innerdir refid="dir_5a94fc886539f26dc7b9a649f084e639">Project-6---Group-4---CSCN73060-SEC-1.Tests/obj</innerdir>
+    <innerfile refid="_acceptance_tests_8cs">AcceptanceTests.cs</innerfile>
+    <innerfile refid="_api_routes_unit_tests_8cs">ApiRoutesUnitTests.cs</innerfile>
+    <innerfile refid="_custom_web_application_factory_8cs">CustomWebApplicationFactory.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/"/>
+  </compounddef>
+</doxygen>

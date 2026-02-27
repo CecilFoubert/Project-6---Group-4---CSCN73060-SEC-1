@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Data::TestDbSeeder</compoundname>
+    <basecompoundref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder" prot="public" virt="non-virtual">Project_6___Group_4___CSCN73060_SEC_1.Data.DbSeeder</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder_1aedfef86f9f7ca899a3b753aa6b4b6358" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context" kindref="compound">ApplicationDbContext</ref></type>
+        <definition>readonly ApplicationDbContext Project_6___Group_4___CSCN73060_SEC_1.Data.TestDbSeeder._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Data.TestDbSeeder._context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/TestDbSeeder.cs" line="11" column="43" bodyfile="Data/TestDbSeeder.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder_1a9d190b8bfb5037530837e9c6876df856" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Project_6___Group_4___CSCN73060_SEC_1.Data.TestDbSeeder.TestDbSeeder</definition>
+        <argsstring>(ApplicationDbContext context, IWebHostEnvironment env, ILogger&lt; TestDbSeeder &gt; logger, IConfiguration configuration)</argsstring>
+        <name>TestDbSeeder</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Data.TestDbSeeder.TestDbSeeder</qualifiedname>
+        <param>
+          <type><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context" kindref="compound">ApplicationDbContext</ref></type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>IWebHostEnvironment</type>
+          <declname>env</declname>
+        </param>
+        <param>
+          <type>ILogger&lt; TestDbSeeder &gt;</type>
+          <declname>logger</declname>
+        </param>
+        <param>
+          <type>IConfiguration</type>
+          <declname>configuration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/TestDbSeeder.cs" line="13" column="12" bodyfile="Data/TestDbSeeder.cs" bodystart="13" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder_1aee211554434bbe842afd037c047b4c47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override async Task</type>
+        <definition>override async Task Project_6___Group_4___CSCN73060_SEC_1.Data.TestDbSeeder.SeedAsync</definition>
+        <argsstring>()</argsstring>
+        <name>SeedAsync</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Data.TestDbSeeder.SeedAsync</qualifiedname>
+        <reimplements refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder_1aba2da0481779f18e6e32714ff66b8b22">SeedAsync</reimplements>
+        <briefdescription>
+<para>Seed the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is idempotent: it will skip seeding when CPUs already exist. It logs progress and rethrows unexpected exceptions after logging for the caller to handle. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/TestDbSeeder.cs" line="23" column="32" bodyfile="Data/TestDbSeeder.cs" bodystart="23" bodyend="55"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Seeds minimal test data via EF (for InMemory database in unit tests). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Data.TestDbSeeder</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Data.DbSeeder</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Data.TestDbSeeder</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Data.DbSeeder</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder"/>
+      </node>
+    </collaborationgraph>
+    <location file="Data/TestDbSeeder.cs" line="9" column="7" bodyfile="Data/TestDbSeeder.cs" bodystart="10" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder_1aedfef86f9f7ca899a3b753aa6b4b6358" prot="private" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::TestDbSeeder</scope><name>_context</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder_1af3ff6caa93fc13e9f8e56afaaeb4e1a8" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::TestDbSeeder</scope><name>DbSeeder</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder_1aee211554434bbe842afd037c047b4c47" prot="public" virt="virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::TestDbSeeder</scope><name>SeedAsync</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder_1a9d190b8bfb5037530837e9c6876df856" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::TestDbSeeder</scope><name>TestDbSeeder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

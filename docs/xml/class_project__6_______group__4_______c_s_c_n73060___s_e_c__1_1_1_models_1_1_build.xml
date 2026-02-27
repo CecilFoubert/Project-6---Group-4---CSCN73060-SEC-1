@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a9b0352f0a6278dc2844513bf1234c3e4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="19" column="20" bodyfile="Models/Build.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1ae86d45f0156cdb3e1f7f9bdd6540bc75" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Name</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+<para>User-supplied build name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="26" column="23" bodyfile="Models/Build.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1ac0d0bb39dc4d7fc5543e3ff4889cb8b1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Description</qualifiedname>
+        <briefdescription>
+<para>Optional description entered by the user. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="32" column="23" bodyfile="Models/Build.cs" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a271ac0e0cdf16edcc7a68d2874719845" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime Project_6___Group_4___CSCN73060_SEC_1.Models.Build.CreatedAt</definition>
+        <argsstring></argsstring>
+        <name>CreatedAt</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.CreatedAt</qualifiedname>
+        <initializer>= DateTime.UtcNow</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="34" column="25" bodyfile="Models/Build.cs" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a298f3227bd8c9e6fb82bcf3f0b5f7042" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime Project_6___Group_4___CSCN73060_SEC_1.Models.Build.UpdatedAt</definition>
+        <argsstring></argsstring>
+        <name>UpdatedAt</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.UpdatedAt</qualifiedname>
+        <initializer>= DateTime.UtcNow</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="36" column="25" bodyfile="Models/Build.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1aa6f32d74b453bb4e59772334a975084e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int?</type>
+        <definition>int? Project_6___Group_4___CSCN73060_SEC_1.Models.Build.CpuId</definition>
+        <argsstring></argsstring>
+        <name>CpuId</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.CpuId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="39" column="20" bodyfile="Models/Build.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a061bed3946198c8f96802f699ccba817" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int?</type>
+        <definition>int? Project_6___Group_4___CSCN73060_SEC_1.Models.Build.GpuId</definition>
+        <argsstring></argsstring>
+        <name>GpuId</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.GpuId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="40" column="20" bodyfile="Models/Build.cs" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a6926d88b6bf24cf7d78f5ae7ee26748b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int?</type>
+        <definition>int? Project_6___Group_4___CSCN73060_SEC_1.Models.Build.MotherboardId</definition>
+        <argsstring></argsstring>
+        <name>MotherboardId</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.MotherboardId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="41" column="20" bodyfile="Models/Build.cs" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a9d942d89c8d29250653f8ac37ae97d8d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int?</type>
+        <definition>int? Project_6___Group_4___CSCN73060_SEC_1.Models.Build.MemoryId</definition>
+        <argsstring></argsstring>
+        <name>MemoryId</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.MemoryId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="42" column="20" bodyfile="Models/Build.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a6ab975a471f412224b6448acc1dbb4e0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int?</type>
+        <definition>int? Project_6___Group_4___CSCN73060_SEC_1.Models.Build.StorageId</definition>
+        <argsstring></argsstring>
+        <name>StorageId</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.StorageId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="43" column="20" bodyfile="Models/Build.cs" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1af8d9bd119103953296bc9cece20ba439" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int?</type>
+        <definition>int? Project_6___Group_4___CSCN73060_SEC_1.Models.Build.CaseId</definition>
+        <argsstring></argsstring>
+        <name>CaseId</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.CaseId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="44" column="20" bodyfile="Models/Build.cs" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1ae67c169679a2f5939cdcb3a74005e56c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int?</type>
+        <definition>int? Project_6___Group_4___CSCN73060_SEC_1.Models.Build.PowerSupplyId</definition>
+        <argsstring></argsstring>
+        <name>PowerSupplyId</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.PowerSupplyId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="45" column="20" bodyfile="Models/Build.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a133b1c92bcf9decbebd84144296af196" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int?</type>
+        <definition>int? Project_6___Group_4___CSCN73060_SEC_1.Models.Build.CpuCoolerId</definition>
+        <argsstring></argsstring>
+        <name>CpuCoolerId</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.CpuCoolerId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="46" column="20" bodyfile="Models/Build.cs" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1aa571bcb6e79bfae74d1c90565735e67f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>? Cpu</type>
+        <definition>virtual ? Cpu Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Cpu</definition>
+        <argsstring></argsstring>
+        <name>Cpu</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Cpu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="50" column="28" bodyfile="Models/Build.cs" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1afb2484d39966662f7781f2efccd475a9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>? Gpu</type>
+        <definition>virtual ? Gpu Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Gpu</definition>
+        <argsstring></argsstring>
+        <name>Gpu</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Gpu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="53" column="28" bodyfile="Models/Build.cs" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a5d9cece2b7cf161855b6707883b31e76" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>? Motherboard</type>
+        <definition>virtual ? Motherboard Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Motherboard</definition>
+        <argsstring></argsstring>
+        <name>Motherboard</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Motherboard</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="56" column="36" bodyfile="Models/Build.cs" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1ae0d0ccde7b11b3c8df645b8b294863fc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>? Memory</type>
+        <definition>virtual ? Memory Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Memory</definition>
+        <argsstring></argsstring>
+        <name>Memory</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Memory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="59" column="31" bodyfile="Models/Build.cs" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a285386845098969ba47dd0802c895fb9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>? Storage</type>
+        <definition>virtual ? Storage Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Storage</definition>
+        <argsstring></argsstring>
+        <name>Storage</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Storage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="62" column="32" bodyfile="Models/Build.cs" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a5fc7ebf3dab6e976cec560bcb54e5cd9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>? Case</type>
+        <definition>virtual ? Case Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Case</definition>
+        <argsstring></argsstring>
+        <name>Case</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.Case</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="65" column="29" bodyfile="Models/Build.cs" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a1086f1d9d1b10edebdb393ba7ae9f5f5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>? PowerSupply</type>
+        <definition>virtual ? PowerSupply Project_6___Group_4___CSCN73060_SEC_1.Models.Build.PowerSupply</definition>
+        <argsstring></argsstring>
+        <name>PowerSupply</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.PowerSupply</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="68" column="36" bodyfile="Models/Build.cs" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a73396a51af24371cbb7e1cb7e6ff803c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>? CpuCooler</type>
+        <definition>virtual ? CpuCooler Project_6___Group_4___CSCN73060_SEC_1.Models.Build.CpuCooler</definition>
+        <argsstring></argsstring>
+        <name>CpuCooler</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.CpuCooler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="71" column="34" bodyfile="Models/Build.cs" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1af4fc4ae88f2c488182c31e2da3f9d70d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>decimal?</type>
+        <definition>decimal? Project_6___Group_4___CSCN73060_SEC_1.Models.Build.TotalPrice</definition>
+        <argsstring></argsstring>
+        <name>TotalPrice</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Build.TotalPrice</qualifiedname>
+        <briefdescription>
+<para>Computed total price for the build. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns null when no priced parts present. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Build.cs" line="77" column="24" bodyfile="Models/Build.cs" bodystart="78" bodyend="134"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build" kindref="compound">Build</ref> aggregates selected parts into a saved PC configuration. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Navigation properties link to individual part entities; foreign keys are nullable. </para>
+    </detaileddescription>
+    <location file="Models/Build.cs" line="16" column="11" bodyfile="Models/Build.cs" bodystart="17" bodyend="135"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a5fc7ebf3dab6e976cec560bcb54e5cd9" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>Case</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1af8d9bd119103953296bc9cece20ba439" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>CaseId</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1aa571bcb6e79bfae74d1c90565735e67f" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>Cpu</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a73396a51af24371cbb7e1cb7e6ff803c" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>CpuCooler</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a133b1c92bcf9decbebd84144296af196" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>CpuCoolerId</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1aa6f32d74b453bb4e59772334a975084e" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>CpuId</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a271ac0e0cdf16edcc7a68d2874719845" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>CreatedAt</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1ac0d0bb39dc4d7fc5543e3ff4889cb8b1" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>Description</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1afb2484d39966662f7781f2efccd475a9" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>Gpu</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a061bed3946198c8f96802f699ccba817" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>GpuId</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a9b0352f0a6278dc2844513bf1234c3e4" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>Id</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1ae0d0ccde7b11b3c8df645b8b294863fc" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>Memory</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a9d942d89c8d29250653f8ac37ae97d8d" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>MemoryId</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a5d9cece2b7cf161855b6707883b31e76" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>Motherboard</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a6926d88b6bf24cf7d78f5ae7ee26748b" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>MotherboardId</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1ae86d45f0156cdb3e1f7f9bdd6540bc75" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>Name</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a1086f1d9d1b10edebdb393ba7ae9f5f5" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>PowerSupply</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1ae67c169679a2f5939cdcb3a74005e56c" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>PowerSupplyId</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a285386845098969ba47dd0802c895fb9" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>Storage</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a6ab975a471f412224b6448acc1dbb4e0" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>StorageId</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1af4fc4ae88f2c488182c31e2da3f9d70d" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>TotalPrice</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a298f3227bd8c9e6fb82bcf3f0b5f7042" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</scope><name>UpdatedAt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,9 +1,20 @@
+/*!
+ * @file Controllers/PartsController.cs
+ * @brief API controller that exposes endpoints for parts (CRUD, search, filters).
+ * @ingroup Controllers
+ */
+
 using Microsoft.AspNetCore.Mvc;
 using Project_6___Group_4___CSCN73060_SEC_1.Models;
 using Project_6___Group_4___CSCN73060_SEC_1.Services;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Controllers
 {
+    /// <summary>
+    /// API controller that exposes endpoints for CRUD and search over PC part types
+    /// (cpu, gpu, memory, motherboard, case, storage, powersupply, cpucooler).
+    /// Delegates data access and filtering logic to <see cref="IPartService"/>.
+    /// </summary>
     [ApiController]
     [Route("api/[controller]")]
     public class PartsController : ControllerBase
@@ -11,6 +22,11 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Controllers
         private readonly IPartService _partService;
         private readonly ILogger<PartsController> _logger;
 
+        /// <summary>
+        /// Creates a new instance of <see cref="PartsController"/>.
+        /// </summary>
+        /// <param name="partService">Service used to perform part operations.</param>
+        /// <param name="logger">Logger for diagnostics.</param>
         public PartsController(IPartService partService, ILogger<PartsController> logger)
         {
             _partService = partService;
@@ -175,13 +191,7 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Controllers
         /// <summary>
         /// Get all available filter options for a part type
         /// GET /api/parts/{partType}/filters
-        /// Returns all searchable attributes with their distinct values
-        /// Perfect for building dynamic dropdown filters in the frontend
-        /// 
-        /// Examples:
-        /// - /api/parts/cpu/filters
-        /// - /api/parts/gpu/filters
-        /// - /api/parts/memory/filters
+        /// Returns all searchable attributes with their distinct values.
         /// </summary>
         [HttpGet("{partType}/filters")]
         public async Task<IActionResult> GetFilters(string partType)
@@ -211,18 +221,6 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Controllers
         /// <summary>
         /// Dynamic search endpoint for parts with flexible filtering (JSON body)
         /// POST /api/parts/{partType}/search
-        /// Body: SearchFilters object with minPrice, maxPrice, manufacturer, and dynamic filters
-        /// 
-        /// Example body:
-        /// {
-        ///   "minPrice": 200,
-        ///   "maxPrice": 500,
-        ///   "manufacturer": "Intel",
-        ///   "filters": {
-        ///     "socket": "LGA1700",
-        ///     "cores": "8"
-        ///   }
-        /// }
         /// </summary>
         [HttpPost("{partType}/search")]
         public async Task<IActionResult> Search(string partType, [FromBody] SearchFilters? searchFilters)

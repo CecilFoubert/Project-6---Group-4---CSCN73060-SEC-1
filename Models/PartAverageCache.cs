@@ -1,3 +1,9 @@
+/*!
+ * @file Models/PartAverageCache.cs
+ * @brief Caching model for average-part results (search).
+ * @ingroup Models
+ */
+
 using System.ComponentModel.DataAnnotations;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Models

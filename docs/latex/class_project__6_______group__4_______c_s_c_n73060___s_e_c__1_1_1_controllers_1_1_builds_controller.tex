@@ -1,0 +1,321 @@
+\doxysection{Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Builds\+Controller Class Reference}
+\hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller}{}\label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}}
+
+
+MVC controller that renders Razor views for build CRUD operations.  
+
+
+Inheritance diagram for Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Builds\+Controller:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a70a82507b34a13476fd9293de476c139}{Builds\+Controller}} (\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context}{Application\+Db\+Context}} context, ILogger$<$ Builds\+Controller $>$ logger)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller}{Builds\+Controller}. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a87ace0f2a02d7ceda40b41a214953dad}{Index}} ()
+\item 
+async Task$<$ IAction\+Result $>$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a26e85a5ace41ff154dd7cc2e6cff57a2}{Details}} (int? id)
+\item 
+IAction\+Result \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_ab612d9bbed45c0df11020320364ab09c}{Create}} ()
+\item 
+async Task$<$ IAction\+Result $>$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a3ac0e535a735d983dd29bc7817a87e80}{Create}} (\+[Bind("{}Id,Name,Description,Cpu\+Id,Gpu\+Id,Motherboard\+Id,Memory\+Id,Storage\+Id,Case\+Id,Power\+Supply\+Id,Cpu\+Cooler\+Id"{})]\+ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Build}} build)
+\item 
+async Task$<$ IAction\+Result $>$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a4f48f151e0066873a9142ab9d14b02c4}{Edit}} (int? id)
+\item 
+async Task$<$ IAction\+Result $>$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a0d2d07e19e1d44e5ffeb47c88b4c7b8e}{Edit}} (int id, \+[Bind("{}Id,Name,Description,Cpu\+Id,Gpu\+Id,Motherboard\+Id,Memory\+Id,Storage\+Id,Case\+Id,Power\+Supply\+Id,Cpu\+Cooler\+Id,Created\+At"{})]\+ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Build}} build)
+\item 
+async Task$<$ IAction\+Result $>$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_aee759fd0e5841bebcceaa6f5064fbe9d}{Delete}} (int? id)
+\item 
+async Task$<$ IAction\+Result $>$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a9c26105ea1a85bc72b7df0702f61d713}{Delete\+Confirmed}} (int id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+MVC controller that renders Razor views for build CRUD operations. 
+
+Used by the web UI (not the API) to view and manage saved builds. 
+
+Definition at line \doxymbox{\hyperlink{_builds_controller_8cs_source_l00018}{18}} of file \doxymbox{\hyperlink{_builds_controller_8cs_source}{Builds\+Controller.\+cs}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a70a82507b34a13476fd9293de476c139}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}!BuildsController@{BuildsController}}
+\index{BuildsController@{BuildsController}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}}
+\doxysubsubsection{\texorpdfstring{BuildsController()}{BuildsController()}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a70a82507b34a13476fd9293de476c139} 
+Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Builds\+Controller.\+Builds\+Controller (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context}{Application\+Db\+Context}}}]{context}{, }\item[{ILogger$<$ Builds\+Controller $>$}]{logger}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller}{Builds\+Controller}. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_builds_controller_8cs_source_l00026}{26}} of file \doxymbox{\hyperlink{_builds_controller_8cs_source}{Builds\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \_context\ =\ context;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \_logger\ =\ logger;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_ab612d9bbed45c0df11020320364ab09c}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}!Create@{Create}}
+\index{Create@{Create}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_ab612d9bbed45c0df11020320364ab09c} 
+IAction\+Result Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Builds\+Controller.\+Create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_builds_controller_8cs_source_l00078}{78}} of file \doxymbox{\hyperlink{_builds_controller_8cs_source}{Builds\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a3ac0e535a735d983dd29bc7817a87e80}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}!Create@{Create}}
+\index{Create@{Create}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a3ac0e535a735d983dd29bc7817a87e80} 
+async Task$<$ IAction\+Result $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Builds\+Controller.\+Create (\begin{DoxyParamCaption}\item[{\+[\+Bind("{}\+Id,\+Name,\+Description,\+Cpu\+Id,\+Gpu\+Id,\+Motherboard\+Id,\+Memory\+Id,\+Storage\+Id,\+Case\+Id,\+Power\+Supply\+Id,\+Cpu\+Cooler\+Id"{})]\+ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Build}}}]{build}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_builds_controller_8cs_source_l00086}{86}} of file \doxymbox{\hyperlink{_builds_controller_8cs_source}{Builds\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ModelState.IsValid)}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ build.CreatedAt\ =\ DateTime.UtcNow;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ build.UpdatedAt\ =\ DateTime.UtcNow;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_context.Add(build);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_context.SaveChangesAsync();}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ RedirectToAction(nameof(Index));}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(build);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_aee759fd0e5841bebcceaa6f5064fbe9d}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}!Delete@{Delete}}
+\index{Delete@{Delete}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_aee759fd0e5841bebcceaa6f5064fbe9d} 
+async Task$<$ IAction\+Result $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Builds\+Controller.\+Delete (\begin{DoxyParamCaption}\item[{int?}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_builds_controller_8cs_source_l00150}{150}} of file \doxymbox{\hyperlink{_builds_controller_8cs_source}{Builds\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{id}\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ var\ build\ =\ await\ \_context.Builds}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Cpu)}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Gpu)}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Motherboard)}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Memory)}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Storage)}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Case)}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.PowerSupply)}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.CpuCooler)}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .FirstOrDefaultAsync(m\ =>\ m.Id\ ==\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (build\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(build);}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a9c26105ea1a85bc72b7df0702f61d713}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}!DeleteConfirmed@{DeleteConfirmed}}
+\index{DeleteConfirmed@{DeleteConfirmed}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}}
+\doxysubsubsection{\texorpdfstring{DeleteConfirmed()}{DeleteConfirmed()}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a9c26105ea1a85bc72b7df0702f61d713} 
+async Task$<$ IAction\+Result $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Builds\+Controller.\+Delete\+Confirmed (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_builds_controller_8cs_source_l00179}{179}} of file \doxymbox{\hyperlink{_builds_controller_8cs_source}{Builds\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ var\ build\ =\ await\ \_context.Builds.FindAsync(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (build\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_context.Builds.Remove(build);}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_context.SaveChangesAsync();}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ RedirectToAction(nameof(Index));}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a26e85a5ace41ff154dd7cc2e6cff57a2}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}!Details@{Details}}
+\index{Details@{Details}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}}
+\doxysubsubsection{\texorpdfstring{Details()}{Details()}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a26e85a5ace41ff154dd7cc2e6cff57a2} 
+async Task$<$ IAction\+Result $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Builds\+Controller.\+Details (\begin{DoxyParamCaption}\item[{int?}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_builds_controller_8cs_source_l00051}{51}} of file \doxymbox{\hyperlink{_builds_controller_8cs_source}{Builds\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{id}\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ var\ build\ =\ await\ \_context.Builds}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Cpu)}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Gpu)}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Motherboard)}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Memory)}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Storage)}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Case)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.PowerSupply)}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.CpuCooler)}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .FirstOrDefaultAsync(m\ =>\ m.Id\ ==\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (build\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(build);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a0d2d07e19e1d44e5ffeb47c88b4c7b8e}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}!Edit@{Edit}}
+\index{Edit@{Edit}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a0d2d07e19e1d44e5ffeb47c88b4c7b8e} 
+async Task$<$ IAction\+Result $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Builds\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{\+[\+Bind("{}\+Id,\+Name,\+Description,\+Cpu\+Id,\+Gpu\+Id,\+Motherboard\+Id,\+Memory\+Id,\+Storage\+Id,\+Case\+Id,\+Power\+Supply\+Id,\+Cpu\+Cooler\+Id,\+Created\+At"{})]\+ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Build}}}]{build}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_builds_controller_8cs_source_l00118}{118}} of file \doxymbox{\hyperlink{_builds_controller_8cs_source}{Builds\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{id}\ !=\ build.Id)}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ModelState.IsValid)}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ build.UpdatedAt\ =\ DateTime.UtcNow;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_context.Update(build);}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_context.SaveChangesAsync();}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (DbUpdateConcurrencyException)}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!BuildExists(build.Id))}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ RedirectToAction(nameof(Index));}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(build);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a4f48f151e0066873a9142ab9d14b02c4}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}!Edit@{Edit}}
+\index{Edit@{Edit}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a4f48f151e0066873a9142ab9d14b02c4} 
+async Task$<$ IAction\+Result $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Builds\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int?}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_builds_controller_8cs_source_l00100}{100}} of file \doxymbox{\hyperlink{_builds_controller_8cs_source}{Builds\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{id}\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ var\ build\ =\ await\ \_context.Builds.FindAsync(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (build\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(build);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a87ace0f2a02d7ceda40b41a214953dad}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}!Index@{Index}}
+\index{Index@{Index}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.BuildsController}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_a87ace0f2a02d7ceda40b41a214953dad} 
+async Task$<$ IAction\+Result $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Builds\+Controller.\+Index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_builds_controller_8cs_source_l00033}{33}} of file \doxymbox{\hyperlink{_builds_controller_8cs_source}{Builds\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ var\ builds\ =\ await\ \_context.Builds}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Cpu)}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Gpu)}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Motherboard)}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Memory)}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Storage)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.Case)}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.PowerSupply)}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(b\ =>\ b.CpuCooler)}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OrderByDescending(b\ =>\ b.UpdatedAt)}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToListAsync();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ View(builds);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Controllers/\+\doxymbox{\hyperlink{_builds_controller_8cs}{Builds\+Controller.\+cs}}\end{DoxyCompactItemize}

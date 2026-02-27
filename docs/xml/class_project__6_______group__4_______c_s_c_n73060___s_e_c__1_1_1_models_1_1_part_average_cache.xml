@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Models::PartAverageCache</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache_1ac7f7947dc9b3853d0483ce305d8b9948" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Project_6___Group_4___CSCN73060_SEC_1.Models.PartAverageCache.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PartAverageCache.Id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PartAverageCache.cs" line="18" column="20" bodyfile="Models/PartAverageCache.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache_1a8510ff1cd5ed294a784eb4e6412f09da" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Project_6___Group_4___CSCN73060_SEC_1.Models.PartAverageCache.PartType</definition>
+        <argsstring></argsstring>
+        <name>PartType</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PartAverageCache.PartType</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PartAverageCache.cs" line="22" column="23" bodyfile="Models/PartAverageCache.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache_1a4a629eae27673d49a0e7999bbfa1d159" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Project_6___Group_4___CSCN73060_SEC_1.Models.PartAverageCache.FilterKey</definition>
+        <argsstring></argsstring>
+        <name>FilterKey</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PartAverageCache.FilterKey</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+<para>Deterministic key from sorted filter key-value pairs (e.g. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>hash or &quot;key1=val1;key2=val2&quot;). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PartAverageCache.cs" line="29" column="23" bodyfile="Models/PartAverageCache.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache_1a87200a5228dbed3be3ba0d13d6954d39" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Project_6___Group_4___CSCN73060_SEC_1.Models.PartAverageCache.AveragePartJson</definition>
+        <argsstring></argsstring>
+        <name>AveragePartJson</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PartAverageCache.AveragePartJson</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+<para>JSON-serialized average part data (Dictionary/ExpandoObject). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PartAverageCache.cs" line="35" column="23" bodyfile="Models/PartAverageCache.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache_1a8acd506aa20bf0829115a801cb705110" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime Project_6___Group_4___CSCN73060_SEC_1.Models.PartAverageCache.CreatedAt</definition>
+        <argsstring></argsstring>
+        <name>CreatedAt</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.PartAverageCache.CreatedAt</qualifiedname>
+        <initializer>= DateTime.UtcNow</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/PartAverageCache.cs" line="37" column="25" bodyfile="Models/PartAverageCache.cs" bodystart="37" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Caches calculated average parts for search results. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Lookup key: PartType + FilterKey (deterministic hash of applied filters). </para>
+    </detaileddescription>
+    <location file="Models/PartAverageCache.cs" line="15" column="11" bodyfile="Models/PartAverageCache.cs" bodystart="16" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache_1a87200a5228dbed3be3ba0d13d6954d39" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PartAverageCache</scope><name>AveragePartJson</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache_1a8acd506aa20bf0829115a801cb705110" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PartAverageCache</scope><name>CreatedAt</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache_1a4a629eae27673d49a0e7999bbfa1d159" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PartAverageCache</scope><name>FilterKey</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache_1ac7f7947dc9b3853d0483ce305d8b9948" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PartAverageCache</scope><name>Id</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache_1a8510ff1cd5ed294a784eb4e6412f09da" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::PartAverageCache</scope><name>PartType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

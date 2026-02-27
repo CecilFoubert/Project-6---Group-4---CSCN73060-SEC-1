@@ -1,0 +1,52 @@
+\doxysection{20260227010532\+\_\+\+Add\+Part\+Average\+Cache\+Table.\+cs}
+\hypertarget{20260227010532___add_part_average_cache_table_8cs_source}{}\label{20260227010532___add_part_average_cache_table_8cs_source}\index{Migrations/20260227010532\_AddPartAverageCacheTable.cs@{Migrations/20260227010532\_AddPartAverageCacheTable.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Microsoft.EntityFrameworkCore.Metadata;}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Microsoft.EntityFrameworkCore.Migrations;}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00005}00005\ \textcolor{preprocessor}{\#nullable\ disable}}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Migrations}}}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00010}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table}{AddPartAverageCacheTable}}\ :\ Migration}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00013}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table_aec92f584ca39cfc38c308139cbb111b9}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table_aec92f584ca39cfc38c308139cbb111b9}{Up}}(MigrationBuilder\ migrationBuilder)}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}PartAverageCaches"{}},}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ columns:\ table\ =>\ \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Id\ =\ table.Column<\textcolor{keywordtype}{int}>(type:\ \textcolor{stringliteral}{"{}int"{}},\ nullable:\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Annotation(\textcolor{stringliteral}{"{}MySql:ValueGenerationStrategy"{}},\ MySqlValueGenerationStrategy.IdentityColumn),}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PartType\ =\ table.Column<\textcolor{keywordtype}{string}>(type:\ \textcolor{stringliteral}{"{}varchar(50)"{}},\ maxLength:\ 50,\ nullable:\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}},\ \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FilterKey\ =\ table.Column<\textcolor{keywordtype}{string}>(type:\ \textcolor{stringliteral}{"{}varchar(500)"{}},\ maxLength:\ 500,\ nullable:\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}},\ \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AveragePartJson\ =\ table.Column<\textcolor{keywordtype}{string}>(type:\ \textcolor{stringliteral}{"{}longtext"{}},\ nullable:\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}},\ \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CreatedAt\ =\ table.Column<DateTime>(type:\ \textcolor{stringliteral}{"{}datetime(6)"{}},\ nullable:\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constraints:\ table\ =>}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_PartAverageCaches"{}},\ x\ =>\ x.Id);}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \})}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}},\ \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}IX\_PartAverageCaches\_PartType\_FilterKey"{}},}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table:\ \textcolor{stringliteral}{"{}PartAverageCaches"{}},}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ columns:\ \textcolor{keyword}{new}[]\ \{\ \textcolor{stringliteral}{"{}PartType"{}},\ \textcolor{stringliteral}{"{}FilterKey"{}}\ \},}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ unique:\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00043}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table_a3e0482e05627a7dfc8f25c8ff733fae4}{00043}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table_a3e0482e05627a7dfc8f25c8ff733fae4}{Down}}(MigrationBuilder\ migrationBuilder)}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}PartAverageCaches"{}});}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20260227010532___add_part_average_cache_table_8cs_source_l00049}00049\ \}}
+
+\end{DoxyCode}

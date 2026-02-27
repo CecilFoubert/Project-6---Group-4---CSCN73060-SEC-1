@@ -1,0 +1,8 @@
+var namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations =
+[
+    [ "InitialCreate", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_initial_create.html", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_initial_create" ],
+    [ "AddBuildsTable", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table.html", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table" ],
+    [ "IncreaseMemorySpeedColumnSize", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size.html", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size" ],
+    [ "AddPartAverageCacheTable", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table.html", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table" ],
+    [ "ApplicationDbContextModelSnapshot", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_application_db_context_model_snapshot.html", null ]
+];

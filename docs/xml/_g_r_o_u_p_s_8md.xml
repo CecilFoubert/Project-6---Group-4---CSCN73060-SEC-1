@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="_g_r_o_u_p_s_8md" kind="file" language="Markdown">
+    <compoundname>GROUPS.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">/*!<sp/>\defgroup<sp/>Controllers<sp/>Controllers</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>\brief<sp/>API<sp/>and<sp/>MVC<sp/>controllers<sp/>(REST<sp/>endpoints<sp/>and<sp/>view<sp/>controllers).</highlight></codeline>
+<codeline><highlight class="normal">*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*!<sp/>\defgroup<sp/>Services<sp/>Services</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>\brief<sp/>Service<sp/>interfaces<sp/>and<sp/>implementations<sp/>(business<sp/>logic,<sp/>search<sp/>and<sp/>data<sp/>operations).</highlight></codeline>
+<codeline><highlight class="normal">*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*!<sp/>\defgroup<sp/>Models<sp/>Models</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>\brief<sp/>Domain<sp/>models<sp/>and<sp/>DTOs<sp/>used<sp/>by<sp/>the<sp/>application<sp/>and<sp/>API.</highlight></codeline>
+<codeline><highlight class="normal">*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*!<sp/>\defgroup<sp/>Data<sp/>Data</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>\brief<sp/>EF<sp/>Core<sp/>DbContext,<sp/>seeders<sp/>and<sp/>persistence<sp/>helpers.</highlight></codeline>
+<codeline><highlight class="normal">*/</highlight></codeline>
+    </programlisting>
+    <location file="docs/GROUPS.md"/>
+  </compounddef>
+</doxygen>

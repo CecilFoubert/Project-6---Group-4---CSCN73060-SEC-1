@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="_custom_web_application_factory_8cs" kind="file" language="C#">
+    <compoundname>CustomWebApplicationFactory.cs</compoundname>
+    <innerclass refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_custom_web_application_factory" prot="public">Project_6___Group_4___CSCN73060_SEC_1::Tests::CustomWebApplicationFactory</innerclass>
+    <innernamespace refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1">Project_6___Group_4___CSCN73060_SEC_1</innernamespace>
+    <innernamespace refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests">Project_6___Group_4___CSCN73060_SEC_1::Tests</innernamespace>
+    <innernamespace refid="namespace_microsoft_1_1_asp_net_core_1_1_hosting">Microsoft::AspNetCore::Hosting</innernamespace>
+    <innernamespace refid="namespace_microsoft_1_1_asp_net_core_1_1_mvc_1_1_testing">Microsoft::AspNetCore::Mvc::Testing</innernamespace>
+    <innernamespace refid="namespace_microsoft_1_1_extensions_1_1_configuration">Microsoft::Extensions::Configuration</innernamespace>
+    <innernamespace refid="namespace_microsoft_1_1_extensions_1_1_dependency_injection">Microsoft::Extensions::DependencyInjection</innernamespace>
+    <innernamespace refid="namespace_microsoft_1_1_extensions_1_1_hosting">Microsoft::Extensions::Hosting</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.AspNetCore.Hosting;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.AspNetCore.Mvc.Testing;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.Extensions.Configuration;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.Extensions.DependencyInjection;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.Extensions.Hosting;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests" kindref="compound">Project_6___Group_4___CSCN73060_SEC_1.Tests</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_custom_web_application_factory" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_custom_web_application_factory" kindref="compound">CustomWebApplicationFactory</ref><sp/>:<sp/>WebApplicationFactory&lt;Program&gt;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ConfigureWebHost(IWebHostBuilder<sp/>builder)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>builder.ConfigureAppConfiguration((context,<sp/>config)<sp/>=&gt;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config.AddInMemoryCollection(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Dictionary&lt;string,<sp/>string?&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="stringliteral">&quot;UseInMemoryDatabase&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>builder.UseEnvironment(Environments.Development);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/CustomWebApplicationFactory.cs"/>
+  </compounddef>
+</doxygen>

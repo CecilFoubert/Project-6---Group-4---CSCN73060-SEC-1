@@ -1,8 +1,18 @@
+/*!
+ * @file Data/DbSeeder.cs
+ * @brief Database seeder that loads SQL seed file into the configured database.
+ * @ingroup Data
+ */
+
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Data
 {
+    /// <summary>
+    /// Seeds the database from SQL files. The seeder runs at application startup when the database is empty.
+    /// Splits the SQL into batches and applies them inside transactions to avoid large single-statement execution.
+    /// </summary>
     public class DbSeeder
     {
         private readonly ApplicationDbContext _context;
@@ -22,6 +32,10 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Data
             _configuration = configuration;
         }
 
+        /// <summary>
+        /// Seed the database. This method is idempotent: it will skip seeding when CPUs already exist.
+        /// It logs progress and rethrows unexpected exceptions after logging for the caller to handle.
+        /// </summary>
         public virtual async Task SeedAsync()
         {
             try

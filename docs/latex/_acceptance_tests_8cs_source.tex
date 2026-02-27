@@ -1,0 +1,179 @@
+\doxysection{Acceptance\+Tests.\+cs}
+\hypertarget{_acceptance_tests_8cs_source}{}\label{_acceptance_tests_8cs_source}\index{Project-\/6-\/-\/-\/Group-\/4-\/-\/-\/CSCN73060-\/SEC-\/1.Tests/AcceptanceTests.cs@{Project-\/6-\/-\/-\/Group-\/4-\/-\/-\/CSCN73060-\/SEC-\/1.Tests/AcceptanceTests.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Net;}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Net.Http.Json;}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Text.Json;}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Xunit;}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00007}\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests}{00007}}\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Tests}};}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00012}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }AcceptanceTests\ :\ IClassFixture<CustomWebApplicationFactory>}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ HttpClient\ \_client;}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{public}\ AcceptanceTests(\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_custom_web_application_factory}{CustomWebApplicationFactory}}\ factory)}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \_client\ =\ factory.CreateClient();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00021}00021\ \ \ \ \ [Fact]}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ User\_Can\_BrowseCpus\_And\_CreateBuild\_WithSelectedCpu()}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00023}00023\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Given:\ User\ wants\ to\ build\ a\ PC}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When:\ User\ browses\ available\ CPUs\ and\ selects\ one\ for\ their\ build}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ var\ cpusResponse\ =\ await\ \_client.GetAsync(\textcolor{stringliteral}{"{}/api/Parts/cpu"{}});}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ cpusResponse.EnsureSuccessStatusCode();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ var\ cpusJson\ =\ await\ cpusResponse.Content.ReadFromJsonAsync<JsonElement>();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ var\ cpus\ =\ cpusJson.GetProperty(\textcolor{stringliteral}{"{}data"{}});}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ var\ firstCpuId\ =\ cpus[0].GetProperty(\textcolor{stringliteral}{"{}Id"{}}).GetInt32();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ var\ buildDto\ =\ \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ \textcolor{stringliteral}{"{}My\ Gaming\ PC"{}},}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ Description\ =\ \textcolor{stringliteral}{"{}Budget\ gaming\ build"{}},}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ Parts\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ object>\ \{\ [\textcolor{stringliteral}{"{}cpu"{}}]\ =\ \textcolor{keyword}{new}\ \{\ Id\ =\ firstCpuId\ \}\ \}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ var\ createResponse\ =\ await\ \_client.PostAsync(\textcolor{stringliteral}{"{}/api/Builds"{}},}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ StringContent(JsonSerializer.Serialize(buildDto),\ Encoding.UTF8,\ \textcolor{stringliteral}{"{}application/json"{}}));}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Then:\ Build\ is\ created\ with\ the\ selected\ CPU}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ Assert.Equal(HttpStatusCode.Created,\ createResponse.StatusCode);}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ var\ created\ =\ await\ createResponse.Content.ReadFromJsonAsync<JsonElement>();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ var\ buildId\ =\ created.TryGetProperty(\textcolor{stringliteral}{"{}id"{}},\ out\ var\ idProp)\ ?\ idProp.GetInt32()\ :\ created.GetProperty(\textcolor{stringliteral}{"{}Id"{}}).GetInt32();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ var\ getResponse\ =\ await\ \_client.GetAsync(\$\textcolor{stringliteral}{"{}/api/Builds/\{buildId\}"{}});}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ getResponse.EnsureSuccessStatusCode();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ var\ build\ =\ await\ getResponse.Content.ReadFromJsonAsync<JsonElement>();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ Assert.Equal(\textcolor{stringliteral}{"{}My\ Gaming\ PC"{}},\ build.GetProperty(\textcolor{stringliteral}{"{}name"{}}).GetString());}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ Assert.True(build.TryGetProperty(\textcolor{stringliteral}{"{}parts"{}},\ out\ var\ parts)\ \&\&\ parts.TryGetProperty(\textcolor{stringliteral}{"{}cpu"{}},\ out\ \_));}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00054}00054\ \ \ \ \ [Fact]}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00055}00055\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ User\_Can\_SearchCpus\_ByPriceAndManufacturer\_ThenCreateBuild()}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00056}00056\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Given:\ User\ has\ a\ budget\ and\ prefers\ Intel}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When:\ User\ searches\ for\ Intel\ CPUs\ under\ \$300}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ var\ searchBody\ =\ \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ minPrice\ =\ 100m,}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ maxPrice\ =\ 300m,}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ manufacturer\ =\ \textcolor{stringliteral}{"{}Intel"{}}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ var\ searchResponse\ =\ await\ \_client.PostAsync(\textcolor{stringliteral}{"{}/api/Parts/cpu/search"{}},}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ StringContent(JsonSerializer.Serialize(searchBody),\ Encoding.UTF8,\ \textcolor{stringliteral}{"{}application/json"{}}));}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ searchResponse.EnsureSuccessStatusCode();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ var\ searchResult\ =\ await\ searchResponse.Content.ReadFromJsonAsync<JsonElement>();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ var\ results\ =\ searchResult.GetProperty(\textcolor{stringliteral}{"{}results"{}});}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ Assert.True(results.GetArrayLength()\ >=\ 1);}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ var\ selectedCpuId\ =\ results[0].GetProperty(\textcolor{stringliteral}{"{}Id"{}}).GetInt32();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ var\ buildDto\ =\ \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ \textcolor{stringliteral}{"{}Intel\ Budget\ Build"{}},}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ Description\ =\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ Parts\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ object>\ \{\ [\textcolor{stringliteral}{"{}cpu"{}}]\ =\ \textcolor{keyword}{new}\ \{\ Id\ =\ selectedCpuId\ \}\ \}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ var\ createResponse\ =\ await\ \_client.PostAsync(\textcolor{stringliteral}{"{}/api/Builds"{}},}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ StringContent(JsonSerializer.Serialize(buildDto),\ Encoding.UTF8,\ \textcolor{stringliteral}{"{}application/json"{}}));}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Then:\ Build\ is\ created\ with\ a\ CPU\ matching\ the\ search\ criteria}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ Assert.Equal(HttpStatusCode.Created,\ createResponse.StatusCode);}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ var\ created\ =\ await\ createResponse.Content.ReadFromJsonAsync<JsonElement>();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ var\ buildId\ =\ created.TryGetProperty(\textcolor{stringliteral}{"{}id"{}},\ out\ var\ idProp)\ ?\ idProp.GetInt32()\ :\ created.GetProperty(\textcolor{stringliteral}{"{}Id"{}}).GetInt32();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ var\ getResponse\ =\ await\ \_client.GetAsync(\$\textcolor{stringliteral}{"{}/api/Builds/\{buildId\}"{}});}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ getResponse.EnsureSuccessStatusCode();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ var\ build\ =\ await\ getResponse.Content.ReadFromJsonAsync<JsonElement>();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ var\ cpuPart\ =\ build.GetProperty(\textcolor{stringliteral}{"{}parts"{}}).GetProperty(\textcolor{stringliteral}{"{}cpu"{}});}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ Assert.True(cpuPart.GetProperty(\textcolor{stringliteral}{"{}Manufacturer"{}}).GetString()!.Contains(\textcolor{stringliteral}{"{}Intel"{}},\ StringComparison.OrdinalIgnoreCase));}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00097}00097\ \ \ \ \ [Fact]}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00098}00098\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ User\_Can\_CreateBuild\_SaveWithName\_AndRetrieveLater()}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00099}00099\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Given:\ User\ creates\ a\ new\ build}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ var\ buildName\ =\ \$\textcolor{stringliteral}{"{}Saved\ Build\ \{Guid.NewGuid():N\}"{}};}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ var\ createDto\ =\ \textcolor{keyword}{new}\ \{\ Name\ =\ buildName,\ Description\ =\ \textcolor{stringliteral}{"{}My\ saved\ configuration"{}}\ \};}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ var\ createResponse\ =\ await\ \_client.PostAsync(\textcolor{stringliteral}{"{}/api/Builds"{}},}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ StringContent(JsonSerializer.Serialize(createDto),\ Encoding.UTF8,\ \textcolor{stringliteral}{"{}application/json"{}}));}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ createResponse.EnsureSuccessStatusCode();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When:\ User\ retrieves\ the\ build\ by\ name\ later}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ var\ getByNameResponse\ =\ await\ \_client.GetAsync(\$\textcolor{stringliteral}{"{}/api/Builds/by-\/name/\{Uri.EscapeDataString(buildName)\}"{}});}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Then:\ User\ gets\ their\ saved\ build}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ getByNameResponse.EnsureSuccessStatusCode();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ var\ build\ =\ await\ getByNameResponse.Content.ReadFromJsonAsync<JsonElement>();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ Assert.Equal(buildName,\ build.GetProperty(\textcolor{stringliteral}{"{}name"{}}).GetString());}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ Assert.Equal(\textcolor{stringliteral}{"{}My\ saved\ configuration"{}},\ build.GetProperty(\textcolor{stringliteral}{"{}description"{}}).GetString());}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00115}00115\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00117}00117\ \ \ \ \ [Fact]}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00118}00118\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ User\_Can\_UpdateExistingBuild\_WhenSavingWithSameName()}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00119}00119\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Given:\ User\ has\ an\ existing\ build\ named\ "{}My\ Build"{}}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ var\ buildName\ =\ \textcolor{stringliteral}{"{}My\ Build"{}};}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ var\ createDto\ =\ \textcolor{keyword}{new}\ \{\ Name\ =\ buildName,\ Description\ =\ \textcolor{stringliteral}{"{}Original\ description"{}},\ Parts\ =\ (\textcolor{keywordtype}{object}?)\textcolor{keyword}{null}\ \};}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ var\ createResponse\ =\ await\ \_client.PostAsync(\textcolor{stringliteral}{"{}/api/Builds"{}},}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ StringContent(JsonSerializer.Serialize(createDto),\ Encoding.UTF8,\ \textcolor{stringliteral}{"{}application/json"{}}));}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ createResponse.EnsureSuccessStatusCode();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ var\ created\ =\ await\ createResponse.Content.ReadFromJsonAsync<JsonElement>();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ var\ buildId\ =\ created.TryGetProperty(\textcolor{stringliteral}{"{}id"{}},\ out\ var\ idProp)\ ?\ idProp.GetInt32()\ :\ created.GetProperty(\textcolor{stringliteral}{"{}Id"{}}).GetInt32();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When:\ User\ saves\ again\ with\ the\ same\ name\ but\ updated\ description\ and\ parts}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ var\ updateDto\ =\ \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ buildName,}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ Description\ =\ \textcolor{stringliteral}{"{}Updated\ -\/\ added\ CPU"{}},}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ Parts\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ object>\ \{\ [\textcolor{stringliteral}{"{}cpu"{}}]\ =\ \textcolor{keyword}{new}\ \{\ Id\ =\ 1\ \}\ \}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ var\ patchResponse\ =\ await\ \_client.PatchAsync(\$\textcolor{stringliteral}{"{}/api/Builds/\{buildId\}"{}},}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ StringContent(JsonSerializer.Serialize(updateDto),\ Encoding.UTF8,\ \textcolor{stringliteral}{"{}application/json"{}}));}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Then:\ Build\ is\ updated\ in\ place}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ patchResponse.EnsureSuccessStatusCode();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ var\ updated\ =\ await\ patchResponse.Content.ReadFromJsonAsync<JsonElement>();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ Assert.Equal(\textcolor{stringliteral}{"{}Updated\ -\/\ added\ CPU"{}},\ updated.GetProperty(\textcolor{stringliteral}{"{}description"{}}).GetString());}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ Assert.True(updated.TryGetProperty(\textcolor{stringliteral}{"{}parts"{}},\ out\ var\ parts)\ \&\&\ parts.TryGetProperty(\textcolor{stringliteral}{"{}cpu"{}},\ out\ \_));}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00144}00144\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00146}00146\ \ \ \ \ [Fact]}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00147}00147\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ User\_Can\_GetFilterOptions\_UseThemToSearch\_AndViewResults()}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00148}00148\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Given:\ User\ wants\ to\ filter\ CPUs}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When:\ User\ fetches\ available\ filter\ options}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ var\ filtersResponse\ =\ await\ \_client.GetAsync(\textcolor{stringliteral}{"{}/api/Parts/cpu/filters"{}});}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ filtersResponse.EnsureSuccessStatusCode();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ var\ filtersJson\ =\ await\ filtersResponse.Content.ReadFromJsonAsync<JsonElement>();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ var\ attributes\ =\ filtersJson.GetProperty(\textcolor{stringliteral}{"{}attributes"{}});}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Then:\ User\ can\ use\ filter\ attributes\ (e.g.\ Manufacturer,\ Socket)\ to\ search}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ Assert.True(attributes.EnumerateObject().Any());}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ var\ searchBody\ =\ \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ minPrice\ =\ (decimal?)\textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ maxPrice\ =\ (decimal?)\textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ manufacturer\ =\ \textcolor{stringliteral}{"{}AMD"{}},}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ filters\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ string>()}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ var\ searchResponse\ =\ await\ \_client.PostAsync(\textcolor{stringliteral}{"{}/api/Parts/cpu/search"{}},}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ StringContent(JsonSerializer.Serialize(searchBody),\ Encoding.UTF8,\ \textcolor{stringliteral}{"{}application/json"{}}));}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ searchResponse.EnsureSuccessStatusCode();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ var\ searchResult\ =\ await\ searchResponse.Content.ReadFromJsonAsync<JsonElement>();}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ Assert.Equal(\textcolor{stringliteral}{"{}cpu"{}},\ searchResult.GetProperty(\textcolor{stringliteral}{"{}partType"{}}).GetString());}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ Assert.True(searchResult.TryGetProperty(\textcolor{stringliteral}{"{}results"{}},\ out\ var\ results));}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TestDbSeeder\ has\ AMD\ Ryzen\ 5\ 5600X}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ Assert.True(results.GetArrayLength()\ >=\ 1);}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00175}00175\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_acceptance_tests_8cs_source_l00176}00176\ \}}
+
+\end{DoxyCode}

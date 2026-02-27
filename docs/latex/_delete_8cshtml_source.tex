@@ -1,0 +1,87 @@
+\doxysection{Delete.\+cshtml}
+\hypertarget{_delete_8cshtml_source}{}\label{_delete_8cshtml_source}\index{Views/Builds/Delete.cshtml@{Views/Builds/Delete.cshtml}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00001}00001\ @model\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00003}00003\ @\{}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00004}00004\ \ \ \ \ ViewData[\textcolor{stringliteral}{"{}Title"{}}]\ =\ \textcolor{stringliteral}{"{}Delete\ Build"{}};}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00005}00005\ \}}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00007}00007\ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}container\ mt-\/4"{}}>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00008}00008\ \ \ \ \ <h1\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}text-\/danger"{}}>Delete\ Build</h1>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00009}00009\ \ \ \ \ <hr\ />}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00011}00011\ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}alert\ alert-\/warning"{}}>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00012}00012\ \ \ \ \ \ \ \ \ <h4>Are\ you\ sure\ you\ want\ to\ \textcolor{keyword}{delete}\ \textcolor{keyword}{this}\ build?</h4>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00013}00013\ \ \ \ \ \ \ \ \ <p>This\ action\ cannot\ be\ undone.</p>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00014}00014\ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00016}00016\ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card\ mb-\/4"{}}>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00017}00017\ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/header\ bg-\/danger\ text-\/white"{}}>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ <h5\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}mb-\/0"{}}>@Model.\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_ae86d45f0156cdb3e1f7f9bdd6540bc75}{Name}}</h5>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00019}00019\ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00020}00020\ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}card-\/body"{}}>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ @\textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrEmpty(Model.Description))}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <p><strong>Description:</strong>\ @Model.Description</p>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ @\textcolor{keywordflow}{if}\ (Model.TotalPrice.HasValue)}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <p><strong>Total\ Cost:</strong>\ <span\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}text-\/success"{}}>\$@Model.TotalPrice.Value.ToString(\textcolor{stringliteral}{"{}N2"{}})</span></p>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ <h6\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}mt-\/3"{}}>Components:</h6>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ <ul>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ @\textcolor{keywordflow}{if}\ (Model.Cpu\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <li><strong>CPU:</strong>\ @Model.Cpu.Name\ (@Model.Cpu.Price)</li>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ @\textcolor{keywordflow}{if}\ (Model.Gpu\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <li><strong>GPU:</strong>\ @Model.Gpu.Name\ (@Model.Gpu.Price)</li>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ @\textcolor{keywordflow}{if}\ (Model.Motherboard\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <li><strong>Motherboard:</strong>\ @Model.Motherboard.Name\ (@Model.Motherboard.Price)</li>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ @\textcolor{keywordflow}{if}\ (Model.Memory\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <li><strong>Memory:</strong>\ @Model.Memory.Name\ (@Model.Memory.Price)</li>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ @\textcolor{keywordflow}{if}\ (Model.Storage\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <li><strong>Storage:</strong>\ @Model.Storage.Name\ (@Model.Storage.Price)</li>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ @\textcolor{keywordflow}{if}\ (Model.Case\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <li><strong>Case:</strong>\ @Model.Case.Name\ (@Model.Case.Price)</li>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ @\textcolor{keywordflow}{if}\ (Model.PowerSupply\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <li><strong>Power\ Supply:</strong>\ @Model.PowerSupply.Name\ (@Model.PowerSupply.Price)</li>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ @\textcolor{keywordflow}{if}\ (Model.CpuCooler\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <li><strong>CPU\ Cooler:</strong>\ @Model.CpuCooler.Name\ (@Model.CpuCooler.Price)</li>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ </ul>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ <p\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}text-\/muted"{}}>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <strong>Created:</strong>\ @Model.CreatedAt.ToLocalTime().ToString(\textcolor{stringliteral}{"{}f"{}})<br>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <strong>Last\ Updated:</strong>\ @Model.UpdatedAt.ToLocalTime().ToString(\textcolor{stringliteral}{"{}f"{}})}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ </p>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00071}00071\ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00072}00072\ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00074}00074\ \ \ \ \ <form\ asp-\/action=\textcolor{stringliteral}{"{}Delete"{}}>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00075}00075\ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{"{}hidden"{}}\ asp-\/\textcolor{keywordflow}{for}=\textcolor{stringliteral}{"{}Id"{}}\ />}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00076}00076\ \ \ \ \ \ \ \ \ <button\ type=\textcolor{stringliteral}{"{}submit"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn\ btn-\/danger\ btn-\/lg"{}}>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ <i\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}bi\ bi-\/trash"{}}></i>\ Yes,\ Delete\ This\ Build}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00078}00078\ \ \ \ \ \ \ \ \ </button>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00079}00079\ \ \ \ \ \ \ \ \ <a\ asp-\/action=\textcolor{stringliteral}{"{}Index"{}}\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}btn\ btn-\/secondary\ btn-\/lg"{}}>Cancel</a>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00080}00080\ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{_delete_8cshtml_source_l00081}00081\ </div>}
+
+\end{DoxyCode}

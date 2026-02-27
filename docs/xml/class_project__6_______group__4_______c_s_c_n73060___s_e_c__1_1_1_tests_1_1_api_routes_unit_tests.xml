@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IClassFixture</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1afef94586960f264c93e9ddc19afb80ac" prot="private" static="no" mutable="no">
+        <type>readonly HttpClient</type>
+        <definition>readonly HttpClient Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests._client</definition>
+        <argsstring></argsstring>
+        <name>_client</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests._client</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="11" column="33" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1af8518ca6e3338d85c1ca0f0a11380660" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.ApiRoutesUnitTests</definition>
+        <argsstring>(CustomWebApplicationFactory factory)</argsstring>
+        <name>ApiRoutesUnitTests</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.ApiRoutesUnitTests</qualifiedname>
+        <param>
+          <type><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_custom_web_application_factory" kindref="compound">CustomWebApplicationFactory</ref></type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="13" column="12" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a367efbad984b12e1bd05894a494cf711" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Options_ReturnsRoutesList</definition>
+        <argsstring>()</argsstring>
+        <name>Options_ReturnsRoutesList</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Options_ReturnsRoutesList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="19" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="19" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a53a7887fdcfa673222d45c05e204fc92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_GetSupportedTypes_ReturnsPartTypes</definition>
+        <argsstring>()</argsstring>
+        <name>Parts_GetSupportedTypes_ReturnsPartTypes</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_GetSupportedTypes_ReturnsPartTypes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="31" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="31" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a1cec57db9c27c796433dbb2001b0f9f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_GetAllCpus_ReturnsCpus</definition>
+        <argsstring>()</argsstring>
+        <name>Parts_GetAllCpus_ReturnsCpus</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_GetAllCpus_ReturnsCpus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="44" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="44" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a1097eb432574edf703a1d8bcc7792c21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_GetById_ReturnsCpu</definition>
+        <argsstring>()</argsstring>
+        <name>Parts_GetById_ReturnsCpu</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_GetById_ReturnsCpu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="56" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="56" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a40d3aa53417f08a3449e80f337061892" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_GetById_NotFound_Returns404</definition>
+        <argsstring>()</argsstring>
+        <name>Parts_GetById_NotFound_Returns404</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_GetById_NotFound_Returns404</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="67" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="67" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a5bfe3ad28875bd10881aaa3827759fd7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_GetFilters_ReturnsFilterOptions</definition>
+        <argsstring>()</argsstring>
+        <name>Parts_GetFilters_ReturnsFilterOptions</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_GetFilters_ReturnsFilterOptions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="75" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="75" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a828ecefd4d1b94bcd98a73ae1ba49619" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_SearchCpus_ReturnsFilteredResults</definition>
+        <argsstring>()</argsstring>
+        <name>Parts_SearchCpus_ReturnsFilteredResults</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_SearchCpus_ReturnsFilteredResults</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="86" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="86" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a6be7354ae5b33e9d8546471da0d27f1b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_Create_ReturnsCreated</definition>
+        <argsstring>()</argsstring>
+        <name>Parts_Create_ReturnsCreated</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_Create_ReturnsCreated</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="114" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="114" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1aeb12eea1109637b0ea0e731f12fe1365" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_Update_ReturnsOk</definition>
+        <argsstring>()</argsstring>
+        <name>Parts_Update_ReturnsOk</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_Update_ReturnsOk</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="136" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="136" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a3ad622536c6985de5b3a4e911abead2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_Delete_ReturnsOk</definition>
+        <argsstring>()</argsstring>
+        <name>Parts_Delete_ReturnsOk</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Parts_Delete_ReturnsOk</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="156" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="156" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1ad01dd94a1cf4a4434623baba60e8ae45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Builds_GetAll_ReturnsBuilds</definition>
+        <argsstring>()</argsstring>
+        <name>Builds_GetAll_ReturnsBuilds</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Builds_GetAll_ReturnsBuilds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="180" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="180" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1acf042d0d74203022e69293b333613acc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Builds_Create_ReturnsCreated</definition>
+        <argsstring>()</argsstring>
+        <name>Builds_Create_ReturnsCreated</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Builds_Create_ReturnsCreated</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="190" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="190" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a7d9f1371e2c841ba3334dd532db09c4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Builds_GetById_ReturnsBuild</definition>
+        <argsstring>()</argsstring>
+        <name>Builds_GetById_ReturnsBuild</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Builds_GetById_ReturnsBuild</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="215" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="215" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a6f286d3f2560985002440c97cae34a3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Builds_GetById_NotFound_Returns404</definition>
+        <argsstring>()</argsstring>
+        <name>Builds_GetById_NotFound_Returns404</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Builds_GetById_NotFound_Returns404</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="236" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="236" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a7ddad90dfe764747af63513c9155f4aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Builds_GetByName_ReturnsBuild</definition>
+        <argsstring>()</argsstring>
+        <name>Builds_GetByName_ReturnsBuild</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Builds_GetByName_ReturnsBuild</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="244" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="244" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a57544ec3ddc7baf179b2011cee53bc34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Builds_GetByName_NotFound_Returns404</definition>
+        <argsstring>()</argsstring>
+        <name>Builds_GetByName_NotFound_Returns404</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Builds_GetByName_NotFound_Returns404</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="262" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="262" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1ad93247749bd86b57e7844f265f486ab1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Builds_Patch_ReturnsOk</definition>
+        <argsstring>()</argsstring>
+        <name>Builds_Patch_ReturnsOk</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests.Builds_Patch_ReturnsOk</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="270" column="23" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="270" bodyend="293"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IClassFixture</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IClassFixture</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Tests.ApiRoutesUnitTests</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" line="9" column="7" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/ApiRoutesUnitTests.cs" bodystart="10" bodyend="294"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1afef94586960f264c93e9ddc19afb80ac" prot="private" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>_client</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1af8518ca6e3338d85c1ca0f0a11380660" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>ApiRoutesUnitTests</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1acf042d0d74203022e69293b333613acc" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Builds_Create_ReturnsCreated</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1ad01dd94a1cf4a4434623baba60e8ae45" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Builds_GetAll_ReturnsBuilds</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a6f286d3f2560985002440c97cae34a3f" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Builds_GetById_NotFound_Returns404</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a7d9f1371e2c841ba3334dd532db09c4f" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Builds_GetById_ReturnsBuild</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a57544ec3ddc7baf179b2011cee53bc34" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Builds_GetByName_NotFound_Returns404</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a7ddad90dfe764747af63513c9155f4aa" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Builds_GetByName_ReturnsBuild</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1ad93247749bd86b57e7844f265f486ab1" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Builds_Patch_ReturnsOk</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a367efbad984b12e1bd05894a494cf711" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Options_ReturnsRoutesList</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a6be7354ae5b33e9d8546471da0d27f1b" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Parts_Create_ReturnsCreated</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a3ad622536c6985de5b3a4e911abead2b" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Parts_Delete_ReturnsOk</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a1cec57db9c27c796433dbb2001b0f9f1" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Parts_GetAllCpus_ReturnsCpus</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a40d3aa53417f08a3449e80f337061892" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Parts_GetById_NotFound_Returns404</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a1097eb432574edf703a1d8bcc7792c21" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Parts_GetById_ReturnsCpu</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a5bfe3ad28875bd10881aaa3827759fd7" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Parts_GetFilters_ReturnsFilterOptions</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a53a7887fdcfa673222d45c05e204fc92" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Parts_GetSupportedTypes_ReturnsPartTypes</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a828ecefd4d1b94bcd98a73ae1ba49619" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Parts_SearchCpus_ReturnsFilteredResults</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1aeb12eea1109637b0ea0e731f12fe1365" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</scope><name>Parts_Update_ReturnsOk</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

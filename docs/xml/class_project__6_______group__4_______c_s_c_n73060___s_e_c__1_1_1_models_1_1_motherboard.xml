@@ -1,0 +1,579 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1ae261c266b8dab28037d35c7ccde4f67c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.Id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="18" column="20" bodyfile="Models/Motherboard.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a1eb299a23456a37a450cfddb6c9ce5ec" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.Name</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+<para>Human-friendly name of the motherboard (e.g. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;ASUS ROG Strix Z790-E&quot;). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="25" column="23" bodyfile="Models/Motherboard.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a1f13882d4ebaa5b6dcac4fe4bd6a379d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.ImageUrl</definition>
+        <argsstring></argsstring>
+        <name>ImageUrl</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.ImageUrl</qualifiedname>
+        <briefdescription>
+<para>URL to a product image. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="31" column="23" bodyfile="Models/Motherboard.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a26e636460bb963b73f3fe539960714b7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.ProductUrl</definition>
+        <argsstring></argsstring>
+        <name>ProductUrl</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.ProductUrl</qualifiedname>
+        <briefdescription>
+<para>Link to the manufacturer/product page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="37" column="23" bodyfile="Models/Motherboard.cs" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a7342647d44b2a7d23168513b2c99f523" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.Price</definition>
+        <argsstring></argsstring>
+        <name>Price</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.Price</qualifiedname>
+        <briefdescription>
+<para>Price as shown on the site (kept as string to preserve formatting). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="43" column="23" bodyfile="Models/Motherboard.cs" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a582ecd2b54ab6f43a94a82bc1e9e1421" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.Manufacturer</definition>
+        <argsstring></argsstring>
+        <name>Manufacturer</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.Manufacturer</qualifiedname>
+        <briefdescription>
+<para>Manufacturer name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="49" column="23" bodyfile="Models/Motherboard.cs" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a449c4edfdc5152194ac4e3172fa38230" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.PartNumber</definition>
+        <argsstring></argsstring>
+        <name>PartNumber</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.PartNumber</qualifiedname>
+        <briefdescription>
+<para>Manufacturer part number or SKU. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="55" column="23" bodyfile="Models/Motherboard.cs" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a4619d78fc512fa01db2e5ac4f5938f23" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.SocketCPU</definition>
+        <argsstring></argsstring>
+        <name>SocketCPU</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.SocketCPU</qualifiedname>
+        <briefdescription>
+<para>CPU socket(s) supported (e.g. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;LGA1700&quot;). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="61" column="23" bodyfile="Models/Motherboard.cs" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a6ce481ffc132080100e6eca159755623" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.FormFactor</definition>
+        <argsstring></argsstring>
+        <name>FormFactor</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.FormFactor</qualifiedname>
+        <briefdescription>
+<para>Board form factor (e.g. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;ATX&quot;, &quot;mATX&quot;). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="67" column="23" bodyfile="Models/Motherboard.cs" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a260f815dcf4c460d2171e09f84ee0824" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.Chipset</definition>
+        <argsstring></argsstring>
+        <name>Chipset</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.Chipset</qualifiedname>
+        <briefdescription>
+<para>Chipset identifier (e.g. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;Z790&quot;). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="73" column="23" bodyfile="Models/Motherboard.cs" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1abdbe8d8f8d2ac3fc306b611755c631d8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.MemoryMax</definition>
+        <argsstring></argsstring>
+        <name>MemoryMax</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.MemoryMax</qualifiedname>
+        <briefdescription>
+<para>Maximum supported memory (e.g. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;128 GB&quot;). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="79" column="23" bodyfile="Models/Motherboard.cs" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a81492bec558013022b25d190503b9397" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.MemoryType</definition>
+        <argsstring></argsstring>
+        <name>MemoryType</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.MemoryType</qualifiedname>
+        <briefdescription>
+<para><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory" kindref="compound">Memory</ref> types supported (e.g. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;DDR5&quot;). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="85" column="23" bodyfile="Models/Motherboard.cs" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a6fb5d3bc98283d8d134e442c29057604" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.MemorySlots</definition>
+        <argsstring></argsstring>
+        <name>MemorySlots</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.MemorySlots</qualifiedname>
+        <briefdescription>
+<para>Number of memory slots (e.g. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;4&quot;) or description. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="91" column="23" bodyfile="Models/Motherboard.cs" bodystart="91" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a79b890240cde5efbc3cd44ecb807abd4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.MemorySpeed</definition>
+        <argsstring></argsstring>
+        <name>MemorySpeed</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.MemorySpeed</qualifiedname>
+        <briefdescription>
+<para>Supported memory speeds or supported XMP profiles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Example: &quot;DDR5-5200, DDR5-6000 (OC)&quot;. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="98" column="23" bodyfile="Models/Motherboard.cs" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a282dee13f32b434143a3730ecfaa7371" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.Color</definition>
+        <argsstring></argsstring>
+        <name>Color</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.Color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="101" column="23" bodyfile="Models/Motherboard.cs" bodystart="101" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1ab4c92f086c9e5ed0c18b4670398798eb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.PCIex16Slots</definition>
+        <argsstring></argsstring>
+        <name>PCIex16Slots</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.PCIex16Slots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="104" column="23" bodyfile="Models/Motherboard.cs" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1afba3b4a39cc52a64fdc0633950e502b2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.PCIex8Slots</definition>
+        <argsstring></argsstring>
+        <name>PCIex8Slots</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.PCIex8Slots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="107" column="23" bodyfile="Models/Motherboard.cs" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a91d959b853dca51d89fb69d7f1430120" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.PCIex4Slots</definition>
+        <argsstring></argsstring>
+        <name>PCIex4Slots</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.PCIex4Slots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="110" column="23" bodyfile="Models/Motherboard.cs" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a06e3998457cf4fcce9ea565a61be473e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.PCIex1Slots</definition>
+        <argsstring></argsstring>
+        <name>PCIex1Slots</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.PCIex1Slots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="113" column="23" bodyfile="Models/Motherboard.cs" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a31797ff9da78ae244d020ad60dad7dc9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.PCISlots</definition>
+        <argsstring></argsstring>
+        <name>PCISlots</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.PCISlots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="116" column="23" bodyfile="Models/Motherboard.cs" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a268da749bfbe3c1406a05aa637268279" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.M2Slots</definition>
+        <argsstring></argsstring>
+        <name>M2Slots</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.M2Slots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="119" column="23" bodyfile="Models/Motherboard.cs" bodystart="119" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1af8cac3644c08f3a3b348ec4d853451b2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.MiniPCIeSlots</definition>
+        <argsstring></argsstring>
+        <name>MiniPCIeSlots</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.MiniPCIeSlots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="122" column="23" bodyfile="Models/Motherboard.cs" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a8ca4204ee67132ee0a3d685a2995afb8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.HalfMiniPCIeSlots</definition>
+        <argsstring></argsstring>
+        <name>HalfMiniPCIeSlots</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.HalfMiniPCIeSlots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="125" column="23" bodyfile="Models/Motherboard.cs" bodystart="125" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a449739591f3a2c5fb28b62c736a32263" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.MiniPCIemSATASlots</definition>
+        <argsstring></argsstring>
+        <name>MiniPCIemSATASlots</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.MiniPCIemSATASlots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="128" column="23" bodyfile="Models/Motherboard.cs" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a71eb3a68a071d03de31a42a66dd91e07" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.mSATASlots</definition>
+        <argsstring></argsstring>
+        <name>mSATASlots</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.mSATASlots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="131" column="23" bodyfile="Models/Motherboard.cs" bodystart="131" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1aaf0932132d7d53497cece1c00bc57295" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.SATA6GbsSlots</definition>
+        <argsstring></argsstring>
+        <name>SATA6GbsSlots</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.SATA6GbsSlots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="134" column="23" bodyfile="Models/Motherboard.cs" bodystart="134" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1ae877f6b7b59d07800631ff772bf276b0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.OnboardEthernet</definition>
+        <argsstring></argsstring>
+        <name>OnboardEthernet</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.OnboardEthernet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="137" column="23" bodyfile="Models/Motherboard.cs" bodystart="137" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a7e4364754e14a87f656db66c634be51c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.OnboardVideo</definition>
+        <argsstring></argsstring>
+        <name>OnboardVideo</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.OnboardVideo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="140" column="23" bodyfile="Models/Motherboard.cs" bodystart="140" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a81739757cc765b9107aef1ad30a22273" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.USB20Headers</definition>
+        <argsstring></argsstring>
+        <name>USB20Headers</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.USB20Headers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="143" column="23" bodyfile="Models/Motherboard.cs" bodystart="143" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a26d6a01b28bb7cbf00ed393e88cb7e66" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.USB20HeadersSinglePort</definition>
+        <argsstring></argsstring>
+        <name>USB20HeadersSinglePort</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.USB20HeadersSinglePort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="146" column="23" bodyfile="Models/Motherboard.cs" bodystart="146" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1ab84abc16f6779bde3935368c6bf7834e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.USB32Gen1Headers</definition>
+        <argsstring></argsstring>
+        <name>USB32Gen1Headers</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.USB32Gen1Headers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="149" column="23" bodyfile="Models/Motherboard.cs" bodystart="149" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1af80ec152825c70d9733400017f591ab5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.USB32Gen2Headers</definition>
+        <argsstring></argsstring>
+        <name>USB32Gen2Headers</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.USB32Gen2Headers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="152" column="23" bodyfile="Models/Motherboard.cs" bodystart="152" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1ac8620e48dc81cbf0c70353217429e005" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.USB32Gen2x2Headers</definition>
+        <argsstring></argsstring>
+        <name>USB32Gen2x2Headers</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.USB32Gen2x2Headers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="155" column="23" bodyfile="Models/Motherboard.cs" bodystart="155" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a80f4eafc00b30afa23f840742ff641ef" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.SupportsECC</definition>
+        <argsstring></argsstring>
+        <name>SupportsECC</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.SupportsECC</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="158" column="23" bodyfile="Models/Motherboard.cs" bodystart="158" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a6936815e63e16b345da2989e46551a5e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.WirelessNetworking</definition>
+        <argsstring></argsstring>
+        <name>WirelessNetworking</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.WirelessNetworking</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="161" column="23" bodyfile="Models/Motherboard.cs" bodystart="161" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a0f89001bf76d1cd0156cf9fde00c0e18" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.RAIDSupport</definition>
+        <argsstring></argsstring>
+        <name>RAIDSupport</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Motherboard.RAIDSupport</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Motherboard.cs" line="164" column="23" bodyfile="Models/Motherboard.cs" bodystart="164" bodyend="164"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a motherboard product and its technical specifications. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Used by the UI and API to display motherboard details and for compatibility checks. </para>
+    </detaileddescription>
+    <location file="Models/Motherboard.cs" line="15" column="11" bodyfile="Models/Motherboard.cs" bodystart="16" bodyend="165"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a260f815dcf4c460d2171e09f84ee0824" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>Chipset</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a282dee13f32b434143a3730ecfaa7371" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>Color</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a6ce481ffc132080100e6eca159755623" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>FormFactor</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a8ca4204ee67132ee0a3d685a2995afb8" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>HalfMiniPCIeSlots</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1ae261c266b8dab28037d35c7ccde4f67c" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>Id</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a1f13882d4ebaa5b6dcac4fe4bd6a379d" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>ImageUrl</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a268da749bfbe3c1406a05aa637268279" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>M2Slots</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a582ecd2b54ab6f43a94a82bc1e9e1421" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>Manufacturer</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1abdbe8d8f8d2ac3fc306b611755c631d8" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>MemoryMax</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a6fb5d3bc98283d8d134e442c29057604" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>MemorySlots</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a79b890240cde5efbc3cd44ecb807abd4" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>MemorySpeed</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a81492bec558013022b25d190503b9397" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>MemoryType</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a449739591f3a2c5fb28b62c736a32263" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>MiniPCIemSATASlots</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1af8cac3644c08f3a3b348ec4d853451b2" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>MiniPCIeSlots</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a71eb3a68a071d03de31a42a66dd91e07" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>mSATASlots</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a1eb299a23456a37a450cfddb6c9ce5ec" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>Name</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1ae877f6b7b59d07800631ff772bf276b0" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>OnboardEthernet</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a7e4364754e14a87f656db66c634be51c" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>OnboardVideo</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a449c4edfdc5152194ac4e3172fa38230" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>PartNumber</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1ab4c92f086c9e5ed0c18b4670398798eb" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>PCIex16Slots</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a06e3998457cf4fcce9ea565a61be473e" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>PCIex1Slots</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a91d959b853dca51d89fb69d7f1430120" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>PCIex4Slots</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1afba3b4a39cc52a64fdc0633950e502b2" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>PCIex8Slots</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a31797ff9da78ae244d020ad60dad7dc9" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>PCISlots</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a7342647d44b2a7d23168513b2c99f523" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>Price</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a26e636460bb963b73f3fe539960714b7" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>ProductUrl</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a0f89001bf76d1cd0156cf9fde00c0e18" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>RAIDSupport</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1aaf0932132d7d53497cece1c00bc57295" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>SATA6GbsSlots</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a4619d78fc512fa01db2e5ac4f5938f23" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>SocketCPU</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a80f4eafc00b30afa23f840742ff641ef" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>SupportsECC</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a81739757cc765b9107aef1ad30a22273" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>USB20Headers</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a26d6a01b28bb7cbf00ed393e88cb7e66" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>USB20HeadersSinglePort</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1ab84abc16f6779bde3935368c6bf7834e" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>USB32Gen1Headers</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1af80ec152825c70d9733400017f591ab5" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>USB32Gen2Headers</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1ac8620e48dc81cbf0c70353217429e005" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>USB32Gen2x2Headers</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a6936815e63e16b345da2989e46551a5e" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</scope><name>WirelessNetworking</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

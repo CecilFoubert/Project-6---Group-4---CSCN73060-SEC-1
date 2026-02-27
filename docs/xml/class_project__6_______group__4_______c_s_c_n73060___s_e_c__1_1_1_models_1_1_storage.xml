@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a77e879817e9fab8fb7c6ba213e74dfc5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Storage.cs" line="17" column="20" bodyfile="Models/Storage.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a0cacc16a254c14057b528dc218c95ade" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Name</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+<para>Display name of the storage product. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Storage.cs" line="24" column="23" bodyfile="Models/Storage.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a9981714fb0876d22fb025887cdddd196" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.ImageUrl</definition>
+        <argsstring></argsstring>
+        <name>ImageUrl</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.ImageUrl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Storage.cs" line="27" column="23" bodyfile="Models/Storage.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a6ff744cf8a2e5357f39ac55ea0f3e93d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.ProductUrl</definition>
+        <argsstring></argsstring>
+        <name>ProductUrl</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.ProductUrl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Storage.cs" line="30" column="23" bodyfile="Models/Storage.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a9de646bfeced6be4131ee6099760d95f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Price</definition>
+        <argsstring></argsstring>
+        <name>Price</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Price</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Storage.cs" line="33" column="23" bodyfile="Models/Storage.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a449e2b55ed7831c3d03f4a5ce4ce472b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Manufacturer</definition>
+        <argsstring></argsstring>
+        <name>Manufacturer</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Manufacturer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Storage.cs" line="36" column="23" bodyfile="Models/Storage.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a8e4fe010424a0a54898e5efc823c8033" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.PartNumber</definition>
+        <argsstring></argsstring>
+        <name>PartNumber</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.PartNumber</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Storage.cs" line="39" column="23" bodyfile="Models/Storage.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a24d414529eabcf3c6e44427c791fc99a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Capacity</definition>
+        <argsstring></argsstring>
+        <name>Capacity</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Capacity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Storage.cs" line="42" column="23" bodyfile="Models/Storage.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a868b313f7377c0a2fcc800c70b58f7d2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.PricePerGB</definition>
+        <argsstring></argsstring>
+        <name>PricePerGB</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.PricePerGB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Storage.cs" line="45" column="23" bodyfile="Models/Storage.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a69a620cf9d6703b4f599f4256e33ed34" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Storage.cs" line="48" column="23" bodyfile="Models/Storage.cs" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1acac6c012e0a6f893239a07104e1c9864" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Cache</definition>
+        <argsstring></argsstring>
+        <name>Cache</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Cache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Storage.cs" line="51" column="23" bodyfile="Models/Storage.cs" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a68c63301cbe3cc22ae264156185acb9d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.FormFactor</definition>
+        <argsstring></argsstring>
+        <name>FormFactor</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.FormFactor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Storage.cs" line="54" column="23" bodyfile="Models/Storage.cs" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a79ab1fd22a366933dfa3079474e37a0c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Interface</definition>
+        <argsstring></argsstring>
+        <name>Interface</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.Interface</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Storage.cs" line="57" column="23" bodyfile="Models/Storage.cs" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a94938c0b1ab909cae2c82198cbd2b2b6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.NVME</definition>
+        <argsstring></argsstring>
+        <name>NVME</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Storage.NVME</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Storage.cs" line="60" column="23" bodyfile="Models/Storage.cs" bodystart="60" bodyend="60"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage" kindref="compound">Storage</ref> device model (HDD, SSD, NVMe). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Models/Storage.cs" line="14" column="11" bodyfile="Models/Storage.cs" bodystart="15" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1acac6c012e0a6f893239a07104e1c9864" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</scope><name>Cache</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a24d414529eabcf3c6e44427c791fc99a" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</scope><name>Capacity</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a68c63301cbe3cc22ae264156185acb9d" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</scope><name>FormFactor</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a77e879817e9fab8fb7c6ba213e74dfc5" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</scope><name>Id</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a9981714fb0876d22fb025887cdddd196" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</scope><name>ImageUrl</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a79ab1fd22a366933dfa3079474e37a0c" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</scope><name>Interface</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a449e2b55ed7831c3d03f4a5ce4ce472b" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</scope><name>Manufacturer</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a0cacc16a254c14057b528dc218c95ade" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</scope><name>Name</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a94938c0b1ab909cae2c82198cbd2b2b6" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</scope><name>NVME</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a8e4fe010424a0a54898e5efc823c8033" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</scope><name>PartNumber</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a9de646bfeced6be4131ee6099760d95f" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</scope><name>Price</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a868b313f7377c0a2fcc800c70b58f7d2" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</scope><name>PricePerGB</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a6ff744cf8a2e5357f39ac55ea0f3e93d" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</scope><name>ProductUrl</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a69a620cf9d6703b4f599f4256e33ed34" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</scope><name>Type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

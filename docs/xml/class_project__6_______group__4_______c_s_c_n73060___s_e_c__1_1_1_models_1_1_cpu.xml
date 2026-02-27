@@ -1,0 +1,434 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a8397ea0f9b865f84fd5ceb13ff984520" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="18" column="20" bodyfile="Models/Cpu.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a687160d7ae146e24b67e62f6ee948781" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Name</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+<para>Display name of the CPU. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="25" column="23" bodyfile="Models/Cpu.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1aaaee5b69faaf754543a09afbf22a414b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.ImageUrl</definition>
+        <argsstring></argsstring>
+        <name>ImageUrl</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.ImageUrl</qualifiedname>
+        <briefdescription>
+<para>Optional product image URL. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="31" column="23" bodyfile="Models/Cpu.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a059046bbdec91de81d0b0c7ee78e198f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.ProductUrl</definition>
+        <argsstring></argsstring>
+        <name>ProductUrl</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.ProductUrl</qualifiedname>
+        <briefdescription>
+<para>Optional manufacturer/product page URL. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="37" column="23" bodyfile="Models/Cpu.cs" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a758aefab0c2148f47b4a7c7665756f57" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Price</definition>
+        <argsstring></argsstring>
+        <name>Price</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Price</qualifiedname>
+        <briefdescription>
+<para>Price string (kept as string to preserve currency symbol and formatting). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="43" column="23" bodyfile="Models/Cpu.cs" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a8e159eef038cbe5d113d0e227a663549" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Manufacturer</definition>
+        <argsstring></argsstring>
+        <name>Manufacturer</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Manufacturer</qualifiedname>
+        <briefdescription>
+<para>Manufacturer name (e.g. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;Intel&quot;, &quot;AMD&quot;). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="49" column="23" bodyfile="Models/Cpu.cs" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a62fe1e5385e1856de257f625d7da4aa9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.PartNumber</definition>
+        <argsstring></argsstring>
+        <name>PartNumber</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.PartNumber</qualifiedname>
+        <briefdescription>
+<para>Manufacturer part number or SKU. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="55" column="23" bodyfile="Models/Cpu.cs" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1abe84017aa3bf3ca997e3d8d575f2f5c8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Series</definition>
+        <argsstring></argsstring>
+        <name>Series</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Series</qualifiedname>
+        <briefdescription>
+<para>Series or family name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="61" column="23" bodyfile="Models/Cpu.cs" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a21c83362db463b87b0d13597e91baac6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Microarchitecture</definition>
+        <argsstring></argsstring>
+        <name>Microarchitecture</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Microarchitecture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="64" column="23" bodyfile="Models/Cpu.cs" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a8d3e049d2aa79e57bba4358e23a09e12" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.CoreFamily</definition>
+        <argsstring></argsstring>
+        <name>CoreFamily</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.CoreFamily</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="67" column="23" bodyfile="Models/Cpu.cs" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1ad957fa937bf7e52369967bf43989c184" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Socket</definition>
+        <argsstring></argsstring>
+        <name>Socket</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Socket</qualifiedname>
+        <briefdescription>
+<para>CPU socket identifier (e.g. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&quot;LGA1700&quot;, &quot;AM5&quot;). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="73" column="23" bodyfile="Models/Cpu.cs" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a1c4ea18824f2842fbb7d49d97b8e0bb9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int?</type>
+        <definition>int? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.CoreCount</definition>
+        <argsstring></argsstring>
+        <name>CoreCount</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.CoreCount</qualifiedname>
+        <briefdescription>
+<para>Optional core count. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="78" column="20" bodyfile="Models/Cpu.cs" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a893403a8a9a8f3be85a4c509bab909f6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.PerformanceCoreClock</definition>
+        <argsstring></argsstring>
+        <name>PerformanceCoreClock</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.PerformanceCoreClock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="81" column="23" bodyfile="Models/Cpu.cs" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a894038af8b861ebb6691edb36e82fde6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.PerformanceCoreBoostClock</definition>
+        <argsstring></argsstring>
+        <name>PerformanceCoreBoostClock</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.PerformanceCoreBoostClock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="84" column="23" bodyfile="Models/Cpu.cs" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1ac26f74dadb20079ab417a190762871bc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.EfficiencyCoreClock</definition>
+        <argsstring></argsstring>
+        <name>EfficiencyCoreClock</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.EfficiencyCoreClock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="87" column="23" bodyfile="Models/Cpu.cs" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a740a064758f77374fef44df5305293ce" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.EfficiencyCoreBoostClock</definition>
+        <argsstring></argsstring>
+        <name>EfficiencyCoreBoostClock</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.EfficiencyCoreBoostClock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="90" column="23" bodyfile="Models/Cpu.cs" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a97f8a01cc95896e78ea8272f12836ce7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.L2Cache</definition>
+        <argsstring></argsstring>
+        <name>L2Cache</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.L2Cache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="93" column="23" bodyfile="Models/Cpu.cs" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1aac341a84d370fc40b0ffe215c627f144" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.L3Cache</definition>
+        <argsstring></argsstring>
+        <name>L3Cache</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.L3Cache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="96" column="23" bodyfile="Models/Cpu.cs" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a8817a6e91791d4191875960398dc97af" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.TDP</definition>
+        <argsstring></argsstring>
+        <name>TDP</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.TDP</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="99" column="23" bodyfile="Models/Cpu.cs" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1aacfab30ca4fe6bef4bd446743b0a7f22" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.IntegratedGraphics</definition>
+        <argsstring></argsstring>
+        <name>IntegratedGraphics</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.IntegratedGraphics</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="102" column="23" bodyfile="Models/Cpu.cs" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a77efaa43074a169bcb8c0818f1771338" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.MaximumSupportedMemory</definition>
+        <argsstring></argsstring>
+        <name>MaximumSupportedMemory</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.MaximumSupportedMemory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="105" column="23" bodyfile="Models/Cpu.cs" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a7825f88c1fe847d91e54a26424865912" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.ECCSupport</definition>
+        <argsstring></argsstring>
+        <name>ECCSupport</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.ECCSupport</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="108" column="23" bodyfile="Models/Cpu.cs" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a4b44dc82b5b76f0e0abe9fee1bac3ffc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.IncludesCooler</definition>
+        <argsstring></argsstring>
+        <name>IncludesCooler</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.IncludesCooler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="111" column="23" bodyfile="Models/Cpu.cs" bodystart="111" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a7415efd8f7c027a3d71570a7d3ffdc6b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Packaging</definition>
+        <argsstring></argsstring>
+        <name>Packaging</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Packaging</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="114" column="23" bodyfile="Models/Cpu.cs" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1ae83c89288bc3a54a51ccacfa521e3705" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Lithography</definition>
+        <argsstring></argsstring>
+        <name>Lithography</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.Lithography</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="117" column="23" bodyfile="Models/Cpu.cs" bodystart="117" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a1c47518f0591acc527bfcc1d7b600f38" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.IncludesCPUCooler</definition>
+        <argsstring></argsstring>
+        <name>IncludesCPUCooler</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.IncludesCPUCooler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="120" column="23" bodyfile="Models/Cpu.cs" bodystart="120" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a519d8c1043b4dc044364098977867885" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.SimultaneousMultithreading</definition>
+        <argsstring></argsstring>
+        <name>SimultaneousMultithreading</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.Cpu.SimultaneousMultithreading</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/Cpu.cs" line="123" column="23" bodyfile="Models/Cpu.cs" bodystart="123" bodyend="123"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>CPU product model with common specification fields used by the application and API. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Price is stored as a formatted string (e.g. &quot;$199.99&quot;) to preserve display formatting. </para>
+    </detaileddescription>
+    <location file="Models/Cpu.cs" line="15" column="11" bodyfile="Models/Cpu.cs" bodystart="16" bodyend="124"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a1c4ea18824f2842fbb7d49d97b8e0bb9" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>CoreCount</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a8d3e049d2aa79e57bba4358e23a09e12" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>CoreFamily</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a7825f88c1fe847d91e54a26424865912" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>ECCSupport</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a740a064758f77374fef44df5305293ce" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>EfficiencyCoreBoostClock</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1ac26f74dadb20079ab417a190762871bc" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>EfficiencyCoreClock</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a8397ea0f9b865f84fd5ceb13ff984520" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>Id</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1aaaee5b69faaf754543a09afbf22a414b" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>ImageUrl</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a4b44dc82b5b76f0e0abe9fee1bac3ffc" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>IncludesCooler</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a1c47518f0591acc527bfcc1d7b600f38" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>IncludesCPUCooler</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1aacfab30ca4fe6bef4bd446743b0a7f22" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>IntegratedGraphics</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a97f8a01cc95896e78ea8272f12836ce7" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>L2Cache</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1aac341a84d370fc40b0ffe215c627f144" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>L3Cache</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1ae83c89288bc3a54a51ccacfa521e3705" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>Lithography</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a8e159eef038cbe5d113d0e227a663549" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>Manufacturer</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a77efaa43074a169bcb8c0818f1771338" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>MaximumSupportedMemory</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a21c83362db463b87b0d13597e91baac6" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>Microarchitecture</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a687160d7ae146e24b67e62f6ee948781" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>Name</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a7415efd8f7c027a3d71570a7d3ffdc6b" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>Packaging</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a62fe1e5385e1856de257f625d7da4aa9" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>PartNumber</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a894038af8b861ebb6691edb36e82fde6" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>PerformanceCoreBoostClock</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a893403a8a9a8f3be85a4c509bab909f6" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>PerformanceCoreClock</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a758aefab0c2148f47b4a7c7665756f57" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>Price</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a059046bbdec91de81d0b0c7ee78e198f" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>ProductUrl</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1abe84017aa3bf3ca997e3d8d575f2f5c8" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>Series</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a519d8c1043b4dc044364098977867885" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>SimultaneousMultithreading</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1ad957fa937bf7e52369967bf43989c184" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>Socket</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a8817a6e91791d4191875960398dc97af" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</scope><name>TDP</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

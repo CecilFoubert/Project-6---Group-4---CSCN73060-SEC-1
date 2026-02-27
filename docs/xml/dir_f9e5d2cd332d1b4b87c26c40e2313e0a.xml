@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dir_f9e5d2cd332d1b4b87c26c40e2313e0a" kind="dir">
+    <compoundname>wwwroot</compoundname>
+    <innerdir refid="dir_111aacf516ae25a0b3dd7ff30d79c0a3">wwwroot/lib</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="wwwroot/"/>
+  </compounddef>
+</doxygen>

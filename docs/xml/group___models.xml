@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="group___models" kind="group">
+    <compoundname>Models</compoundname>
+    <title>Models</title>
+    <innerfile refid="_build_8cs">Build.cs</innerfile>
+    <innerfile refid="_build_create_update_dto_8cs">BuildCreateUpdateDto.cs</innerfile>
+    <innerfile refid="_case_8cs">Case.cs</innerfile>
+    <innerfile refid="_cpu_8cs">Cpu.cs</innerfile>
+    <innerfile refid="_cpu_cooler_8cs">CpuCooler.cs</innerfile>
+    <innerfile refid="_gpu_8cs">Gpu.cs</innerfile>
+    <innerfile refid="_memory_8cs">Memory.cs</innerfile>
+    <innerfile refid="_motherboard_8cs">Motherboard.cs</innerfile>
+    <innerfile refid="_part_average_cache_8cs">PartAverageCache.cs</innerfile>
+    <innerfile refid="_power_supply_8cs">PowerSupply.cs</innerfile>
+    <innerfile refid="_search_filters_8cs">SearchFilters.cs</innerfile>
+    <innerfile refid="_storage_8cs">Storage.cs</innerfile>
+    <briefdescription>
+<para>Domain models and DTOs used by the application and API. */. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>/*! </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

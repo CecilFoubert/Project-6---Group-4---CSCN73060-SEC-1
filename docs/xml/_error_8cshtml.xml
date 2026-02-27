@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="_error_8cshtml" kind="file" language="C#">
+    <compoundname>Error.cshtml</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="property" id="_error_8cshtml_1ac3fee34147ef57e877679e4b9fe2b421" prot="public" static="no" readable="no" writable="no" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>model</type>
+        <definition>model ErrorViewModel</definition>
+        <argsstring></argsstring>
+        <name>ErrorViewModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Views/Shared/Error.cshtml" line="1" column="7" bodyfile="Views/Shared/Error.cshtml" bodystart="2" bodyend="4"/>
+      </memberdef>
+      <memberdef kind="variable" id="_error_8cshtml_1a0a3a5b0cc0297433bf4e86e80cd8d462" prot="public" static="no" mutable="no">
+        <type>&lt; h3 &gt; Development Mode&lt;/h3 &gt;&lt; p &gt; Swapping to&lt; strong &gt; Development&lt;/strong &gt; environment will display more detailed information about the error that occurred.&lt;/p &gt;&lt; p &gt;&lt; strong &gt; The Development environment shouldn t be enabled for deployed applications.&lt;/strong &gt; It can result in displaying sensitive information from exceptions to end users.For</type>
+        <definition>&lt;h3&gt; Development Mode&lt;/h3&gt;&lt;p&gt; Swapping to&lt;strong&gt; Development&lt;/strong&gt; environment will display more detailed information about the error that occurred.&lt;/p&gt;&lt;p&gt;&lt;strong&gt; The Development environment shouldn t be enabled for deployed applications.&lt;/strong&gt; It can result in displaying sensitive information from exceptions to end users.For debugging</definition>
+        <argsstring></argsstring>
+        <name>debugging</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Views/Shared/Error.cshtml" line="23" column="15" bodyfile="Views/Shared/Error.cshtml" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_error_8cshtml_1a6d89d66bdc5d3b56465ecae968da08d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>&lt; h1 class=&quot;text-danger&quot;&gt; Error.&lt;/h1 &gt;&lt; h2 class=&quot;text-danger&quot;&gt; An error occurred while processing your request.&lt;/h2 &gt;</type>
+        <definition>&lt; h1 class=&quot;text-danger&quot;&gt; Error.&lt;/h1 &gt;&lt; h2 class=&quot;text-danger&quot;&gt; An error occurred while processing your request.&lt;/h2 &gt; if</definition>
+        <argsstring>(Model.ShowRequestId)</argsstring>
+        <name>if</name>
+        <param>
+          <type>Model.</type>
+          <declname>ShowRequestId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Views/Shared/Error.cshtml" line="9" column="1" bodyfile="Views/Shared/Error.cshtml" bodystart="9" bodyend="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">@model<sp/>ErrorViewModel</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">@{</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/>ViewData[</highlight><highlight class="stringliteral">&quot;Title&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Error&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">&lt;h1<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;text-danger&quot;</highlight><highlight class="normal">&gt;Error.&lt;/h1&gt;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">&lt;h2<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;text-danger&quot;</highlight><highlight class="normal">&gt;An<sp/>error<sp/>occurred<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>processing<sp/>your<sp/>request.&lt;/h2&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">@</highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Model.ShowRequestId)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;p&gt;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;strong&gt;Request<sp/>ID:&lt;/strong&gt;<sp/>&lt;code&gt;@Model.RequestId&lt;/code&gt;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/p&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">&lt;h3&gt;Development<sp/>Mode&lt;/h3&gt;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">&lt;p&gt;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>Swapping<sp/>to<sp/>&lt;strong&gt;Development&lt;/strong&gt;<sp/>environment<sp/>will<sp/>display<sp/>more<sp/>detailed<sp/>information<sp/>about<sp/>the<sp/>error<sp/>that<sp/>occurred.</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">&lt;/p&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">&lt;p&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;strong&gt;The<sp/>Development<sp/>environment<sp/>shouldn</highlight><highlight class="stringliteral">&apos;t<sp/>be<sp/>enabled<sp/>for<sp/>deployed<sp/>applications.&lt;/strong&gt;</highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>It<sp/>can<sp/>result<sp/>in<sp/>displaying<sp/>sensitive<sp/>information<sp/>from<sp/>exceptions<sp/>to<sp/>end<sp/>users.</highlight></codeline>
+<codeline lineno="23"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>For<sp/>local<sp/>debugging,<sp/>enable<sp/>the<sp/>&lt;strong&gt;Development&lt;/strong&gt;<sp/>environment<sp/>by<sp/>setting<sp/>the<sp/>&lt;strong&gt;ASPNETCORE_ENVIRONMENT&lt;/strong&gt;<sp/>environment<sp/>variable<sp/>to<sp/>&lt;strong&gt;Development&lt;/strong&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>and<sp/>restarting<sp/>the<sp/>app.</highlight></codeline>
+<codeline lineno="25"><highlight class="stringliteral">&lt;/p&gt;</highlight></codeline>
+    </programlisting>
+    <location file="Views/Shared/Error.cshtml"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,4 @@
+var _parts_controller_8cs =
+[
+    [ "Project_6___Group_4___CSCN73060_SEC_1.Controllers.PartsController", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller.html", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller" ]
+];

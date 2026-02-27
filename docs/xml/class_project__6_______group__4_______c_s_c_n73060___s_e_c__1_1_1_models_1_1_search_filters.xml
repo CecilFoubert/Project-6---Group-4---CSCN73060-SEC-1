@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Models::SearchFilters</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_1a066d89085ceef53e986f6dbb44324450" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal?</type>
+        <definition>decimal? Project_6___Group_4___CSCN73060_SEC_1.Models.SearchFilters.MinPrice</definition>
+        <argsstring></argsstring>
+        <name>MinPrice</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.SearchFilters.MinPrice</qualifiedname>
+        <briefdescription>
+<para>Minimum price filter (inclusive). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/SearchFilters.cs" line="17" column="24" bodyfile="Models/SearchFilters.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_1a4c587ffef1ed0af5a5261689535022f2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal?</type>
+        <definition>decimal? Project_6___Group_4___CSCN73060_SEC_1.Models.SearchFilters.MaxPrice</definition>
+        <argsstring></argsstring>
+        <name>MaxPrice</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.SearchFilters.MaxPrice</qualifiedname>
+        <briefdescription>
+<para>Maximum price filter (inclusive). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/SearchFilters.cs" line="22" column="24" bodyfile="Models/SearchFilters.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_1a57e1602041ac7e7d03196f3afdc71412" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.SearchFilters.Manufacturer</definition>
+        <argsstring></argsstring>
+        <name>Manufacturer</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.SearchFilters.Manufacturer</qualifiedname>
+        <briefdescription>
+<para>Manufacturer filter (partial match, case-insensitive). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/SearchFilters.cs" line="27" column="23" bodyfile="Models/SearchFilters.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_1ad44557dbdbcf48f00a6d1003844095fd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Dictionary&lt; string, string &gt;?</type>
+        <definition>Dictionary&lt;string, string&gt;? Project_6___Group_4___CSCN73060_SEC_1.Models.SearchFilters.Filters</definition>
+        <argsstring></argsstring>
+        <name>Filters</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.SearchFilters.Filters</qualifiedname>
+        <briefdescription>
+<para>Dynamic filters as key-value pairs for any part property. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Keys are property names (e.g., &quot;Socket&quot;, &quot;Chipset&quot;, &quot;Speed&quot;). Values are filter values (partial match, case-insensitive). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/SearchFilters.cs" line="34" column="27" bodyfile="Models/SearchFilters.cs" bodystart="34" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Model for search filters sent as JSON body to the search endpoint. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Models/SearchFilters.cs" line="12" column="11" bodyfile="Models/SearchFilters.cs" bodystart="13" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_1ad44557dbdbcf48f00a6d1003844095fd" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::SearchFilters</scope><name>Filters</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_1a57e1602041ac7e7d03196f3afdc71412" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::SearchFilters</scope><name>Manufacturer</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_1a4c587ffef1ed0af5a5261689535022f2" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::SearchFilters</scope><name>MaxPrice</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_1a066d89085ceef53e986f6dbb44324450" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::SearchFilters</scope><name>MinPrice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

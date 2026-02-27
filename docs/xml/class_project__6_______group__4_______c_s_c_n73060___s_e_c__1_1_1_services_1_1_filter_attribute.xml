@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Services::FilterAttribute</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute_1a5a100431e7a153e8d0f7624c6fcccb66" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Project_6___Group_4___CSCN73060_SEC_1.Services.FilterAttribute.AttributeName</definition>
+        <argsstring></argsstring>
+        <name>AttributeName</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Services.FilterAttribute.AttributeName</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Services/IPartService.cs" line="80" column="23" bodyfile="Services/IPartService.cs" bodystart="80" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute_1a53c3ee57e42747361049f887cd8140ee" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Project_6___Group_4___CSCN73060_SEC_1.Services.FilterAttribute.AttributeType</definition>
+        <argsstring></argsstring>
+        <name>AttributeType</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Services.FilterAttribute.AttributeType</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Services/IPartService.cs" line="81" column="23" bodyfile="Services/IPartService.cs" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute_1aa0ba32b4df2c9e45224e0a579855b19d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; Project_6___Group_4___CSCN73060_SEC_1.Services.FilterAttribute.DistinctValues</definition>
+        <argsstring></argsstring>
+        <name>DistinctValues</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Services.FilterAttribute.DistinctValues</qualifiedname>
+        <initializer>= new List&lt;string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Services/IPartService.cs" line="82" column="21" bodyfile="Services/IPartService.cs" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute_1ac9191e7d523aad6d98a88efb89fcdca9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Project_6___Group_4___CSCN73060_SEC_1.Services.FilterAttribute.TotalDistinctCount</definition>
+        <argsstring></argsstring>
+        <name>TotalDistinctCount</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Services.FilterAttribute.TotalDistinctCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Services/IPartService.cs" line="83" column="20" bodyfile="Services/IPartService.cs" bodystart="83" bodyend="83"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Information about a single filterable attribute: name, type and distinct values. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Services/IPartService.cs" line="78" column="11" bodyfile="Services/IPartService.cs" bodystart="79" bodyend="84"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute_1a5a100431e7a153e8d0f7624c6fcccb66" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Services::FilterAttribute</scope><name>AttributeName</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute_1a53c3ee57e42747361049f887cd8140ee" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Services::FilterAttribute</scope><name>AttributeType</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute_1aa0ba32b4df2c9e45224e0a579855b19d" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Services::FilterAttribute</scope><name>DistinctValues</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute_1ac9191e7d523aad6d98a88efb89fcdca9" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Services::FilterAttribute</scope><name>TotalDistinctCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

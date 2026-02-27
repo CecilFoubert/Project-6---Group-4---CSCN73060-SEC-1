@@ -1,17 +1,33 @@
+/*!
+ * @file Models/Build.cs
+ * @brief Build aggregate model.
+ * @ingroup Models
+ */
+
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Models
 {
+    /// <summary>
+    /// Build aggregates selected parts into a saved PC configuration.
+    /// Navigation properties link to individual part entities; foreign keys are nullable.
+    /// </summary>
     public class Build
     {
         [Key]
         public int Id { get; set; }
 
+        /// <summary>
+        /// User-supplied build name.
+        /// </summary>
         [Required]
         [MaxLength(200)]
         public string Name { get; set; } = string.Empty;
 
+        /// <summary>
+        /// Optional description entered by the user.
+        /// </summary>
         [MaxLength(1000)]
         public string? Description { get; set; }
 
@@ -54,7 +70,9 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Models
         [ForeignKey("CpuCoolerId")]
         public virtual CpuCooler? CpuCooler { get; set; }
 
-        // Computed property for total price
+        /// <summary>
+        /// Computed total price for the build. Returns null when no priced parts present.
+        /// </summary>
         [NotMapped]
         public decimal? TotalPrice
         {

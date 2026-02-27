@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Controllers::ApiBuildsController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ControllerBase</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1abf721e932752dea63c38bc0a732d1524" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context" kindref="compound">ApplicationDbContext</ref></type>
+        <definition>readonly ApplicationDbContext Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController._context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/ApiBuildsController.cs" line="23" column="47" bodyfile="Controllers/ApiBuildsController.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1abae49c1b0994b6d3c883bf226dc654c8" prot="private" static="no" mutable="no">
+        <type>readonly ILogger&lt; <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a8e7596b277f8accfff58c6a2d64a5417" kindref="member">ApiBuildsController</ref> &gt;</type>
+        <definition>readonly ILogger&lt;ApiBuildsController&gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController._logger</definition>
+        <argsstring></argsstring>
+        <name>_logger</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController._logger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/ApiBuildsController.cs" line="24" column="34" bodyfile="Controllers/ApiBuildsController.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1aaa528be99289d8e9c03c7c8b7b3dee56" prot="private" static="yes" mutable="no">
+        <type>readonly Dictionary&lt; string, string &gt;</type>
+        <definition>readonly Dictionary&lt;string, string&gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.PartTypeToColumn</definition>
+        <argsstring></argsstring>
+        <name>PartTypeToColumn</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.PartTypeToColumn</qualifiedname>
+        <initializer>                                                    = new(StringComparer.OrdinalIgnoreCase)
+{
+    [&quot;cpu&quot;] = &quot;CpuId&quot;,
+    [&quot;motherboard&quot;] = &quot;MotherboardId&quot;,
+    [&quot;memory&quot;] = &quot;MemoryId&quot;,
+    [&quot;storage&quot;] = &quot;StorageId&quot;,
+    [&quot;gpu&quot;] = &quot;GpuId&quot;,
+    [&quot;case&quot;] = &quot;CaseId&quot;,
+    [&quot;powersupply&quot;] = &quot;PowerSupplyId&quot;,
+    [&quot;cpucooler&quot;] = &quot;CpuCoolerId&quot;
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/ApiBuildsController.cs" line="26" column="44" bodyfile="Controllers/ApiBuildsController.cs" bodystart="26" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a8e7596b277f8accfff58c6a2d64a5417" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.ApiBuildsController</definition>
+        <argsstring>(ApplicationDbContext context, ILogger&lt; ApiBuildsController &gt; logger)</argsstring>
+        <name>ApiBuildsController</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.ApiBuildsController</qualifiedname>
+        <param>
+          <type><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context" kindref="compound">ApplicationDbContext</ref></type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>ILogger&lt; ApiBuildsController &gt;</type>
+          <declname>logger</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller" kindref="compound">ApiBuildsController</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/ApiBuildsController.cs" line="41" column="16" bodyfile="Controllers/ApiBuildsController.cs" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a0d5372f53dab7df59f24cab4b3219545" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.GetAll</qualifiedname>
+        <briefdescription>
+<para>Get all builds GET /api/ApiBuilds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/ApiBuildsController.cs" line="52" column="27" bodyfile="Controllers/ApiBuildsController.cs" bodystart="52" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1ae1fdb3694fb5c627be735498ad38c05a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.GetById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetById</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.GetById</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get build by ID GET /api/ApiBuilds/5. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/ApiBuildsController.cs" line="75" column="27" bodyfile="Controllers/ApiBuildsController.cs" bodystart="75" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a56c971fce7ccc86a8a75f598ad42c096" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.GetByName</definition>
+        <argsstring>(string name)</argsstring>
+        <name>GetByName</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.GetByName</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Get build by name (to check if a build with this name exists) GET /api/ApiBuilds/by-name/My%20<ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build" kindref="compound">Build</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/ApiBuildsController.cs" line="99" column="27" bodyfile="Controllers/ApiBuildsController.cs" bodystart="99" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a4de68decc1fdeb4ce8f3776548a533d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.Create</definition>
+        <argsstring>([FromBody] BuildCreateUpdateDto dto)</argsstring>
+        <name>Create</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.Create</qualifiedname>
+        <param>
+          <attributes>[FromBody]</attributes>
+          <type><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto" kindref="compound">BuildCreateUpdateDto</ref></type>
+          <declname>dto</declname>
+        </param>
+        <briefdescription>
+<para>Create a new build POST /api/ApiBuilds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/ApiBuildsController.cs" line="123" column="27" bodyfile="Controllers/ApiBuildsController.cs" bodystart="123" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a0baa9a965852c4f0b68125480e16bd6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.Patch</definition>
+        <argsstring>(int id, [FromBody] BuildCreateUpdateDto dto)</argsstring>
+        <name>Patch</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.Patch</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <attributes>[FromBody]</attributes>
+          <type><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto" kindref="compound">BuildCreateUpdateDto</ref></type>
+          <declname>dto</declname>
+        </param>
+        <briefdescription>
+<para>Update an existing build (e.g. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>when user saves a build with the same name as an existing one) PATCH /api/ApiBuilds/5 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/ApiBuildsController.cs" line="143" column="27" bodyfile="Controllers/ApiBuildsController.cs" bodystart="143" bodyend="192"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a19706a746e4cfdc754ed12c97fed448a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build" kindref="compound">Build</ref></type>
+        <definition>static Build Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.MapDtoToBuild</definition>
+        <argsstring>(BuildCreateUpdateDto dto)</argsstring>
+        <name>MapDtoToBuild</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.MapDtoToBuild</qualifiedname>
+        <param>
+          <type><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto" kindref="compound">BuildCreateUpdateDto</ref></type>
+          <declname>dto</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/ApiBuildsController.cs" line="194" column="30" bodyfile="Controllers/ApiBuildsController.cs" bodystart="194" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a14791a7bc28b2d80c73e9dee49ec6cb1" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>static object Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.ToApiModel</definition>
+        <argsstring>(Build b)</argsstring>
+        <name>ToApiModel</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController.ToApiModel</qualifiedname>
+        <param>
+          <type><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build" kindref="compound">Build</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Controllers/ApiBuildsController.cs" line="227" column="31" bodyfile="Controllers/ApiBuildsController.cs" bodystart="227" bodyend="248"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>API controller for builds. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides endpoints to list, retrieve, create, update and delete builds, and to query builds by part selection. Returns lightweight API models suitable for client-side consumption. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ControllerBase</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ControllerBase</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Controllers.ApiBuildsController</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Controllers/ApiBuildsController.cs" line="21" column="11" bodyfile="Controllers/ApiBuildsController.cs" bodystart="22" bodyend="249"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1abf721e932752dea63c38bc0a732d1524" prot="private" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::ApiBuildsController</scope><name>_context</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1abae49c1b0994b6d3c883bf226dc654c8" prot="private" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::ApiBuildsController</scope><name>_logger</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a8e7596b277f8accfff58c6a2d64a5417" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::ApiBuildsController</scope><name>ApiBuildsController</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a4de68decc1fdeb4ce8f3776548a533d4" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::ApiBuildsController</scope><name>Create</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a0d5372f53dab7df59f24cab4b3219545" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::ApiBuildsController</scope><name>GetAll</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1ae1fdb3694fb5c627be735498ad38c05a" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::ApiBuildsController</scope><name>GetById</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a56c971fce7ccc86a8a75f598ad42c096" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::ApiBuildsController</scope><name>GetByName</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a19706a746e4cfdc754ed12c97fed448a" prot="private" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::ApiBuildsController</scope><name>MapDtoToBuild</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1aaa528be99289d8e9c03c7c8b7b3dee56" prot="private" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::ApiBuildsController</scope><name>PartTypeToColumn</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a0baa9a965852c4f0b68125480e16bd6d" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::ApiBuildsController</scope><name>Patch</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a14791a7bc28b2d80c73e9dee49ec6cb1" prot="private" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Controllers::ApiBuildsController</scope><name>ToApiModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

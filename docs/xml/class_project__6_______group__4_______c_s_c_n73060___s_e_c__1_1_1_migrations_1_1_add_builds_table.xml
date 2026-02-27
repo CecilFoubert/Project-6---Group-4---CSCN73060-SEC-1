@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Migrations::AddBuildsTable</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Migration</basecompoundref>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table_1ac263d0dcbdcd7e766a1ce12eab72f646" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddBuildsTable.Up</definition>
+        <argsstring>(MigrationBuilder migrationBuilder)</argsstring>
+        <name>Up</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddBuildsTable.Up</qualifiedname>
+        <param>
+          <type>MigrationBuilder</type>
+          <declname>migrationBuilder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Migrations/20260212042700_AddBuildsTable.cs" line="13" column="33" bodyfile="Migrations/20260212042700_AddBuildsTable.cs" bodystart="13" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table_1aed8559766ea123727d7045def742e467" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddBuildsTable.Down</definition>
+        <argsstring>(MigrationBuilder migrationBuilder)</argsstring>
+        <name>Down</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddBuildsTable.Down</qualifiedname>
+        <param>
+          <type>MigrationBuilder</type>
+          <declname>migrationBuilder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Migrations/20260212042700_AddBuildsTable.cs" line="132" column="33" bodyfile="Migrations/20260212042700_AddBuildsTable.cs" bodystart="132" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table_1a8626283aee9682395e60c7e8e466f217" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddBuildsTable.BuildTargetModel</definition>
+        <argsstring>(ModelBuilder modelBuilder)</argsstring>
+        <name>BuildTargetModel</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddBuildsTable.BuildTargetModel</qualifiedname>
+        <param>
+          <type>ModelBuilder</type>
+          <declname>modelBuilder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Migrations/20260212042700_AddBuildsTable.Designer.cs" line="19" column="33" bodyfile="Migrations/20260212042700_AddBuildsTable.Designer.cs" bodystart="19" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Migration</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddBuildsTable</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Migration</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddBuildsTable</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Migrations/20260212042700_AddBuildsTable.cs" line="10" column="19" bodyfile="Migrations/20260212042700_AddBuildsTable.cs" bodystart="11" bodyend="137"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table_1a8626283aee9682395e60c7e8e466f217" prot="protected" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Migrations::AddBuildsTable</scope><name>BuildTargetModel</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table_1aed8559766ea123727d7045def742e467" prot="protected" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Migrations::AddBuildsTable</scope><name>Down</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table_1ac263d0dcbdcd7e766a1ce12eab72f646" prot="protected" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Migrations::AddBuildsTable</scope><name>Up</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
