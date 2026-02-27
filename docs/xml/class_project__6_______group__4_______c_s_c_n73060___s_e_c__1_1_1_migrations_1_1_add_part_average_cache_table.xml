@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Migrations::AddPartAverageCacheTable</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Migration</basecompoundref>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table_1aec92f584ca39cfc38c308139cbb111b9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddPartAverageCacheTable.Up</definition>
+        <argsstring>(MigrationBuilder migrationBuilder)</argsstring>
+        <name>Up</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddPartAverageCacheTable.Up</qualifiedname>
+        <param>
+          <type>MigrationBuilder</type>
+          <declname>migrationBuilder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Migrations/20260227010532_AddPartAverageCacheTable.cs" line="13" column="33" bodyfile="Migrations/20260227010532_AddPartAverageCacheTable.cs" bodystart="13" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table_1a3e0482e05627a7dfc8f25c8ff733fae4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddPartAverageCacheTable.Down</definition>
+        <argsstring>(MigrationBuilder migrationBuilder)</argsstring>
+        <name>Down</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddPartAverageCacheTable.Down</qualifiedname>
+        <param>
+          <type>MigrationBuilder</type>
+          <declname>migrationBuilder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Migrations/20260227010532_AddPartAverageCacheTable.cs" line="43" column="33" bodyfile="Migrations/20260227010532_AddPartAverageCacheTable.cs" bodystart="43" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table_1a35a9156f11d6805cb7470b12c18e8ddd" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddPartAverageCacheTable.BuildTargetModel</definition>
+        <argsstring>(ModelBuilder modelBuilder)</argsstring>
+        <name>BuildTargetModel</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddPartAverageCacheTable.BuildTargetModel</qualifiedname>
+        <param>
+          <type>ModelBuilder</type>
+          <declname>modelBuilder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Migrations/20260227010532_AddPartAverageCacheTable.Designer.cs" line="18" column="33" bodyfile="Migrations/20260227010532_AddPartAverageCacheTable.Designer.cs" bodystart="18" bodyend="988"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Migration</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddPartAverageCacheTable</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Migration</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddPartAverageCacheTable</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Migrations/20260227010532_AddPartAverageCacheTable.cs" line="10" column="19" bodyfile="Migrations/20260227010532_AddPartAverageCacheTable.cs" bodystart="11" bodyend="48"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table_1a35a9156f11d6805cb7470b12c18e8ddd" prot="protected" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Migrations::AddPartAverageCacheTable</scope><name>BuildTargetModel</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table_1a3e0482e05627a7dfc8f25c8ff733fae4" prot="protected" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Migrations::AddPartAverageCacheTable</scope><name>Down</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table_1aec92f584ca39cfc38c308139cbb111b9" prot="protected" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Migrations::AddPartAverageCacheTable</scope><name>Up</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

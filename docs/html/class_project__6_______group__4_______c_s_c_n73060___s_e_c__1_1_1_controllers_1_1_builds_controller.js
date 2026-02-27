@@ -1,0 +1,4 @@
+var class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller =
+[
+    [ "BuildsController", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller.html#a70a82507b34a13476fd9293de476c139", null ]
+];

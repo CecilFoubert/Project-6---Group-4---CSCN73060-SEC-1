@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['build_0',['Build',['../class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build.html',1,'Project_6___Group_4___CSCN73060_SEC_1::Models']]],
+  ['build_2ecs_1',['Build.cs',['../_build_8cs.html',1,'']]],
+  ['buildcreateupdatedto_2',['BuildCreateUpdateDto',['../class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto.html',1,'Project_6___Group_4___CSCN73060_SEC_1::Models']]],
+  ['buildcreateupdatedto_2ecs_3',['BuildCreateUpdateDto.cs',['../_build_create_update_dto_8cs.html',1,'']]],
+  ['buildscontroller_4',['BuildsController',['../class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller.html',1,'Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController'],['../class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller.html#a70a82507b34a13476fd9293de476c139',1,'Project_6___Group_4___CSCN73060_SEC_1.Controllers.BuildsController.BuildsController()']]],
+  ['buildscontroller_2ecs_5',['BuildsController.cs',['../_builds_controller_8cs.html',1,'']]],
+  ['buildtargetmodel_6',['BuildTargetModel',['../class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_initial_create.html#a088bf73fe76e980425f02e7db18e6da9',1,'Project_6___Group_4___CSCN73060_SEC_1.Migrations.InitialCreate.BuildTargetModel()'],['../class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table.html#a8626283aee9682395e60c7e8e466f217',1,'Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddBuildsTable.BuildTargetModel()'],['../class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size.html#a3ad1f67fc4aa5e03849daffb57beb23f',1,'Project_6___Group_4___CSCN73060_SEC_1.Migrations.IncreaseMemorySpeedColumnSize.BuildTargetModel()'],['../class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table.html#a35a9156f11d6805cb7470b12c18e8ddd',1,'Project_6___Group_4___CSCN73060_SEC_1.Migrations.AddPartAverageCacheTable.BuildTargetModel()']]]
+];

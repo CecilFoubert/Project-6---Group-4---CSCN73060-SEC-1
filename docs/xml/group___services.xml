@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="group___services" kind="group">
+    <compoundname>Services</compoundname>
+    <title>Services</title>
+    <innerfile refid="_i_part_service_8cs">IPartService.cs</innerfile>
+    <innerfile refid="_part_service_8cs">PartService.cs</innerfile>
+    <briefdescription>
+<para>Service interfaces and implementations (business logic, search and data operations). */. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>/*! </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

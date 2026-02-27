@@ -1,0 +1,141 @@
+\doxysection{20260212042700\+\_\+\+Add\+Builds\+Table.\+cs}
+\hypertarget{20260212042700___add_builds_table_8cs_source}{}\label{20260212042700___add_builds_table_8cs_source}\index{Migrations/20260212042700\_AddBuildsTable.cs@{Migrations/20260212042700\_AddBuildsTable.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Microsoft.EntityFrameworkCore.Metadata;}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Microsoft.EntityFrameworkCore.Migrations;}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00005}00005\ \textcolor{preprocessor}{\#nullable\ disable}}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Migrations}}}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00010}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table}{AddBuildsTable}}\ :\ Migration}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00013}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table_ac263d0dcbdcd7e766a1ce12eab72f646}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table_ac263d0dcbdcd7e766a1ce12eab72f646}{Up}}(MigrationBuilder\ migrationBuilder)}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}Builds"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ columns:\ table\ =>\ \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Id\ =\ table.Column<\textcolor{keywordtype}{int}>(type:\ \textcolor{stringliteral}{"{}int"{}},\ nullable:\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Annotation(\textcolor{stringliteral}{"{}MySql:ValueGenerationStrategy"{}},\ MySqlValueGenerationStrategy.IdentityColumn),}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ table.Column<\textcolor{keywordtype}{string}>(type:\ \textcolor{stringliteral}{"{}varchar(200)"{}},\ maxLength:\ 200,\ nullable:\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}},\ \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Description\ =\ table.Column<\textcolor{keywordtype}{string}>(type:\ \textcolor{stringliteral}{"{}varchar(1000)"{}},\ maxLength:\ 1000,\ nullable:\ \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}},\ \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CreatedAt\ =\ table.Column<DateTime>(type:\ \textcolor{stringliteral}{"{}datetime(6)"{}},\ nullable:\ \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UpdatedAt\ =\ table.Column<DateTime>(type:\ \textcolor{stringliteral}{"{}datetime(6)"{}},\ nullable:\ \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CpuId\ =\ table.Column<\textcolor{keywordtype}{int}>(type:\ \textcolor{stringliteral}{"{}int"{}},\ nullable:\ \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GpuId\ =\ table.Column<\textcolor{keywordtype}{int}>(type:\ \textcolor{stringliteral}{"{}int"{}},\ nullable:\ \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MotherboardId\ =\ table.Column<\textcolor{keywordtype}{int}>(type:\ \textcolor{stringliteral}{"{}int"{}},\ nullable:\ \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MemoryId\ =\ table.Column<\textcolor{keywordtype}{int}>(type:\ \textcolor{stringliteral}{"{}int"{}},\ nullable:\ \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StorageId\ =\ table.Column<\textcolor{keywordtype}{int}>(type:\ \textcolor{stringliteral}{"{}int"{}},\ nullable:\ \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CaseId\ =\ table.Column<\textcolor{keywordtype}{int}>(type:\ \textcolor{stringliteral}{"{}int"{}},\ nullable:\ \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PowerSupplyId\ =\ table.Column<\textcolor{keywordtype}{int}>(type:\ \textcolor{stringliteral}{"{}int"{}},\ nullable:\ \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CpuCoolerId\ =\ table.Column<\textcolor{keywordtype}{int}>(type:\ \textcolor{stringliteral}{"{}int"{}},\ nullable:\ \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constraints:\ table\ =>}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Builds"{}},\ x\ =>\ x.Id);}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}FK\_Builds\_Cases\_CaseId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ x\ =>\ x.CaseId,}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalTable:\ \textcolor{stringliteral}{"{}Cases"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalColumn:\ \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ onDelete:\ ReferentialAction.SetNull);}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}FK\_Builds\_CpuCoolers\_CpuCoolerId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ x\ =>\ x.CpuCoolerId,}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalTable:\ \textcolor{stringliteral}{"{}CpuCoolers"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalColumn:\ \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ onDelete:\ ReferentialAction.SetNull);}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}FK\_Builds\_Cpus\_CpuId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ x\ =>\ x.CpuId,}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalTable:\ \textcolor{stringliteral}{"{}Cpus"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalColumn:\ \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ onDelete:\ ReferentialAction.SetNull);}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}FK\_Builds\_Gpus\_GpuId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ x\ =>\ x.GpuId,}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalTable:\ \textcolor{stringliteral}{"{}Gpus"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalColumn:\ \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ onDelete:\ ReferentialAction.SetNull);}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}FK\_Builds\_Memories\_MemoryId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ x\ =>\ x.MemoryId,}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalTable:\ \textcolor{stringliteral}{"{}Memories"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalColumn:\ \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ onDelete:\ ReferentialAction.SetNull);}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}FK\_Builds\_Motherboards\_MotherboardId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ x\ =>\ x.MotherboardId,}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalTable:\ \textcolor{stringliteral}{"{}Motherboards"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalColumn:\ \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ onDelete:\ ReferentialAction.SetNull);}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}FK\_Builds\_PowerSupplies\_PowerSupplyId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ x\ =>\ x.PowerSupplyId,}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalTable:\ \textcolor{stringliteral}{"{}PowerSupplies"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalColumn:\ \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ onDelete:\ ReferentialAction.SetNull);}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}FK\_Builds\_Storages\_StorageId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ x\ =>\ x.StorageId,}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalTable:\ \textcolor{stringliteral}{"{}Storages"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ principalColumn:\ \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ onDelete:\ ReferentialAction.SetNull);}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \})}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}},\ \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}IX\_Builds\_CaseId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table:\ \textcolor{stringliteral}{"{}Builds"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ \textcolor{stringliteral}{"{}CaseId"{}});}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}IX\_Builds\_CpuCoolerId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table:\ \textcolor{stringliteral}{"{}Builds"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ \textcolor{stringliteral}{"{}CpuCoolerId"{}});}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}IX\_Builds\_CpuId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table:\ \textcolor{stringliteral}{"{}Builds"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ \textcolor{stringliteral}{"{}CpuId"{}});}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}IX\_Builds\_GpuId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table:\ \textcolor{stringliteral}{"{}Builds"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ \textcolor{stringliteral}{"{}GpuId"{}});}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}IX\_Builds\_MemoryId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table:\ \textcolor{stringliteral}{"{}Builds"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ \textcolor{stringliteral}{"{}MemoryId"{}});}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}IX\_Builds\_MotherboardId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table:\ \textcolor{stringliteral}{"{}Builds"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ \textcolor{stringliteral}{"{}MotherboardId"{}});}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}IX\_Builds\_PowerSupplyId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table:\ \textcolor{stringliteral}{"{}Builds"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ \textcolor{stringliteral}{"{}PowerSupplyId"{}});}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}IX\_Builds\_StorageId"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table:\ \textcolor{stringliteral}{"{}Builds"{}},}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column:\ \textcolor{stringliteral}{"{}StorageId"{}});}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00132}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table_aed8559766ea123727d7045def742e467}{00132}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table_aed8559766ea123727d7045def742e467}{Down}}(MigrationBuilder\ migrationBuilder)}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ \textcolor{stringliteral}{"{}Builds"{}});}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00137}00137\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{20260212042700___add_builds_table_8cs_source_l00138}00138\ \}}
+
+\end{DoxyCode}

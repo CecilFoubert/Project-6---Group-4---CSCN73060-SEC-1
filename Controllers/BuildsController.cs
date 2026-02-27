@@ -1,3 +1,9 @@
+/*!
+ * @file Controllers/BuildsController.cs
+ * @brief MVC controller for Build view pages (Razor views).
+ * @ingroup Controllers
+ */
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Project_6___Group_4___CSCN73060_SEC_1.Data;
@@ -5,11 +11,18 @@ using Project_6___Group_4___CSCN73060_SEC_1.Models;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Controllers
 {
+    /// <summary>
+    /// MVC controller that renders Razor views for build CRUD operations.
+    /// Used by the web UI (not the API) to view and manage saved builds.
+    /// </summary>
     public class BuildsController : Controller
     {
         private readonly ApplicationDbContext _context;
         private readonly ILogger<BuildsController> _logger;
 
+        /// <summary>
+        /// Creates a new <see cref="BuildsController"/>.
+        /// </summary>
         public BuildsController(ApplicationDbContext context, ILogger<BuildsController> logger)
         {
             _context = context;

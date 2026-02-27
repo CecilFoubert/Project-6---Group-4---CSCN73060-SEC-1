@@ -24,12 +24,33 @@
 */
 var NAVTREE =
 [
-  [ "PC Part Picker", "index.html", ]
+  [ "PC Part Picker", "index.html", [
+    [ "GROUPS", "md_docs_2_g_r_o_u_p_s.html", null ],
+    [ "The MIT License (MIT)", "md_wwwroot_2lib_2jquery-validation_2_l_i_c_e_n_s_e.html", null ],
+    [ "Topics", "topics.html", "topics" ],
+    [ "Packages", "namespaces.html", [
+      [ "Package List", "namespaces.html", "namespaces_dup" ]
+    ] ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Properties", "functions_prop.html", null ]
+      ] ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ]
+    ] ]
+  ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"20260203182158___initial_create_8_designer_8cs_source.html",
+"class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_ref_dto.html#a6b7c73a8aad06fd92436d3baffc68150"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dir_8479cdc0036e18ebdf01c3bcd05b33d8" kind="dir">
+    <compoundname>Migrations</compoundname>
+    <innerfile refid="20260203182158___initial_create_8cs">20260203182158_InitialCreate.cs</innerfile>
+    <innerfile refid="20260203182158___initial_create_8_designer_8cs">20260203182158_InitialCreate.Designer.cs</innerfile>
+    <innerfile refid="20260212042700___add_builds_table_8cs">20260212042700_AddBuildsTable.cs</innerfile>
+    <innerfile refid="20260212042700___add_builds_table_8_designer_8cs">20260212042700_AddBuildsTable.Designer.cs</innerfile>
+    <innerfile refid="20260219000000___increase_memory_speed_column_size_8cs">20260219000000_IncreaseMemorySpeedColumnSize.cs</innerfile>
+    <innerfile refid="20260219000000___increase_memory_speed_column_size_8_designer_8cs">20260219000000_IncreaseMemorySpeedColumnSize.Designer.cs</innerfile>
+    <innerfile refid="20260227010532___add_part_average_cache_table_8cs">20260227010532_AddPartAverageCacheTable.cs</innerfile>
+    <innerfile refid="20260227010532___add_part_average_cache_table_8_designer_8cs">20260227010532_AddPartAverageCacheTable.Designer.cs</innerfile>
+    <innerfile refid="_application_db_context_model_snapshot_8cs">ApplicationDbContextModelSnapshot.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Migrations/"/>
+  </compounddef>
+</doxygen>

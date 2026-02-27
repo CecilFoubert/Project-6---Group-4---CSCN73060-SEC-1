@@ -1,12 +1,24 @@
+/*!
+ * @file Models/Gpu.cs
+ * @brief GPU domain model.
+ * @ingroup Models
+ */
+
 using System.ComponentModel.DataAnnotations;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Models
 {
+    /// <summary>
+    /// GPU product model with display and specification fields used by the API and UI.
+    /// </summary>
     public class Gpu
     {
         [Key]
         public int Id { get; set; }
         
+        /// <summary>
+        /// Display name of the GPU.
+        /// </summary>
         [Required]
         [MaxLength(500)]
         public string Name { get; set; } = string.Empty;
@@ -17,6 +29,9 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Models
         [MaxLength(500)]
         public string? ProductUrl { get; set; }
         
+        /// <summary>
+        /// Price as a string (e.g. "$399.00").
+        /// </summary>
         [MaxLength(100)]
         public string? Price { get; set; }
         

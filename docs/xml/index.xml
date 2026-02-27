@@ -1,0 +1,772 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.16.1" xml:lang="en-US">
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Tests::AcceptanceTests</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1a2b63f115a639b5a289eebf4568023b53" kind="variable"><name>_client</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1ad30015d86a4d6b1445fda680ea82398c" kind="function"><name>AcceptanceTests</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1ab7246707b40c6700143421d309644851" kind="function"><name>User_Can_BrowseCpus_And_CreateBuild_WithSelectedCpu</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1ac62729bf5ecc18347c34f9ff42b45cc4" kind="function"><name>User_Can_SearchCpus_ByPriceAndManufacturer_ThenCreateBuild</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1a6958530550833cf8ba9497d1d2827867" kind="function"><name>User_Can_CreateBuild_SaveWithName_AndRetrieveLater</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1a22344364c5d7ffa7c151ae450b54cee0" kind="function"><name>User_Can_UpdateExistingBuild_WhenSavingWithSameName</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_acceptance_tests_1a9cec86343d51512faaa960110393c7d6" kind="function"><name>User_Can_GetFilterOptions_UseThemToSearch_AndViewResults</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Migrations::AddBuildsTable</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table_1ac263d0dcbdcd7e766a1ce12eab72f646" kind="function"><name>Up</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table_1aed8559766ea123727d7045def742e467" kind="function"><name>Down</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_builds_table_1a8626283aee9682395e60c7e8e466f217" kind="function"><name>BuildTargetModel</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Migrations::AddPartAverageCacheTable</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table_1aec92f584ca39cfc38c308139cbb111b9" kind="function"><name>Up</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table_1a3e0482e05627a7dfc8f25c8ff733fae4" kind="function"><name>Down</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_add_part_average_cache_table_1a35a9156f11d6805cb7470b12c18e8ddd" kind="function"><name>BuildTargetModel</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Controllers::ApiBuildsController</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1abf721e932752dea63c38bc0a732d1524" kind="variable"><name>_context</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1abae49c1b0994b6d3c883bf226dc654c8" kind="variable"><name>_logger</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1aaa528be99289d8e9c03c7c8b7b3dee56" kind="variable"><name>PartTypeToColumn</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a8e7596b277f8accfff58c6a2d64a5417" kind="function"><name>ApiBuildsController</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a0d5372f53dab7df59f24cab4b3219545" kind="function"><name>GetAll</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1ae1fdb3694fb5c627be735498ad38c05a" kind="function"><name>GetById</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a56c971fce7ccc86a8a75f598ad42c096" kind="function"><name>GetByName</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a4de68decc1fdeb4ce8f3776548a533d4" kind="function"><name>Create</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a0baa9a965852c4f0b68125480e16bd6d" kind="function"><name>Patch</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a19706a746e4cfdc754ed12c97fed448a" kind="function"><name>MapDtoToBuild</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_api_builds_controller_1a14791a7bc28b2d80c73e9dee49ec6cb1" kind="function"><name>ToApiModel</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Tests::ApiRoutesUnitTests</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1afef94586960f264c93e9ddc19afb80ac" kind="variable"><name>_client</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1af8518ca6e3338d85c1ca0f0a11380660" kind="function"><name>ApiRoutesUnitTests</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a367efbad984b12e1bd05894a494cf711" kind="function"><name>Options_ReturnsRoutesList</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a53a7887fdcfa673222d45c05e204fc92" kind="function"><name>Parts_GetSupportedTypes_ReturnsPartTypes</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a1cec57db9c27c796433dbb2001b0f9f1" kind="function"><name>Parts_GetAllCpus_ReturnsCpus</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a1097eb432574edf703a1d8bcc7792c21" kind="function"><name>Parts_GetById_ReturnsCpu</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a40d3aa53417f08a3449e80f337061892" kind="function"><name>Parts_GetById_NotFound_Returns404</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a5bfe3ad28875bd10881aaa3827759fd7" kind="function"><name>Parts_GetFilters_ReturnsFilterOptions</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a828ecefd4d1b94bcd98a73ae1ba49619" kind="function"><name>Parts_SearchCpus_ReturnsFilteredResults</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a6be7354ae5b33e9d8546471da0d27f1b" kind="function"><name>Parts_Create_ReturnsCreated</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1aeb12eea1109637b0ea0e731f12fe1365" kind="function"><name>Parts_Update_ReturnsOk</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a3ad622536c6985de5b3a4e911abead2b" kind="function"><name>Parts_Delete_ReturnsOk</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1ad01dd94a1cf4a4434623baba60e8ae45" kind="function"><name>Builds_GetAll_ReturnsBuilds</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1acf042d0d74203022e69293b333613acc" kind="function"><name>Builds_Create_ReturnsCreated</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a7d9f1371e2c841ba3334dd532db09c4f" kind="function"><name>Builds_GetById_ReturnsBuild</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a6f286d3f2560985002440c97cae34a3f" kind="function"><name>Builds_GetById_NotFound_Returns404</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a7ddad90dfe764747af63513c9155f4aa" kind="function"><name>Builds_GetByName_ReturnsBuild</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1a57544ec3ddc7baf179b2011cee53bc34" kind="function"><name>Builds_GetByName_NotFound_Returns404</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_api_routes_unit_tests_1ad93247749bd86b57e7844f265f486ab1" kind="function"><name>Builds_Patch_ReturnsOk</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Data::ApplicationDbContext</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a8a7788d04e99de21833e82bd744b7c2d" kind="property"><name>Cpus</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a820ed030569a75aeb3c327d68d7ebd66" kind="property"><name>Gpus</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1aeab9741929a2edd35e7b44c22500670c" kind="property"><name>Memories</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1aab248e14c5c70db994b28c0785c2494b" kind="property"><name>Motherboards</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a19942b8a1d6a823b318d2c68cbe94a08" kind="property"><name>Cases</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a6a2bac0c3daf8020b7f4992de0d35459" kind="property"><name>Storages</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a247424f3363cc16e4c209935d08abad8" kind="property"><name>PowerSupplies</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a97655a0feb2695798a286ade9c2d5cd1" kind="property"><name>CpuCoolers</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a870de0ed92ad24c2754196bf2b400627" kind="property"><name>Builds</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1ab41f2c20dfa8c578194fa922ab4676ec" kind="property"><name>PartAverageCaches</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a12eb4d8a06ba5e59918d69a18ae1fd44" kind="function"><name>ApplicationDbContext</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1ab98756a978afb17654576b54b9c43f29" kind="function"><name>OnModelCreating</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_application_db_context_model_snapshot" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Migrations::ApplicationDbContextModelSnapshot</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_application_db_context_model_snapshot_1a6b47abe5e2863976f3b40805505226b9" kind="function"><name>BuildModel</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Models::Build</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a9b0352f0a6278dc2844513bf1234c3e4" kind="property"><name>Id</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1ae86d45f0156cdb3e1f7f9bdd6540bc75" kind="property"><name>Name</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1ac0d0bb39dc4d7fc5543e3ff4889cb8b1" kind="property"><name>Description</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a271ac0e0cdf16edcc7a68d2874719845" kind="property"><name>CreatedAt</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a298f3227bd8c9e6fb82bcf3f0b5f7042" kind="property"><name>UpdatedAt</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1aa6f32d74b453bb4e59772334a975084e" kind="property"><name>CpuId</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a061bed3946198c8f96802f699ccba817" kind="property"><name>GpuId</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a6926d88b6bf24cf7d78f5ae7ee26748b" kind="property"><name>MotherboardId</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a9d942d89c8d29250653f8ac37ae97d8d" kind="property"><name>MemoryId</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a6ab975a471f412224b6448acc1dbb4e0" kind="property"><name>StorageId</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1af8d9bd119103953296bc9cece20ba439" kind="property"><name>CaseId</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1ae67c169679a2f5939cdcb3a74005e56c" kind="property"><name>PowerSupplyId</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a133b1c92bcf9decbebd84144296af196" kind="property"><name>CpuCoolerId</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1aa571bcb6e79bfae74d1c90565735e67f" kind="property"><name>Cpu</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1afb2484d39966662f7781f2efccd475a9" kind="property"><name>Gpu</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a5d9cece2b7cf161855b6707883b31e76" kind="property"><name>Motherboard</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1ae0d0ccde7b11b3c8df645b8b294863fc" kind="property"><name>Memory</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a285386845098969ba47dd0802c895fb9" kind="property"><name>Storage</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a5fc7ebf3dab6e976cec560bcb54e5cd9" kind="property"><name>Case</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a1086f1d9d1b10edebdb393ba7ae9f5f5" kind="property"><name>PowerSupply</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1a73396a51af24371cbb7e1cb7e6ff803c" kind="property"><name>CpuCooler</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_1af4fc4ae88f2c488182c31e2da3f9d70d" kind="property"><name>TotalPrice</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Models::BuildCreateUpdateDto</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto_1a78dc11ce425913600e3c2dd38160a8af" kind="property"><name>Name</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto_1ab8c101a8b01b59b64b3568de6be14a93" kind="property"><name>Description</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto_1ac1af0ebebe8c48c1eb9bcecd7f631cbd" kind="property"><name>Parts</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Controllers::BuildsController</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1ad20677fcfec4c412eebfebfd3786b288" kind="variable"><name>_context</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a94f5d9fc45b13bb959833fc20fa9c77e" kind="variable"><name>_logger</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a70a82507b34a13476fd9293de476c139" kind="function"><name>BuildsController</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a87ace0f2a02d7ceda40b41a214953dad" kind="function"><name>Index</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a26e85a5ace41ff154dd7cc2e6cff57a2" kind="function"><name>Details</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1ab612d9bbed45c0df11020320364ab09c" kind="function"><name>Create</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a3ac0e535a735d983dd29bc7817a87e80" kind="function"><name>Create</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a4f48f151e0066873a9142ab9d14b02c4" kind="function"><name>Edit</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a0d2d07e19e1d44e5ffeb47c88b4c7b8e" kind="function"><name>Edit</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1aee759fd0e5841bebcceaa6f5064fbe9d" kind="function"><name>Delete</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a9c26105ea1a85bc72b7df0702f61d713" kind="function"><name>DeleteConfirmed</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_builds_controller_1a2cac2c254c8ce9da8713a706d858ce50" kind="function"><name>BuildExists</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Models::Case</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1acaa12a0727bd23f709f6ec20fe05d66a" kind="property"><name>Id</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1ab8cb00dea291f9f0a10c7a33a5202b40" kind="property"><name>Name</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1a809e4bab327f00f9d1b51f1060af7a2c" kind="property"><name>ImageUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1a63621a93ddd49d6559db5b418f6e8a01" kind="property"><name>ProductUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1a8a627c118d4207d079b43cdb521a62d0" kind="property"><name>Price</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1a3c50e38ea34dd932b4c43cb1a587193c" kind="property"><name>Manufacturer</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1a09405e6178e33cd685e26080c578d843" kind="property"><name>PartNumber</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1af03c09e628db2b7c847724756529f1c3" kind="property"><name>Type</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1a971d35a747b74074cba0cff881189bd1" kind="property"><name>Color</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1ac79d302f45f445134023176c8a845415" kind="property"><name>PowerSupply</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1abf73b9d039f523fb719881e3b034640e" kind="property"><name>SidePanel</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1a90c3061a0eb76f788c3b9b98bf93db3f" kind="property"><name>PowerSupplyShroud</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1af28118d4a2d1646206bf3bb62671a45f" kind="property"><name>FrontPanelUSB</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1a909084995f6465b887dc8fb8956a6671" kind="property"><name>MotherboardFormFactor</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1acbd7d1ec1bb9343a9d24f2ec3fa9ef5e" kind="property"><name>MaximumVideoCardLength</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1a6e84afac1d9e593c6936c98d77c562e6" kind="property"><name>DriveBays</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1a4d030792fdf101e41ed51e5737e11930" kind="property"><name>ExpansionSlots</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1a4e5a58c0958730a7715bbee336189e50" kind="property"><name>Dimensions</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case_1a269cc51e03f1048d58eb744ec98f76a3" kind="property"><name>Volume</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Models::Cpu</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a8397ea0f9b865f84fd5ceb13ff984520" kind="property"><name>Id</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a687160d7ae146e24b67e62f6ee948781" kind="property"><name>Name</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1aaaee5b69faaf754543a09afbf22a414b" kind="property"><name>ImageUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a059046bbdec91de81d0b0c7ee78e198f" kind="property"><name>ProductUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a758aefab0c2148f47b4a7c7665756f57" kind="property"><name>Price</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a8e159eef038cbe5d113d0e227a663549" kind="property"><name>Manufacturer</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a62fe1e5385e1856de257f625d7da4aa9" kind="property"><name>PartNumber</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1abe84017aa3bf3ca997e3d8d575f2f5c8" kind="property"><name>Series</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a21c83362db463b87b0d13597e91baac6" kind="property"><name>Microarchitecture</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a8d3e049d2aa79e57bba4358e23a09e12" kind="property"><name>CoreFamily</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1ad957fa937bf7e52369967bf43989c184" kind="property"><name>Socket</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a1c4ea18824f2842fbb7d49d97b8e0bb9" kind="property"><name>CoreCount</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a893403a8a9a8f3be85a4c509bab909f6" kind="property"><name>PerformanceCoreClock</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a894038af8b861ebb6691edb36e82fde6" kind="property"><name>PerformanceCoreBoostClock</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1ac26f74dadb20079ab417a190762871bc" kind="property"><name>EfficiencyCoreClock</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a740a064758f77374fef44df5305293ce" kind="property"><name>EfficiencyCoreBoostClock</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a97f8a01cc95896e78ea8272f12836ce7" kind="property"><name>L2Cache</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1aac341a84d370fc40b0ffe215c627f144" kind="property"><name>L3Cache</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a8817a6e91791d4191875960398dc97af" kind="property"><name>TDP</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1aacfab30ca4fe6bef4bd446743b0a7f22" kind="property"><name>IntegratedGraphics</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a77efaa43074a169bcb8c0818f1771338" kind="property"><name>MaximumSupportedMemory</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a7825f88c1fe847d91e54a26424865912" kind="property"><name>ECCSupport</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a4b44dc82b5b76f0e0abe9fee1bac3ffc" kind="property"><name>IncludesCooler</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a7415efd8f7c027a3d71570a7d3ffdc6b" kind="property"><name>Packaging</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1ae83c89288bc3a54a51ccacfa521e3705" kind="property"><name>Lithography</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a1c47518f0591acc527bfcc1d7b600f38" kind="property"><name>IncludesCPUCooler</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_1a519d8c1043b4dc044364098977867885" kind="property"><name>SimultaneousMultithreading</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Models::CpuCooler</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1ae77257c60ac7ff5c15c98c55e63058e8" kind="property"><name>Id</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1acc497d5c28e316fb63eaa62a93cc6368" kind="property"><name>Name</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1adf20bdcdd02089c721166c4310f9a7d4" kind="property"><name>ImageUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a5be7740bbf0810cd2ebbe67d608a6dc0" kind="property"><name>ProductUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a038b8ef5e721dccfaa7b3a27fc6d119a" kind="property"><name>Price</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a480dbe62cca56a2143331bb8ae8424c6" kind="property"><name>Manufacturer</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a198204bfe815909298b55bed213613de" kind="property"><name>Model</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1ab036016f00cd5623ca91a3fb1a2eb715" kind="property"><name>PartNumber</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a2e730f6be962cd8ec86b4b18305452c9" kind="property"><name>FanRPM</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a2fc0fa4bb6f3b11b3bf79b1897e65960" kind="property"><name>NoiseLevel</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a6ba275545253dfceaa32f9493a819712" kind="property"><name>Color</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a30abc4e42ff18b6898418239bd5c4df5" kind="property"><name>Height</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a31d5bfeb71e34a75e9ef076e550d9ea2" kind="property"><name>CPUSocket</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1af4cded9d17608ab76e2f2808d4de36d3" kind="property"><name>WaterCooled</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1a25b2270a5dba82dd648523925909407c" kind="property"><name>Fanless</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler_1aa935c85fe2d9a047cac798b492753d69" kind="property"><name>SpecsNumber</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_custom_web_application_factory" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Tests::CustomWebApplicationFactory</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_custom_web_application_factory_1ae14fe348671dbd941ad9b371e873cb0d" kind="function"><name>ConfigureWebHost</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Data::DbSeeder</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder_1a218f493f4824ae131b3ccf375ab99fa3" kind="variable"><name>_context</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder_1a1c2cbd9a7ab899017969b16faa18dffc" kind="variable"><name>_env</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder_1aa4ba62deeffa5549b3bcde91fcd7b39e" kind="variable"><name>_logger</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder_1ad50eba26d5d994b97369260194ca6847" kind="variable"><name>_configuration</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder_1af3ff6caa93fc13e9f8e56afaaeb4e1a8" kind="function"><name>DbSeeder</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder_1aba2da0481779f18e6e32714ff66b8b22" kind="function"><name>SeedAsync</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_error_view_model" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Models::ErrorViewModel</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_error_view_model_1a2571111a1b2a6f861a5ab19583d507ba" kind="property"><name>RequestId</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_error_view_model_1ac87efa0bc482918628743fa00826b9c6" kind="property"><name>ShowRequestId</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Services::FilterAttribute</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute_1a5a100431e7a153e8d0f7624c6fcccb66" kind="property"><name>AttributeName</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute_1a53c3ee57e42747361049f887cd8140ee" kind="property"><name>AttributeType</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute_1aa0ba32b4df2c9e45224e0a579855b19d" kind="property"><name>DistinctValues</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_attribute_1ac9191e7d523aad6d98a88efb89fcdca9" kind="property"><name>TotalDistinctCount</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_options" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Services::FilterOptions</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_options_1a08b65d070e7700f7cadd642551bfb1dc" kind="property"><name>PartType</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_filter_options_1a6f34cd558ee57f4df87840020f3983c9" kind="property"><name>Attributes</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Models::Gpu</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a7ee51c744aa6e607d1d7e16a88291211" kind="property"><name>Id</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a44851b18514cb26350e20fef79495eb0" kind="property"><name>Name</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a0db74a354819444540505240afc44de3" kind="property"><name>ImageUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1ace0b7a42ffc7ec550069f3e956b4bbc9" kind="property"><name>ProductUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a9b01cbd7bc97871ef6c4a2d2360a502c" kind="property"><name>Price</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a2e7aaaf81ccead3470cd8dd77b08ce26" kind="property"><name>Manufacturer</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1adbc3f66f2d437ff43f3d0e60d4048f51" kind="property"><name>PartNumber</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a1162dd61f2598175459bbd103a0a74f8" kind="property"><name>Chipset</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a321f58d8eb4f0081ba172e3316e2b07c" kind="property"><name>Memory</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1ac01a52a2d1ea7204515a7401fb3bff0b" kind="property"><name>MemoryType</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a2e8906173aaaae50a9b67b8a52714f05" kind="property"><name>CoreClock</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a05351620ef602a6f133651998e35f1a5" kind="property"><name>BoostClock</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a6ed074021d55201be2d01bdb2fd80935" kind="property"><name>EffectiveMemoryClock</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a0619964d655ddcdb9e750d3809a01320" kind="property"><name>Interface</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a209d64a37e8d3bb62e5f0cac2f75444e" kind="property"><name>Color</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a013f4ebcc5d558db81dcdc8dab244da6" kind="property"><name>FrameSync</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a29e5d35a62c278a15b72f8ee90e66f5a" kind="property"><name>Length</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a1178e75009f0ee742c7731380d9ae5f0" kind="property"><name>TDP</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1aad71e205f3ce3cc2f1da2b1b1935176d" kind="property"><name>CaseExpansionSlotWidth</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a7073ffceadaf0c53504a4e0b5c136bdb" kind="property"><name>TotalSlotWidth</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1acb70c8b093bb69e36e6eac89d560fd88" kind="property"><name>Cooling</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1ac1b72ddf85a4b8baf9f019271df0787a" kind="property"><name>ExternalPower</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a255bead19bbc8ad884c6717fdd1eb4be" kind="property"><name>HDMIOutputs</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1af7e442bda719d1a8d4dbd9ad467a0b02" kind="property"><name>DisplayPortOutputs</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a1f261334b5a8898cb9d03fd47d410f15" kind="property"><name>DVIDDualLinkOutputs</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a2b6263c3c258845ad02cd2415ee5863d" kind="property"><name>HDMI21aOutputs</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a9cc457b417255149d9c44420e017fd93" kind="property"><name>DisplayPort14Outputs</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a25bb7fa1c543994dd2254c1bacb694ba" kind="property"><name>DisplayPort14aOutputs</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1aeb953c5f06156d3b899b364c09e1bd38" kind="property"><name>DisplayPort21Outputs</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_1a1baca5d71b5f05d2985a8f4153fa862f" kind="property"><name>SLICrossFire</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Controllers::HomeController</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller_1aab751f371515607f80aa1c860216182d" kind="variable"><name>_logger</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller_1a7f23ca4b46fc18c6eb613e3d4a94a4f4" kind="function"><name>HomeController</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller_1a86af744d6c6d82b057957a9165e0f1b2" kind="function"><name>Index</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller_1a46d6b83463fa85a277a9a3d46375a54d" kind="function"><name>Privacy</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller_1a8a1d3170137a89745b55414aa4ce0976" kind="function"><name>Error</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Migrations::IncreaseMemorySpeedColumnSize</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size_1ac1e8ebfb280c43bb59c1a7d4499a1966" kind="function"><name>Up</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size_1ad3706703d56795895f7a87ed8a6b6439" kind="function"><name>Down</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size_1a3ad1f67fc4aa5e03849daffb57beb23f" kind="function"><name>BuildTargetModel</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_initial_create" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Migrations::InitialCreate</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_initial_create_1a76882dbd0224366533279c2c4fdbc6a1" kind="function"><name>Up</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_initial_create_1a32692fd16fae247384be4a902d30ea34" kind="function"><name>Down</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_initial_create_1a088bf73fe76e980425f02e7db18e6da9" kind="function"><name>BuildTargetModel</name></member>
+  </compound>
+  <compound refid="interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service" kind="interface"><name>Project_6___Group_4___CSCN73060_SEC_1::Services::IPartService</name>
+    <member refid="interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_1a9ce235931d2838cf970597a9a1cd055d" kind="function"><name>GetAllAsync</name></member>
+    <member refid="interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_1a8e1ffbcaa5ec0eb0c6fb3b331ff72940" kind="function"><name>GetByIdAsync</name></member>
+    <member refid="interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_1ab56d037f0e0c362dfe7851e492e766d4" kind="function"><name>CreateAsync</name></member>
+    <member refid="interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_1afaca9457e9ff766c2fbe7b5ec6dd15cc" kind="function"><name>UpdateAsync</name></member>
+    <member refid="interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_1ab8fc535562cba511f13fca3257be10d8" kind="function"><name>DeleteAsync</name></member>
+    <member refid="interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_1a17c3c1225de79d1a87c5de25ef42df48" kind="function"><name>SearchAsync</name></member>
+    <member refid="interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service_1ae82291c6911af6bd0e44ca9042136dc7" kind="function"><name>GetFilterOptionsAsync</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Models::Memory</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1a4c6b5c549770976828fd8a73b7bd5348" kind="property"><name>Id</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1acc48e7e7995264accec8530c9cd40d4c" kind="property"><name>Name</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1abe117497f751022ea34e7304694b21a8" kind="property"><name>ImageUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1a475712f90cce74f5e80e994df1256cb1" kind="property"><name>ProductUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1a2048e5702b7e8cabf2c14238c0233ea3" kind="property"><name>Price</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1a966b5ed537049fd1d5347e0f59611938" kind="property"><name>Manufacturer</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1a790b8a02f69bde27d3e23b1f2bf61b42" kind="property"><name>PartNumber</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1a8b9ba2f7bc93e2db98360e6d4c90995d" kind="property"><name>Speed</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1a5029aae93d85d287333b36199873af8e" kind="property"><name>FormFactor</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1a5e8a6768cb26fcf0a9872c1d6121df24" kind="property"><name>Modules</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1a00b2d819e8cf7cca0a866ab3973b26c6" kind="property"><name>PricePerGB</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1a9a79b1321ed451547c1f4aeb44ff6835" kind="property"><name>Color</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1a8864675f52071b120ec4e32152ce4ea7" kind="property"><name>FirstWordLatency</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1ad1afea8892b5d7ce53cb97312146ed8d" kind="property"><name>CASLatency</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1affb54ad25cad4490af0ec752decee65d" kind="property"><name>Voltage</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1a4aada84ffbe846de7ac1a3ac75af9e7d" kind="property"><name>Timing</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1ab59a1e24454a434cac8328def54ca1e1" kind="property"><name>ECCRegistered</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1a9c5e21286f14dd36311859103815fb30" kind="property"><name>HeatSpreader</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory_1aa35debbf11cad9eba85463a035d4271d" kind="property"><name>SpecsNumber</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Models::Motherboard</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1ae261c266b8dab28037d35c7ccde4f67c" kind="property"><name>Id</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a1eb299a23456a37a450cfddb6c9ce5ec" kind="property"><name>Name</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a1f13882d4ebaa5b6dcac4fe4bd6a379d" kind="property"><name>ImageUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a26e636460bb963b73f3fe539960714b7" kind="property"><name>ProductUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a7342647d44b2a7d23168513b2c99f523" kind="property"><name>Price</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a582ecd2b54ab6f43a94a82bc1e9e1421" kind="property"><name>Manufacturer</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a449c4edfdc5152194ac4e3172fa38230" kind="property"><name>PartNumber</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a4619d78fc512fa01db2e5ac4f5938f23" kind="property"><name>SocketCPU</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a6ce481ffc132080100e6eca159755623" kind="property"><name>FormFactor</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a260f815dcf4c460d2171e09f84ee0824" kind="property"><name>Chipset</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1abdbe8d8f8d2ac3fc306b611755c631d8" kind="property"><name>MemoryMax</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a81492bec558013022b25d190503b9397" kind="property"><name>MemoryType</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a6fb5d3bc98283d8d134e442c29057604" kind="property"><name>MemorySlots</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a79b890240cde5efbc3cd44ecb807abd4" kind="property"><name>MemorySpeed</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a282dee13f32b434143a3730ecfaa7371" kind="property"><name>Color</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1ab4c92f086c9e5ed0c18b4670398798eb" kind="property"><name>PCIex16Slots</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1afba3b4a39cc52a64fdc0633950e502b2" kind="property"><name>PCIex8Slots</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a91d959b853dca51d89fb69d7f1430120" kind="property"><name>PCIex4Slots</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a06e3998457cf4fcce9ea565a61be473e" kind="property"><name>PCIex1Slots</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a31797ff9da78ae244d020ad60dad7dc9" kind="property"><name>PCISlots</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a268da749bfbe3c1406a05aa637268279" kind="property"><name>M2Slots</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1af8cac3644c08f3a3b348ec4d853451b2" kind="property"><name>MiniPCIeSlots</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a8ca4204ee67132ee0a3d685a2995afb8" kind="property"><name>HalfMiniPCIeSlots</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a449739591f3a2c5fb28b62c736a32263" kind="property"><name>MiniPCIemSATASlots</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a71eb3a68a071d03de31a42a66dd91e07" kind="property"><name>mSATASlots</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1aaf0932132d7d53497cece1c00bc57295" kind="property"><name>SATA6GbsSlots</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1ae877f6b7b59d07800631ff772bf276b0" kind="property"><name>OnboardEthernet</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a7e4364754e14a87f656db66c634be51c" kind="property"><name>OnboardVideo</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a81739757cc765b9107aef1ad30a22273" kind="property"><name>USB20Headers</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a26d6a01b28bb7cbf00ed393e88cb7e66" kind="property"><name>USB20HeadersSinglePort</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1ab84abc16f6779bde3935368c6bf7834e" kind="property"><name>USB32Gen1Headers</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1af80ec152825c70d9733400017f591ab5" kind="property"><name>USB32Gen2Headers</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1ac8620e48dc81cbf0c70353217429e005" kind="property"><name>USB32Gen2x2Headers</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a80f4eafc00b30afa23f840742ff641ef" kind="property"><name>SupportsECC</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a6936815e63e16b345da2989e46551a5e" kind="property"><name>WirelessNetworking</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard_1a0f89001bf76d1cd0156cf9fde00c0e18" kind="property"><name>RAIDSupport</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Models::PartAverageCache</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache_1ac7f7947dc9b3853d0483ce305d8b9948" kind="property"><name>Id</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache_1a8510ff1cd5ed294a784eb4e6412f09da" kind="property"><name>PartType</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache_1a4a629eae27673d49a0e7999bbfa1d159" kind="property"><name>FilterKey</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache_1a87200a5228dbed3be3ba0d13d6954d39" kind="property"><name>AveragePartJson</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache_1a8acd506aa20bf0829115a801cb705110" kind="property"><name>CreatedAt</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_ref_dto" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Models::PartRefDto</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_ref_dto_1a6b7c73a8aad06fd92436d3baffc68150" kind="property"><name>Id</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Controllers::PartsController</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1ac07494c3d23e8d9fb2389b86002c4f5e" kind="variable"><name>_partService</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1acab2ddac25b49a5710c89cb3f706ff5e" kind="variable"><name>_logger</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a27d72825c60f1d9f2fe7f3f1005df319" kind="function"><name>PartsController</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a488b5b2a2f96b6b13e89ba9b8e5cab90" kind="function"><name>GetAll</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a9bf6a94727d66ff5e7b4310831ebacd4" kind="function"><name>GetById</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1ab9ca2c74fa2c10e9d059367c759e3186" kind="function"><name>Create</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a7157a0b3eff2d1df44a9b383ca5bfeeb" kind="function"><name>Update</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a5299734d0fb246f470b663f82e8933d0" kind="function"><name>Delete</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a03b43ef0be415e5e2b58ddfa4a95bd39" kind="function"><name>GetSupportedTypes</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a7bbf252ddc876b8266ed8a2b84a99263" kind="function"><name>GetFilters</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_1a3473eb23cae0fb324ea8bdff20848d2d" kind="function"><name>Search</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Services::PartService</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1a773758374bf3ef374488bf62e47d26a0" kind="variable"><name>_context</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1a1d4ee1de38b25e078722b72c33913416" kind="variable"><name>_logger</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1afcd9fa923ee398ce7c7944151e97fd84" kind="function"><name>PartService</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1a60426a934332c38493a59629e0ed2a04" kind="function"><name>GetAllAsync</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1acc4f3fbec11b7ae3e41066d141041c70" kind="function"><name>GetByIdAsync</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1a3467a506be8f190b25cf00b6f780df37" kind="function"><name>CreateAsync</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1a5ba4b195c45104bdab5b5b8067d2179b" kind="function"><name>UpdateAsync</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1a6fb3747aac4d11320c1d4f8ccf0611d6" kind="function"><name>DeleteAsync</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1a8627c0650a0710e66d930b164597dda9" kind="function"><name>SearchAsync</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1a5dfee76c37f030bec9443e49d4b233cb" kind="function"><name>GetFilterOptionsAsync</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1ae9477801986d668bad5fd47145672230" kind="function"><name>GetModelType</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1a230ab9aca24da55067ffd91aba38eb1e" kind="function"><name>ToLightweightObject</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1a63a1d09c137545c2751aac34cd0a6462" kind="function"><name>GetAllAsyncInternal&lt; T &gt;</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1a533e4e40ba372c9da2576ba31710b82f" kind="function"><name>SearchAsyncInternal&lt; T &gt;</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1a7da8d99f14e1c33fd7e1ae8bca8da51c" kind="function"><name>SaveAveragePartToCacheAsync</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1ac4f7d0b8a71117036238e060f151394b" kind="function"><name>CalculateAveragePart</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1acd2c590537eade96f94de6d4ad39a0a1" kind="function"><name>GetFilterOptionsInternal&lt; T &gt;</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1afcf47c82de4e5ab74ed6402ea670e887" kind="function"><name>GetFriendlyTypeName</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1acb03321e0708ecfc8d05b5c8433aa6dd" kind="function"><name>BuildContainsExpression&lt; T &gt;</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service_1a48771fb473f47740c73eed59da7730f4" kind="function"><name>BuildFilterKey</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Models::PowerSupply</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a54af6aa24278009812e12c35b3b1ef8b" kind="property"><name>Id</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a8ad486868248a672d295187d6bfe31e6" kind="property"><name>Name</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a7f3ead38aba96ba863f958a5e05a2f0e" kind="property"><name>ImageUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1adf6d3b27fd9eeb66b29c1fbbc3e579b0" kind="property"><name>ProductUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a209740cdc29817df44f1dcb4ab091fd0" kind="property"><name>Price</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a54f2dbcfe7e4fe0395cbb35e3cfed913" kind="property"><name>Manufacturer</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1ad368539c95632af6137a900726cb17f2" kind="property"><name>Model</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1ab593c333232137f18d82499947ff830f" kind="property"><name>PartNumber</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1aa0aa235c92a529aa7df0b1088bcebe6b" kind="property"><name>Type</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1ac0bc31f026981f576f18c2ec245fa450" kind="property"><name>EfficiencyRating</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a650b32ab5ded3d7392ee02c64e209fea" kind="property"><name>Wattage</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a8f2f16fbbcaa3a548a44f1aa47176f41" kind="property"><name>Length</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1aa8e6582e846e5f42763baaf0f2b72037" kind="property"><name>Modular</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a466db700a77ccf7dd6cbfd72f89ef947" kind="property"><name>Color</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a8450c0ee81e624e7bc780e4c61e3d189" kind="property"><name>Fanless</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a8c9266c0aa2cd467a40882413bbbe895" kind="property"><name>ATX4PinConnectors</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1ae524784e6c0e1e03a9e97d948c3e7078" kind="property"><name>EPS8PinConnectors</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a1168f0b628019ce791227c22536b32d8" kind="property"><name>PCIe12Plus4Pin12VHPWRConnectors</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a0eba270113014539327df82ea66d3aff" kind="property"><name>PCIe12PinConnectors</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1aa5547b02bcf2e5dd0f83f6ef36b3645e" kind="property"><name>PCIe8PinConnectors</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a4948d703466cda2fbdffaddc82efa740" kind="property"><name>PCIe6Plus2PinConnectors</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a03aba69aa1e3edea35dd25c2b2befc49" kind="property"><name>PCIe6PinConnectors</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1add45ac8e2588b01ff3ca5e5a68345f3a" kind="property"><name>SATAConnectors</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a36727813f6fba47edf0e30e33267690d" kind="property"><name>Molex4PinConnectors</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_1a34e0cd083e03bd231b920b0374a6dc29" kind="property"><name>SpecsNumber</name></member>
+  </compound>
+  <compound refid="class_program" kind="class"><name>Program</name>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Models::SearchFilters</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_1a066d89085ceef53e986f6dbb44324450" kind="property"><name>MinPrice</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_1a4c587ffef1ed0af5a5261689535022f2" kind="property"><name>MaxPrice</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_1a57e1602041ac7e7d03196f3afdc71412" kind="property"><name>Manufacturer</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters_1ad44557dbdbcf48f00a6d1003844095fd" kind="property"><name>Filters</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Services::SearchResult</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result_1a57b300f10aaf3080f8a15e8d1f8dac8d" kind="property"><name>PartType</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result_1a8ef6a205b8911c03afe67f10e6c64588" kind="property"><name>TotalCount</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result_1a0446a693e909e0b81c20ffe996e6131e" kind="property"><name>Results</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result_1a66561cbb3b892cadcb5494a94a51883d" kind="property"><name>AppliedFilters</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_search_result_1a60306f9d1ec5711861dd1d1e2276dab3" kind="property"><name>AveragePart</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Models::Storage</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a77e879817e9fab8fb7c6ba213e74dfc5" kind="property"><name>Id</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a0cacc16a254c14057b528dc218c95ade" kind="property"><name>Name</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a9981714fb0876d22fb025887cdddd196" kind="property"><name>ImageUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a6ff744cf8a2e5357f39ac55ea0f3e93d" kind="property"><name>ProductUrl</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a9de646bfeced6be4131ee6099760d95f" kind="property"><name>Price</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a449e2b55ed7831c3d03f4a5ce4ce472b" kind="property"><name>Manufacturer</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a8e4fe010424a0a54898e5efc823c8033" kind="property"><name>PartNumber</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a24d414529eabcf3c6e44427c791fc99a" kind="property"><name>Capacity</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a868b313f7377c0a2fcc800c70b58f7d2" kind="property"><name>PricePerGB</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a69a620cf9d6703b4f599f4256e33ed34" kind="property"><name>Type</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1acac6c012e0a6f893239a07104e1c9864" kind="property"><name>Cache</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a68c63301cbe3cc22ae264156185acb9d" kind="property"><name>FormFactor</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a79ab1fd22a366933dfa3079474e37a0c" kind="property"><name>Interface</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage_1a94938c0b1ab909cae2c82198cbd2b2b6" kind="property"><name>NVME</name></member>
+  </compound>
+  <compound refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder" kind="class"><name>Project_6___Group_4___CSCN73060_SEC_1::Data::TestDbSeeder</name>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder_1aedfef86f9f7ca899a3b753aa6b4b6358" kind="variable"><name>_context</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder_1a9d190b8bfb5037530837e9c6876df856" kind="function"><name>TestDbSeeder</name></member>
+    <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder_1aee211554434bbe842afd037c047b4c47" kind="function"><name>SeedAsync</name></member>
+  </compound>
+  <compound refid="namespaceadd_tag_helper" kind="namespace"><name>addTagHelper</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_microsoft_1_1_asp_net_core_1_1_builder" kind="namespace"><name>global::Microsoft::AspNetCore::Builder</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_microsoft_1_1_asp_net_core_1_1_hosting" kind="namespace"><name>global::Microsoft::AspNetCore::Hosting</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_microsoft_1_1_asp_net_core_1_1_http" kind="namespace"><name>global::Microsoft::AspNetCore::Http</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_microsoft_1_1_asp_net_core_1_1_routing" kind="namespace"><name>global::Microsoft::AspNetCore::Routing</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_microsoft_1_1_extensions_1_1_configuration" kind="namespace"><name>global::Microsoft::Extensions::Configuration</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_microsoft_1_1_extensions_1_1_dependency_injection" kind="namespace"><name>global::Microsoft::Extensions::DependencyInjection</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_microsoft_1_1_extensions_1_1_hosting" kind="namespace"><name>global::Microsoft::Extensions::Hosting</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_microsoft_1_1_extensions_1_1_logging" kind="namespace"><name>global::Microsoft::Extensions::Logging</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system" kind="namespace"><name>global::System</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_collections_1_1_generic" kind="namespace"><name>global::System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_i_o" kind="namespace"><name>global::System::IO</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_linq" kind="namespace"><name>global::System::Linq</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_net_1_1_http" kind="namespace"><name>global::System::Net::Http</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_net_1_1_http_1_1_json" kind="namespace"><name>global::System::Net::Http::Json</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_threading" kind="namespace"><name>global::System::Threading</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_threading_1_1_tasks" kind="namespace"><name>global::System::Threading::Tasks</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_asp_net_core_1_1_hosting" kind="namespace"><name>Microsoft::AspNetCore::Hosting</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_asp_net_core_1_1_mvc" kind="namespace"><name>Microsoft::AspNetCore::Mvc</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_asp_net_core_1_1_mvc_1_1_tag_helpers" kind="namespace"><name>Microsoft::AspNetCore::Mvc::TagHelpers</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_asp_net_core_1_1_mvc_1_1_testing" kind="namespace"><name>Microsoft::AspNetCore::Mvc::Testing</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_asp_net_core_1_1_routing" kind="namespace"><name>Microsoft::AspNetCore::Routing</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_entity_framework_core" kind="namespace"><name>Microsoft::EntityFrameworkCore</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_entity_framework_core_1_1_infrastructure" kind="namespace"><name>Microsoft::EntityFrameworkCore::Infrastructure</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_entity_framework_core_1_1_metadata" kind="namespace"><name>Microsoft::EntityFrameworkCore::Metadata</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_entity_framework_core_1_1_migrations" kind="namespace"><name>Microsoft::EntityFrameworkCore::Migrations</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_entity_framework_core_1_1_storage_1_1_value_conversion" kind="namespace"><name>Microsoft::EntityFrameworkCore::Storage::ValueConversion</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_extensions_1_1_configuration" kind="namespace"><name>Microsoft::Extensions::Configuration</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_extensions_1_1_dependency_injection" kind="namespace"><name>Microsoft::Extensions::DependencyInjection</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_extensions_1_1_file_providers" kind="namespace"><name>Microsoft::Extensions::FileProviders</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_extensions_1_1_hosting" kind="namespace"><name>Microsoft::Extensions::Hosting</name>
+  </compound>
+  <compound refid="namespace_my_sql_connector" kind="namespace"><name>MySqlConnector</name>
+  </compound>
+  <compound refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1" kind="namespace"><name>Project_6___Group_4___CSCN73060_SEC_1</name>
+  </compound>
+  <compound refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers" kind="namespace"><name>Project_6___Group_4___CSCN73060_SEC_1::Controllers</name>
+  </compound>
+  <compound refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data" kind="namespace"><name>Project_6___Group_4___CSCN73060_SEC_1::Data</name>
+  </compound>
+  <compound refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations" kind="namespace"><name>Project_6___Group_4___CSCN73060_SEC_1::Migrations</name>
+  </compound>
+  <compound refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models" kind="namespace"><name>Project_6___Group_4___CSCN73060_SEC_1::Models</name>
+  </compound>
+  <compound refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services" kind="namespace"><name>Project_6___Group_4___CSCN73060_SEC_1::Services</name>
+  </compound>
+  <compound refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests" kind="namespace"><name>Project_6___Group_4___CSCN73060_SEC_1::Tests</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_component_model_1_1_data_annotations" kind="namespace"><name>System::ComponentModel::DataAnnotations</name>
+  </compound>
+  <compound refid="namespace_system_1_1_component_model_1_1_data_annotations_1_1_schema" kind="namespace"><name>System::ComponentModel::DataAnnotations::Schema</name>
+  </compound>
+  <compound refid="namespace_system_1_1_diagnostics" kind="namespace"><name>System::Diagnostics</name>
+  </compound>
+  <compound refid="namespace_system_1_1_dynamic" kind="namespace"><name>System::Dynamic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq_1_1_expressions" kind="namespace"><name>System::Linq::Expressions</name>
+  </compound>
+  <compound refid="namespace_system_1_1_net" kind="namespace"><name>System::Net</name>
+  </compound>
+  <compound refid="namespace_system_1_1_net_1_1_http_1_1_json" kind="namespace"><name>System::Net::Http::Json</name>
+  </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_system_1_1_security_1_1_cryptography" kind="namespace"><name>System::Security::Cryptography</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text_1_1_json" kind="namespace"><name>System::Text::Json</name>
+  </compound>
+  <compound refid="namespaceusing" kind="namespace"><name>using</name>
+  </compound>
+  <compound refid="namespacevar" kind="namespace"><name>var</name>
+  </compound>
+  <compound refid="namespace_xunit" kind="namespace"><name>Xunit</name>
+  </compound>
+  <compound refid="_api_builds_controller_8cs" kind="file"><name>ApiBuildsController.cs</name>
+  </compound>
+  <compound refid="_builds_controller_8cs" kind="file"><name>BuildsController.cs</name>
+  </compound>
+  <compound refid="_home_controller_8cs" kind="file"><name>HomeController.cs</name>
+  </compound>
+  <compound refid="_parts_controller_8cs" kind="file"><name>PartsController.cs</name>
+  </compound>
+  <compound refid="_application_db_context_8cs" kind="file"><name>ApplicationDbContext.cs</name>
+  </compound>
+  <compound refid="_db_seeder_8cs" kind="file"><name>DbSeeder.cs</name>
+  </compound>
+  <compound refid="_test_db_seeder_8cs" kind="file"><name>TestDbSeeder.cs</name>
+  </compound>
+  <compound refid="_g_r_o_u_p_s_8md" kind="file"><name>GROUPS.md</name>
+  </compound>
+  <compound refid="20260203182158___initial_create_8cs" kind="file"><name>20260203182158_InitialCreate.cs</name>
+  </compound>
+  <compound refid="20260203182158___initial_create_8_designer_8cs" kind="file"><name>20260203182158_InitialCreate.Designer.cs</name>
+  </compound>
+  <compound refid="20260212042700___add_builds_table_8cs" kind="file"><name>20260212042700_AddBuildsTable.cs</name>
+  </compound>
+  <compound refid="20260212042700___add_builds_table_8_designer_8cs" kind="file"><name>20260212042700_AddBuildsTable.Designer.cs</name>
+  </compound>
+  <compound refid="20260219000000___increase_memory_speed_column_size_8cs" kind="file"><name>20260219000000_IncreaseMemorySpeedColumnSize.cs</name>
+  </compound>
+  <compound refid="20260219000000___increase_memory_speed_column_size_8_designer_8cs" kind="file"><name>20260219000000_IncreaseMemorySpeedColumnSize.Designer.cs</name>
+  </compound>
+  <compound refid="20260227010532___add_part_average_cache_table_8cs" kind="file"><name>20260227010532_AddPartAverageCacheTable.cs</name>
+  </compound>
+  <compound refid="20260227010532___add_part_average_cache_table_8_designer_8cs" kind="file"><name>20260227010532_AddPartAverageCacheTable.Designer.cs</name>
+  </compound>
+  <compound refid="_application_db_context_model_snapshot_8cs" kind="file"><name>ApplicationDbContextModelSnapshot.cs</name>
+  </compound>
+  <compound refid="_build_8cs" kind="file"><name>Build.cs</name>
+  </compound>
+  <compound refid="_build_create_update_dto_8cs" kind="file"><name>BuildCreateUpdateDto.cs</name>
+  </compound>
+  <compound refid="_case_8cs" kind="file"><name>Case.cs</name>
+  </compound>
+  <compound refid="_cpu_8cs" kind="file"><name>Cpu.cs</name>
+  </compound>
+  <compound refid="_cpu_cooler_8cs" kind="file"><name>CpuCooler.cs</name>
+  </compound>
+  <compound refid="_error_view_model_8cs" kind="file"><name>ErrorViewModel.cs</name>
+  </compound>
+  <compound refid="_gpu_8cs" kind="file"><name>Gpu.cs</name>
+  </compound>
+  <compound refid="_memory_8cs" kind="file"><name>Memory.cs</name>
+  </compound>
+  <compound refid="_motherboard_8cs" kind="file"><name>Motherboard.cs</name>
+  </compound>
+  <compound refid="_part_average_cache_8cs" kind="file"><name>PartAverageCache.cs</name>
+  </compound>
+  <compound refid="_power_supply_8cs" kind="file"><name>PowerSupply.cs</name>
+  </compound>
+  <compound refid="_search_filters_8cs" kind="file"><name>SearchFilters.cs</name>
+  </compound>
+  <compound refid="_storage_8cs" kind="file"><name>Storage.cs</name>
+  </compound>
+  <compound refid="obj_2_debug_2net8_80_2_8_n_e_t_core_app_00_version_0av8_80_8_assembly_attributes_8cs" kind="file"><name>.NETCoreApp,Version=v8.0.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="obj_2_release_2net8_80_2_8_n_e_t_core_app_00_version_0av8_80_8_assembly_attributes_8cs" kind="file"><name>.NETCoreApp,Version=v8.0.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_project-6---_group-4---_c_s_c_n73060-_s_e_c-1_8_tests_2obj_2_debug_2net8_80_2_8_n_e_t_core_app_dd58b70d8b095a3faf73dd550369ec6a" kind="file"><name>.NETCoreApp,Version=v8.0.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_debug_2net8_80_2_project-6---_group-4---_c_s_c_n73060-_s_e_c-1_8_assembly_info_8cs" kind="file"><name>Project-6---Group-4---CSCN73060-SEC-1.AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_release_2net8_80_2_project-6---_group-4---_c_s_c_n73060-_s_e_c-1_8_assembly_info_8cs" kind="file"><name>Project-6---Group-4---CSCN73060-SEC-1.AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_debug_2net8_80_2_project-6---_group-4---_c_s_c_n73060-_s_e_c-1_8_global_usings_8g_8cs" kind="file"><name>Project-6---Group-4---CSCN73060-SEC-1.GlobalUsings.g.cs</name>
+  </compound>
+  <compound refid="_release_2net8_80_2_project-6---_group-4---_c_s_c_n73060-_s_e_c-1_8_global_usings_8g_8cs" kind="file"><name>Project-6---Group-4---CSCN73060-SEC-1.GlobalUsings.g.cs</name>
+  </compound>
+  <compound refid="_project-6---_group-4---_c_s_c_n73060-_s_e_c-1_8_mvc_application_parts_assembly_info_8cs" kind="file"><name>Project-6---Group-4---CSCN73060-SEC-1.MvcApplicationPartsAssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_debug_2net8_80_2_project-6---_group-4---_c_s_c_n73060-_s_e_c-1_8_razor_assembly_info_8cs" kind="file"><name>Project-6---Group-4---CSCN73060-SEC-1.RazorAssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_release_2net8_80_2_project-6---_group-4---_c_s_c_n73060-_s_e_c-1_8_razor_assembly_info_8cs" kind="file"><name>Project-6---Group-4---CSCN73060-SEC-1.RazorAssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_program_8cs" kind="file"><name>Program.cs</name>
+    <member refid="_program_8cs_1a23d9efdc467c02b92c78518f72bb2e09" kind="typedef"><name>scope</name></member>
+    <member refid="_program_8cs_1a2f78352277081c620fd4cf92a5ce15e5" kind="variable"><name>builder</name></member>
+    <member refid="_program_8cs_1a5e57b0e9fd477676e7789c421495c68b" kind="variable"><name>WriteIndented</name></member>
+    <member refid="_program_8cs_1abaf851ca9394808faf7c77a8db51c810" kind="variable"><name>useInMemory</name></member>
+    <member refid="_program_8cs_1a0544c3fe466e421738dae463968b70ba" kind="variable"><name>else</name></member>
+    <member refid="_program_8cs_1a7b225fcb720e4d5ed2bbf60e28a25e6d" kind="variable"><name>app</name></member>
+    <member refid="_program_8cs_1adf1466fc9631e1fb4b311c23643e84d7" kind="variable"><name>clientRoot</name></member>
+    <member refid="_program_8cs_1af8107f2f8ff8e8de22a684c8c8ad3e99" kind="function"><name>AddControllersWithViews</name></member>
+    <member refid="_program_8cs_1af1ac677ad5b0b73dc97062c292e88d5e" kind="function"><name>AddControllers</name></member>
+    <member refid="_program_8cs_1a99808fcb8671d4097557fc00f8d613b5" kind="function"><name>if</name></member>
+    <member refid="_program_8cs_1a74ef5ca8f7dc71e68765c4afd0403419" kind="function"><name>AddDbContext&lt; ApplicationDbContext &gt;</name></member>
+    <member refid="_program_8cs_1a14cd9b18a308080a29d553bcf72818b0" kind="function"><name>AddScoped&lt; DbSeeder &gt;</name></member>
+    <member refid="_program_8cs_1a89bb082ff87e07add8df269e5abddb0c" kind="function"><name>AddScoped&lt; IPartService, PartService &gt;</name></member>
+    <member refid="_program_8cs_1a56333e29eba17b2f9cabf631dbec4d14" kind="function"><name>AddCors</name></member>
+    <member refid="_program_8cs_1a0d7859f9cad50e8e9fdf015100780e07" kind="function"><name>AddEndpointsApiExplorer</name></member>
+    <member refid="_program_8cs_1ae0ce43c019a5621d731d0c622c793644" kind="function"><name>AddSwaggerGen</name></member>
+    <member refid="_program_8cs_1abebf8580ff1a2760b8ba9de386528243" kind="function"><name>UseSwaggerUI</name></member>
+    <member refid="_program_8cs_1aa4d447fc3129a3aa301d736b8bd04ae9" kind="function"><name>UseHttpsRedirection</name></member>
+    <member refid="_program_8cs_1a906a3ce545279a7a73941f1d7b64d7cf" kind="function"><name>UseStaticFiles</name></member>
+    <member refid="_program_8cs_1aed5e4d56e5c05977874c6a9f6b071047" kind="function"><name>if</name></member>
+    <member refid="_program_8cs_1a94c810d266751293a2d511a720a5625f" kind="function"><name>UseRouting</name></member>
+    <member refid="_program_8cs_1adfcad7d2e6cbf2e6372bbe0f9fa96231" kind="function"><name>UseCors</name></member>
+    <member refid="_program_8cs_1af6f72d752b2e73aa0292f74bd13237ab" kind="function"><name>UseAuthorization</name></member>
+    <member refid="_program_8cs_1a21592305984036576bba1d72f61d5d83" kind="function"><name>MapMethods</name></member>
+    <member refid="_program_8cs_1a9e2ee3170aa6279b68eefd1651f7d96c" kind="function"><name>MapControllers</name></member>
+    <member refid="_program_8cs_1aec500e125fbbfcd3d99a23db7de60be7" kind="function"><name>MapControllerRoute</name></member>
+    <member refid="_program_8cs_1aaa3dbf02e269c3ef7e8546d290c6b3dd" kind="function"><name>Run</name></member>
+  </compound>
+  <compound refid="_acceptance_tests_8cs" kind="file"><name>AcceptanceTests.cs</name>
+  </compound>
+  <compound refid="_api_routes_unit_tests_8cs" kind="file"><name>ApiRoutesUnitTests.cs</name>
+  </compound>
+  <compound refid="_custom_web_application_factory_8cs" kind="file"><name>CustomWebApplicationFactory.cs</name>
+  </compound>
+  <compound refid="_project-6---_group-4---_c_s_c_n73060-_s_e_c-1_8_tests_8_assembly_info_8cs" kind="file"><name>Project-6---Group-4---CSCN73060-SEC-1.Tests.AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_project-6---_group-4---_c_s_c_n73060-_s_e_c-1_8_tests_8_global_usings_8g_8cs" kind="file"><name>Project-6---Group-4---CSCN73060-SEC-1.Tests.GlobalUsings.g.cs</name>
+  </compound>
+  <compound refid="_i_part_service_8cs" kind="file"><name>IPartService.cs</name>
+  </compound>
+  <compound refid="_part_service_8cs" kind="file"><name>PartService.cs</name>
+  </compound>
+  <compound refid="___view_imports_8cshtml" kind="file"><name>_ViewImports.cshtml</name>
+  </compound>
+  <compound refid="___view_start_8cshtml" kind="file"><name>_ViewStart.cshtml</name>
+    <member refid="___view_start_8cshtml_1a961c98fd0056dc954131538319ac9002" kind="function"><name>[instance initializer]</name></member>
+  </compound>
+  <compound refid="_create_8cshtml" kind="file"><name>Create.cshtml</name>
+    <member refid="_create_8cshtml_1a26ae69b6338501de6995e6845aed90cf" kind="property"><name>Build</name></member>
+  </compound>
+  <compound refid="_delete_8cshtml" kind="file"><name>Delete.cshtml</name>
+    <member refid="_delete_8cshtml_1a26ae69b6338501de6995e6845aed90cf" kind="property"><name>Build</name></member>
+  </compound>
+  <compound refid="_details_8cshtml" kind="file"><name>Details.cshtml</name>
+    <member refid="_details_8cshtml_1a26ae69b6338501de6995e6845aed90cf" kind="property"><name>Build</name></member>
+    <member refid="_details_8cshtml_1abeccfe0c25a218349251e66e96142515" kind="function"><name>if</name></member>
+    <member refid="_details_8cshtml_1ac39e8e2d604975b40805958c1f88b6b4" kind="function"><name>if</name></member>
+    <member refid="_details_8cshtml_1aa0d0b19f2518a4b633164ac884fc06fb" kind="function"><name>if</name></member>
+    <member refid="_details_8cshtml_1aa2fe1e3c471c19f45ad7d0823e724322" kind="function"><name>if</name></member>
+    <member refid="_details_8cshtml_1ac6ed46f38233e1183d24d12bdd8d6455" kind="function"><name>if</name></member>
+    <member refid="_details_8cshtml_1a1aa82d461d84d67d29a810719100e3ff" kind="function"><name>if</name></member>
+    <member refid="_details_8cshtml_1ae193320d5b52de3c57608917e8a47691" kind="function"><name>if</name></member>
+    <member refid="_details_8cshtml_1ae13a3c92fc04d0aafde79e674301cbb5" kind="function"><name>if</name></member>
+    <member refid="_details_8cshtml_1a384a2053aa7873bb1c42e32f0c06a438" kind="function"><name>if</name></member>
+    <member refid="_details_8cshtml_1ab958b5c88557cb3f46b1c75c7a356103" kind="function"><name>if</name></member>
+  </compound>
+  <compound refid="_edit_8cshtml" kind="file"><name>Edit.cshtml</name>
+    <member refid="_edit_8cshtml_1a26ae69b6338501de6995e6845aed90cf" kind="property"><name>Build</name></member>
+  </compound>
+  <compound refid="_builds_2_index_8cshtml" kind="file"><name>Index.cshtml</name>
+    <member refid="_builds_2_index_8cshtml_1a79361cb7e131db56faafd8e2259b1692" kind="property"><name>IEnumerable&lt; Project_6___Group_4___CSCN73060_SEC_1.Models.Build &gt;</name></member>
+    <member refid="_builds_2_index_8cshtml_1aaed26a21bf5c874305b660f83a379383" kind="function"><name>if</name></member>
+  </compound>
+  <compound refid="_home_2_index_8cshtml" kind="file"><name>Index.cshtml</name>
+    <member refid="_home_2_index_8cshtml_1a961c98fd0056dc954131538319ac9002" kind="function"><name>[instance initializer]</name></member>
+  </compound>
+  <compound refid="_privacy_8cshtml" kind="file"><name>Privacy.cshtml</name>
+    <member refid="_privacy_8cshtml_1a961c98fd0056dc954131538319ac9002" kind="function"><name>[instance initializer]</name></member>
+  </compound>
+  <compound refid="___layout_8cshtml" kind="file"><name>_Layout.cshtml</name>
+    <member refid="___layout_8cshtml_1a38d3cc317c10873e984df50d90dce6c4" kind="function"><name>RenderBody</name></member>
+  </compound>
+  <compound refid="___validation_scripts_partial_8cshtml" kind="file"><name>_ValidationScriptsPartial.cshtml</name>
+  </compound>
+  <compound refid="_error_8cshtml" kind="file"><name>Error.cshtml</name>
+    <member refid="_error_8cshtml_1ac3fee34147ef57e877679e4b9fe2b421" kind="property"><name>ErrorViewModel</name></member>
+    <member refid="_error_8cshtml_1a0a3a5b0cc0297433bf4e86e80cd8d462" kind="variable"><name>debugging</name></member>
+    <member refid="_error_8cshtml_1a6d89d66bdc5d3b56465ecae968da08d2" kind="function"><name>if</name></member>
+  </compound>
+  <compound refid="_l_i_c_e_n_s_e_8md" kind="file"><name>LICENSE.md</name>
+  </compound>
+  <compound refid="group___controllers" kind="group"><name>Controllers</name>
+  </compound>
+  <compound refid="group___services" kind="group"><name>Services</name>
+  </compound>
+  <compound refid="group___models" kind="group"><name>Models</name>
+  </compound>
+  <compound refid="group___data" kind="group"><name>Data</name>
+  </compound>
+  <compound refid="md_docs_2_g_r_o_u_p_s" kind="page"><name>md_docs_2_g_r_o_u_p_s</name>
+  </compound>
+  <compound refid="md_wwwroot_2lib_2jquery-validation_2_l_i_c_e_n_s_e" kind="page"><name>md_wwwroot_2lib_2jquery-validation_2_l_i_c_e_n_s_e</name>
+  </compound>
+  <compound refid="dir_865bc089c3520a89751aa9655c98d887" kind="dir"><name>Views/Builds</name>
+  </compound>
+  <compound refid="dir_f1e231c396d6a78f925b250f39acb3ba" kind="dir"><name>Controllers</name>
+  </compound>
+  <compound refid="dir_e3d743d0ec9b4013b28b5d69101bc7fb" kind="dir"><name>Data</name>
+  </compound>
+  <compound refid="dir_a71c3b2ad23b9ff58220dd012d201987" kind="dir"><name>obj/Debug</name>
+  </compound>
+  <compound refid="dir_f9f32977cfa007f70a3f5db2a2903631" kind="dir"><name>Project-6---Group-4---CSCN73060-SEC-1.Tests/obj/Debug</name>
+  </compound>
+  <compound refid="dir_49e56c817e5e54854c35e136979f97ca" kind="dir"><name>docs</name>
+  </compound>
+  <compound refid="dir_9a55d6a51af77df824486daf7f99dc13" kind="dir"><name>Views/Home</name>
+  </compound>
+  <compound refid="dir_f8d5525ec0cb1d8d5e443fabd990f7de" kind="dir"><name>wwwroot/lib/jquery-validation</name>
+  </compound>
+  <compound refid="dir_111aacf516ae25a0b3dd7ff30d79c0a3" kind="dir"><name>wwwroot/lib</name>
+  </compound>
+  <compound refid="dir_8479cdc0036e18ebdf01c3bcd05b33d8" kind="dir"><name>Migrations</name>
+  </compound>
+  <compound refid="dir_22305cb0964bbe63c21991dd2265ce48" kind="dir"><name>Models</name>
+  </compound>
+  <compound refid="dir_4ad6c4ce518a9fa81f4ccf8af5f59991" kind="dir"><name>obj/Debug/net8.0</name>
+  </compound>
+  <compound refid="dir_462d10c84c8e86466b42283666d397ba" kind="dir"><name>obj/Release/net8.0</name>
+  </compound>
+  <compound refid="dir_d8ff00b54002f3658345462807c63805" kind="dir"><name>Project-6---Group-4---CSCN73060-SEC-1.Tests/obj/Debug/net8.0</name>
+  </compound>
+  <compound refid="dir_43724e81dd40e09f32417973865cdd64" kind="dir"><name>obj</name>
+  </compound>
+  <compound refid="dir_5a94fc886539f26dc7b9a649f084e639" kind="dir"><name>Project-6---Group-4---CSCN73060-SEC-1.Tests/obj</name>
+  </compound>
+  <compound refid="dir_a918b2cf39a28328a2b33c0da93cf50d" kind="dir"><name>Project-6---Group-4---CSCN73060-SEC-1.Tests</name>
+  </compound>
+  <compound refid="dir_9fe5cc214b8578ee5b8e153089aca810" kind="dir"><name>obj/Release</name>
+  </compound>
+  <compound refid="dir_d69fddb65e10ed1e1aad5b4f2a8c0135" kind="dir"><name>Services</name>
+  </compound>
+  <compound refid="dir_8dda3312684a93b2e6708913084b29ad" kind="dir"><name>Views/Shared</name>
+  </compound>
+  <compound refid="dir_e47e4de72e0320db55f81376ac4f26ec" kind="dir"><name>Views</name>
+  </compound>
+  <compound refid="dir_f9e5d2cd332d1b4b87c26c40e2313e0a" kind="dir"><name>wwwroot</name>
+  </compound>
+</doxygenindex>

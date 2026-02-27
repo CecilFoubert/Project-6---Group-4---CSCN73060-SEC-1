@@ -1,3 +1,9 @@
+/*!
+ * @file Services/PartService.cs
+ * @brief Concrete implementation of IPartService: dynamic search, create/update/delete and caching logic.
+ * @ingroup Services
+ */
+
 using Microsoft.EntityFrameworkCore;
 using Project_6___Group_4___CSCN73060_SEC_1.Data;
 using Project_6___Group_4___CSCN73060_SEC_1.Models;
@@ -10,17 +16,28 @@ using System.Text.Json;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Services
 {
+    /// <summary>
+    /// Concrete implementation of <see cref="IPartService"/> that uses <see cref="ApplicationDbContext"/>
+    /// to query and mutate database entities. Returns lightweight dynamic representations suitable for API clients.
+    /// </summary>
     public class PartService : IPartService
     {
         private readonly ApplicationDbContext _context;
         private readonly ILogger<PartService> _logger;
 
+        /// <summary>
+        /// Creates a new <see cref="PartService"/>.
+        /// </summary>
         public PartService(ApplicationDbContext context, ILogger<PartService> logger)
         {
             _context = context;
             _logger = logger;
         }
 
+        /// <summary>
+        /// Resolve model CLR type from the normalized partType string.
+        /// Returns null when the partType is invalid.
+        /// </summary>
         private Type? GetModelType(string partType)
         {
             return partType.ToLower() switch
@@ -37,6 +54,9 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
             };
         }
 
+        /// <summary>
+        /// Convert an EF entity instance into a lightweight ExpandoObject for API responses.
+        /// </summary>
         private object ToLightweightObject(object entity, string partType)
         {
             var properties = entity.GetType().GetProperties();
@@ -67,6 +87,7 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
             return result;
         }
 
+        /// <inheritdoc/>
         public async Task<IEnumerable<object>> GetAllAsync(string partType)
         {
             var normalizedPartType = partType.ToLower();
@@ -90,6 +111,7 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
             return items.Select(item => ToLightweightObject(item, partType));
         }
 
+        /// <inheritdoc/>
         public async Task<object?> GetByIdAsync(string partType, int id)
         {
             var modelType = GetModelType(partType);
@@ -100,6 +122,7 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
             return entity != null ? ToLightweightObject(entity, partType) : null;
         }
 
+        /// <inheritdoc/>
         public async Task<object> CreateAsync(string partType, Dictionary<string, object> data)
         {
             var modelType = GetModelType(partType);
@@ -134,6 +157,7 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
             return ToLightweightObject(entity, partType);
         }
 
+        /// <inheritdoc/>
         public async Task<object?> UpdateAsync(string partType, int id, Dictionary<string, object> data)
         {
             var modelType = GetModelType(partType);
@@ -168,6 +192,7 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
             return ToLightweightObject(entity, partType);
         }
 
+        /// <inheritdoc/>
         public async Task<bool> DeleteAsync(string partType, int id)
         {
             var modelType = GetModelType(partType);
@@ -184,6 +209,7 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
             return true;
         }
 
+        /// <inheritdoc/>
         public async Task<SearchResult> SearchAsync(string partType, Dictionary<string, string> filters)
         {
             var normalizedPartType = partType.ToLower();
@@ -303,6 +329,9 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
             };
         }
 
+        /// <summary>
+        /// Build a LINQ expression for case-insensitive string Contains on a property.
+        /// </summary>
         private static Expression<Func<T, bool>> BuildContainsExpression<T>(PropertyInfo property, string value)
         {
             var param = Expression.Parameter(typeof(T), "x");
@@ -421,6 +450,7 @@ namespace Project_6___Group_4___CSCN73060_SEC_1.Services
             return averageData;
         }
 
+        /// <inheritdoc/>
         public async Task<FilterOptions> GetFilterOptionsAsync(string partType)
         {
             var normalizedPartType = partType.ToLower();

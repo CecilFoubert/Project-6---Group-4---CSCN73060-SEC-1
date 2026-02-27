@@ -1,12 +1,24 @@
+/*!
+ * @file Models/Storage.cs
+ * @brief Storage domain model.
+ * @ingroup Models
+ */
+
 using System.ComponentModel.DataAnnotations;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Models
 {
+    /// <summary>
+    /// Storage device model (HDD, SSD, NVMe).
+    /// </summary>
     public class Storage
     {
         [Key]
         public int Id { get; set; }
         
+        /// <summary>
+        /// Display name of the storage product.
+        /// </summary>
         [Required]
         [MaxLength(500)]
         public string Name { get; set; } = string.Empty;

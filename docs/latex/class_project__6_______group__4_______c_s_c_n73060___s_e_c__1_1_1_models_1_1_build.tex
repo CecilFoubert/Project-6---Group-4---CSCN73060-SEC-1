@@ -1,0 +1,471 @@
+\doxysection{Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build Class Reference}
+\hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{}\label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+
+
+\doxylink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Build} aggregates selected parts into a saved PC configuration.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a9b0352f0a6278dc2844513bf1234c3e4}{Id}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+string \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_ae86d45f0156cdb3e1f7f9bdd6540bc75}{Name}} = string.\+Empty\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em User-\/supplied build name. \end{DoxyCompactList}\item 
+string? \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_ac0d0bb39dc4d7fc5543e3ff4889cb8b1}{Description}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Optional description entered by the user. \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a271ac0e0cdf16edcc7a68d2874719845}{Created\+At}} = Date\+Time.\+Utc\+Now\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+Date\+Time \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a298f3227bd8c9e6fb82bcf3f0b5f7042}{Updated\+At}} = Date\+Time.\+Utc\+Now\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+int? \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_aa6f32d74b453bb4e59772334a975084e}{Cpu\+Id}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+int? \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a061bed3946198c8f96802f699ccba817}{Gpu\+Id}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+int? \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a6926d88b6bf24cf7d78f5ae7ee26748b}{Motherboard\+Id}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+int? \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a9d942d89c8d29250653f8ac37ae97d8d}{Memory\+Id}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+int? \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a6ab975a471f412224b6448acc1dbb4e0}{Storage\+Id}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+int? \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_af8d9bd119103953296bc9cece20ba439}{Case\+Id}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+int? \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_ae67c169679a2f5939cdcb3a74005e56c}{Power\+Supply\+Id}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+int? \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a133b1c92bcf9decbebd84144296af196}{Cpu\+Cooler\+Id}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+virtual ? Cpu \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_aa571bcb6e79bfae74d1c90565735e67f}{Cpu}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+virtual ? Gpu \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_afb2484d39966662f7781f2efccd475a9}{Gpu}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+virtual ? Motherboard \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a5d9cece2b7cf161855b6707883b31e76}{Motherboard}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+virtual ? Memory \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_ae0d0ccde7b11b3c8df645b8b294863fc}{Memory}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+virtual ? Storage \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a285386845098969ba47dd0802c895fb9}{Storage}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+virtual ? Case \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a5fc7ebf3dab6e976cec560bcb54e5cd9}{Case}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+virtual ? Power\+Supply \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a1086f1d9d1b10edebdb393ba7ae9f5f5}{Power\+Supply}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+virtual ? Cpu\+Cooler \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a73396a51af24371cbb7e1cb7e6ff803c}{Cpu\+Cooler}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+decimal? \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_af4fc4ae88f2c488182c31e2da3f9d70d}{Total\+Price}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Computed total price for the build. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build}{Build} aggregates selected parts into a saved PC configuration. 
+
+Navigation properties link to individual part entities; foreign keys are nullable. 
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00016}{16}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a5fc7ebf3dab6e976cec560bcb54e5cd9}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!Case@{Case}}
+\index{Case@{Case}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{Case}{Case}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a5fc7ebf3dab6e976cec560bcb54e5cd9} 
+virtual ? Case Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Case\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00065}{65}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_af8d9bd119103953296bc9cece20ba439}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!CaseId@{CaseId}}
+\index{CaseId@{CaseId}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{CaseId}{CaseId}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_af8d9bd119103953296bc9cece20ba439} 
+int? Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Case\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00044}{44}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_aa571bcb6e79bfae74d1c90565735e67f}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!Cpu@{Cpu}}
+\index{Cpu@{Cpu}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{Cpu}{Cpu}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_aa571bcb6e79bfae74d1c90565735e67f} 
+virtual ? Cpu Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Cpu\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00050}{50}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a73396a51af24371cbb7e1cb7e6ff803c}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!CpuCooler@{CpuCooler}}
+\index{CpuCooler@{CpuCooler}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{CpuCooler}{CpuCooler}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a73396a51af24371cbb7e1cb7e6ff803c} 
+virtual ? Cpu\+Cooler Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Cpu\+Cooler\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00071}{71}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a133b1c92bcf9decbebd84144296af196}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!CpuCoolerId@{CpuCoolerId}}
+\index{CpuCoolerId@{CpuCoolerId}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{CpuCoolerId}{CpuCoolerId}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a133b1c92bcf9decbebd84144296af196} 
+int? Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Cpu\+Cooler\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00046}{46}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_aa6f32d74b453bb4e59772334a975084e}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!CpuId@{CpuId}}
+\index{CpuId@{CpuId}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{CpuId}{CpuId}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_aa6f32d74b453bb4e59772334a975084e} 
+int? Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Cpu\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00039}{39}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a271ac0e0cdf16edcc7a68d2874719845}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!CreatedAt@{CreatedAt}}
+\index{CreatedAt@{CreatedAt}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{CreatedAt}{CreatedAt}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a271ac0e0cdf16edcc7a68d2874719845} 
+Date\+Time Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Created\+At = Date\+Time.\+Utc\+Now\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00034}{34}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ DateTime.UtcNow;}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_ac0d0bb39dc4d7fc5543e3ff4889cb8b1}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!Description@{Description}}
+\index{Description@{Description}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{Description}{Description}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_ac0d0bb39dc4d7fc5543e3ff4889cb8b1} 
+string? Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Optional description entered by the user. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00032}{32}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_afb2484d39966662f7781f2efccd475a9}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!Gpu@{Gpu}}
+\index{Gpu@{Gpu}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{Gpu}{Gpu}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_afb2484d39966662f7781f2efccd475a9} 
+virtual ? Gpu Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Gpu\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00053}{53}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a061bed3946198c8f96802f699ccba817}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!GpuId@{GpuId}}
+\index{GpuId@{GpuId}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{GpuId}{GpuId}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a061bed3946198c8f96802f699ccba817} 
+int? Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Gpu\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00040}{40}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a9b0352f0a6278dc2844513bf1234c3e4}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!Id@{Id}}
+\index{Id@{Id}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{Id}{Id}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a9b0352f0a6278dc2844513bf1234c3e4} 
+int Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00019}{19}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_ae0d0ccde7b11b3c8df645b8b294863fc}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!Memory@{Memory}}
+\index{Memory@{Memory}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{Memory}{Memory}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_ae0d0ccde7b11b3c8df645b8b294863fc} 
+virtual ? Memory Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Memory\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00059}{59}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a9d942d89c8d29250653f8ac37ae97d8d}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!MemoryId@{MemoryId}}
+\index{MemoryId@{MemoryId}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{MemoryId}{MemoryId}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a9d942d89c8d29250653f8ac37ae97d8d} 
+int? Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Memory\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00042}{42}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a5d9cece2b7cf161855b6707883b31e76}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!Motherboard@{Motherboard}}
+\index{Motherboard@{Motherboard}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{Motherboard}{Motherboard}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a5d9cece2b7cf161855b6707883b31e76} 
+virtual ? Motherboard Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Motherboard\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00056}{56}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a6926d88b6bf24cf7d78f5ae7ee26748b}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!MotherboardId@{MotherboardId}}
+\index{MotherboardId@{MotherboardId}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{MotherboardId}{MotherboardId}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a6926d88b6bf24cf7d78f5ae7ee26748b} 
+int? Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Motherboard\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00041}{41}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_ae86d45f0156cdb3e1f7f9bdd6540bc75}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!Name@{Name}}
+\index{Name@{Name}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_ae86d45f0156cdb3e1f7f9bdd6540bc75} 
+string Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Name = string.\+Empty\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+User-\/supplied build name. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00026}{26}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keywordtype}{string}.Empty;}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a1086f1d9d1b10edebdb393ba7ae9f5f5}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!PowerSupply@{PowerSupply}}
+\index{PowerSupply@{PowerSupply}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{PowerSupply}{PowerSupply}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a1086f1d9d1b10edebdb393ba7ae9f5f5} 
+virtual ? Power\+Supply Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Power\+Supply\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00068}{68}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_ae67c169679a2f5939cdcb3a74005e56c}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!PowerSupplyId@{PowerSupplyId}}
+\index{PowerSupplyId@{PowerSupplyId}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{PowerSupplyId}{PowerSupplyId}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_ae67c169679a2f5939cdcb3a74005e56c} 
+int? Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Power\+Supply\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00045}{45}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a285386845098969ba47dd0802c895fb9}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!Storage@{Storage}}
+\index{Storage@{Storage}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{Storage}{Storage}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a285386845098969ba47dd0802c895fb9} 
+virtual ? Storage Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Storage\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00062}{62}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a6ab975a471f412224b6448acc1dbb4e0}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!StorageId@{StorageId}}
+\index{StorageId@{StorageId}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{StorageId}{StorageId}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a6ab975a471f412224b6448acc1dbb4e0} 
+int? Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Storage\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00043}{43}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_af4fc4ae88f2c488182c31e2da3f9d70d}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!TotalPrice@{TotalPrice}}
+\index{TotalPrice@{TotalPrice}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{TotalPrice}{TotalPrice}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_af4fc4ae88f2c488182c31e2da3f9d70d} 
+decimal? Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Total\+Price\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Computed total price for the build. 
+
+Returns null when no priced parts present. 
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00077}{77}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ decimal\ total\ =\ 0;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasAnyPrice\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Cpu?.Price\ !=\ \textcolor{keyword}{null}\ \&\&\ decimal.TryParse(Cpu.Price.Replace(\textcolor{stringliteral}{"{}\$"{}},\ \textcolor{stringliteral}{"{}"{}}).Replace(\textcolor{stringliteral}{"{},"{}},\ \textcolor{stringliteral}{"{}"{}}),\ out\ var\ cpuPrice))}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ total\ +=\ cpuPrice;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hasAnyPrice\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Gpu?.Price\ !=\ \textcolor{keyword}{null}\ \&\&\ decimal.TryParse(Gpu.Price.Replace(\textcolor{stringliteral}{"{}\$"{}},\ \textcolor{stringliteral}{"{}"{}}).Replace(\textcolor{stringliteral}{"{},"{}},\ \textcolor{stringliteral}{"{}"{}}),\ out\ var\ gpuPrice))}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ total\ +=\ gpuPrice;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hasAnyPrice\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Motherboard?.Price\ !=\ \textcolor{keyword}{null}\ \&\&\ decimal.TryParse(Motherboard.Price.Replace(\textcolor{stringliteral}{"{}\$"{}},\ \textcolor{stringliteral}{"{}"{}}).Replace(\textcolor{stringliteral}{"{},"{}},\ \textcolor{stringliteral}{"{}"{}}),\ out\ var\ mbPrice))}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ total\ +=\ mbPrice;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hasAnyPrice\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Memory?.Price\ !=\ \textcolor{keyword}{null}\ \&\&\ decimal.TryParse(Memory.Price.Replace(\textcolor{stringliteral}{"{}\$"{}},\ \textcolor{stringliteral}{"{}"{}}).Replace(\textcolor{stringliteral}{"{},"{}},\ \textcolor{stringliteral}{"{}"{}}),\ out\ var\ memPrice))}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ total\ +=\ memPrice;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hasAnyPrice\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Storage?.Price\ !=\ \textcolor{keyword}{null}\ \&\&\ decimal.TryParse(Storage.Price.Replace(\textcolor{stringliteral}{"{}\$"{}},\ \textcolor{stringliteral}{"{}"{}}).Replace(\textcolor{stringliteral}{"{},"{}},\ \textcolor{stringliteral}{"{}"{}}),\ out\ var\ storagePrice))}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ total\ +=\ storagePrice;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hasAnyPrice\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Case?.Price\ !=\ \textcolor{keyword}{null}\ \&\&\ decimal.TryParse(Case.Price.Replace(\textcolor{stringliteral}{"{}\$"{}},\ \textcolor{stringliteral}{"{}"{}}).Replace(\textcolor{stringliteral}{"{},"{}},\ \textcolor{stringliteral}{"{}"{}}),\ out\ var\ casePrice))}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ total\ +=\ casePrice;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hasAnyPrice\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (PowerSupply?.Price\ !=\ \textcolor{keyword}{null}\ \&\&\ decimal.TryParse(PowerSupply.Price.Replace(\textcolor{stringliteral}{"{}\$"{}},\ \textcolor{stringliteral}{"{}"{}}).Replace(\textcolor{stringliteral}{"{},"{}},\ \textcolor{stringliteral}{"{}"{}}),\ out\ var\ psuPrice))}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ total\ +=\ psuPrice;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hasAnyPrice\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (CpuCooler?.Price\ !=\ \textcolor{keyword}{null}\ \&\&\ decimal.TryParse(CpuCooler.Price.Replace(\textcolor{stringliteral}{"{}\$"{}},\ \textcolor{stringliteral}{"{}"{}}).Replace(\textcolor{stringliteral}{"{},"{}},\ \textcolor{stringliteral}{"{}"{}}),\ out\ var\ coolerPrice))}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ total\ +=\ coolerPrice;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hasAnyPrice\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ hasAnyPrice\ ?\ total\ :\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a298f3227bd8c9e6fb82bcf3f0b5f7042}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}!UpdatedAt@{UpdatedAt}}
+\index{UpdatedAt@{UpdatedAt}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build}}
+\doxysubsubsection{\texorpdfstring{UpdatedAt}{UpdatedAt}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_a298f3227bd8c9e6fb82bcf3f0b5f7042} 
+Date\+Time Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Models.\+Build.\+Updated\+At = Date\+Time.\+Utc\+Now\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_build_8cs_source_l00036}{36}} of file \doxymbox{\hyperlink{_build_8cs_source}{Build.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ DateTime.UtcNow;}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Models/\+\doxymbox{\hyperlink{_build_8cs}{Build.\+cs}}\end{DoxyCompactItemize}

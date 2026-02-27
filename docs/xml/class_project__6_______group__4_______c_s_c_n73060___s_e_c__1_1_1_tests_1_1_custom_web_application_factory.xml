@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_custom_web_application_factory" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Tests::CustomWebApplicationFactory</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">WebApplicationFactory</basecompoundref>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_custom_web_application_factory_1ae14fe348671dbd941ad9b371e873cb0d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Project_6___Group_4___CSCN73060_SEC_1.Tests.CustomWebApplicationFactory.ConfigureWebHost</definition>
+        <argsstring>(IWebHostBuilder builder)</argsstring>
+        <name>ConfigureWebHost</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Tests.CustomWebApplicationFactory.ConfigureWebHost</qualifiedname>
+        <param>
+          <type>IWebHostBuilder</type>
+          <declname>builder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/CustomWebApplicationFactory.cs" line="14" column="29" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/CustomWebApplicationFactory.cs" bodystart="14" bodyend="25"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Custom WebApplicationFactory that configures InMemory database for testing. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Tests.CustomWebApplicationFactory</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_custom_web_application_factory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WebApplicationFactory&lt; Program &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Tests.CustomWebApplicationFactory</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_custom_web_application_factory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WebApplicationFactory&lt; Program &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="Project-6---Group-4---CSCN73060-SEC-1.Tests/CustomWebApplicationFactory.cs" line="12" column="7" bodyfile="Project-6---Group-4---CSCN73060-SEC-1.Tests/CustomWebApplicationFactory.cs" bodystart="13" bodyend="26"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_tests_1_1_custom_web_application_factory_1ae14fe348671dbd941ad9b371e873cb0d" prot="protected" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Tests::CustomWebApplicationFactory</scope><name>ConfigureWebHost</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="_home_controller_8cs" kind="file" language="C#">
+    <compoundname>HomeController.cs</compoundname>
+    <innerclass refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller" prot="public">Project_6___Group_4___CSCN73060_SEC_1::Controllers::HomeController</innerclass>
+    <innernamespace refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1">Project_6___Group_4___CSCN73060_SEC_1</innernamespace>
+    <innernamespace refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers">Project_6___Group_4___CSCN73060_SEC_1::Controllers</innernamespace>
+    <innernamespace refid="namespace_system_1_1_diagnostics">System::Diagnostics</innernamespace>
+    <briefdescription>
+<para>Standard application home controller for site pages (Index, Privacy, Error). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.AspNetCore.Mvc;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models" kindref="compound">Project_6___Group_4___CSCN73060_SEC_1.Models</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Diagnostics;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers" kindref="compound">Project_6___Group_4___CSCN73060_SEC_1.Controllers</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17" refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller_1a7f23ca4b46fc18c6eb613e3d4a94a4f4" kindref="member">HomeController</ref><sp/>:<sp/>Controller</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>readonly<sp/>ILogger&lt;HomeController&gt;<sp/>_logger;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller_1a7f23ca4b46fc18c6eb613e3d4a94a4f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller_1a7f23ca4b46fc18c6eb613e3d4a94a4f4" kindref="member">HomeController</ref>(ILogger&lt;HomeController&gt;<sp/>logger)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_logger<sp/>=<sp/>logger;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller_1a86af744d6c6d82b057957a9165e0f1b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>IActionResult<sp/><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller_1a86af744d6c6d82b057957a9165e0f1b2" kindref="member">Index</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>View();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller_1a46d6b83463fa85a277a9a3d46375a54d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>IActionResult<sp/><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller_1a46d6b83463fa85a277a9a3d46375a54d" kindref="member">Privacy</ref>()</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>View();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[ResponseCache(Duration<sp/>=<sp/>0,<sp/>Location<sp/>=<sp/>ResponseCacheLocation.None,<sp/>NoStore<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="49" refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller_1a8a1d3170137a89745b55414aa4ce0976" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>IActionResult<sp/><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_home_controller_1a8a1d3170137a89745b55414aa4ce0976" kindref="member">Error</ref>()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>View(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_error_view_model" kindref="compound">ErrorViewModel</ref><sp/>{<sp/>RequestId<sp/>=<sp/>Activity.Current?.Id<sp/>??<sp/>HttpContext.TraceIdentifier<sp/>});</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Controllers/HomeController.cs"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,993 @@
+\doxysection{Application\+Db\+Context\+Model\+Snapshot.\+cs}
+\hypertarget{_application_db_context_model_snapshot_8cs_source}{}\label{_application_db_context_model_snapshot_8cs_source}\index{Migrations/ApplicationDbContextModelSnapshot.cs@{Migrations/ApplicationDbContextModelSnapshot.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00001}00001\ \textcolor{comment}{//\ <auto-\/generated\ />}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Microsoft.EntityFrameworkCore.Infrastructure;}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Microsoft.EntityFrameworkCore.Storage.ValueConversion;}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Data}};}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00008}00008\ \textcolor{preprocessor}{\#nullable\ disable}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00010}00010\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Migrations}}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00012}00012\ \ \ \ \ [DbContext(typeof(ApplicationDbContext))]}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00013}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_application_db_context_model_snapshot}{00013}}\ \ \ \ \ \textcolor{keyword}{partial\ class\ }\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_application_db_context_model_snapshot}{ApplicationDbContextModelSnapshot}}\ :\ ModelSnapshot}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ BuildModel(ModelBuilder\ modelBuilder)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00017}00017\ \textcolor{preprocessor}{\#pragma\ warning\ disable\ 612,\ 618}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasAnnotation(\textcolor{stringliteral}{"{}ProductVersion"{}},\ \textcolor{stringliteral}{"{}8.0.0"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasAnnotation(\textcolor{stringliteral}{"{}Relational:MaxIdentifierLength"{}},\ 64);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build"{}},\ b\ =>}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}CaseId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}CpuCoolerId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}CpuId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<DateTime>(\textcolor{stringliteral}{"{}CreatedAt"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}datetime(6)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Description"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(1000)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(1000)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}GpuId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}MemoryId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}MotherboardId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Name"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}PowerSupplyId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}StorageId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<DateTime>(\textcolor{stringliteral}{"{}UpdatedAt"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}datetime(6)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasIndex(\textcolor{stringliteral}{"{}CaseId"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasIndex(\textcolor{stringliteral}{"{}CpuCoolerId"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasIndex(\textcolor{stringliteral}{"{}CpuId"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasIndex(\textcolor{stringliteral}{"{}GpuId"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasIndex(\textcolor{stringliteral}{"{}MemoryId"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasIndex(\textcolor{stringliteral}{"{}MotherboardId"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasIndex(\textcolor{stringliteral}{"{}PowerSupplyId"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasIndex(\textcolor{stringliteral}{"{}StorageId"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.ToTable(\textcolor{stringliteral}{"{}Builds"{}},\ (\textcolor{keywordtype}{string})\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Case"{}},\ b\ =>}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Color"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Dimensions"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(300)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(300)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}DriveBays"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ExpansionSlots"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}FrontPanelUSB"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ImageUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Manufacturer"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}MaximumVideoCardLength"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}MotherboardFormFactor"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Name"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PartNumber"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PowerSupply"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PowerSupplyShroud"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Price"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ProductUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}SidePanel"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Type"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Volume"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.ToTable(\textcolor{stringliteral}{"{}Cases"{}},\ (\textcolor{keywordtype}{string})\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Cpu"{}},\ b\ =>}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}?>(\textcolor{stringliteral}{"{}CoreCount"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}CoreFamily"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ECCSupport"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}EfficiencyCoreBoostClock"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}EfficiencyCoreClock"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ImageUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}IncludesCPUCooler"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00204}00204\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}IncludesCooler"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}IntegratedGraphics"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}L2Cache"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}L3Cache"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Lithography"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00224}00224\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Manufacturer"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00228}00228\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}MaximumSupportedMemory"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Microarchitecture"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Name"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Packaging"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00245}00245\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PartNumber"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00249}00249\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PerformanceCoreBoostClock"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00253}00253\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PerformanceCoreClock"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00257}00257\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Price"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00259}00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00260}00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ProductUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Series"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00269}00269\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}SimultaneousMultithreading"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00273}00273\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Socket"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00277}00277\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}TDP"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00281}00281\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00283}00283\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.ToTable(\textcolor{stringliteral}{"{}Cpus"{}},\ (\textcolor{keywordtype}{string})\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.CpuCooler"{}},\ b\ =>}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00290}00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00292}00292\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}CPUSocket"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00296}00296\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00297}00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Color"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00300}00300\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}FanRPM"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00302}00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00303}00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00304}00304\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00305}00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Fanless"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00308}00308\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Height"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00312}00312\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ImageUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00315}00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00316}00316\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00317}00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Manufacturer"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00318}00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00319}00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00320}00320\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00321}00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Model"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00322}00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00323}00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Name"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00327}00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00329}00329\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}NoiseLevel"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00331}00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00332}00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00333}00333\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PartNumber"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00337}00337\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Price"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00339}00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00341}00341\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ProductUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00345}00345\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}SpecsNumber"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00347}00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00348}00348\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00349}00349\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00350}00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}WaterCooled"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00351}00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00352}00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00353}00353\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00354}00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00355}00355\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00356}00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.ToTable(\textcolor{stringliteral}{"{}CpuCoolers"{}},\ (\textcolor{keywordtype}{string})\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00357}00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00358}00358\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00359}00359\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Gpu"{}},\ b\ =>}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00360}00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00361}00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00362}00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00363}00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00364}00364\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00365}00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}BoostClock"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00366}00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00367}00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00368}00368\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00369}00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}CaseExpansionSlotWidth"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00370}00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00371}00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00372}00372\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00373}00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Chipset"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00374}00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00375}00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00376}00376\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00377}00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Color"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00378}00378\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00379}00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00380}00380\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00381}00381\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Cooling"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00382}00382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00383}00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00384}00384\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00385}00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}CoreClock"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00386}00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00387}00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00388}00388\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00389}00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}DVIDDualLinkOutputs"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00390}00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00391}00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00392}00392\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00393}00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}DisplayPort14Outputs"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00394}00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00395}00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00396}00396\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00397}00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}DisplayPort14aOutputs"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00398}00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00399}00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00400}00400\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00401}00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}DisplayPort21Outputs"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00402}00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00403}00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00404}00404\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00405}00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}DisplayPortOutputs"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00406}00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00407}00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00408}00408\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00409}00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}EffectiveMemoryClock"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00410}00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00411}00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00412}00412\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00413}00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ExternalPower"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00414}00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00415}00415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00416}00416\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00417}00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}FrameSync"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00418}00418\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00419}00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00420}00420\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00421}00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}HDMI21aOutputs"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00422}00422\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00423}00423\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00424}00424\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00425}00425\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}HDMIOutputs"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00426}00426\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00427}00427\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00428}00428\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00429}00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ImageUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00430}00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00431}00431\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00432}00432\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00433}00433\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Interface"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00434}00434\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00435}00435\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00436}00436\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00437}00437\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Length"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00438}00438\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00439}00439\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00440}00440\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00441}00441\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Manufacturer"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00442}00442\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00443}00443\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00444}00444\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00445}00445\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Memory"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00446}00446\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00447}00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00448}00448\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00449}00449\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}MemoryType"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00450}00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00451}00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00452}00452\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00453}00453\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Name"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00454}00454\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00455}00455\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00456}00456\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00457}00457\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00458}00458\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PartNumber"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00459}00459\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00460}00460\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00461}00461\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00462}00462\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Price"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00463}00463\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00464}00464\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00465}00465\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00466}00466\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ProductUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00467}00467\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00468}00468\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00469}00469\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00470}00470\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}SLICrossFire"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00471}00471\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00472}00472\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00473}00473\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00474}00474\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}TDP"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00475}00475\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00476}00476\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00477}00477\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00478}00478\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}TotalSlotWidth"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00479}00479\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00480}00480\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00481}00481\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00482}00482\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00483}00483\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00484}00484\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.ToTable(\textcolor{stringliteral}{"{}Gpus"{}},\ (\textcolor{keywordtype}{string})\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00485}00485\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00486}00486\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00487}00487\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Memory"{}},\ b\ =>}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00488}00488\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00489}00489\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00490}00490\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00491}00491\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00492}00492\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00493}00493\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}CASLatency"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00494}00494\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00495}00495\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00496}00496\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00497}00497\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Color"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00498}00498\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00499}00499\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00500}00500\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00501}00501\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ECCRegistered"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00502}00502\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00503}00503\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00504}00504\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00505}00505\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}FirstWordLatency"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00506}00506\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00507}00507\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00508}00508\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00509}00509\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}FormFactor"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00510}00510\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00511}00511\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00512}00512\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00513}00513\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}HeatSpreader"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00514}00514\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00515}00515\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00516}00516\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00517}00517\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ImageUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00518}00518\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00519}00519\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00520}00520\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00521}00521\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Manufacturer"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00522}00522\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00523}00523\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00524}00524\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00525}00525\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Modules"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00526}00526\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00527}00527\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00528}00528\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00529}00529\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Name"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00530}00530\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00531}00531\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00532}00532\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00533}00533\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00534}00534\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PartNumber"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00535}00535\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00536}00536\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00537}00537\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00538}00538\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Price"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00539}00539\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00540}00540\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00541}00541\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00542}00542\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PricePerGB"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00543}00543\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00544}00544\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00545}00545\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00546}00546\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ProductUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00547}00547\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00548}00548\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00549}00549\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00550}00550\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}SpecsNumber"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00551}00551\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00552}00552\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00553}00553\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00554}00554\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Speed"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00555}00555\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00556}00556\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00557}00557\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00558}00558\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Timing"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00559}00559\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00560}00560\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00561}00561\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00562}00562\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Voltage"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00563}00563\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00564}00564\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00565}00565\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00566}00566\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00567}00567\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00568}00568\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.ToTable(\textcolor{stringliteral}{"{}Memories"{}},\ (\textcolor{keywordtype}{string})\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00569}00569\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00570}00570\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00571}00571\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Motherboard"{}},\ b\ =>}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00572}00572\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00573}00573\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00574}00574\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00575}00575\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00576}00576\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00577}00577\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Chipset"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00578}00578\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00579}00579\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00580}00580\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00581}00581\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Color"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00582}00582\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00583}00583\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00584}00584\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00585}00585\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}FormFactor"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00586}00586\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00587}00587\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00588}00588\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00589}00589\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}HalfMiniPCIeSlots"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00590}00590\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00591}00591\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00592}00592\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00593}00593\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ImageUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00594}00594\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00595}00595\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00596}00596\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00597}00597\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}M2Slots"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00598}00598\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00599}00599\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00600}00600\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00601}00601\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Manufacturer"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00602}00602\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00603}00603\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00604}00604\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00605}00605\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}MemoryMax"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00606}00606\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00607}00607\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00608}00608\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00609}00609\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}MemorySlots"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00610}00610\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00611}00611\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00612}00612\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00613}00613\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}MemorySpeed"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00614}00614\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(1000)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00615}00615\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(1000)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00616}00616\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00617}00617\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}MemoryType"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00618}00618\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00619}00619\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00620}00620\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00621}00621\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}MiniPCIeSlots"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00622}00622\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00623}00623\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00624}00624\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00625}00625\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}MiniPCIemSATASlots"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00626}00626\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00627}00627\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00628}00628\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00629}00629\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Name"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00630}00630\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00631}00631\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00632}00632\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00633}00633\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00634}00634\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}OnboardEthernet"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00635}00635\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00636}00636\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00637}00637\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00638}00638\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}OnboardVideo"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00639}00639\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00640}00640\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00641}00641\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00642}00642\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PCISlots"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00643}00643\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00644}00644\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00645}00645\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00646}00646\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PCIex16Slots"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00647}00647\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00648}00648\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00649}00649\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00650}00650\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PCIex1Slots"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00651}00651\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00652}00652\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00653}00653\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00654}00654\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PCIex4Slots"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00655}00655\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00656}00656\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00657}00657\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00658}00658\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PCIex8Slots"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00659}00659\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00660}00660\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00661}00661\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00662}00662\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PartNumber"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00663}00663\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00664}00664\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00665}00665\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00666}00666\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Price"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00667}00667\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00668}00668\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00669}00669\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00670}00670\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ProductUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00671}00671\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00672}00672\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00673}00673\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00674}00674\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}RAIDSupport"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00675}00675\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00676}00676\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00677}00677\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00678}00678\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}SATA6GbsSlots"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00679}00679\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00680}00680\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00681}00681\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00682}00682\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}SocketCPU"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00683}00683\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00684}00684\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00685}00685\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00686}00686\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}SupportsECC"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00687}00687\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00688}00688\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00689}00689\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00690}00690\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}USB20Headers"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00691}00691\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00692}00692\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00693}00693\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00694}00694\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}USB20HeadersSinglePort"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00695}00695\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00696}00696\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00697}00697\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00698}00698\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}USB32Gen1Headers"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00699}00699\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00700}00700\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00701}00701\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00702}00702\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}USB32Gen2Headers"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00703}00703\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00704}00704\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00705}00705\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00706}00706\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}USB32Gen2x2Headers"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00707}00707\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00708}00708\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00709}00709\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00710}00710\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}WirelessNetworking"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00711}00711\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00712}00712\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00713}00713\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00714}00714\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}mSATASlots"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00715}00715\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00716}00716\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00717}00717\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00718}00718\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00719}00719\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00720}00720\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.ToTable(\textcolor{stringliteral}{"{}Motherboards"{}},\ (\textcolor{keywordtype}{string})\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00721}00721\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00722}00722\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00723}00723\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.PartAverageCache"{}},\ b\ =>}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00724}00724\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00725}00725\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00726}00726\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00727}00727\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00728}00728\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00729}00729\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}AveragePartJson"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00730}00730\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00731}00731\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}longtext"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00732}00732\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00733}00733\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<DateTime>(\textcolor{stringliteral}{"{}CreatedAt"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00734}00734\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}datetime(6)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00735}00735\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00736}00736\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}FilterKey"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00737}00737\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00738}00738\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00739}00739\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00740}00740\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00741}00741\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PartType"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00742}00742\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00743}00743\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(50)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00744}00744\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(50)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00745}00745\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00746}00746\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00747}00747\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00748}00748\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasIndex(\textcolor{stringliteral}{"{}PartType"{}},\ \textcolor{stringliteral}{"{}FilterKey"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00749}00749\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsUnique();}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00750}00750\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00751}00751\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.ToTable(\textcolor{stringliteral}{"{}PartAverageCaches"{}},\ (\textcolor{keywordtype}{string})\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00752}00752\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00753}00753\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00754}00754\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.PowerSupply"{}},\ b\ =>}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00755}00755\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00756}00756\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00757}00757\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00758}00758\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00759}00759\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00760}00760\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ATX4PinConnectors"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00761}00761\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00762}00762\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00763}00763\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00764}00764\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Color"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00765}00765\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00766}00766\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00767}00767\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00768}00768\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}EPS8PinConnectors"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00769}00769\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00770}00770\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00771}00771\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00772}00772\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}EfficiencyRating"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00773}00773\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00774}00774\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00775}00775\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00776}00776\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Fanless"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00777}00777\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00778}00778\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00779}00779\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00780}00780\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ImageUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00781}00781\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00782}00782\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00783}00783\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00784}00784\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Length"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00785}00785\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00786}00786\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00787}00787\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00788}00788\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Manufacturer"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00789}00789\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00790}00790\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00791}00791\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00792}00792\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Model"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00793}00793\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00794}00794\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00795}00795\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00796}00796\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Modular"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00797}00797\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00798}00798\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00799}00799\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00800}00800\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Molex4PinConnectors"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00801}00801\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00802}00802\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00803}00803\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00804}00804\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Name"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00805}00805\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00806}00806\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00807}00807\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00808}00808\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00809}00809\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PCIe12PinConnectors"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00810}00810\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00811}00811\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00812}00812\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00813}00813\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PCIe12Plus4Pin12VHPWRConnectors"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00814}00814\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00815}00815\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00816}00816\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00817}00817\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PCIe6PinConnectors"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00818}00818\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00819}00819\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00820}00820\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00821}00821\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PCIe6Plus2PinConnectors"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00822}00822\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00823}00823\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00824}00824\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00825}00825\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PCIe8PinConnectors"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00826}00826\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00827}00827\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00828}00828\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00829}00829\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PartNumber"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00830}00830\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00831}00831\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00832}00832\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00833}00833\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Price"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00834}00834\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00835}00835\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00836}00836\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00837}00837\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ProductUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00838}00838\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00839}00839\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00840}00840\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00841}00841\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}SATAConnectors"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00842}00842\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00843}00843\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00844}00844\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00845}00845\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}SpecsNumber"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00846}00846\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00847}00847\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00848}00848\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00849}00849\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Type"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00850}00850\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00851}00851\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00852}00852\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00853}00853\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Wattage"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00854}00854\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00855}00855\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00856}00856\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00857}00857\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00858}00858\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00859}00859\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.ToTable(\textcolor{stringliteral}{"{}PowerSupplies"{}},\ (\textcolor{keywordtype}{string})\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00860}00860\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00861}00861\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00862}00862\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Storage"{}},\ b\ =>}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00863}00863\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00864}00864\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}Id"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00865}00865\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ValueGeneratedOnAdd()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00866}00866\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}int"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00867}00867\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00868}00868\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Cache"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00869}00869\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00870}00870\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00871}00871\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00872}00872\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Capacity"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00873}00873\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00874}00874\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00875}00875\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00876}00876\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}FormFactor"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00877}00877\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(200)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00878}00878\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(200)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00879}00879\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00880}00880\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ImageUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00881}00881\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00882}00882\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00883}00883\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00884}00884\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Interface"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00885}00885\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00886}00886\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00887}00887\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00888}00888\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Manufacturer"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00889}00889\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00890}00890\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00891}00891\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00892}00892\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}NVME"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00893}00893\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00894}00894\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00895}00895\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00896}00896\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Name"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00897}00897\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .IsRequired()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00898}00898\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00899}00899\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00900}00900\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00901}00901\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PartNumber"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00902}00902\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00903}00903\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00904}00904\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00905}00905\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Price"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00906}00906\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00907}00907\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00908}00908\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00909}00909\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}PricePerGB"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00910}00910\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00911}00911\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00912}00912\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00913}00913\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}ProductUrl"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00914}00914\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(500)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00915}00915\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(500)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00916}00916\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00917}00917\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Property<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}Type"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00918}00918\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasMaxLength(100)}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00919}00919\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00920}00920\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00921}00921\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasKey(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00922}00922\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00923}00923\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.ToTable(\textcolor{stringliteral}{"{}Storages"{}},\ (\textcolor{keywordtype}{string})\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00924}00924\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00925}00925\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00926}00926\ \ \ \ \ \ \ \ \ \ \ \ \ modelBuilder.Entity(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Build"{}},\ b\ =>}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00927}00927\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00928}00928\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasOne(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Case"{}},\ \textcolor{stringliteral}{"{}Case"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00929}00929\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00930}00930\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(\textcolor{stringliteral}{"{}CaseId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00931}00931\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00932}00932\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00933}00933\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasOne(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.CpuCooler"{}},\ \textcolor{stringliteral}{"{}CpuCooler"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00934}00934\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00935}00935\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(\textcolor{stringliteral}{"{}CpuCoolerId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00936}00936\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00937}00937\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00938}00938\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasOne(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Cpu"{}},\ \textcolor{stringliteral}{"{}Cpu"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00939}00939\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00940}00940\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(\textcolor{stringliteral}{"{}CpuId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00941}00941\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00942}00942\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00943}00943\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasOne(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Gpu"{}},\ \textcolor{stringliteral}{"{}Gpu"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00944}00944\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00945}00945\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(\textcolor{stringliteral}{"{}GpuId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00946}00946\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00947}00947\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00948}00948\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasOne(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Memory"{}},\ \textcolor{stringliteral}{"{}Memory"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00949}00949\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00950}00950\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(\textcolor{stringliteral}{"{}MemoryId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00951}00951\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00952}00952\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00953}00953\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasOne(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Motherboard"{}},\ \textcolor{stringliteral}{"{}Motherboard"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00954}00954\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00955}00955\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(\textcolor{stringliteral}{"{}MotherboardId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00956}00956\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00957}00957\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00958}00958\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasOne(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.PowerSupply"{}},\ \textcolor{stringliteral}{"{}PowerSupply"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00959}00959\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00960}00960\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(\textcolor{stringliteral}{"{}PowerSupplyId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00961}00961\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00962}00962\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00963}00963\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.HasOne(\textcolor{stringliteral}{"{}Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models.Storage"{}},\ \textcolor{stringliteral}{"{}Storage"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00964}00964\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WithMany()}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00965}00965\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .HasForeignKey(\textcolor{stringliteral}{"{}StorageId"{}})}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00966}00966\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnDelete(DeleteBehavior.SetNull);}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00967}00967\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00968}00968\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Navigation(\textcolor{stringliteral}{"{}Case"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00969}00969\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00970}00970\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Navigation(\textcolor{stringliteral}{"{}Cpu"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00971}00971\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00972}00972\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Navigation(\textcolor{stringliteral}{"{}CpuCooler"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00973}00973\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00974}00974\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Navigation(\textcolor{stringliteral}{"{}Gpu"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00975}00975\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00976}00976\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Navigation(\textcolor{stringliteral}{"{}Memory"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00977}00977\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00978}00978\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Navigation(\textcolor{stringliteral}{"{}Motherboard"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00979}00979\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00980}00980\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Navigation(\textcolor{stringliteral}{"{}PowerSupply"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00981}00981\ }
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00982}00982\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.Navigation(\textcolor{stringliteral}{"{}Storage"{}});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00983}00983\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00984}00984\ \textcolor{preprocessor}{\#pragma\ warning\ restore\ 612,\ 618}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00985}00985\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00986}00986\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_application_db_context_model_snapshot_8cs_source_l00987}00987\ \}}
+
+\end{DoxyCode}

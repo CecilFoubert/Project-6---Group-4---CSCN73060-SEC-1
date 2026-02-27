@@ -1,0 +1,410 @@
+\doxysection{Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Parts\+Controller Class Reference}
+\hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller}{}\label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}}
+
+
+API controller that exposes endpoints for CRUD and search over PC part types (cpu, gpu, memory, motherboard, case, storage, powersupply, cpucooler).  
+
+
+Inheritance diagram for Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Parts\+Controller:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a27d72825c60f1d9f2fe7f3f1005df319}{Parts\+Controller}} (\doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service}{IPart\+Service}} part\+Service, ILogger$<$ Parts\+Controller $>$ logger)
+\begin{DoxyCompactList}\small\item\em Creates a new instance of \doxylink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller}{Parts\+Controller}. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a488b5b2a2f96b6b13e89ba9b8e5cab90}{Get\+All}} (string part\+Type)
+\begin{DoxyCompactList}\small\item\em Get all parts of a specific type GET /\+api/\+parts/\+\{part\+Type\} Examples:\+ /\+api/\+parts/\+cpu, /\+api/\+parts/\+gpu, /\+api/\+parts/\+memory. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a9bf6a94727d66ff5e7b4310831ebacd4}{Get\+By\+Id}} (string part\+Type, int id)
+\begin{DoxyCompactList}\small\item\em Get a specific part by ID GET /\+api/\+parts/\+\{part\+Type\}/\+\{id\} Example:\+ /\+api/\+parts/\+cpu/\+5. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_ab9ca2c74fa2c10e9d059367c759e3186}{Create}} (string part\+Type, \+[From\+Body]\+ Dictionary$<$ string, object $>$ data)
+\begin{DoxyCompactList}\small\item\em Create a new part POST /\+api/\+parts/\+\{part\+Type\} Body:\+ \{ "{}name"{}:\+ "{}..."{}, "{}price"{}:\+ "{}..."{}, "{}manufacturer"{}:\+ "{}..."{} \}. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a7157a0b3eff2d1df44a9b383ca5bfeeb}{Update}} (string part\+Type, int id, \+[From\+Body]\+ Dictionary$<$ string, object $>$ data)
+\begin{DoxyCompactList}\small\item\em Update an existing part PUT /\+api/\+parts/\+\{part\+Type\}/\+\{id\} Body:\+ \{ "{}name"{}:\+ "{}..."{}, "{}price"{}:\+ "{}..."{} \}. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a5299734d0fb246f470b663f82e8933d0}{Delete}} (string part\+Type, int id)
+\begin{DoxyCompactList}\small\item\em Delete a part DELETE /\+api/\+parts/\+\{part\+Type\}/\+\{id\}. \end{DoxyCompactList}\item 
+IAction\+Result \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a03b43ef0be415e5e2b58ddfa4a95bd39}{Get\+Supported\+Types}} ()
+\begin{DoxyCompactList}\small\item\em Get supported part types GET /\+api/\+parts. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a7bbf252ddc876b8266ed8a2b84a99263}{Get\+Filters}} (string part\+Type)
+\begin{DoxyCompactList}\small\item\em Get all available filter options for a part type GET /\+api/\+parts/\+\{part\+Type\}/\+filters Returns all searchable attributes with their distinct values. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a3473eb23cae0fb324ea8bdff20848d2d}{Search}} (string part\+Type, \+[From\+Body]\+ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters}{Search\+Filters}}? search\+Filters)
+\begin{DoxyCompactList}\small\item\em Dynamic search endpoint for parts with flexible filtering (JSON body) POST /\+api/\+parts/\+\{part\+Type\}/\+search. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+API controller that exposes endpoints for CRUD and search over PC part types (cpu, gpu, memory, motherboard, case, storage, powersupply, cpucooler). 
+
+Delegates data access and filtering logic to \doxylink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service}{IPart\+Service}. 
+
+Definition at line \doxymbox{\hyperlink{_parts_controller_8cs_source_l00020}{20}} of file \doxymbox{\hyperlink{_parts_controller_8cs_source}{Parts\+Controller.\+cs}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a27d72825c60f1d9f2fe7f3f1005df319}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}!PartsController@{PartsController}}
+\index{PartsController@{PartsController}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}}
+\doxysubsubsection{\texorpdfstring{PartsController()}{PartsController()}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a27d72825c60f1d9f2fe7f3f1005df319} 
+Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Parts\+Controller.\+Parts\+Controller (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service}{IPart\+Service}}}]{part\+Service}{, }\item[{ILogger$<$ Parts\+Controller $>$}]{logger}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new instance of \doxylink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller}{Parts\+Controller}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em part\+Service} & Service used to perform part operations.\\
+\hline
+{\em logger} & Logger for diagnostics.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{_parts_controller_8cs_source_l00030}{30}} of file \doxymbox{\hyperlink{_parts_controller_8cs_source}{Parts\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \_partService\ =\ partService;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \_logger\ =\ logger;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_ab9ca2c74fa2c10e9d059367c759e3186}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}!Create@{Create}}
+\index{Create@{Create}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_ab9ca2c74fa2c10e9d059367c759e3186} 
+async Task$<$ IAction\+Result $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Parts\+Controller.\+Create (\begin{DoxyParamCaption}\item[{string}]{part\+Type}{, }\item[{\+[\+From\+Body]\+ Dictionary$<$ string, object $>$}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Create a new part POST /\+api/\+parts/\+\{part\+Type\} Body:\+ \{ "{}name"{}:\+ "{}..."{}, "{}price"{}:\+ "{}..."{}, "{}manufacturer"{}:\+ "{}..."{} \}. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_parts_controller_8cs_source_l00098}{98}} of file \doxymbox{\hyperlink{_parts_controller_8cs_source}{Parts\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ createdPart\ =\ await\ \_partService.CreateAsync(partType,\ data);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ CreatedAtAction(}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nameof(GetById),}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ \{\ partType,\ \textcolor{keywordtype}{id}\ =\ ((dynamic)createdPart).Id\ \},}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ createdPart}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (ArgumentException\ ex)}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ BadRequest(\textcolor{keyword}{new}\ \{\ error\ =\ ex.Message\ \});}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogError(ex,\ \textcolor{stringliteral}{"{}Error\ creating\ part\ of\ type\ \{PartType\}"{}},\ partType);}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ StatusCode(500,\ \textcolor{keyword}{new}\ \{\ error\ =\ \textcolor{stringliteral}{"{}An\ error\ occurred\ while\ creating\ the\ part"{}}\ \});}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a5299734d0fb246f470b663f82e8933d0}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}!Delete@{Delete}}
+\index{Delete@{Delete}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a5299734d0fb246f470b663f82e8933d0} 
+async Task$<$ IAction\+Result $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Parts\+Controller.\+Delete (\begin{DoxyParamCaption}\item[{string}]{part\+Type}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Delete a part DELETE /\+api/\+parts/\+\{part\+Type\}/\+\{id\}. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_parts_controller_8cs_source_l00152}{152}} of file \doxymbox{\hyperlink{_parts_controller_8cs_source}{Parts\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ deleted\ =\ await\ \_partService.DeleteAsync(partType,\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!deleted)}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound(\textcolor{keyword}{new}\ \{\ error\ =\ \$\textcolor{stringliteral}{"{}Part\ with\ ID\ \{id\}\ not\ found\ in\ \{partType\}"{}}\ \});}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Ok(\textcolor{keyword}{new}\ \{\ message\ =\ \$\textcolor{stringliteral}{"{}Part\ \{id\}\ deleted\ successfully\ from\ \{partType\}"{}}\ \});}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (ArgumentException\ ex)}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ BadRequest(\textcolor{keyword}{new}\ \{\ error\ =\ ex.Message\ \});}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogError(ex,\ \textcolor{stringliteral}{"{}Error\ deleting\ part\ \{PartType\}/\{Id\}"{}},\ partType,\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ StatusCode(500,\ \textcolor{keyword}{new}\ \{\ error\ =\ \textcolor{stringliteral}{"{}An\ error\ occurred\ while\ deleting\ the\ part"{}}\ \});}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a488b5b2a2f96b6b13e89ba9b8e5cab90}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a488b5b2a2f96b6b13e89ba9b8e5cab90} 
+async Task$<$ IAction\+Result $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Parts\+Controller.\+Get\+All (\begin{DoxyParamCaption}\item[{string}]{part\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Get all parts of a specific type GET /\+api/\+parts/\+\{part\+Type\} Examples:\+ /\+api/\+parts/\+cpu, /\+api/\+parts/\+gpu, /\+api/\+parts/\+memory. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_parts_controller_8cs_source_l00042}{42}} of file \doxymbox{\hyperlink{_parts_controller_8cs_source}{Parts\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ parts\ =\ await\ \_partService.GetAllAsync(partType);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Ok(\textcolor{keyword}{new}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ partType,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count\ =\ parts.Count(),}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data\ =\ parts}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (ArgumentException\ ex)}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ BadRequest(\textcolor{keyword}{new}\ \{\ error\ =\ ex.Message\ \});}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogError(ex,\ \textcolor{stringliteral}{"{}Error\ getting\ parts\ of\ type\ \{PartType\}"{}},\ partType);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ StatusCode(500,\ \textcolor{keyword}{new}\ \{\ error\ =\ \textcolor{stringliteral}{"{}An\ error\ occurred\ while\ fetching\ parts"{}}\ \});}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a9bf6a94727d66ff5e7b4310831ebacd4}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}!GetById@{GetById}}
+\index{GetById@{GetById}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}}
+\doxysubsubsection{\texorpdfstring{GetById()}{GetById()}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a9bf6a94727d66ff5e7b4310831ebacd4} 
+async Task$<$ IAction\+Result $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Parts\+Controller.\+Get\+By\+Id (\begin{DoxyParamCaption}\item[{string}]{part\+Type}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Get a specific part by ID GET /\+api/\+parts/\+\{part\+Type\}/\+\{id\} Example:\+ /\+api/\+parts/\+cpu/\+5. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_parts_controller_8cs_source_l00071}{71}} of file \doxymbox{\hyperlink{_parts_controller_8cs_source}{Parts\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ part\ =\ await\ \_partService.GetByIdAsync(partType,\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (part\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound(\textcolor{keyword}{new}\ \{\ error\ =\ \$\textcolor{stringliteral}{"{}Part\ with\ ID\ \{id\}\ not\ found\ in\ \{partType\}"{}}\ \});}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Ok(part);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (ArgumentException\ ex)}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ BadRequest(\textcolor{keyword}{new}\ \{\ error\ =\ ex.Message\ \});}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogError(ex,\ \textcolor{stringliteral}{"{}Error\ getting\ part\ \{PartType\}/\{Id\}"{}},\ partType,\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ StatusCode(500,\ \textcolor{keyword}{new}\ \{\ error\ =\ \textcolor{stringliteral}{"{}An\ error\ occurred\ while\ fetching\ the\ part"{}}\ \});}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a7bbf252ddc876b8266ed8a2b84a99263}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}!GetFilters@{GetFilters}}
+\index{GetFilters@{GetFilters}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}}
+\doxysubsubsection{\texorpdfstring{GetFilters()}{GetFilters()}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a7bbf252ddc876b8266ed8a2b84a99263} 
+async Task$<$ IAction\+Result $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Parts\+Controller.\+Get\+Filters (\begin{DoxyParamCaption}\item[{string}]{part\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Get all available filter options for a part type GET /\+api/\+parts/\+\{part\+Type\}/\+filters Returns all searchable attributes with their distinct values. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_parts_controller_8cs_source_l00197}{197}} of file \doxymbox{\hyperlink{_parts_controller_8cs_source}{Parts\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ filterOptions\ =\ await\ \_partService.GetFilterOptionsAsync(partType);}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Ok(\textcolor{keyword}{new}}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ partType\ =\ filterOptions.PartType,}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ totalAttributes\ =\ filterOptions.Attributes.Count,}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes\ =\ filterOptions.Attributes}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (ArgumentException\ ex)}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ BadRequest(\textcolor{keyword}{new}\ \{\ error\ =\ ex.Message\ \});}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogError(ex,\ \textcolor{stringliteral}{"{}Error\ getting\ filter\ options\ for\ part\ type\ \{PartType\}"{}},\ partType);}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ StatusCode(500,\ \textcolor{keyword}{new}\ \{\ error\ =\ \textcolor{stringliteral}{"{}An\ error\ occurred\ while\ fetching\ filter\ options"{}}\ \});}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a03b43ef0be415e5e2b58ddfa4a95bd39}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}!GetSupportedTypes@{GetSupportedTypes}}
+\index{GetSupportedTypes@{GetSupportedTypes}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}}
+\doxysubsubsection{\texorpdfstring{GetSupportedTypes()}{GetSupportedTypes()}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a03b43ef0be415e5e2b58ddfa4a95bd39} 
+IAction\+Result Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Parts\+Controller.\+Get\+Supported\+Types (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get supported part types GET /\+api/\+parts. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_parts_controller_8cs_source_l00178}{178}} of file \doxymbox{\hyperlink{_parts_controller_8cs_source}{Parts\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Ok(\textcolor{keyword}{new}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ message\ =\ \textcolor{stringliteral}{"{}Supported\ part\ types"{}},}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ types\ =\ \textcolor{keyword}{new}[]}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}cpu"{}},\ \textcolor{stringliteral}{"{}gpu"{}},\ \textcolor{stringliteral}{"{}memory"{}},\ \textcolor{stringliteral}{"{}motherboard"{}},}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}case"{}},\ \textcolor{stringliteral}{"{}storage"{}},\ \textcolor{stringliteral}{"{}powersupply"{}},\ \textcolor{stringliteral}{"{}cpucooler"{}}}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a3473eb23cae0fb324ea8bdff20848d2d}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}!Search@{Search}}
+\index{Search@{Search}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a3473eb23cae0fb324ea8bdff20848d2d} 
+async Task$<$ IAction\+Result $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Parts\+Controller.\+Search (\begin{DoxyParamCaption}\item[{string}]{part\+Type}{, }\item[{\+[\+From\+Body]\+ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_search_filters}{Search\+Filters}}?}]{search\+Filters}{}\end{DoxyParamCaption})}
+
+
+
+Dynamic search endpoint for parts with flexible filtering (JSON body) POST /\+api/\+parts/\+\{part\+Type\}/\+search. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_parts_controller_8cs_source_l00226}{226}} of file \doxymbox{\hyperlink{_parts_controller_8cs_source}{Parts\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Convert\ SearchFilters\ to\ Dictionary\ for\ the\ service}}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ filters\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ string>();}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (searchFilters\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (searchFilters.MinPrice.HasValue)}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ filters[\textcolor{stringliteral}{"{}minPrice"{}}]\ =\ searchFilters.MinPrice.Value.ToString();}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (searchFilters.MaxPrice.HasValue)}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ filters[\textcolor{stringliteral}{"{}maxPrice"{}}]\ =\ searchFilters.MaxPrice.Value.ToString();}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrWhiteSpace(searchFilters.Manufacturer))}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ filters[\textcolor{stringliteral}{"{}manufacturer"{}}]\ =\ searchFilters.Manufacturer;}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (searchFilters.Filters\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ kvp\ \textcolor{keywordflow}{in}\ searchFilters.Filters)}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrWhiteSpace(kvp.Value))}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ filters[kvp.Key]\ =\ kvp.Value;}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ searchResult\ =\ await\ \_partService.SearchAsync(partType,\ filters);}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Ok(\textcolor{keyword}{new}}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ partType\ =\ searchResult.PartType,}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ totalCount\ =\ searchResult.TotalCount,}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ appliedFilters\ =\ searchResult.AppliedFilters,}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ results\ =\ searchResult.Results,}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ averagePart\ =\ searchResult.AveragePart}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (ArgumentException\ ex)}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ BadRequest(\textcolor{keyword}{new}\ \{\ error\ =\ ex.Message\ \});}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogError(ex,\ \textcolor{stringliteral}{"{}Error\ searching\ parts\ of\ type\ \{PartType\}"{}},\ partType);}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ StatusCode(500,\ \textcolor{keyword}{new}\ \{\ error\ =\ \textcolor{stringliteral}{"{}An\ error\ occurred\ while\ searching\ parts"{}}\ \});}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a7157a0b3eff2d1df44a9b383ca5bfeeb}\index{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}!Update@{Update}}
+\index{Update@{Update}!Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController@{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Controllers.PartsController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_controllers_1_1_parts_controller_a7157a0b3eff2d1df44a9b383ca5bfeeb} 
+async Task$<$ IAction\+Result $>$ Project\+\_\+6\+\_\+\+\_\+\+\_\+\+Group\+\_\+4\+\_\+\+\_\+\+\_\+\+CSCN73060\+\_\+\+SEC\+\_\+1.\+Controllers.\+Parts\+Controller.\+Update (\begin{DoxyParamCaption}\item[{string}]{part\+Type}{, }\item[{int}]{id}{, }\item[{\+[\+From\+Body]\+ Dictionary$<$ string, object $>$}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Update an existing part PUT /\+api/\+parts/\+\{part\+Type\}/\+\{id\} Body:\+ \{ "{}name"{}:\+ "{}..."{}, "{}price"{}:\+ "{}..."{} \}. 
+
+
+
+Definition at line \doxymbox{\hyperlink{_parts_controller_8cs_source_l00126}{126}} of file \doxymbox{\hyperlink{_parts_controller_8cs_source}{Parts\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ updatedPart\ =\ await\ \_partService.UpdateAsync(partType,\ \textcolor{keywordtype}{id},\ data);}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (updatedPart\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NotFound(\textcolor{keyword}{new}\ \{\ error\ =\ \$\textcolor{stringliteral}{"{}Part\ with\ ID\ \{id\}\ not\ found\ in\ \{partType\}"{}}\ \});}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Ok(updatedPart);}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (ArgumentException\ ex)}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ BadRequest(\textcolor{keyword}{new}\ \{\ error\ =\ ex.Message\ \});}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_logger.LogError(ex,\ \textcolor{stringliteral}{"{}Error\ updating\ part\ \{PartType\}/\{Id\}"{}},\ partType,\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ StatusCode(500,\ \textcolor{keyword}{new}\ \{\ error\ =\ \textcolor{stringliteral}{"{}An\ error\ occurred\ while\ updating\ the\ part"{}}\ \});}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Controllers/\+\doxymbox{\hyperlink{_parts_controller_8cs}{Parts\+Controller.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Migrations::IncreaseMemorySpeedColumnSize</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Migration</basecompoundref>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size_1ac1e8ebfb280c43bb59c1a7d4499a1966" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Project_6___Group_4___CSCN73060_SEC_1.Migrations.IncreaseMemorySpeedColumnSize.Up</definition>
+        <argsstring>(MigrationBuilder migrationBuilder)</argsstring>
+        <name>Up</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Migrations.IncreaseMemorySpeedColumnSize.Up</qualifiedname>
+        <param>
+          <type>MigrationBuilder</type>
+          <declname>migrationBuilder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Migrations/20260219000000_IncreaseMemorySpeedColumnSize.cs" line="11" column="33" bodyfile="Migrations/20260219000000_IncreaseMemorySpeedColumnSize.cs" bodystart="11" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size_1ad3706703d56795895f7a87ed8a6b6439" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Project_6___Group_4___CSCN73060_SEC_1.Migrations.IncreaseMemorySpeedColumnSize.Down</definition>
+        <argsstring>(MigrationBuilder migrationBuilder)</argsstring>
+        <name>Down</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Migrations.IncreaseMemorySpeedColumnSize.Down</qualifiedname>
+        <param>
+          <type>MigrationBuilder</type>
+          <declname>migrationBuilder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Migrations/20260219000000_IncreaseMemorySpeedColumnSize.cs" line="27" column="33" bodyfile="Migrations/20260219000000_IncreaseMemorySpeedColumnSize.cs" bodystart="27" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size_1a3ad1f67fc4aa5e03849daffb57beb23f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Project_6___Group_4___CSCN73060_SEC_1.Migrations.IncreaseMemorySpeedColumnSize.BuildTargetModel</definition>
+        <argsstring>(ModelBuilder modelBuilder)</argsstring>
+        <name>BuildTargetModel</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Migrations.IncreaseMemorySpeedColumnSize.BuildTargetModel</qualifiedname>
+        <param>
+          <type>ModelBuilder</type>
+          <declname>modelBuilder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Migrations/20260219000000_IncreaseMemorySpeedColumnSize.Designer.cs" line="19" column="33" bodyfile="Migrations/20260219000000_IncreaseMemorySpeedColumnSize.Designer.cs" bodystart="19" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Migration</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Migrations.IncreaseMemorySpeedColumnSize</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Migration</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Migrations.IncreaseMemorySpeedColumnSize</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Migrations/20260219000000_IncreaseMemorySpeedColumnSize.cs" line="8" column="19" bodyfile="Migrations/20260219000000_IncreaseMemorySpeedColumnSize.cs" bodystart="9" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size_1a3ad1f67fc4aa5e03849daffb57beb23f" prot="protected" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Migrations::IncreaseMemorySpeedColumnSize</scope><name>BuildTargetModel</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size_1ad3706703d56795895f7a87ed8a6b6439" prot="protected" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Migrations::IncreaseMemorySpeedColumnSize</scope><name>Down</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_migrations_1_1_increase_memory_speed_column_size_1ac1e8ebfb280c43bb59c1a7d4499a1966" prot="protected" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Migrations::IncreaseMemorySpeedColumnSize</scope><name>Up</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

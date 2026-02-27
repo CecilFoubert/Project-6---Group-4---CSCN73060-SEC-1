@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Data::ApplicationDbContext</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">DbContext</basecompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a8a7788d04e99de21833e82bd744b7c2d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu" kindref="compound">Cpu</ref> &gt;</type>
+        <definition>DbSet&lt;Cpu&gt; Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.Cpus</definition>
+        <argsstring></argsstring>
+        <name>Cpus</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.Cpus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/ApplicationDbContext.cs" line="23" column="22" bodyfile="Data/ApplicationDbContext.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a820ed030569a75aeb3c327d68d7ebd66" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu" kindref="compound">Gpu</ref> &gt;</type>
+        <definition>DbSet&lt;Gpu&gt; Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.Gpus</definition>
+        <argsstring></argsstring>
+        <name>Gpus</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.Gpus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/ApplicationDbContext.cs" line="24" column="22" bodyfile="Data/ApplicationDbContext.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1aeab9741929a2edd35e7b44c22500670c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_memory" kindref="compound">Memory</ref> &gt;</type>
+        <definition>DbSet&lt;Memory&gt; Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.Memories</definition>
+        <argsstring></argsstring>
+        <name>Memories</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.Memories</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/ApplicationDbContext.cs" line="25" column="22" bodyfile="Data/ApplicationDbContext.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1aab248e14c5c70db994b28c0785c2494b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_motherboard" kindref="compound">Motherboard</ref> &gt;</type>
+        <definition>DbSet&lt;Motherboard&gt; Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.Motherboards</definition>
+        <argsstring></argsstring>
+        <name>Motherboards</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.Motherboards</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/ApplicationDbContext.cs" line="26" column="22" bodyfile="Data/ApplicationDbContext.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a19942b8a1d6a823b318d2c68cbe94a08" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_case" kindref="compound">Case</ref> &gt;</type>
+        <definition>DbSet&lt;Case&gt; Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.Cases</definition>
+        <argsstring></argsstring>
+        <name>Cases</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.Cases</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/ApplicationDbContext.cs" line="27" column="22" bodyfile="Data/ApplicationDbContext.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a6a2bac0c3daf8020b7f4992de0d35459" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_storage" kindref="compound">Storage</ref> &gt;</type>
+        <definition>DbSet&lt;Storage&gt; Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.Storages</definition>
+        <argsstring></argsstring>
+        <name>Storages</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.Storages</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/ApplicationDbContext.cs" line="28" column="22" bodyfile="Data/ApplicationDbContext.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a247424f3363cc16e4c209935d08abad8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply" kindref="compound">PowerSupply</ref> &gt;</type>
+        <definition>DbSet&lt;PowerSupply&gt; Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.PowerSupplies</definition>
+        <argsstring></argsstring>
+        <name>PowerSupplies</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.PowerSupplies</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/ApplicationDbContext.cs" line="29" column="22" bodyfile="Data/ApplicationDbContext.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a97655a0feb2695798a286ade9c2d5cd1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_cpu_cooler" kindref="compound">CpuCooler</ref> &gt;</type>
+        <definition>DbSet&lt;CpuCooler&gt; Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.CpuCoolers</definition>
+        <argsstring></argsstring>
+        <name>CpuCoolers</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.CpuCoolers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/ApplicationDbContext.cs" line="30" column="22" bodyfile="Data/ApplicationDbContext.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a870de0ed92ad24c2754196bf2b400627" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build" kindref="compound">Build</ref> &gt;</type>
+        <definition>DbSet&lt;Build&gt; Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.Builds</definition>
+        <argsstring></argsstring>
+        <name>Builds</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.Builds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/ApplicationDbContext.cs" line="33" column="22" bodyfile="Data/ApplicationDbContext.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1ab41f2c20dfa8c578194fa922ab4676ec" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_average_cache" kindref="compound">PartAverageCache</ref> &gt;</type>
+        <definition>DbSet&lt;PartAverageCache&gt; Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.PartAverageCaches</definition>
+        <argsstring></argsstring>
+        <name>PartAverageCaches</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.PartAverageCaches</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/ApplicationDbContext.cs" line="36" column="22" bodyfile="Data/ApplicationDbContext.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a12eb4d8a06ba5e59918d69a18ae1fd44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.ApplicationDbContext</definition>
+        <argsstring>(DbContextOptions&lt; ApplicationDbContext &gt; options)</argsstring>
+        <name>ApplicationDbContext</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.ApplicationDbContext</qualifiedname>
+        <param>
+          <type>DbContextOptions&lt; ApplicationDbContext &gt;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/ApplicationDbContext.cs" line="17" column="16" bodyfile="Data/ApplicationDbContext.cs" bodystart="17" bodyend="20"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1ab98756a978afb17654576b54b9c43f29" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.OnModelCreating</definition>
+        <argsstring>(ModelBuilder modelBuilder)</argsstring>
+        <name>OnModelCreating</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext.OnModelCreating</qualifiedname>
+        <param>
+          <type>ModelBuilder</type>
+          <declname>modelBuilder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/ApplicationDbContext.cs" line="38" column="33" bodyfile="Data/ApplicationDbContext.cs" bodystart="38" bodyend="105"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>EF Core DbContext for PC Part Picker. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Exposes DbSets for all part types, builds and caching. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DbContext</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>DbContext</label>
+      </node>
+      <node id="1">
+        <label>Project_6___Group_4___CSCN73060_SEC_1.Data.ApplicationDbContext</label>
+        <link refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Data/ApplicationDbContext.cs" line="15" column="11" bodyfile="Data/ApplicationDbContext.cs" bodystart="16" bodyend="106"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a12eb4d8a06ba5e59918d69a18ae1fd44" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::ApplicationDbContext</scope><name>ApplicationDbContext</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a870de0ed92ad24c2754196bf2b400627" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::ApplicationDbContext</scope><name>Builds</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a19942b8a1d6a823b318d2c68cbe94a08" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::ApplicationDbContext</scope><name>Cases</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a97655a0feb2695798a286ade9c2d5cd1" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::ApplicationDbContext</scope><name>CpuCoolers</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a8a7788d04e99de21833e82bd744b7c2d" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::ApplicationDbContext</scope><name>Cpus</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a820ed030569a75aeb3c327d68d7ebd66" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::ApplicationDbContext</scope><name>Gpus</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1aeab9741929a2edd35e7b44c22500670c" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::ApplicationDbContext</scope><name>Memories</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1aab248e14c5c70db994b28c0785c2494b" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::ApplicationDbContext</scope><name>Motherboards</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1ab98756a978afb17654576b54b9c43f29" prot="protected" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::ApplicationDbContext</scope><name>OnModelCreating</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1ab41f2c20dfa8c578194fa922ab4676ec" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::ApplicationDbContext</scope><name>PartAverageCaches</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a247424f3363cc16e4c209935d08abad8" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::ApplicationDbContext</scope><name>PowerSupplies</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context_1a6a2bac0c3daf8020b7f4992de0d35459" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Data::ApplicationDbContext</scope><name>Storages</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

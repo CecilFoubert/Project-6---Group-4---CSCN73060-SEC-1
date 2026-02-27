@@ -1,12 +1,24 @@
+/*!
+ * @file Models/PowerSupply.cs
+ * @brief PowerSupply domain model.
+ * @ingroup Models
+ */
+
 using System.ComponentModel.DataAnnotations;
 
 namespace Project_6___Group_4___CSCN73060_SEC_1.Models
 {
+    /// <summary>
+    /// Power supply unit (PSU) model for the catalog.
+    /// </summary>
     public class PowerSupply
     {
         [Key]
         public int Id { get; set; }
         
+        /// <summary>
+        /// Display name of the PSU.
+        /// </summary>
         [Required]
         [MaxLength(500)]
         public string Name { get; set; } = string.Empty;

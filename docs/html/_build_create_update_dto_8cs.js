@@ -1,0 +1,5 @@
+var _build_create_update_dto_8cs =
+[
+    [ "Project_6___Group_4___CSCN73060_SEC_1.Models.BuildCreateUpdateDto", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto.html", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto" ],
+    [ "Project_6___Group_4___CSCN73060_SEC_1.Models.PartRefDto", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_ref_dto.html", "class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_ref_dto" ]
+];

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_error_view_model" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Models::ErrorViewModel</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_error_view_model_1a2571111a1b2a6f861a5ab19583d507ba" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.ErrorViewModel.RequestId</definition>
+        <argsstring></argsstring>
+        <name>RequestId</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.ErrorViewModel.RequestId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/ErrorViewModel.cs" line="5" column="23" bodyfile="Models/ErrorViewModel.cs" bodystart="5" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_error_view_model_1ac87efa0bc482918628743fa00826b9c6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool Project_6___Group_4___CSCN73060_SEC_1.Models.ErrorViewModel.ShowRequestId</definition>
+        <argsstring></argsstring>
+        <name>ShowRequestId</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.ErrorViewModel.ShowRequestId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/ErrorViewModel.cs" line="7" column="21" bodyfile="Models/ErrorViewModel.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Models/ErrorViewModel.cs" line="3" column="11" bodyfile="Models/ErrorViewModel.cs" bodystart="4" bodyend="8"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_error_view_model_1a2571111a1b2a6f861a5ab19583d507ba" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::ErrorViewModel</scope><name>RequestId</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_error_view_model_1ac87efa0bc482918628743fa00826b9c6" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::ErrorViewModel</scope><name>ShowRequestId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

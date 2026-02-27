@@ -1,0 +1,107 @@
+\doxysection{Gpu.\+cs}
+\hypertarget{_gpu_8cs_source}{}\label{_gpu_8cs_source}\index{Models/Gpu.cs@{Models/Gpu.cs}}
+\doxymbox{\hyperlink{_gpu_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }System.ComponentModel.DataAnnotations;}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00009}00009\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models}}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00014}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu}{Gpu}}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [Key]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ Id\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ [Required]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ [MaxLength(500)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00024}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_a44851b18514cb26350e20fef79495eb0}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_a44851b18514cb26350e20fef79495eb0}{Name}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ [MaxLength(500)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ ImageUrl\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ [MaxLength(500)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ ProductUrl\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00036}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_a9b01cbd7bc97871ef6c4a2d2360a502c}{00036}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_gpu_a9b01cbd7bc97871ef6c4a2d2360a502c}{Price}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ [MaxLength(200)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Manufacturer\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ [MaxLength(500)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ PartNumber\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ [MaxLength(200)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Chipset\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Memory\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ MemoryType\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ CoreClock\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ BoostClock\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ EffectiveMemoryClock\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Interface\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Color\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ FrameSync\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Length\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ TDP\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ CaseExpansionSlotWidth\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ TotalSlotWidth\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ [MaxLength(200)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Cooling\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ [MaxLength(200)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ ExternalPower\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ HDMIOutputs\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ DisplayPortOutputs\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ DVIDDualLinkOutputs\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ HDMI21aOutputs\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ DisplayPort14Outputs\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ DisplayPort14aOutputs\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ DisplayPort21Outputs\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ SLICrossFire\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00112}00112\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00113}00113\ \}}
+\DoxyCodeLine{\Hypertarget{_gpu_8cs_source_l00114}00114\ }
+
+\end{DoxyCode}

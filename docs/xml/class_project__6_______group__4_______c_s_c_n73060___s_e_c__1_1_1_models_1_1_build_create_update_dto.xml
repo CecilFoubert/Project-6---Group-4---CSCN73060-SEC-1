@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto" kind="class" language="C#" prot="public">
+    <compoundname>Project_6___Group_4___CSCN73060_SEC_1::Models::BuildCreateUpdateDto</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto_1a78dc11ce425913600e3c2dd38160a8af" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Project_6___Group_4___CSCN73060_SEC_1.Models.BuildCreateUpdateDto.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.BuildCreateUpdateDto.Name</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+<para>The build name provided by the user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Required for creation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/BuildCreateUpdateDto.cs" line="18" column="23" bodyfile="Models/BuildCreateUpdateDto.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto_1ab8c101a8b01b59b64b3568de6be14a93" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? Project_6___Group_4___CSCN73060_SEC_1.Models.BuildCreateUpdateDto.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.BuildCreateUpdateDto.Description</qualifiedname>
+        <briefdescription>
+<para>Optional description for the build. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/BuildCreateUpdateDto.cs" line="23" column="23" bodyfile="Models/BuildCreateUpdateDto.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto_1ac1af0ebebe8c48c1eb9bcecd7f631cbd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Dictionary&lt; string, <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_part_ref_dto" kindref="compound">PartRefDto</ref> &gt;?</type>
+        <definition>Dictionary&lt;string, PartRefDto&gt;? Project_6___Group_4___CSCN73060_SEC_1.Models.BuildCreateUpdateDto.Parts</definition>
+        <argsstring></argsstring>
+        <name>Parts</name>
+        <qualifiedname>Project_6___Group_4___CSCN73060_SEC_1.Models.BuildCreateUpdateDto.Parts</qualifiedname>
+        <briefdescription>
+<para>Mapping of part type keys to selected part reference (Id). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Example: { &quot;cpu&quot;: { &quot;Id&quot;: 5 }, &quot;gpu&quot;: { &quot;Id&quot;: 10 } }. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Models/BuildCreateUpdateDto.cs" line="29" column="27" bodyfile="Models/BuildCreateUpdateDto.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>DTO for creating or updating a build from the frontend. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Parts object maps part types to part IDs (e.g., { &quot;cpu&quot;: { &quot;Id&quot;: 5 }, &quot;gpu&quot;: { &quot;Id&quot;: 10 } }). </para>
+    </detaileddescription>
+    <location file="Models/BuildCreateUpdateDto.cs" line="13" column="11" bodyfile="Models/BuildCreateUpdateDto.cs" bodystart="14" bodyend="30"/>
+    <listofallmembers>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto_1ab8c101a8b01b59b64b3568de6be14a93" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::BuildCreateUpdateDto</scope><name>Description</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto_1a78dc11ce425913600e3c2dd38160a8af" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::BuildCreateUpdateDto</scope><name>Name</name></member>
+      <member refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_build_create_update_dto_1ac1af0ebebe8c48c1eb9bcecd7f631cbd" prot="public" virt="non-virtual"><scope>Project_6___Group_4___CSCN73060_SEC_1::Models::BuildCreateUpdateDto</scope><name>Parts</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

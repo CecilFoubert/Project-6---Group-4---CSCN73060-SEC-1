@@ -1,0 +1,92 @@
+\doxysection{Power\+Supply.\+cs}
+\hypertarget{_power_supply_8cs_source}{}\label{_power_supply_8cs_source}\index{Models/PowerSupply.cs@{Models/PowerSupply.cs}}
+\doxymbox{\hyperlink{_power_supply_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }System.ComponentModel.DataAnnotations;}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00009}00009\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models}{Project\_6\_\_\_Group\_4\_\_\_CSCN73060\_SEC\_1.Models}}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00014}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply}{PowerSupply}}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [Key]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ Id\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ [Required]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ [MaxLength(500)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00024}\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_a8ad486868248a672d295187d6bfe31e6}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_models_1_1_power_supply_a8ad486868248a672d295187d6bfe31e6}{Name}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ [MaxLength(500)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ ImageUrl\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ [MaxLength(500)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ ProductUrl\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Price\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ [MaxLength(200)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Manufacturer\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ [MaxLength(200)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Model\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ [MaxLength(500)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ PartNumber\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Type\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ EfficiencyRating\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Wattage\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Length\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Modular\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Color\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Fanless\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ ATX4PinConnectors\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ EPS8PinConnectors\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ PCIe12Plus4Pin12VHPWRConnectors\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ PCIe12PinConnectors\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ PCIe8PinConnectors\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ PCIe6Plus2PinConnectors\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ PCIe6PinConnectors\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ SATAConnectors\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Molex4PinConnectors\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ [MaxLength(100)]}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ SpecsNumber\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00095}00095\ \}}
+\DoxyCodeLine{\Hypertarget{_power_supply_8cs_source_l00096}00096\ }
+
+\end{DoxyCode}

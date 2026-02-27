@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dir_865bc089c3520a89751aa9655c98d887" kind="dir">
+    <compoundname>Views/Builds</compoundname>
+    <innerfile refid="_create_8cshtml">Create.cshtml</innerfile>
+    <innerfile refid="_delete_8cshtml">Delete.cshtml</innerfile>
+    <innerfile refid="_details_8cshtml">Details.cshtml</innerfile>
+    <innerfile refid="_edit_8cshtml">Edit.cshtml</innerfile>
+    <innerfile refid="_builds_2_index_8cshtml">Index.cshtml</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Views/Builds/"/>
+  </compounddef>
+</doxygen>

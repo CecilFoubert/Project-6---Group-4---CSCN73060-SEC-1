@@ -1,0 +1,324 @@
+\doxysection{Program.\+cs File Reference}
+\hypertarget{_program_8cs}{}\label{_program_8cs}\index{Program.cs@{Program.cs}}
+
+
+Application startup and host configuration for PC Part Picker.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_program}{Program}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \doxymbox{\hyperlink{_program_8cs_a23d9efdc467c02b92c78518f72bb2e09}{scope}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_program_8cs_af8107f2f8ff8e8de22a684c8c8ad3e99}\label{_program_8cs_af8107f2f8ff8e8de22a684c8c8ad3e99} 
+builder.\+Services. {\bfseries Add\+Controllers\+With\+Views} ()
+\item 
+builder.\+Services. \doxymbox{\hyperlink{_program_8cs_af1ac677ad5b0b73dc97062c292e88d5e}{Add\+Controllers}} () .Add\+Json\+Options(options
+\item 
+\doxymbox{\hyperlink{_program_8cs_a99808fcb8671d4097557fc00f8d613b5}{if}} (use\+In\+Memory)
+\item 
+\Hypertarget{_program_8cs_a74ef5ca8f7dc71e68765c4afd0403419}\label{_program_8cs_a74ef5ca8f7dc71e68765c4afd0403419} 
+builder.\+Services. {\bfseries Add\+Db\+Context$<$ Application\+Db\+Context $>$} (options=$>$ options.\+Use\+My\+Sql(connection\+String, Server\+Version.\+Auto\+Detect(connection\+String)))
+\item 
+\Hypertarget{_program_8cs_a14cd9b18a308080a29d553bcf72818b0}\label{_program_8cs_a14cd9b18a308080a29d553bcf72818b0} 
+builder.\+Services. {\bfseries Add\+Scoped$<$ Db\+Seeder $>$} ()
+\item 
+\Hypertarget{_program_8cs_a89bb082ff87e07add8df269e5abddb0c}\label{_program_8cs_a89bb082ff87e07add8df269e5abddb0c} 
+builder.\+Services. {\bfseries Add\+Scoped$<$ IPart\+Service, Part\+Service $>$} ()
+\item 
+\Hypertarget{_program_8cs_a56333e29eba17b2f9cabf631dbec4d14}\label{_program_8cs_a56333e29eba17b2f9cabf631dbec4d14} 
+builder.\+Services. {\bfseries Add\+Cors} (options=$>$ \{ options.\+Add\+Policy("{}Allow\+All"{}, policy=$>$ \{ policy.\+Allow\+Any\+Origin() .Allow\+Any\+Method() .Allow\+Any\+Header();\});\})
+\item 
+\Hypertarget{_program_8cs_a0d7859f9cad50e8e9fdf015100780e07}\label{_program_8cs_a0d7859f9cad50e8e9fdf015100780e07} 
+builder.\+Services. {\bfseries Add\+Endpoints\+Api\+Explorer} ()
+\item 
+\Hypertarget{_program_8cs_ae0ce43c019a5621d731d0c622c793644}\label{_program_8cs_ae0ce43c019a5621d731d0c622c793644} 
+builder.\+Services. {\bfseries Add\+Swagger\+Gen} ()
+\item 
+\Hypertarget{_program_8cs_abebf8580ff1a2760b8ba9de386528243}\label{_program_8cs_abebf8580ff1a2760b8ba9de386528243} 
+app. {\bfseries Use\+Swagger\+UI} (options=$>$ \{ options.\+Swagger\+Endpoint("{}/\+swagger/\+v1/\+swagger.\+json"{}, "{}PC Part Picker API v1"{});options.\+Route\+Prefix="{}swagger"{};\})
+\item 
+\Hypertarget{_program_8cs_aa4d447fc3129a3aa301d736b8bd04ae9}\label{_program_8cs_aa4d447fc3129a3aa301d736b8bd04ae9} 
+app. {\bfseries Use\+Https\+Redirection} ()
+\item 
+\Hypertarget{_program_8cs_a906a3ce545279a7a73941f1d7b64d7cf}\label{_program_8cs_a906a3ce545279a7a73941f1d7b64d7cf} 
+app. {\bfseries Use\+Static\+Files} ()
+\item 
+\doxymbox{\hyperlink{_program_8cs_aed5e4d56e5c05977874c6a9f6b071047}{if}} (Directory.\+Exists(client\+Root))
+\item 
+\Hypertarget{_program_8cs_a94c810d266751293a2d511a720a5625f}\label{_program_8cs_a94c810d266751293a2d511a720a5625f} 
+app. {\bfseries Use\+Routing} ()
+\item 
+\Hypertarget{_program_8cs_adfcad7d2e6cbf2e6372bbe0f9fa96231}\label{_program_8cs_adfcad7d2e6cbf2e6372bbe0f9fa96231} 
+app. {\bfseries Use\+Cors} ("{}Allow\+All"{})
+\item 
+\Hypertarget{_program_8cs_af6f72d752b2e73aa0292f74bd13237ab}\label{_program_8cs_af6f72d752b2e73aa0292f74bd13237ab} 
+app. {\bfseries Use\+Authorization} ()
+\item 
+\Hypertarget{_program_8cs_a21592305984036576bba1d72f61d5d83}\label{_program_8cs_a21592305984036576bba1d72f61d5d83} 
+app. {\bfseries Map\+Methods} ("{}/\+options"{}, new\+[$\,$]\+ \{ "{}OPTIONS"{} \},(IEnumerable$<$ Endpoint\+Data\+Source $>$ endpoint\+Sources)=$>$ \{ var routes=endpoint\+Sources .Select\+Many(es=$>$ es.\+Endpoints) .Of\+Type$<$ Route\+Endpoint $>$() .Select(e=$>$ \{ var methods=e.\+Metadata.\+Of\+Type$<$ Http\+Method\+Metadata $>$().First\+Or\+Default()?.Http\+Methods ??\+[$\,$]\+;var path="{}/\+"{}+(e.\+Route\+Pattern.\+Raw\+Text?.Trim\+Start(\textquotesingle{}/\+\textquotesingle{}) ?? "{}"{});return new \{ path, methods=methods.\+To\+List() \};\}) .Where(r=$>$ !string.\+Is\+Null\+Or\+Empty(r.\+path)) .Order\+By(r=$>$ r.\+path) .To\+List();return Results.\+Json(new \{ routes \});\})
+\item 
+\Hypertarget{_program_8cs_a9e2ee3170aa6279b68eefd1651f7d96c}\label{_program_8cs_a9e2ee3170aa6279b68eefd1651f7d96c} 
+app. {\bfseries Map\+Controllers} ()
+\item 
+\Hypertarget{_program_8cs_aec500e125fbbfcd3d99a23db7de60be7}\label{_program_8cs_aec500e125fbbfcd3d99a23db7de60be7} 
+app. {\bfseries Map\+Controller\+Route} (name:\+"{}default"{}, pattern:\+"{}\{controller=Home\}/\+\{action=Index\}/\+\{id?\}"{})
+\item 
+\Hypertarget{_program_8cs_aaa3dbf02e269c3ef7e8546d290c6b3dd}\label{_program_8cs_aaa3dbf02e269c3ef7e8546d290c6b3dd} 
+app. {\bfseries Run} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \doxymbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}} = Web\+Application.\+Create\+Builder(args)
+\item 
+options.\+Json\+Serializer\+Options. \doxymbox{\hyperlink{_program_8cs_a5e57b0e9fd477676e7789c421495c68b}{Write\+Indented}} = true
+\item 
+var \doxymbox{\hyperlink{_program_8cs_abaf851ca9394808faf7c77a8db51c810}{use\+In\+Memory}} = builder.\+Configuration.\+Get\+Value$<$bool$>$("{}Use\+In\+Memory\+Database"{})
+\item 
+\doxymbox{\hyperlink{_program_8cs_a0544c3fe466e421738dae463968b70ba}{else}}
+\item 
+var \doxymbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} = builder.\+Build()
+\item 
+var \doxymbox{\hyperlink{_program_8cs_adf1466fc9631e1fb4b311c23643e84d7}{client\+Root}} = Path.\+Combine(app.\+Environment.\+Content\+Root\+Path, "{}Client\+App"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Application startup and host configuration for PC Part Picker. 
+
+High-\/level responsibilities:\+
+\begin{DoxyItemize}
+\item Configure services (Db\+Context, \doxylink{interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service}{IPart\+Service}, CORS, Swagger)
+\item Configure JSON serialization options for API controllers
+\item Apply EF Core migrations and run $<$\+Db\+Seeder$>$ at startup
+\item Serve SPA Client\+App static files and provide API endpoints
+\end{DoxyItemize}
+
+This file is the entry point for the web application and is important to document so developers know where migrations, seeding, CORS and static file hosting are configured. 
+
+Definition in file \doxymbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+
+
+\label{doc-typedef-members}
+\Hypertarget{_program_8cs_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{_program_8cs_a23d9efdc467c02b92c78518f72bb2e09}\index{Program.cs@{Program.cs}!scope@{scope}}
+\index{scope@{scope}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily \label{_program_8cs_a23d9efdc467c02b92c78518f72bb2e09} 
+using scope}
+
+
+
+Definition at line \doxymbox{\hyperlink{_program_8cs_source_l00074}{74}} of file \doxymbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ var\ services\ =\ scope.ServiceProvider;}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00078\ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ var\ context\ =\ services.GetRequiredService<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context}{ApplicationDbContext}}>();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ var\ logger\ =\ services.GetRequiredService<ILogger<Program>>();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Apply\ migrations\ (or\ EnsureCreated\ for\ InMemory)}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (useInMemory)}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ logger.LogInformation(\textcolor{stringliteral}{"{}Ensuring\ test\ database\ is\ created..."{}});}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ await\ context.Database.EnsureCreatedAsync();}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ logger.LogInformation(\textcolor{stringliteral}{"{}Applying\ database\ migrations..."{}});}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ await\ context.Database.MigrateAsync();}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ logger.LogInformation(\textcolor{stringliteral}{"{}Database\ ready."{}});}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Seed\ the\ database}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ var\ seeder\ =\ services.GetRequiredService<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder}{DbSeeder}}>();}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ await\ seeder.\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder_aba2da0481779f18e6e32714ff66b8b22}{SeedAsync}}();}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00100\ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ var\ logger\ =\ services.GetRequiredService<ILogger<Program>>();}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ logger.LogError(ex,\ \textcolor{stringliteral}{"{}An\ error\ occurred\ while\ migrating\ or\ seeding\ the\ database."{}});}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{comment}{//\ Configure\ the\ HTTP\ request\ pipeline.}}
+\DoxyCodeLine{00108\ \textcolor{keywordflow}{if}\ (!app.Environment.IsDevelopment())}
+\DoxyCodeLine{00109\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ app.UseExceptionHandler(\textcolor{stringliteral}{"{}/Home/Error"{}});}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//\ The\ default\ HSTS\ value\ is\ 30\ days.\ You\ may\ want\ to\ change\ this\ for\ production\ scenarios,\ see\ https://aka.ms/aspnetcore-\/hsts.}}
+\DoxyCodeLine{00112\ \ \ \ \ app.UseHsts();}
+\DoxyCodeLine{00113\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{_program_8cs_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_program_8cs_af1ac677ad5b0b73dc97062c292e88d5e}\index{Program.cs@{Program.cs}!AddControllers@{AddControllers}}
+\index{AddControllers@{AddControllers}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddControllers()}{AddControllers()}}
+{\footnotesize\ttfamily \label{_program_8cs_af1ac677ad5b0b73dc97062c292e88d5e} 
+builder.\+Services. Add\+Controllers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_program_8cs_source_l00030}{30}} of file \doxymbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ options.JsonSerializerOptions.PropertyNamingPolicy\ =\ \textcolor{keyword}{null};\ \textcolor{comment}{//\ Keep\ property\ names\ as-\/is}}
+
+\end{DoxyCode}
+\Hypertarget{_program_8cs_aed5e4d56e5c05977874c6a9f6b071047}\index{Program.cs@{Program.cs}!if@{if}}
+\index{if@{if}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{_program_8cs_aed5e4d56e5c05977874c6a9f6b071047} 
+if (\begin{DoxyParamCaption}\item[{Directory.\+Exists(client\+Root)}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_program_8cs_source_l00129}{129}} of file \doxymbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00130\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ var\ clientProvider\ =\ \textcolor{keyword}{new}\ PhysicalFileProvider(clientRoot);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ app.UseDefaultFiles(\textcolor{keyword}{new}\ DefaultFilesOptions}
+\DoxyCodeLine{00134\ \ \ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ FileProvider\ =\ clientProvider,}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ RequestPath\ =\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ DefaultFileNames\ =\ \{\ \textcolor{stringliteral}{"{}index.html"{}}\ \}}
+\DoxyCodeLine{00138\ \ \ \ \ \});}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ app.UseStaticFiles(\textcolor{keyword}{new}\ StaticFileOptions}
+\DoxyCodeLine{00141\ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ FileProvider\ =\ clientProvider,}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ RequestPath\ =\ \textcolor{stringliteral}{"{}"{}}}
+\DoxyCodeLine{00144\ \ \ \ \ \});}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{comment}{//\ Fallback:\ for\ non-\/API\ requests\ without\ file\ extension,\ return\ index.html\ so\ client-\/side\ routes\ work}}
+\DoxyCodeLine{00147\ \ \ \ \ app.MapWhen(context\ =>}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ !context.Request.Path.StartsWithSegments(\textcolor{stringliteral}{"{}/api"{}})\ \&\&}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ !context.Request.Path.StartsWithSegments(\textcolor{stringliteral}{"{}/swagger"{}})\ \&\&}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ !context.Request.Path.StartsWithSegments(\textcolor{stringliteral}{"{}/options"{}})\ \&\&}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}.IsNullOrEmpty(Path.GetExtension(context.Request.Path.Value\ ??\ \textcolor{keywordtype}{string}.Empty)),}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ subApp\ =>}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ subApp.Run(async\ ctx\ =>}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ctx.Response.ContentType\ =\ \textcolor{stringliteral}{"{}text/html"{}};}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ ctx.Response.SendFileAsync(Path.Combine(clientRoot,\ \textcolor{stringliteral}{"{}index.html"{}}));}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00160\ \}}
+
+\end{DoxyCode}
+\Hypertarget{_program_8cs_a99808fcb8671d4097557fc00f8d613b5}\index{Program.cs@{Program.cs}!if@{if}}
+\index{if@{if}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{_program_8cs_a99808fcb8671d4097557fc00f8d613b5} 
+if (\begin{DoxyParamCaption}\item[{use\+In\+Memory}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_program_8cs_source_l00039}{39}} of file \doxymbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ builder.Services.AddDbContext<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context}{ApplicationDbContext}}>(options\ =>}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ options.UseInMemoryDatabase(\textcolor{stringliteral}{"{}TestDb"{}}));}
+\DoxyCodeLine{00043\ \ \ \ \ builder.Services.AddScoped<\doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder}{DbSeeder}},\ \doxymbox{\hyperlink{class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder}{TestDbSeeder}}>();}
+\DoxyCodeLine{00044\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-var-members}
+\Hypertarget{_program_8cs_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}\index{Program.cs@{Program.cs}!app@{app}}
+\index{app@{app}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{app}{app}}
+{\footnotesize\ttfamily \label{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d} 
+var app = builder.\+Build()}
+
+
+
+Definition at line \doxymbox{\hyperlink{_program_8cs_source_l00071}{71}} of file \doxymbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+\Hypertarget{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}\index{Program.cs@{Program.cs}!builder@{builder}}
+\index{builder@{builder}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{builder}{builder}}
+{\footnotesize\ttfamily \label{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5} 
+var builder = Web\+Application.\+Create\+Builder(args)}
+
+
+
+Definition at line \doxymbox{\hyperlink{_program_8cs_source_l00024}{24}} of file \doxymbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+\Hypertarget{_program_8cs_adf1466fc9631e1fb4b311c23643e84d7}\index{Program.cs@{Program.cs}!clientRoot@{clientRoot}}
+\index{clientRoot@{clientRoot}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{clientRoot}{clientRoot}}
+{\footnotesize\ttfamily \label{_program_8cs_adf1466fc9631e1fb4b311c23643e84d7} 
+var client\+Root = Path.\+Combine(app.\+Environment.\+Content\+Root\+Path, "{}Client\+App"{})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_program_8cs_source_l00128}{128}} of file \doxymbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+\Hypertarget{_program_8cs_a0544c3fe466e421738dae463968b70ba}\index{Program.cs@{Program.cs}!else@{else}}
+\index{else@{else}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \label{_program_8cs_a0544c3fe466e421738dae463968b70ba} 
+else}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ var\ connectionString\ =\ builder.Configuration.GetConnectionString(\textcolor{stringliteral}{"{}DefaultConnection"{}})}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{_program_8cs_source_l00045}{45}} of file \doxymbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+\Hypertarget{_program_8cs_abaf851ca9394808faf7c77a8db51c810}\index{Program.cs@{Program.cs}!useInMemory@{useInMemory}}
+\index{useInMemory@{useInMemory}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{useInMemory}{useInMemory}}
+{\footnotesize\ttfamily \label{_program_8cs_abaf851ca9394808faf7c77a8db51c810} 
+var use\+In\+Memory = builder.\+Configuration.\+Get\+Value$<$bool$>$("{}Use\+In\+Memory\+Database"{})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_program_8cs_source_l00038}{38}} of file \doxymbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+
+\Hypertarget{_program_8cs_a5e57b0e9fd477676e7789c421495c68b}\index{Program.cs@{Program.cs}!WriteIndented@{WriteIndented}}
+\index{WriteIndented@{WriteIndented}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{WriteIndented}{WriteIndented}}
+{\footnotesize\ttfamily \label{_program_8cs_a5e57b0e9fd477676e7789c421495c68b} 
+options.\+Json\+Serializer\+Options. Write\+Indented = true}
+
+
+
+Definition at line \doxymbox{\hyperlink{_program_8cs_source_l00034}{34}} of file \doxymbox{\hyperlink{_program_8cs_source}{Program.\+cs}}.
+

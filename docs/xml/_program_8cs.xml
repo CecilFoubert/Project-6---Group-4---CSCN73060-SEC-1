@@ -1,0 +1,667 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="_program_8cs" kind="file" language="C#">
+    <compoundname>Program.cs</compoundname>
+    <innerclass refid="class_program" prot="public">Program</innerclass>
+    <innernamespace refid="namespace_microsoft_1_1_asp_net_core_1_1_routing">Microsoft::AspNetCore::Routing</innernamespace>
+    <innernamespace refid="namespace_microsoft_1_1_extensions_1_1_file_providers">Microsoft::Extensions::FileProviders</innernamespace>
+    <innernamespace refid="namespace_system_1_1_i_o">System::IO</innernamespace>
+    <innernamespace refid="namespacevar">var</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_program_8cs_1a23d9efdc467c02b92c78518f72bb2e09" prot="public" static="no">
+        <type>app.Services.CreateScope()) { var services=scope.ServiceProvider; try { var context=services.GetRequiredService&lt; <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context" kindref="compound">ApplicationDbContext</ref> &gt;(); var logger=services.GetRequiredService&lt; ILogger&lt; <ref refid="class_program" kindref="compound">Program</ref> &gt; &gt;(); if(useInMemory) { logger.LogInformation(&quot;Ensuring test database is created...&quot;); await context.Database.EnsureCreatedAsync(); } else { logger.LogInformation(&quot;Applying database migrations...&quot;); await context.Database.MigrateAsync(); } logger.LogInformation(&quot;Database ready.&quot;); var seeder=services.GetRequiredService&lt; <ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder" kindref="compound">DbSeeder</ref> &gt;(); await seeder.SeedAsync(); } catch(Exception ex) { var logger=services.GetRequiredService&lt; ILogger&lt; <ref refid="class_program" kindref="compound">Program</ref> &gt; &gt;(); logger.LogError(ex, &quot;An error occurred while migrating or seeding the database.&quot;); throw; } } if(!app.Environment.IsDevelopment()) { app.UseExceptionHandler(&quot;/Home/Error&quot;); app.UseHsts();} app.UseSwagger()</type>
+        <definition>using scope =  app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService&lt;ApplicationDbContext&gt;();
+        var logger = services.GetRequiredService&lt;ILogger&lt;Program&gt;&gt;();
+        
+        
+        if (useInMemory)
+        {
+            logger.LogInformation(&quot;Ensuring test database is created...&quot;);
+            await context.Database.EnsureCreatedAsync();
+        }
+        else
+        {
+            logger.LogInformation(&quot;Applying database migrations...&quot;);
+            await context.Database.MigrateAsync();
+        }
+        logger.LogInformation(&quot;Database ready.&quot;);
+        
+        
+        var seeder = services.GetRequiredService&lt;DbSeeder&gt;();
+        await seeder.SeedAsync();
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService&lt;ILogger&lt;Program&gt;&gt;();
+        logger.LogError(ex, &quot;An error occurred while migrating or seeding the database.&quot;);
+        throw;
+    }
+}
+
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler(&quot;/Home/Error&quot;);
+    
+    app.UseHsts();
+}
+
+
+app.UseSwagger()</definition>
+        <argsstring></argsstring>
+        <name>scope</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="74" column="1" bodyfile="Program.cs" bodystart="74" bodyend="113"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_program_8cs_1a2f78352277081c620fd4cf92a5ce15e5" prot="public" static="no" mutable="no">
+        <type>var</type>
+        <definition>var builder</definition>
+        <argsstring></argsstring>
+        <name>builder</name>
+        <initializer>= WebApplication.CreateBuilder(args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="24" column="5" bodyfile="Program.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_program_8cs_1a5e57b0e9fd477676e7789c421495c68b" prot="public" static="no" mutable="no">
+        <type>options.JsonSerializerOptions.</type>
+        <definition>options.JsonSerializerOptions. WriteIndented</definition>
+        <argsstring></argsstring>
+        <name>WriteIndented</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="34" column="37" bodyfile="Program.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_program_8cs_1abaf851ca9394808faf7c77a8db51c810" prot="public" static="no" mutable="no">
+        <type>var</type>
+        <definition>var useInMemory</definition>
+        <argsstring></argsstring>
+        <name>useInMemory</name>
+        <initializer>= builder.Configuration.GetValue&lt;bool&gt;(&quot;UseInMemoryDatabase&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="38" column="5" bodyfile="Program.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_program_8cs_1a0544c3fe466e421738dae463968b70ba" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>else</definition>
+        <argsstring></argsstring>
+        <name>else</name>
+        <initializer>{
+    var connectionString = builder.Configuration.GetConnectionString(&quot;DefaultConnection&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="45" column="1" bodyfile="Program.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_program_8cs_1a7b225fcb720e4d5ed2bbf60e28a25e6d" prot="public" static="no" mutable="no">
+        <type>var</type>
+        <definition>var app</definition>
+        <argsstring></argsstring>
+        <name>app</name>
+        <initializer>= builder.Build()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="71" column="5" bodyfile="Program.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_program_8cs_1adf1466fc9631e1fb4b311c23643e84d7" prot="public" static="no" mutable="no">
+        <type>var</type>
+        <definition>var clientRoot</definition>
+        <argsstring></argsstring>
+        <name>clientRoot</name>
+        <initializer>= Path.Combine(app.Environment.ContentRootPath, &quot;ClientApp&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="128" column="5" bodyfile="Program.cs" bodystart="128" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_program_8cs_1af8107f2f8ff8e8de22a684c8c8ad3e99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>builder.Services.</type>
+        <definition>builder.Services. AddControllersWithViews</definition>
+        <argsstring>()</argsstring>
+        <name>AddControllersWithViews</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="27" column="16" declfile="Program.cs" declline="27" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1af1ac677ad5b0b73dc97062c292e88d5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>builder.Services.</type>
+        <definition>builder.Services. AddControllers</definition>
+        <argsstring>() .AddJsonOptions(options</argsstring>
+        <name>AddControllers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="30" column="16" bodyfile="Program.cs" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1a99808fcb8671d4097557fc00f8d613b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>if</definition>
+        <argsstring>(useInMemory)</argsstring>
+        <name>if</name>
+        <param>
+          <type>useInMemory</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="39" column="1" bodyfile="Program.cs" bodystart="39" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1a74ef5ca8f7dc71e68765c4afd0403419" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>builder.Services.</type>
+        <definition>builder.Services. AddDbContext&lt; ApplicationDbContext &gt;</definition>
+        <argsstring>(options=&gt; options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)))</argsstring>
+        <name>AddDbContext&lt; ApplicationDbContext &gt;</name>
+        <param>
+          <type>options</type>
+        </param>
+        <param>
+          <type>options.</type>
+          <declname>UseMySql</declname>
+          <array>connectionString, ServerVersion.AutoDetect(connectionString)</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="48" column="12" declfile="Program.cs" declline="48" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1a14cd9b18a308080a29d553bcf72818b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>builder.Services.</type>
+        <definition>builder.Services. AddScoped&lt; DbSeeder &gt;</definition>
+        <argsstring>()</argsstring>
+        <name>AddScoped&lt; DbSeeder &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="50" column="12" declfile="Program.cs" declline="50" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1a89bb082ff87e07add8df269e5abddb0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>builder.Services.</type>
+        <definition>builder.Services. AddScoped&lt; IPartService, PartService &gt;</definition>
+        <argsstring>()</argsstring>
+        <name>AddScoped&lt; IPartService, PartService &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="54" column="8" declfile="Program.cs" declline="54" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1a56333e29eba17b2f9cabf631dbec4d14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>builder.Services.</type>
+        <definition>builder.Services. AddCors</definition>
+        <argsstring>(options=&gt; { options.AddPolicy(&quot;AllowAll&quot;, policy=&gt; { policy.AllowAnyOrigin() .AllowAnyMethod() .AllowAnyHeader();});})</argsstring>
+        <name>AddCors</name>
+        <param>
+          <type>options</type>
+        </param>
+        <param>
+          <type>{ options.AddPolicy(&quot;AllowAll&quot;, policy=&gt; { policy.AllowAnyOrigin() .AllowAnyMethod() .AllowAnyHeader();});}</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="57" column="16" declfile="Program.cs" declline="57" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1a0d7859f9cad50e8e9fdf015100780e07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>builder.Services.</type>
+        <definition>builder.Services. AddEndpointsApiExplorer</definition>
+        <argsstring>()</argsstring>
+        <name>AddEndpointsApiExplorer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="68" column="16" declfile="Program.cs" declline="68" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1ae0ce43c019a5621d731d0c622c793644" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>builder.Services.</type>
+        <definition>builder.Services. AddSwaggerGen</definition>
+        <argsstring>()</argsstring>
+        <name>AddSwaggerGen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="69" column="16" declfile="Program.cs" declline="69" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1abebf8580ff1a2760b8ba9de386528243" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>app.</type>
+        <definition>app. UseSwaggerUI</definition>
+        <argsstring>(options=&gt; { options.SwaggerEndpoint(&quot;/swagger/v1/swagger.json&quot;, &quot;PC Part Picker API v1&quot;);options.RoutePrefix=&quot;swagger&quot;;})</argsstring>
+        <name>UseSwaggerUI</name>
+        <param>
+          <type>options</type>
+        </param>
+        <param>
+          <type>{ options.SwaggerEndpoint(&quot;/swagger/v1/swagger.json&quot;, &quot;PC Part Picker API v1&quot;);options.RoutePrefix=&quot;swagger&quot;;}</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="117" column="4" declfile="Program.cs" declline="117" declcolumn="4"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1aa4d447fc3129a3aa301d736b8bd04ae9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>app.</type>
+        <definition>app. UseHttpsRedirection</definition>
+        <argsstring>()</argsstring>
+        <name>UseHttpsRedirection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="123" column="4" declfile="Program.cs" declline="123" declcolumn="4"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1a906a3ce545279a7a73941f1d7b64d7cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>app.</type>
+        <definition>app. UseStaticFiles</definition>
+        <argsstring>()</argsstring>
+        <name>UseStaticFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="124" column="4" declfile="Program.cs" declline="124" declcolumn="4"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1aed5e4d56e5c05977874c6a9f6b071047" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>if</definition>
+        <argsstring>(Directory.Exists(clientRoot))</argsstring>
+        <name>if</name>
+        <param>
+          <type>Directory.</type>
+          <declname>Exists</declname>
+          <array>clientRoot</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="129" column="1" bodyfile="Program.cs" bodystart="129" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1a94c810d266751293a2d511a720a5625f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>app.</type>
+        <definition>app. UseRouting</definition>
+        <argsstring>()</argsstring>
+        <name>UseRouting</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="162" column="4" declfile="Program.cs" declline="162" declcolumn="4"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1adfcad7d2e6cbf2e6372bbe0f9fa96231" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>app.</type>
+        <definition>app. UseCors</definition>
+        <argsstring>(&quot;AllowAll&quot;)</argsstring>
+        <name>UseCors</name>
+        <param>
+          <type>&quot;AllowAll&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="165" column="4" declfile="Program.cs" declline="165" declcolumn="4"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1af6f72d752b2e73aa0292f74bd13237ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>app.</type>
+        <definition>app. UseAuthorization</definition>
+        <argsstring>()</argsstring>
+        <name>UseAuthorization</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="167" column="4" declfile="Program.cs" declline="167" declcolumn="4"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1a21592305984036576bba1d72f61d5d83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>app.</type>
+        <definition>app. MapMethods</definition>
+        <argsstring>(&quot;/options&quot;, new[] { &quot;OPTIONS&quot; },(IEnumerable&lt; EndpointDataSource &gt; endpointSources)=&gt; { var routes=endpointSources .SelectMany(es=&gt; es.Endpoints) .OfType&lt; RouteEndpoint &gt;() .Select(e=&gt; { var methods=e.Metadata.OfType&lt; HttpMethodMetadata &gt;().FirstOrDefault()?.HttpMethods ??[];var path=&quot;/&quot;+(e.RoutePattern.RawText?.TrimStart(&apos;/&apos;) ?? &quot;&quot;);return new { path, methods=methods.ToList() };}) .Where(r=&gt; !string.IsNullOrEmpty(r.path)) .OrderBy(r=&gt; r.path) .ToList();return Results.Json(new { routes });})</argsstring>
+        <name>MapMethods</name>
+        <param>
+          <type>&quot;/options&quot;</type>
+        </param>
+        <param>
+          <type>new { &quot;OPTIONS&quot; }</type>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>(IEnumerable&lt; EndpointDataSource &gt; endpointSources)</type>
+        </param>
+        <param>
+          <type>{ var routes=endpointSources .SelectMany(es=&gt; es.Endpoints) .OfType&lt; RouteEndpoint &gt;() .Select(e=&gt; { var methods=e.Metadata.OfType&lt; HttpMethodMetadata &gt;().FirstOrDefault()?.HttpMethods ??[];var path=&quot;/&quot;+(e.RoutePattern.RawText?.TrimStart(&apos;/&apos;) ?? &quot;&quot;);return new { path, methods=methods.ToList() };}) .Where(r=&gt; !string.IsNullOrEmpty(r.path)) .OrderBy(r=&gt; r.path) .ToList();return Results.Json(new { routes });}</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="170" column="4" declfile="Program.cs" declline="170" declcolumn="4"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1a9e2ee3170aa6279b68eefd1651f7d96c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>app.</type>
+        <definition>app. MapControllers</definition>
+        <argsstring>()</argsstring>
+        <name>MapControllers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="188" column="4" declfile="Program.cs" declline="188" declcolumn="4"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1aec500e125fbbfcd3d99a23db7de60be7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>app.</type>
+        <definition>app. MapControllerRoute</definition>
+        <argsstring>(name:&quot;default&quot;, pattern:&quot;{controller=Home}/{action=Index}/{id?}&quot;)</argsstring>
+        <name>MapControllerRoute</name>
+        <param>
+          <type>name:&quot;default&quot;</type>
+        </param>
+        <param>
+          <type>pattern:&quot;{controller=Home}/{action=Index}/{id?}&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="191" column="4" declfile="Program.cs" declline="191" declcolumn="4"/>
+      </memberdef>
+      <memberdef kind="function" id="_program_8cs_1aaa3dbf02e269c3ef7e8546d290c6b3dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>app.</type>
+        <definition>app. Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="195" column="4" declfile="Program.cs" declline="195" declcolumn="4"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Application startup and host configuration for PC Part Picker. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>High-level responsibilities:<itemizedlist>
+<listitem><para>Configure services (DbContext, <ref refid="interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service" kindref="compound">IPartService</ref>, CORS, Swagger)</para>
+</listitem><listitem><para>Configure JSON serialization options for API controllers</para>
+</listitem><listitem><para>Apply EF Core migrations and run &lt;DbSeeder&gt; at startup</para>
+</listitem><listitem><para>Serve SPA ClientApp static files and provide API endpoints</para>
+</listitem></itemizedlist>
+</para>
+<para>This file is the entry point for the web application and is important to document so developers know where migrations, seeding, CORS and static file hosting are configured. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.AspNetCore.Routing;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.EntityFrameworkCore;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.Extensions.FileProviders;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.IO;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data" kindref="compound">Project_6___Group_4___CSCN73060_SEC_1.Data</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services" kindref="compound">Project_6___Group_4___CSCN73060_SEC_1.Services</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">var<sp/>builder<sp/>=<sp/>WebApplication.CreateBuilder(args);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Add<sp/>services<sp/>to<sp/>the<sp/>container.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">builder.Services.AddControllersWithViews();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Add<sp/>API<sp/>Controllers<sp/>with<sp/>JSON<sp/>options</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">builder.Services.AddControllers()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>.AddJsonOptions(options<sp/>=&gt;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.JsonSerializerOptions.PropertyNamingPolicy<sp/>=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Keep<sp/>property<sp/>names<sp/>as-is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.JsonSerializerOptions.WriteIndented<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Pretty<sp/>print<sp/>JSON</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Configure<sp/>database<sp/>(InMemory<sp/>for<sp/>testing,<sp/>MySQL<sp/>otherwise)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">var<sp/>useInMemory<sp/>=<sp/>builder.Configuration.GetValue&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&gt;(</highlight><highlight class="stringliteral">&quot;UseInMemoryDatabase&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(useInMemory)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>builder.Services.AddDbContext&lt;<ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context" kindref="compound">ApplicationDbContext</ref>&gt;(options<sp/>=&gt;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.UseInMemoryDatabase(</highlight><highlight class="stringliteral">&quot;TestDb&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>builder.Services.AddScoped&lt;<ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder" kindref="compound">DbSeeder</ref>,<sp/><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_test_db_seeder" kindref="compound">TestDbSeeder</ref>&gt;();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>var<sp/>connectionString<sp/>=<sp/>builder.Configuration.GetConnectionString(</highlight><highlight class="stringliteral">&quot;DefaultConnection&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>builder.Services.AddDbContext&lt;<ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context" kindref="compound">ApplicationDbContext</ref>&gt;(options<sp/>=&gt;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.UseMySql(connectionString,<sp/>ServerVersion.AutoDetect(connectionString)));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>builder.Services.AddScoped&lt;<ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder" kindref="compound">DbSeeder</ref>&gt;();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Register<sp/>Part<sp/>Service</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">builder.Services.AddScoped&lt;<ref refid="interface_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_i_part_service" kindref="compound">IPartService</ref>,<sp/><ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_services_1_1_part_service" kindref="compound">PartService</ref>&gt;();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Add<sp/>CORS<sp/>policy<sp/>for<sp/>API<sp/>access</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">builder.Services.AddCors(options<sp/>=&gt;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>options.AddPolicy(</highlight><highlight class="stringliteral">&quot;AllowAll&quot;</highlight><highlight class="normal">,<sp/>policy<sp/>=&gt;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>policy.AllowAnyOrigin()</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.AllowAnyMethod()</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.AllowAnyHeader();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">});</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Add<sp/>Swagger/OpenAPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">builder.Services.AddEndpointsApiExplorer();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">builder.Services.AddSwaggerGen();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">var<sp/>app<sp/>=<sp/>builder.Build();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Run<sp/>migrations<sp/>and<sp/>seed<sp/>database<sp/>automatically</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>(var<sp/>scope<sp/>=<sp/>app.Services.CreateScope())</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>var<sp/>services<sp/>=<sp/>scope.ServiceProvider;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>context<sp/>=<sp/>services.GetRequiredService&lt;<ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_application_db_context" kindref="compound">ApplicationDbContext</ref>&gt;();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>logger<sp/>=<sp/>services.GetRequiredService&lt;ILogger&lt;Program&gt;&gt;();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Apply<sp/>migrations<sp/>(or<sp/>EnsureCreated<sp/>for<sp/>InMemory)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(useInMemory)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logger.LogInformation(</highlight><highlight class="stringliteral">&quot;Ensuring<sp/>test<sp/>database<sp/>is<sp/>created...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>await<sp/>context.Database.EnsureCreatedAsync();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logger.LogInformation(</highlight><highlight class="stringliteral">&quot;Applying<sp/>database<sp/>migrations...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>await<sp/>context.Database.MigrateAsync();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logger.LogInformation(</highlight><highlight class="stringliteral">&quot;Database<sp/>ready.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Seed<sp/>the<sp/>database</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>seeder<sp/>=<sp/>services.GetRequiredService&lt;<ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder" kindref="compound">DbSeeder</ref>&gt;();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>await<sp/>seeder.<ref refid="class_project__6_______group__4_______c_s_c_n73060___s_e_c__1_1_1_data_1_1_db_seeder_1aba2da0481779f18e6e32714ff66b8b22" kindref="member">SeedAsync</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>ex)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>logger<sp/>=<sp/>services.GetRequiredService&lt;ILogger&lt;Program&gt;&gt;();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logger.LogError(ex,<sp/></highlight><highlight class="stringliteral">&quot;An<sp/>error<sp/>occurred<sp/>while<sp/>migrating<sp/>or<sp/>seeding<sp/>the<sp/>database.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Configure<sp/>the<sp/>HTTP<sp/>request<sp/>pipeline.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!app.Environment.IsDevelopment())</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>app.UseExceptionHandler(</highlight><highlight class="stringliteral">&quot;/Home/Error&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>default<sp/>HSTS<sp/>value<sp/>is<sp/>30<sp/>days.<sp/>You<sp/>may<sp/>want<sp/>to<sp/>change<sp/>this<sp/>for<sp/>production<sp/>scenarios,<sp/>see<sp/>https://aka.ms/aspnetcore-hsts.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>app.UseHsts();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Enable<sp/>Swagger<sp/>in<sp/>all<sp/>environments</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">app.UseSwagger();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">app.UseSwaggerUI(options<sp/>=&gt;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>options.SwaggerEndpoint(</highlight><highlight class="stringliteral">&quot;/swagger/v1/swagger.json&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;PC<sp/>Part<sp/>Picker<sp/>API<sp/>v1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>options.RoutePrefix<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;swagger&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Access<sp/>at<sp/>/swagger</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">});</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">app.UseHttpsRedirection();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">app.UseStaticFiles();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Serve<sp/>the<sp/>ClientApp<sp/>static<sp/>files<sp/>so<sp/>the<sp/>frontend<sp/>is<sp/>available<sp/>on<sp/>the<sp/>same<sp/>origin/port<sp/>as<sp/>the<sp/>API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(works<sp/>in<sp/>both<sp/>Development<sp/>and<sp/>Production,<sp/>e.g.<sp/>when<sp/>running<sp/>via<sp/>Docker/start.bat).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">var<sp/>clientRoot<sp/>=<sp/>Path.Combine(app.Environment.ContentRootPath,<sp/></highlight><highlight class="stringliteral">&quot;ClientApp&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Directory.Exists(clientRoot))</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>var<sp/>clientProvider<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>PhysicalFileProvider(clientRoot);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>app.UseDefaultFiles(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>DefaultFilesOptions</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FileProvider<sp/>=<sp/>clientProvider,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RequestPath<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DefaultFileNames<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;index.html&quot;</highlight><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>app.UseStaticFiles(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>StaticFileOptions</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FileProvider<sp/>=<sp/>clientProvider,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RequestPath<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fallback:<sp/>for<sp/>non-API<sp/>requests<sp/>without<sp/>file<sp/>extension,<sp/>return<sp/>index.html<sp/>so<sp/>client-side<sp/>routes<sp/>work</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>app.MapWhen(context<sp/>=&gt;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!context.Request.Path.StartsWithSegments(</highlight><highlight class="stringliteral">&quot;/api&quot;</highlight><highlight class="normal">)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!context.Request.Path.StartsWithSegments(</highlight><highlight class="stringliteral">&quot;/swagger&quot;</highlight><highlight class="normal">)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!context.Request.Path.StartsWithSegments(</highlight><highlight class="stringliteral">&quot;/options&quot;</highlight><highlight class="normal">)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.IsNullOrEmpty(Path.GetExtension(context.Request.Path.Value<sp/>??<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.Empty)),</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>subApp<sp/>=&gt;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>subApp.Run(async<sp/>ctx<sp/>=&gt;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx.Response.ContentType<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;text/html&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>await<sp/>ctx.Response.SendFileAsync(Path.Combine(clientRoot,<sp/></highlight><highlight class="stringliteral">&quot;index.html&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">app.UseRouting();</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Enable<sp/>CORS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal">app.UseCors(</highlight><highlight class="stringliteral">&quot;AllowAll&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal">app.UseAuthorization();</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">//<sp/>OPTIONS<sp/>&quot;/options&quot;<sp/>-<sp/>Returns<sp/>list<sp/>of<sp/>all<sp/>available<sp/>routes<sp/>in<sp/>JSON<sp/>format</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal">app.MapMethods(</highlight><highlight class="stringliteral">&quot;/options&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">[]<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;OPTIONS&quot;</highlight><highlight class="normal"><sp/>},<sp/>(IEnumerable&lt;EndpointDataSource&gt;<sp/>endpointSources)<sp/>=&gt;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>var<sp/>routes<sp/>=<sp/>endpointSources</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.SelectMany(es<sp/>=&gt;<sp/>es.Endpoints)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.OfType&lt;RouteEndpoint&gt;()</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Select(e<sp/>=&gt;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>methods<sp/>=<sp/>e.Metadata.OfType&lt;HttpMethodMetadata&gt;().FirstOrDefault()?.HttpMethods<sp/>??<sp/>[];</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>path<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/>(e.RoutePattern.RawText?.TrimStart(</highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">)<sp/>??<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>{<sp/>path,<sp/>methods<sp/>=<sp/>methods.ToList()<sp/>};</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>})</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Where(r<sp/>=&gt;<sp/>!</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.IsNullOrEmpty(r.path))</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.OrderBy(r<sp/>=&gt;<sp/>r.path)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.ToList();</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Results.Json(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>{<sp/>routes<sp/>});</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">});</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Map<sp/>API<sp/>Controllers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal">app.MapControllers();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Map<sp/>MVC<sp/>Controllers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal">app.MapControllerRoute(</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>name:<sp/></highlight><highlight class="stringliteral">&quot;default&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>pattern:<sp/></highlight><highlight class="stringliteral">&quot;{controller=Home}/{action=Index}/{id?}&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal">app.Run();</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Expose<sp/>Program<sp/>for<sp/>WebApplicationFactory<sp/>in<sp/>tests</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="class_program" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">partial<sp/>class<sp/></highlight><highlight class="normal"><ref refid="class_program" kindref="compound">Program</ref><sp/>{<sp/>}</highlight></codeline>
+    </programlisting>
+    <location file="Program.cs"/>
+  </compounddef>
+</doxygen>
