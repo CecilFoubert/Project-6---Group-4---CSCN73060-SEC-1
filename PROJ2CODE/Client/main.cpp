@@ -272,6 +272,8 @@ int main(int argc, char* argv[])
             std::cerr << "[Client] Send failed at t=" << elapsedSeconds << "s\n";
             break;
         }
+
+        Sleep(1000); // 1 second between transmissions
     }
 
     // Signal end of flight (triggers SYS-020 on the server)
