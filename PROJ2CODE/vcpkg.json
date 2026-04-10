@@ -1,9 +1,5 @@
 {
   "name": "aircraft-telemetry",
   "version": "1.0.0",
-  "dependencies": [
-    "crow",
-    "nlohmann-json",
-    "cpp-httplib"
-  ]
+  "dependencies": []
 }

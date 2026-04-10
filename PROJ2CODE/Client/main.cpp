@@ -1,5 +1,9 @@
-#include <httplib.h>
-#include <nlohmann/json.hpp>
+#define WIN32_LEAN_AND_MEAN
+#define NOMINMAX
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#pragma comment(lib, "ws2_32.lib")
+
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -11,8 +15,6 @@
 #include <cctype>
 #include <ctime>
 #include <cstdio>
-
-using json = nlohmann::json;
 
 // ---------------------------------------------------------------------------
 // Utility helpers
@@ -40,7 +42,6 @@ static std::string trim(const std::string& s)
     return s.substr(first, last - first + 1);
 }
 
-// Split a string on the first occurrence of delim
 static std::vector<std::string> splitCSV(const std::string& line)
 {
     std::vector<std::string> cols;
@@ -57,9 +58,8 @@ static std::vector<std::string> splitCSV(const std::string& line)
 // ---------------------------------------------------------------------------
 // Timestamp parsing
 // ---------------------------------------------------------------------------
-// The data files use the format:  "D_M_YYYY H:MM:SS"  or  "DD_MM_YYYY HH:MM:SS"
-// e.g. "3_3_2023 14:53:21"  or  " 12_3_2023 14:56:47"
-// Returns true and sets `out` to a time_t value, or false on failure.
+// The data files use the format: "D_M_YYYY H:MM:SS" or "DD_MM_YYYY HH:MM:SS"
+// e.g. "3_3_2023 14:53:21" or " 12_3_2023 14:56:47"
 static bool parseTimestamp(const std::string& raw, std::time_t& out)
 {
     int day = 0, mon = 0, year = 0, hour = 0, min = 0, sec = 0;
@@ -92,11 +92,9 @@ struct TelemetryRecord
 // ---------------------------------------------------------------------------
 // Parse one telemetry file.
 //
-// File format (CSV, from real flight recorder data):
+// File format (CSV):
 //   Line 1  : FUEL TOTAL QUANTITY,<timestamp>,<fuel>,
-//   Lines 2+ :  <timestamp>,<fuel>,
-//
-// Returns the list of parsed records in chronological order.
+//   Lines 2+ : <timestamp>,<fuel>,
 // ---------------------------------------------------------------------------
 static std::vector<TelemetryRecord> parseFile(const std::string& path)
 {
@@ -114,7 +112,6 @@ static std::vector<TelemetryRecord> parseFile(const std::string& path)
     while (std::getline(file, line))
     {
         auto cols = splitCSV(line);
-
         std::string tsRaw, fuelRaw;
 
         if (firstLine)
@@ -149,6 +146,37 @@ static std::vector<TelemetryRecord> parseFile(const std::string& path)
 }
 
 // ---------------------------------------------------------------------------
+// Socket helpers
+// ---------------------------------------------------------------------------
+
+static bool sendLine(SOCKET sock, const std::string& line)
+{
+    std::string msg = line + "\n";
+    int total = 0;
+    int len   = static_cast<int>(msg.size());
+    while (total < len)
+    {
+        int n = send(sock, msg.c_str() + total, len - total, 0);
+        if (n == SOCKET_ERROR) return false;
+        total += n;
+    }
+    return true;
+}
+
+static bool recvLine(SOCKET sock, std::string& out)
+{
+    out.clear();
+    char ch;
+    while (true)
+    {
+        int n = recv(sock, &ch, 1, 0);
+        if (n <= 0) return false;
+        if (ch == '\n') return true;
+        if (ch != '\r') out += ch;
+    }
+}
+
+// ---------------------------------------------------------------------------
 // main
 // ---------------------------------------------------------------------------
 // Usage: Client [server_ip] [port] [data_file] [plane_id]
@@ -171,13 +199,58 @@ int main(int argc, char* argv[])
         std::cerr << "[Client] No valid records found in: " << dataFile << "\n";
         return 1;
     }
-
     std::cout << "[Client] Parsed " << records.size() << " telemetry records.\n";
 
-    httplib::Client cli(serverIp, port);
-    cli.set_connection_timeout(10, 0);
-    cli.set_read_timeout(10, 0);
+    // Initialise Winsock
+    WSADATA wsa;
+    if (WSAStartup(MAKEWORD(2, 2), &wsa) != 0)
+    {
+        std::cerr << "[Client] WSAStartup failed\n";
+        return 1;
+    }
 
+    SOCKET sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    if (sock == INVALID_SOCKET)
+    {
+        std::cerr << "[Client] socket() failed: " << WSAGetLastError() << "\n";
+        WSACleanup();
+        return 1;
+    }
+
+    // Resolve server address and connect
+    sockaddr_in serverAddr{};
+    serverAddr.sin_family = AF_INET;
+    serverAddr.sin_port   = htons(static_cast<u_short>(port));
+    if (inet_pton(AF_INET, serverIp.c_str(), &serverAddr.sin_addr) != 1)
+    {
+        std::cerr << "[Client] Invalid server IP: " << serverIp << "\n";
+        closesocket(sock);
+        WSACleanup();
+        return 1;
+    }
+
+    if (connect(sock, reinterpret_cast<sockaddr*>(&serverAddr), sizeof(serverAddr)) == SOCKET_ERROR)
+    {
+        std::cerr << "[Client] connect() failed: " << WSAGetLastError() << "\n";
+        closesocket(sock);
+        WSACleanup();
+        return 1;
+    }
+    std::cout << "[Client] Connected to server.\n";
+
+    // Handshake: send plane ID so the server can identify this aircraft (SYS-030, SYS-050)
+    sendLine(sock, "PLANEID:" + planeId);
+
+    std::string response;
+    if (!recvLine(sock, response) || response != "OK")
+    {
+        std::cerr << "[Client] Handshake failed (got: " << response << ")\n";
+        closesocket(sock);
+        WSACleanup();
+        return 1;
+    }
+
+    // SYS-040b/c: packetise and transmit each telemetry record
     const std::time_t startTime = records.front().timestamp;
     int sent = 0;
 
@@ -186,41 +259,41 @@ int main(int argc, char* argv[])
         // Convert absolute timestamp to elapsed seconds from start of flight
         double elapsedSeconds = static_cast<double>(rec.timestamp - startTime);
 
-        // SYS-040b: packetise  (SYS-040c: transmit)
-        json body = {
-            { "planeId", planeId        },
-            { "time",    elapsedSeconds },
-            { "fuel",    rec.fuel       }
-        };
+        std::ostringstream oss;
+        oss << std::fixed << "DATA:" << elapsedSeconds << "," << rec.fuel;
 
-        auto res = cli.Post("/telemetry", body.dump(), "application/json");
-        if (!res || res->status != 200)
-        {
-            std::cerr << "[Client] Send failed at t=" << elapsedSeconds << "s\n";
-        }
+        if (sendLine(sock, oss.str()))
+            ++sent;
         else
         {
-            ++sent;
+            std::cerr << "[Client] Send failed at t=" << elapsedSeconds << "s\n";
+            break;
         }
     }
 
-    // Notify the server that the flight is complete (triggers SYS-020)
-    json endBody = { { "planeId", planeId } };
-    auto endRes  = cli.Post("/flight/end", endBody.dump(), "application/json");
+    // Signal end of flight (triggers SYS-020 on the server)
+    sendLine(sock, "COMPLETE");
 
-    if (endRes && endRes->status == 200)
+    // Read and display the result summary from the server
+    std::string resultLine;
+    if (recvLine(sock, resultLine) && resultLine.rfind("RESULT:", 0) == 0)
     {
-        auto resp = json::parse(endRes->body);
+        // Parse: "RESULT:<finalAvgRate>,<totalFuelConsumed>,<duration>,<lifetimeAvgRate>"
+        std::istringstream ss(resultLine.substr(7));
+        std::string tok;
+        std::vector<double> vals;
+        while (std::getline(ss, tok, ','))
+        {
+            try { vals.push_back(std::stod(tok)); } catch (...) { vals.push_back(0.0); }
+        }
+        while (vals.size() < 4) vals.push_back(0.0);
+
         std::cout << "[Client] Flight complete. Sent " << sent << " / "
                   << records.size() << " packets.\n";
-        std::cout << "[Client] Final avg consumption : "
-                  << resp.value("finalAvgRate",      0.0) << " gal/s\n";
-        std::cout << "[Client] Total fuel consumed   : "
-                  << resp.value("totalFuelConsumed", 0.0) << " gal\n";
-        std::cout << "[Client] Flight duration       : "
-                  << resp.value("duration",          0.0) << " s\n";
-        std::cout << "[Client] Lifetime avg rate     : "
-                  << resp.value("lifetimeAvgRate",   0.0) << " gal/s\n";
+        std::cout << "[Client] Final avg consumption : " << vals[0] << " gal/s\n";
+        std::cout << "[Client] Total fuel consumed   : " << vals[1] << " gal\n";
+        std::cout << "[Client] Flight duration       : " << vals[2] << " s\n";
+        std::cout << "[Client] Lifetime avg rate     : " << vals[3] << " gal/s\n";
     }
     else
     {
@@ -228,5 +301,7 @@ int main(int argc, char* argv[])
                   << " / " << records.size() << " packets.\n";
     }
 
+    closesocket(sock);
+    WSACleanup();
     return 0;
 }
