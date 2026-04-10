@@ -1,0 +1,68 @@
+## Visual Studio / C++ project – system & generated files
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+build/
+bld/
+
+# Visual Studio cache / options
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+*.vcxproj.user
+slnx.sqlite
+
+# VS workspace state
+ProjectSettings.json
+VSWorkspaceState.json
+
+# IntelliSense / browse DB
+ipch/
+*.idb
+*.pdb
+*.ilk
+*.exp
+*.lib
+
+# NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+
+# vcpkg
+vcpkg_installed/
+
+# Database / log output files
+*.mdf
+*.ldf
+*.bak
+*.sqlite
+*.db
+
+# Runtime-generated data files
+flight_records.csv
+
+# User-specific
+*.userprefs
+
+# Mac
+.DS_Store
+
+# Rider
+.idea/
+
+# VSCode
+.vscode/
