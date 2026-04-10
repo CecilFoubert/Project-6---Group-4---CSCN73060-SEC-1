@@ -185,7 +185,7 @@ static bool recvLine(SOCKET sock, std::string& out)
 // Usage: Client [server_ip] [port] [data_file] [plane_id]
 int main(int argc, char* argv[])
 {
-    const std::string serverIp = (argc > 1) ? argv[1] : "127.0.0.1";
+    const std::string serverIp = (argc > 1) ? argv[1] : "10.192.148.68";
     const int         port     = (argc > 2) ? std::stoi(argv[2]) : 9000;
     const std::string dataFile = (argc > 3) ? argv[3] : "katl-kefd-B737-700.txt";
     // SYS-050: unique ID assigned at startup; auto-generated if not provided
