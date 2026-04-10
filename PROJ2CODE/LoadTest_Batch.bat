@@ -2,10 +2,10 @@
 @echo off
 SET SERVER_IP=10.192.148.31
 SET PORT=9000
-SET DATA_FILE=data\katl-kefd-B737-700.txt
+SET DATA_FILE=data\Telem_2023_3_12_16_26_4.txt
 
 SET /A "index = 1"
-SET /A "count = 25"
+SET /A "count = 100"
 
 :while
 if %index% leq %count% (
