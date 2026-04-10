@@ -1,0 +1,15 @@
+﻿  main.cpp
+C:\Users\Evely\source\repos\Project-6---Group-4---CSCN73060-SEC-1\PROJ2CODE\Server\main.cpp(1,9): warning C4005: 'WIN32_LEAN_AND_MEAN': macro redefinition
+      C:\Users\Evely\source\repos\Project-6---Group-4---CSCN73060-SEC-1\PROJ2CODE\Server\main.cpp(1,9):
+      'WIN32_LEAN_AND_MEAN' previously declared on the command line
+  
+C:\Users\Evely\source\repos\Project-6---Group-4---CSCN73060-SEC-1\PROJ2CODE\Server\main.cpp(2,9): warning C4005: 'NOMINMAX': macro redefinition
+      C:\Users\Evely\source\repos\Project-6---Group-4---CSCN73060-SEC-1\PROJ2CODE\Server\main.cpp(2,9):
+      'NOMINMAX' previously declared on the command line
+  
+  FlightStore.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 732 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Server.vcxproj -> C:\Users\Evely\source\repos\Project-6---Group-4---CSCN73060-SEC-1\PROJ2CODE\x64\Release\Server.exe
