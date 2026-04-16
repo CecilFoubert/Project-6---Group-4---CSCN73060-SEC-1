@@ -4,6 +4,7 @@
 #include <mutex>
 #include <string>
 #include <optional>
+#include <fstream>
 
 struct EndFlightResult
 {
@@ -37,8 +38,8 @@ public:
 
 private:
     std::unordered_map<std::string, AircraftRecord> records_;
-    std::mutex                                       storeMutex_;
-    std::string                                      outputFile_;
+    std::mutex                                       storeMutex_;  // guards records_ map only
+    std::ofstream                                    file_;
     std::mutex                                       fileMutex_;
 
     void appendToFile(const AircraftRecord& record, const FlightSession& session);

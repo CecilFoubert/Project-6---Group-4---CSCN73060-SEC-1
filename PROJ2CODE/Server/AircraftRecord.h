@@ -3,15 +3,18 @@
 #include <string>
 #include <vector>
 #include <optional>
+#include <mutex>
 
 /// Persistent record for one aircraft across all of its flights.
-/// Callers must hold an external mutex before calling any method.
+/// Per-plane mutex (planeMutex) must be held by callers for update/endFlight.
+/// The map-level (store) mutex only needs to be held during lookup/insertion.
 class AircraftRecord
 {
 public:
     std::string                  planeId;
     std::vector<FlightSession>   completedFlights;
     std::optional<FlightSession> activeFlight;
+    mutable std::mutex           planeMutex;
 
     explicit AircraftRecord(std::string id) : planeId(std::move(id)) {}
 
@@ -28,21 +31,21 @@ public:
     {
         if (!activeFlight.has_value()) return std::nullopt;
         activeFlight->complete();
+        lifetimeFuel_ += activeFlight->totalFuelConsumed;
+        lifetimeTime_ += activeFlight->totalTimeElapsed;
         completedFlights.push_back(*activeFlight);
         auto finished = std::move(activeFlight);
         activeFlight.reset();
         return finished;
     }
 
-    /// Lifetime average across all completed flights.
+    /// Lifetime average across all completed flights — O(1).
     double lifetimeAvgRate() const
     {
-        double totalFuel = 0.0, totalTime = 0.0;
-        for (const auto& f : completedFlights)
-        {
-            totalFuel += f.totalFuelConsumed;
-            totalTime += f.totalTimeElapsed;
-        }
-        return totalTime > 0.0 ? totalFuel / totalTime : 0.0;
+        return lifetimeTime_ > 0.0 ? lifetimeFuel_ / lifetimeTime_ : 0.0;
     }
+
+private:
+    double lifetimeFuel_ {0.0};
+    double lifetimeTime_ {0.0};
 };

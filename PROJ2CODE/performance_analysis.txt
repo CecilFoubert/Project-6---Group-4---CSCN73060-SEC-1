@@ -1,0 +1,23 @@
+Performance Analysis
+
+1. Single-byte recv() in recvLine — Most Critical
+   Both Server/main.cpp and Client/main.cpp read one byte per syscall.
+   At 100 connections sending ~25-byte packets, that is ~2,500 syscalls per tick.
+   Fix: buffered reader (4 KB chunks, scan for \n).
+
+2. Single global mutex — High Contention
+   storeMutex_ was held for every update(), endFlight(), and getStats() call.
+   All 100 threads serialized on every packet.
+   Fix: per-plane mutex in AircraftRecord; storeMutex_ now only guards map lookup/insert.
+
+3. Unbounded thread-per-client — No Backpressure
+   detach() created one thread per connection with no limit.
+   Fix: bounded thread pool (default 64 workers, queue cap 256).
+
+4. File opened and closed on every flight completion
+   ofstream was opened, written, and closed per COMPLETE message.
+   Fix: ofstream kept open as a member, flushed after each write.
+
+5. O(n) lifetimeAvgRate()
+   Iterated all completed flights on every endFlight() call.
+   Fix: running lifetimeFuel_ and lifetimeTime_ totals updated incrementally — O(1).

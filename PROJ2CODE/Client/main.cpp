@@ -166,18 +166,38 @@ static bool sendLine(SOCKET sock, const std::string& line)
     return true;
 }
 
-static bool recvLine(SOCKET sock, std::string& out)
+struct SocketBuffer
 {
-    out.clear();
-    char ch;
-    while (true)
+    static constexpr int BUF_SIZE = 4096;
+    char buf[BUF_SIZE];
+    int  pos {0};
+    int  len {0};
+
+    bool fill(SOCKET sock)
     {
-        int n = recv(sock, &ch, 1, 0);
-        if (n <= 0) return false;
-        if (ch == '\n') return true;
-        if (ch != '\r') out += ch;
+        if (pos < len) return true;
+        pos = 0;
+        int n = recv(sock, buf, BUF_SIZE, 0);
+        if (n <= 0) { len = 0; return false; }
+        len = n;
+        return true;
     }
-}
+
+    bool readLine(SOCKET sock, std::string& out)
+    {
+        out.clear();
+        while (true)
+        {
+            if (!fill(sock)) return false;
+            while (pos < len)
+            {
+                char ch = buf[pos++];
+                if (ch == '\n') return true;
+                if (ch != '\r') out += ch;
+            }
+        }
+    }
+};
 
 // ---------------------------------------------------------------------------
 // main
@@ -244,8 +264,9 @@ int main(int argc, char* argv[])
     // Handshake: send plane ID so the server can identify this aircraft (SYS-030, SYS-050)
     sendLine(sock, "PLANEID:" + planeId);
 
-    std::string response;
-    if (!recvLine(sock, response) || response != "OK")
+    SocketBuffer sbuf;
+    std::string  response;
+    if (!sbuf.readLine(sock, response) || response != "OK")
     {
         std::cerr << "[Client] Handshake failed (got: " << response << ")\n";
         closesocket(sock);
@@ -281,7 +302,7 @@ int main(int argc, char* argv[])
 
     // Read and display the result summary from the server
     std::string resultLine;
-    if (recvLine(sock, resultLine) && resultLine.rfind("RESULT:", 0) == 0)
+    if (sbuf.readLine(sock, resultLine) && resultLine.rfind("RESULT:", 0) == 0)
     {
         // Parse: "RESULT:<finalAvgRate>,<totalFuelConsumed>,<duration>,<lifetimeAvgRate>"
         std::istringstream ss(resultLine.substr(7));

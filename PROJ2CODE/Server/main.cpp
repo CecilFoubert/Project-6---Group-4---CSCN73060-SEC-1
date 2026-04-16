@@ -8,24 +8,116 @@
 #include <sstream>
 #include <string>
 #include <thread>
+#include <vector>
+#include <queue>
+#include <condition_variable>
 #include "FlightStore.h"
 
 // ---------------------------------------------------------------------------
-// Helper: read one '\n'-terminated line from a socket.
-// Returns false if the connection is closed or an error occurs.
+// Bounded thread pool — fixes unbounded thread-per-client (SYS-001)
 // ---------------------------------------------------------------------------
-static bool recvLine(SOCKET sock, std::string& out)
+class ThreadPool
 {
-    out.clear();
-    char ch;
-    while (true)
+public:
+    explicit ThreadPool(int numThreads)
     {
-        int n = recv(sock, &ch, 1, 0);
-        if (n <= 0) return false;
-        if (ch == '\n') return true;
-        if (ch != '\r') out += ch;
+        for (int i = 0; i < numThreads; ++i)
+            workers_.emplace_back([this] { workerLoop(); });
     }
-}
+
+    ~ThreadPool()
+    {
+        {
+            std::lock_guard<std::mutex> lock(mutex_);
+            shutdown_ = true;
+        }
+        cv_.notify_all();
+        for (auto& t : workers_) t.join();
+    }
+
+    // Submit a connected socket. Blocks if all workers are busy and the
+    // queue has reached capacity (backpressure).
+    void submit(SOCKET sock)
+    {
+        std::unique_lock<std::mutex> lock(mutex_);
+        cvFull_.wait(lock, [this] { return queue_.size() < MAX_QUEUE || shutdown_; });
+        queue_.push(sock);
+        cv_.notify_one();
+    }
+
+    void setHandler(void (*fn)(SOCKET, FlightStore*), FlightStore* store)
+    {
+        handler_ = fn;
+        store_   = store;
+    }
+
+private:
+    static constexpr std::size_t MAX_QUEUE = 256;
+
+    void workerLoop()
+    {
+        while (true)
+        {
+            SOCKET sock;
+            {
+                std::unique_lock<std::mutex> lock(mutex_);
+                cv_.wait(lock, [this] { return !queue_.empty() || shutdown_; });
+                if (shutdown_ && queue_.empty()) return;
+                sock = queue_.front();
+                queue_.pop();
+                cvFull_.notify_one();
+            }
+            handler_(sock, store_);
+        }
+    }
+
+    std::vector<std::thread>  workers_;
+    std::queue<SOCKET>        queue_;
+    std::mutex                mutex_;
+    std::condition_variable   cv_;
+    std::condition_variable   cvFull_;
+    bool                      shutdown_ {false};
+    void (*handler_)(SOCKET, FlightStore*) {nullptr};
+    FlightStore*              store_ {nullptr};
+};
+
+// ---------------------------------------------------------------------------
+// Buffered reader — amortises recv() syscalls across a 4 KB chunk.
+// ---------------------------------------------------------------------------
+struct SocketBuffer
+{
+    static constexpr int BUF_SIZE = 4096;
+    char buf[BUF_SIZE];
+    int  pos {0};
+    int  len {0};
+
+    // Fill the buffer from the socket if it is empty.
+    bool fill(SOCKET sock)
+    {
+        if (pos < len) return true;
+        pos = 0;
+        int n = recv(sock, buf, BUF_SIZE, 0);
+        if (n <= 0) { len = 0; return false; }
+        len = n;
+        return true;
+    }
+
+    // Read one '\n'-terminated line. Returns false on disconnect/error.
+    bool readLine(SOCKET sock, std::string& out)
+    {
+        out.clear();
+        while (true)
+        {
+            if (!fill(sock)) return false;
+            while (pos < len)
+            {
+                char ch = buf[pos++];
+                if (ch == '\n') return true;
+                if (ch != '\r') out += ch;
+            }
+        }
+    }
+};
 
 // ---------------------------------------------------------------------------
 // Helper: send a complete line (appends '\n').
@@ -49,10 +141,11 @@ static bool sendLine(SOCKET sock, const std::string& line)
 // ---------------------------------------------------------------------------
 static void handleClient(SOCKET clientSock, FlightStore* store)
 {
-    std::string line;
+    SocketBuffer sbuf;
+    std::string  line;
 
     // --- Handshake: read plane ID (SYS-030) ---
-    if (!recvLine(clientSock, line))
+    if (!sbuf.readLine(clientSock, line))
     {
         closesocket(clientSock);
         return;
@@ -69,7 +162,7 @@ static void handleClient(SOCKET clientSock, FlightStore* store)
     sendLine(clientSock, "OK");
 
     // --- Telemetry loop (SYS-010) ---
-    while (recvLine(clientSock, line))
+    while (sbuf.readLine(clientSock, line))
     {
         if (line == "COMPLETE")
         {
@@ -125,11 +218,12 @@ static void handleClient(SOCKET clientSock, FlightStore* store)
 // ---------------------------------------------------------------------------
 // main
 // ---------------------------------------------------------------------------
-// Usage: Server [port] [output_csv]
+// Usage: Server [port] [output_csv] [num_threads]
 int main(int argc, char* argv[])
 {
-    int         port       = (argc > 1) ? std::stoi(argv[1]) : 9000;
-    std::string outputFile = (argc > 2) ? argv[2] : "flight_records.csv";
+    int         port        = (argc > 1) ? std::stoi(argv[1]) : 9000;
+    std::string outputFile  = (argc > 2) ? argv[2] : "flight_records.csv";
+    int         numThreads  = (argc > 3) ? std::stoi(argv[3]) : 64;
 
     // Initialise Winsock
     WSADATA wsa;
@@ -175,11 +269,14 @@ int main(int argc, char* argv[])
     }
 
     FlightStore store(outputFile);
+    ThreadPool  pool(numThreads);
+    pool.setHandler(handleClient, &store);
 
     std::cout << "[Server] Aircraft Telemetry Server listening on port " << port << "\n";
     std::cout << "[Server] Recording flights to: " << outputFile << "\n";
+    std::cout << "[Server] Thread pool size: " << numThreads << "\n";
 
-    // SYS-001: infinite accept loop — detach one thread per client (unlimited connections)
+    // SYS-001: accept loop — dispatch to bounded thread pool
     while (true)
     {
         sockaddr_in clientAddr{};
@@ -193,8 +290,7 @@ int main(int argc, char* argv[])
             continue;
         }
 
-        // Detach thread — it owns clientSock and closes it when done
-        std::thread(handleClient, clientSock, &store).detach();
+        pool.submit(clientSock);
     }
 
     closesocket(listenSock);
