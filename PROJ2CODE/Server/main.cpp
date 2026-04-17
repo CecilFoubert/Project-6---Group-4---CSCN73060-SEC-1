@@ -8,7 +8,18 @@
 #include <sstream>
 #include <string>
 #include <thread>
+#include <mutex>
+#include <charconv>
 #include "FlightStore.h"
+
+static std::mutex coutMutex_;
+
+template<typename... Args>
+static void syncPrint(Args&&... args)
+{
+    std::lock_guard<std::mutex> lock(coutMutex_);
+    (std::cout << ... << args);
+}
 
 // ---------------------------------------------------------------------------
 // Buffered reader — amortises recv() syscalls across a 4 KB chunk.
@@ -49,18 +60,26 @@ struct SocketBuffer
 };
 
 // ---------------------------------------------------------------------------
-// Helper: send a complete line (appends '\n').
+// Helper: send a complete line (appends '\n') — no heap allocation.
 // ---------------------------------------------------------------------------
 static bool sendLine(SOCKET sock, const std::string& line)
 {
-    std::string msg = line + "\n";
-    int total = 0;
-    int len   = static_cast<int>(msg.size());
+    // Send the line content
+    int total = 0, len = static_cast<int>(line.size());
     while (total < len)
     {
-        int n = send(sock, msg.c_str() + total, len - total, 0);
+        int n = send(sock, line.c_str() + total, len - total, 0);
         if (n == SOCKET_ERROR) return false;
         total += n;
+    }
+    // Send the newline separately
+    char nl = '\n';
+    int  sent = 0;
+    while (sent < 1)
+    {
+        int n = send(sock, &nl, 1, 0);
+        if (n == SOCKET_ERROR) return false;
+        sent += n;
     }
     return true;
 }
@@ -87,7 +106,7 @@ static void handleClient(SOCKET clientSock, FlightStore* store)
     else
         planeId = line;   // fallback: treat the whole line as the ID
 
-    std::cout << "[Server] Client connected: plane " << planeId << "\n";
+    syncPrint("[Server] Client connected: plane ", planeId, "\n");
     sendLine(clientSock, "OK");
 
     // --- Telemetry loop (SYS-010) ---
@@ -99,9 +118,9 @@ static void handleClient(SOCKET clientSock, FlightStore* store)
             auto result = store->endFlight(planeId);
             if (result.has_value())
             {
-                std::cout << "[Server] Flight ended for " << planeId
-                          << "  final_avg="    << result->finalAvgRate    << " gal/s"
-                          << "  lifetime_avg=" << result->lifetimeAvgRate << " gal/s\n";
+                syncPrint("[Server] Flight ended for ", planeId,
+                          "  final_avg=",    result->finalAvgRate,    " gal/s"
+                          "  lifetime_avg=", result->lifetimeAvgRate, " gal/s\n");
 
                 std::ostringstream oss;
                 oss << std::fixed
@@ -121,27 +140,26 @@ static void handleClient(SOCKET clientSock, FlightStore* store)
         // Expected format: "DATA:<elapsed_seconds>,<fuel_gallons>"
         if (line.rfind("DATA:", 0) == 0)
         {
-            std::string payload = line.substr(5);
-            auto comma = payload.find(',');
-            if (comma != std::string::npos)
+            const char* begin = line.c_str() + 5;
+            const char* end   = line.c_str() + line.size();
+            double t = 0.0, fuel = 0.0;
+            auto r1 = std::from_chars(begin, end, t);
+            if (r1.ec == std::errc{} && r1.ptr < end && *r1.ptr == ',')
             {
-                try
+                auto r2 = std::from_chars(r1.ptr + 1, end, fuel);
+                if (r2.ec == std::errc{})
                 {
-                    double t    = std::stod(payload.substr(0, comma));
-                    double fuel = std::stod(payload.substr(comma + 1));
-
                     // SYS-010a: read the transmitted data
                     // SYS-010b: parse timing and remaining fuel
                     // SYS-010c: calculate and store current fuel consumption
                     store->update(planeId, t, fuel);
                 }
-                catch (...) { /* skip malformed packet */ }
             }
         }
     }
 
     closesocket(clientSock);
-    std::cout << "[Server] Client disconnected: plane " << planeId << "\n";
+    syncPrint("[Server] Client disconnected: plane ", planeId, "\n");
 }
 
 // ---------------------------------------------------------------------------

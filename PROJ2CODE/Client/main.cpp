@@ -154,14 +154,22 @@ static std::vector<TelemetryRecord> parseFile(const std::string& path)
 
 static bool sendLine(SOCKET sock, const std::string& line)
 {
-    std::string msg = line + "\n";
-    int total = 0;
-    int len   = static_cast<int>(msg.size());
+    // Send line content
+    int total = 0, len = static_cast<int>(line.size());
     while (total < len)
     {
-        int n = send(sock, msg.c_str() + total, len - total, 0);
+        int n = send(sock, line.c_str() + total, len - total, 0);
         if (n == SOCKET_ERROR) return false;
         total += n;
+    }
+    // Send newline separately — avoids allocating a new string
+    char nl = '\n';
+    int  sent = 0;
+    while (sent < 1)
+    {
+        int n = send(sock, &nl, 1, 0);
+        if (n == SOCKET_ERROR) return false;
+        sent += n;
     }
     return true;
 }
@@ -277,14 +285,17 @@ int main(int argc, char* argv[])
     // SYS-040b/c: packetise and transmit each telemetry record
     const std::time_t startTime = records.front().timestamp;
     int sent = 0;
+    std::ostringstream oss;
+    oss << std::fixed;
 
     for (const auto& rec : records)
     {
         // Convert absolute timestamp to elapsed seconds from start of flight
         double elapsedSeconds = static_cast<double>(rec.timestamp - startTime);
 
-        std::ostringstream oss;
-        oss << std::fixed << "DATA:" << elapsedSeconds << "," << rec.fuel;
+        oss.str("");
+        oss.clear();
+        oss << "DATA:" << elapsedSeconds << "," << rec.fuel;
 
         if (sendLine(sock, oss.str()))
             ++sent;

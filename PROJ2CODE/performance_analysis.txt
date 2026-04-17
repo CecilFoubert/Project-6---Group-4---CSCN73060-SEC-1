@@ -1,23 +1,37 @@
 Performance Analysis
 
-1. Single-byte recv() in recvLine — Most Critical
+--- Implemented Fixes ---
+
+1. Single-byte recv() in recvLine
    Both Server/main.cpp and Client/main.cpp read one byte per syscall.
    At 100 connections sending ~25-byte packets, that is ~2,500 syscalls per tick.
    Fix: buffered reader (4 KB chunks, scan for \n).
 
-2. Single global mutex — High Contention
-   storeMutex_ was held for every update(), endFlight(), and getStats() call.
-   All 100 threads serialized on every packet.
-   Fix: per-plane mutex in AircraftRecord; storeMutex_ now only guards map lookup/insert.
-
-3. Unbounded thread-per-client — No Backpressure
-   detach() created one thread per connection with no limit.
-   Fix: bounded thread pool (default 64 workers, queue cap 256).
-
-4. File opened and closed on every flight completion
+2. File opened and closed on every flight completion
    ofstream was opened, written, and closed per COMPLETE message.
    Fix: ofstream kept open as a member, flushed after each write.
 
-5. O(n) lifetimeAvgRate()
+3. O(n) lifetimeAvgRate()
    Iterated all completed flights on every endFlight() call.
    Fix: running lifetimeFuel_ and lifetimeTime_ totals updated incrementally — O(1).
+
+4. from_chars for DATA packet parsing (Server)
+   std::stod required substring allocations and exception handling per packet.
+   Fix: std::from_chars parses directly from the buffer — no allocation, no exceptions.
+
+5. Reuse ostringstream in client send loop
+   A new ostringstream was constructed on every loop iteration (one per telemetry record).
+   Fix: declared once outside the loop, reset with str("") and clear() each iteration.
+
+6. sendLine no-alloc (both Server and Client)
+   sendLine built a new std::string (line + "\n") on every call, causing a heap allocation per send.
+   Fix: send the line and '\n' as two separate send() calls — no string allocation.
+
+7. Thread-safe std::cout (Server)
+   100 concurrent threads writing to std::cout caused interleaved/garbled output.
+   Fix: syncPrint() wraps all console writes with a mutex.
+
+--- Reverted (conflicts with SDD/SRS) ---
+
+- Per-plane locking: SDD specifies a single planeMapMutex covering all operations.
+- Thread pool: SYS-001 requires unlimited connections; SDD specifies detach() per client.
