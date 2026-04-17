@@ -3,18 +3,15 @@
 #include <string>
 #include <vector>
 #include <optional>
-#include <mutex>
 
 /// Persistent record for one aircraft across all of its flights.
-/// Per-plane mutex (planeMutex) must be held by callers for update/endFlight.
-/// The map-level (store) mutex only needs to be held during lookup/insertion.
+/// Callers must hold storeMutex_ (in FlightStore) before calling any method.
 class AircraftRecord
 {
 public:
     std::string                  planeId;
     std::vector<FlightSession>   completedFlights;
     std::optional<FlightSession> activeFlight;
-    mutable std::mutex           planeMutex;
 
     explicit AircraftRecord(std::string id) : planeId(std::move(id)) {}
 

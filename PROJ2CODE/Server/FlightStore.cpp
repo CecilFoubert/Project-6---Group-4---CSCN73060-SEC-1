@@ -15,58 +15,48 @@ FlightStore::FlightStore(const std::string& outputFile)
 
 double FlightStore::update(const std::string& planeId, double time, double fuel)
 {
-    AircraftRecord* record = nullptr;
-    {
-        // Hold storeMutex only long enough to find/insert the record
-        std::lock_guard<std::mutex> lock(storeMutex_);
-        auto [it, inserted] = records_.try_emplace(planeId, planeId);
-        record = &it->second;
-    }
+    std::lock_guard<std::mutex> lock(storeMutex_);
 
-    std::lock_guard<std::mutex> lock(record->planeMutex);
-    if (!record->activeFlight.has_value())
-        record->beginFlight();
-    return record->activeFlight->update(time, fuel);
+    auto [it, inserted] = records_.try_emplace(planeId, planeId);
+    AircraftRecord& record = it->second;
+
+    if (!record.activeFlight.has_value())
+        record.beginFlight();
+    return record.activeFlight->update(time, fuel);
 }
 
 std::optional<EndFlightResult> FlightStore::endFlight(const std::string& planeId)
 {
-    AircraftRecord* record = nullptr;
-    {
-        std::lock_guard<std::mutex> lock(storeMutex_);
-        auto it = records_.find(planeId);
-        if (it == records_.end()) return std::nullopt;
-        record = &it->second;
-    }
+    std::lock_guard<std::mutex> lock(storeMutex_);
 
-    std::lock_guard<std::mutex> lock(record->planeMutex);
-    auto finished = record->endFlight();  // SYS-020: stores final avg
+    auto it = records_.find(planeId);
+    if (it == records_.end()) return std::nullopt;
+
+    AircraftRecord& record  = it->second;
+    auto            finished = record.endFlight();  // SYS-020: stores final avg
     if (!finished.has_value()) return std::nullopt;
 
-    appendToFile(*record, *finished);
+    appendToFile(record, *finished);
 
     return EndFlightResult{
         finished->finalAvgRate,
         finished->totalFuelConsumed,
         finished->duration,
-        record->lifetimeAvgRate()
+        record.lifetimeAvgRate()
     };
 }
 
 std::optional<AircraftStats> FlightStore::getStats(const std::string& planeId)
 {
-    AircraftRecord* record = nullptr;
-    {
-        std::lock_guard<std::mutex> lock(storeMutex_);
-        auto it = records_.find(planeId);
-        if (it == records_.end()) return std::nullopt;
-        record = &it->second;
-    }
+    std::lock_guard<std::mutex> lock(storeMutex_);
 
-    std::lock_guard<std::mutex> lock(record->planeMutex);
+    auto it = records_.find(planeId);
+    if (it == records_.end()) return std::nullopt;
+
+    const AircraftRecord& record = it->second;
     return AircraftStats{
-        static_cast<int>(record->completedFlights.size()),
-        record->lifetimeAvgRate()
+        static_cast<int>(record.completedFlights.size()),
+        record.lifetimeAvgRate()
     };
 }
 

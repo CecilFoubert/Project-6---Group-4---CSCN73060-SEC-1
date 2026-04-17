@@ -8,78 +8,7 @@
 #include <sstream>
 #include <string>
 #include <thread>
-#include <vector>
-#include <queue>
-#include <condition_variable>
 #include "FlightStore.h"
-
-// ---------------------------------------------------------------------------
-// Bounded thread pool — fixes unbounded thread-per-client (SYS-001)
-// ---------------------------------------------------------------------------
-class ThreadPool
-{
-public:
-    explicit ThreadPool(int numThreads)
-    {
-        for (int i = 0; i < numThreads; ++i)
-            workers_.emplace_back([this] { workerLoop(); });
-    }
-
-    ~ThreadPool()
-    {
-        {
-            std::lock_guard<std::mutex> lock(mutex_);
-            shutdown_ = true;
-        }
-        cv_.notify_all();
-        for (auto& t : workers_) t.join();
-    }
-
-    // Submit a connected socket. Blocks if all workers are busy and the
-    // queue has reached capacity (backpressure).
-    void submit(SOCKET sock)
-    {
-        std::unique_lock<std::mutex> lock(mutex_);
-        cvFull_.wait(lock, [this] { return queue_.size() < MAX_QUEUE || shutdown_; });
-        queue_.push(sock);
-        cv_.notify_one();
-    }
-
-    void setHandler(void (*fn)(SOCKET, FlightStore*), FlightStore* store)
-    {
-        handler_ = fn;
-        store_   = store;
-    }
-
-private:
-    static constexpr std::size_t MAX_QUEUE = 256;
-
-    void workerLoop()
-    {
-        while (true)
-        {
-            SOCKET sock;
-            {
-                std::unique_lock<std::mutex> lock(mutex_);
-                cv_.wait(lock, [this] { return !queue_.empty() || shutdown_; });
-                if (shutdown_ && queue_.empty()) return;
-                sock = queue_.front();
-                queue_.pop();
-                cvFull_.notify_one();
-            }
-            handler_(sock, store_);
-        }
-    }
-
-    std::vector<std::thread>  workers_;
-    std::queue<SOCKET>        queue_;
-    std::mutex                mutex_;
-    std::condition_variable   cv_;
-    std::condition_variable   cvFull_;
-    bool                      shutdown_ {false};
-    void (*handler_)(SOCKET, FlightStore*) {nullptr};
-    FlightStore*              store_ {nullptr};
-};
 
 // ---------------------------------------------------------------------------
 // Buffered reader — amortises recv() syscalls across a 4 KB chunk.
@@ -218,12 +147,11 @@ static void handleClient(SOCKET clientSock, FlightStore* store)
 // ---------------------------------------------------------------------------
 // main
 // ---------------------------------------------------------------------------
-// Usage: Server [port] [output_csv] [num_threads]
+// Usage: Server [port] [output_csv]
 int main(int argc, char* argv[])
 {
-    int         port        = (argc > 1) ? std::stoi(argv[1]) : 9000;
-    std::string outputFile  = (argc > 2) ? argv[2] : "flight_records.csv";
-    int         numThreads  = (argc > 3) ? std::stoi(argv[3]) : 64;
+    int         port       = (argc > 1) ? std::stoi(argv[1]) : 9000;
+    std::string outputFile = (argc > 2) ? argv[2] : "flight_records.csv";
 
     // Initialise Winsock
     WSADATA wsa;
@@ -269,14 +197,11 @@ int main(int argc, char* argv[])
     }
 
     FlightStore store(outputFile);
-    ThreadPool  pool(numThreads);
-    pool.setHandler(handleClient, &store);
 
     std::cout << "[Server] Aircraft Telemetry Server listening on port " << port << "\n";
     std::cout << "[Server] Recording flights to: " << outputFile << "\n";
-    std::cout << "[Server] Thread pool size: " << numThreads << "\n";
 
-    // SYS-001: accept loop — dispatch to bounded thread pool
+    // SYS-001: infinite accept loop — detach one thread per client (unlimited connections)
     while (true)
     {
         sockaddr_in clientAddr{};
@@ -290,7 +215,8 @@ int main(int argc, char* argv[])
             continue;
         }
 
-        pool.submit(clientSock);
+        // Detach thread — it owns clientSock and closes it when done (SYS-001)
+        std::thread(handleClient, clientSock, &store).detach();
     }
 
     closesocket(listenSock);

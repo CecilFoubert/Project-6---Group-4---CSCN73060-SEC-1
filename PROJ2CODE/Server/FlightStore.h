@@ -38,7 +38,7 @@ public:
 
 private:
     std::unordered_map<std::string, AircraftRecord> records_;
-    std::mutex                                       storeMutex_;  // guards records_ map only
+    std::mutex                                       storeMutex_;
     std::ofstream                                    file_;
     std::mutex                                       fileMutex_;
 
